@@ -27,27 +27,25 @@ header {
 
 nav {
   background: #f5f5f5;
-  padding: 12px;
+  padding: 10px 0;
   text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
 }
 
 nav a {
+  display: inline-block;
   color: #333;
   text-decoration: none;
   font-weight: bold;
-  font-size: 18px;         /* Bigger font */
-  padding: 12px 16px;      /* Bigger tap target */
-  border-radius: 6px;
-  display: inline-block;
+  font-size: 20px;      /* Always big */
+  padding: 12px 10px;   /* Always big tap area */
+  margin: 0 4px;
+  border-radius: 5px;
+  transition: background 0.2s, color 0.2s;
 }
 
 nav a:hover {
   color: #0066cc;
-  background: #e0e0e0;
+  background: #eaeaea;
 }
 
 .toggle-button {
@@ -70,23 +68,20 @@ footer {
   text-align: center;
 }
 
-/* 🔧 Mobile responsiveness */
-@media (max-width: 768px) {
+/* Optional: Slightly increase menu font on very small screens */
+@media (max-width: 600px) {
   nav a {
-    font-size: 20px;       /* Even bigger on mobile */
-    padding: 14px 18px;    /* Extra padding for fingers */
+    font-size: 22px;
+    padding: 16px 8px;
+    margin: 0 2px;
   }
-
-  header h1 {
-    font-size: 1.6em;
-  }
-
-  .motto {
-    font-size: 1.1em;
-    padding: 0 10px;
-  }
-
   .logo {
     height: 70px;
+  }
+  header h1 {
+    font-size: 1.4em;
+  }
+  .motto {
+    font-size: 1em;
   }
 }
