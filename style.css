@@ -36,9 +36,9 @@ nav a {
   color: #333;
   text-decoration: none;
   font-weight: bold;
-  font-size: 20px;
-  padding: 12px 10px;
-  margin: 0 4px;
+  font-size: 22px;     /* << BIG FONT */
+  padding: 14px 12px;  /* << BIG TAPS */
+  margin: 0 6px;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
 }
@@ -68,33 +68,15 @@ footer {
   text-align: center;
 }
 
-/* --- Mobile: stack menu vertically --- */
-@media (max-width: 768px) {
-  nav {
-    padding: 8px 0;
-  }
-  nav a {
-    display: block;
-    font-size: 22px;
-    padding: 16px 0;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 320px;
-    border-bottom: 1px solid #e0e0e0;
-    text-align: center;
-    border-radius: 0;
-  }
-  nav a:last-child {
-    border-bottom: none;
-  }
+/* Optional: shrink logo a bit on small screens */
+@media (max-width: 600px) {
   .logo {
     height: 70px;
   }
   header h1 {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
   .motto {
-    font-size: 1.1em;
-    padding: 0 10px;
+    font-size: 1em;
   }
 }
