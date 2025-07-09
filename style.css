@@ -27,20 +27,20 @@ header {
 
 nav {
   background: #f5f5f5;
-  padding: 12px 5px;
+  padding: 12px;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 nav a {
   color: #333;
   text-decoration: none;
   font-weight: bold;
-  font-size: 16px;
-  padding: 10px 14px;
+  font-size: 18px;         /* Bigger font */
+  padding: 12px 16px;      /* Bigger tap target */
   border-radius: 6px;
   display: inline-block;
 }
@@ -72,14 +72,18 @@ footer {
 
 /* 🔧 Mobile responsiveness */
 @media (max-width: 768px) {
+  nav a {
+    font-size: 20px;       /* Even bigger on mobile */
+    padding: 14px 18px;    /* Extra padding for fingers */
+  }
+
   header h1 {
-    font-size: 1.5em;
+    font-size: 1.6em;
   }
 
   .motto {
-    font-size: 1em;
+    font-size: 1.1em;
     padding: 0 10px;
-    text-align: center;
   }
 
   .logo {
