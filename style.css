@@ -68,7 +68,7 @@ footer {
   text-align: center;
 }
 
-/* Mobile: Vertical stacked menu */
+/* --- Mobile: stack menu vertically --- */
 @media (max-width: 768px) {
   nav {
     padding: 8px 0;
@@ -95,4 +95,6 @@ footer {
   }
   .motto {
     font-size: 1.1em;
-    padding
+    padding: 0 10px;
+  }
+}
