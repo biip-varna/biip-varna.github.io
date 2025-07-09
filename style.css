@@ -64,24 +64,23 @@ footer {
 
 /* 🔧 Mobile responsiveness */
 @media (max-width: 768px) {
-  nav {
-    font-size: 1.2em;
-    padding: 12px 8px;
-  }
-
   nav a {
-    font-size: 1.3em;
-    padding: 10px;
-    margin: 4px 6px;
+    font-size: 16px;
+    padding: 10px 8px;
     display: inline-block;
   }
 
+  nav {
+    font-size: 16px;
+    padding: 12px 5px;
+  }
+
   header h1 {
-    font-size: 1.6em;
+    font-size: 1.5em;
   }
 
   .motto {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 
   .logo {
