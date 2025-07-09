@@ -68,26 +68,25 @@ footer {
   text-align: center;
 }
 
-/* 🔧 Vertical stacked menu on mobile */
+/* --- Force vertical menu on mobile, even if pipes are present --- */
 @media (max-width: 768px) {
   nav {
     padding: 8px 0;
-  }
-  nav a {
-    display: block;
-    font-size: 22px;
-    padding: 16px 0;
-    margin: 4px 0;
-    border-bottom: 1px solid #e0e0e0;
-    width: 100%;
-    max-width: 320px;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
-    border-radius: 0;
+  }
+  nav a, nav a + *, nav * + a {
+    display: block !important;
+    font-size: 22px !important;
+    padding: 16px 0 !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    text-align: center !important;
+    border-radius: 0 !important;
   }
   nav a:last-child {
-    border-bottom: none;
+    border-bottom: none !important;
   }
   .logo {
     height: 70px;
@@ -98,5 +97,15 @@ footer {
   .motto {
     font-size: 1.1em;
     padding: 0 10px;
+  }
+  /* Hide pipes visually on mobile */
+  nav {
+    font-size: 0;
+  }
+  nav a {
+    font-size: 22px !important;
+  }
+  nav * {
+    font-size: 0 !important;
   }
 }
