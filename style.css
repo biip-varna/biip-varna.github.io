@@ -36,10 +36,10 @@ nav a {
   color: #333;
   text-decoration: none;
   font-weight: bold;
-  font-size: 20px;      /* Always big */
-  padding: 12px 10px;   /* Always big tap area */
-  margin: 0 4px;
-  border-radius: 5px;
+  font-size: 22px;       /* BIG, everywhere */
+  padding: 14px 12px;    /* BIG, everywhere */
+  margin: 0 5px;
+  border-radius: 6px;
   transition: background 0.2s, color 0.2s;
 }
 
@@ -66,22 +66,4 @@ footer {
   font-size: 12px;
   color: #555;
   text-align: center;
-}
-
-/* Optional: Slightly increase menu font on very small screens */
-@media (max-width: 600px) {
-  nav a {
-    font-size: 22px;
-    padding: 16px 8px;
-    margin: 0 2px;
-  }
-  .logo {
-    height: 70px;
-  }
-  header h1 {
-    font-size: 1.4em;
-  }
-  .motto {
-    font-size: 1em;
-  }
 }
