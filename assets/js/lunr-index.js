@@ -1,9 +1,8 @@
-// Example Lunr.js setup; replace `documents` with your actual page index
-// `documents` is an array of objects like { url, title, content }
+// Example documents array; replace with your actual index data.
 const documents = [
-  { url: "/index.html", title: "Добре дошли", content: "Ние сме независимо…" },
-  { url: "/about.html", title: "За нас", content: "Българският институт…" },
-  // ...and so on for each page/article
+  { url: "/index.html", title: "Добре дошли", content: "Ние сме независимо..." },
+  { url: "/about.html", title: "За нас", content: "Българският институт..." },
+  // …and so on for each page or article
 ];
 
 const idx = lunr(function(){
@@ -15,11 +14,17 @@ const idx = lunr(function(){
 
 window.addEventListener('DOMContentLoaded', () => {
   const box = document.getElementById('searchBox');
-  const resList = document.getElementById('results');
+  const resultsList = document.getElementById('results');
+  if (!box || !resultsList) return;
+
   box.addEventListener('input', () => {
-    const query = box.value;
+    const query = box.value.trim();
+    if (!query) {
+      resultsList.innerHTML = '';
+      return;
+    }
     const results = idx.search(query);
-    resList.innerHTML = results.map(r =>
+    resultsList.innerHTML = results.map(r =>
       `<li><a href="${r.ref}">${r.ref}</a></li>`
     ).join('');
   });
