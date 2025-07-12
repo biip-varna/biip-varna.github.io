@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://biip-varna.github.io/</loc>
+  </url>
+  <url>
+    <loc>https://biip-varna.github.io/index-en.html</loc>
+  </url>
+  <url>
+    <loc>https://biip-varna.github.io/about-en.html</loc>
+  </url>
+  <url>
+    <loc>https://biip-varna.github.io/regions-en.html</loc>
+  </url>
+  <url>
+    <loc>https://biip-varna.github.io/cee-en.html</loc>
+  </url>
+  <url>
+    <loc>https://biip-varna.github.io/bulgaria-soviet-en.html</loc>
+  </url>
+  <url>
+    <loc>https://biip-varna.github.io/submit-en.html</loc>
+  </url>
+  <url>
+    <loc>https://biip-varna.github.io/contact-en.html</loc>
+  </url>
+  <!-- Bulgarian pages -->
+  <url>
+    <loc>https://biip-varna.github.io/index.html</loc>
+  </url>
+  <url>
+    <loc>https://biip-varna.github.io/about.html</loc>
+  </url>
+  <url>
+    <loc>https://biip-varna.github.io/regions.html</loc>
+  </url>
+  <url>
+    <loc>https://biip-varna.github.io/submit.html</loc>
+  </url>
+  <url>
+    <loc>https://biip-varna.github.io/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://biip-varna.github.io/articles/bulgarias-democratic-challenge.html</loc>
+  </url>
+  <!-- Add more URLs for each article/page as needed -->
+</urlset>

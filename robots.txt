@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://biip-varna.github.io/sitemap.xml
