@@ -240,87 +240,72 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 160px;
-  min-height: 140px;
-  padding: 22px 12px 18px 12px;
+  min-width: 170px;
+  min-height: 125px;
+  padding: 22px 12px 16px 12px;
   border-radius: 18px;
-  background: linear-gradient(150deg, #e5efff 65%, #f9fafc 100%);
-  box-shadow: 0 3px 12px rgba(0,50,120,0.06);
+  background: linear-gradient(150deg, #e5efff 60%, #f9fafc 100%);
+  box-shadow: 0 3px 12px rgba(0,50,120,0.04);
   text-decoration: none;
   color: #1a222b;
-  font-size: 1.09em;
+  font-size: 1.13em;
   position: relative;
-  transition: box-shadow 0.21s, transform 0.13s, background 0.3s;
-  cursor: pointer;
+  transition: box-shadow 0.19s, transform 0.13s, background 0.3s;
   border: 1px solid #e6eef8;
+  margin-bottom: 0.2em;
 }
 
 .region-card .region-icon {
-  font-size: 2.6em;
-  margin-bottom: 0.23em;
+  font-size: 2.5em;
+  margin-bottom: 0.3em;
   text-shadow: 0 1px 2px rgba(20,70,200,0.09);
+  user-select: none;
 }
 
 .region-title {
   font-weight: bold;
   text-align: center;
-  font-size: 1.07em;
+  font-size: 1.05em;
+  margin-bottom: 0.1em;
   letter-spacing: 0.01em;
 }
 
-.region-card-cee     { background: linear-gradient(140deg,#e6f1ff 60%, #e2f3e6 100%);}
-.region-card-west    { background: linear-gradient(140deg,#f9e9ff 65%, #fafafc 100%);}
-.region-card-africa  { background: linear-gradient(140deg,#fff7e5 65%, #fafafc 100%);}
-.region-card-america { background: linear-gradient(140deg,#e8f8ff 65%, #f3f9f3 100%);}
-.region-card-asia    { background: linear-gradient(140deg,#fff0f0 65%, #f9fafc 100%);}
+.region-soon {
+  color: #aaa;
+  font-size: 0.94em;
+  margin-top: 0.27em;
+  font-style: italic;
+}
 
-/* Card hover effect */
-.region-card:hover,
-.region-card:focus {
-  box-shadow: 0 6px 28px rgba(0,70,190,0.11), 0 1.5px 6px rgba(0,0,0,0.09);
+.region-card-cee     { background: linear-gradient(140deg,#e6f1ff 60%, #e2f3e6 100%);}
+.region-card-west    { background: linear-gradient(140deg,#f9e9ff 62%, #fafafc 100%);}
+.region-card-africa  { background: linear-gradient(140deg,#fff7e5 67%, #fafafc 100%);}
+.region-card-america { background: linear-gradient(140deg,#e8f8ff 60%, #f3f9f3 100%);}
+.region-card-asia    { background: linear-gradient(140deg,#ffe6ef 62%, #f9fafc 100%);}
+.region-card:active        { transform: scale(0.97); }
+
+.region-card:focus,
+.region-card:hover {
+  box-shadow: 0 6px 24px rgba(0,70,190,0.14), 0 1.5px 6px rgba(0,0,0,0.07);
   background: linear-gradient(155deg,#f5fafe 45%, #e1f2fd 90%);
-  transform: translateY(-4px) scale(1.038);
-  border-color: #aad4fa;
   color: #104da6;
   outline: none;
 }
-.region-card-cee:hover     { background: linear-gradient(140deg,#dbefff 65%, #e2f3e6 100%);}
-.region-card-west:hover    { background: linear-gradient(140deg,#f2e1fa 65%, #f8f8fa 100%);}
-.region-card-africa:hover  { background: linear-gradient(140deg,#ffe4a2 65%, #f5f5f8 100%);}
-.region-card-america:hover { background: linear-gradient(140deg,#c6e6fb 65%, #e5f9e8 100%);}
-.region-card-asia:hover    { background: linear-gradient(140deg,#ffe6e6 65%, #f7fafb 100%);}
-.region-card:active        { transform: scale(0.98); }
 
 .region-card:not(a) {
   cursor: default;
-  opacity: 0.6;
+  opacity: 0.63;
+  pointer-events: none;
 }
 
 /* Responsive grid for small screens */
 @media (max-width: 800px) {
-  .region-grid {
-    gap: 1em;
-  }
-  .region-card {
-    min-width: 135px;
-    min-height: 110px;
-    font-size: 1em;
-    padding: 17px 6px 14px 6px;
-  }
+  .region-grid { gap: 1em; }
+  .region-card { min-width: 135px; min-height: 100px; font-size: 1em; padding: 15px 7px 11px 7px;}
 }
 @media (max-width: 600px) {
-  .region-grid {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.8em;
-    margin-top: 1.5em;
-  }
-  .region-card {
-    width: 100%;
-    min-width: 0;
-    font-size: 1em;
-    padding: 14px 4px 12px 4px;
-    margin: 0;
-  }
+  .region-grid { flex-direction: column; align-items: stretch; gap: 0.8em; margin-top: 1.3em;}
+  .region-card { width: 100%; min-width: 0; font-size: 1em; padding: 11px 4px 10px 4px;}
 }
+
 
