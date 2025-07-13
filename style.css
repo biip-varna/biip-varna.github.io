@@ -36,8 +36,8 @@ nav a {
   color: #333;
   text-decoration: none;
   font-weight: bold;
-  font-size: 18px;     /* << BIG FONT */
-  padding: 14px 12px;  /* << BIG TAPS */
+  font-size: 18px;
+  padding: 14px 12px;
   margin: 0 6px;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
@@ -102,34 +102,86 @@ footer {
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
 
+/* --- Smaller thumbnail for compact card --- */
 .article-thumb {
-  width: 70px;     /* was 110px */
-  height: 52px;    /* was 80px */
+  width: 56px;     /* was 70px, now smaller */
+  height: 42px;    /* was 52px, now smaller */
   object-fit: cover;
   border-right: 1px solid #e5e5e5;
   flex-shrink: 0;
 }
 
-
-.article-info {
-  padding: 0.7em 1em;
+/* --- Related Articles Section --- */
+.related-articles {
+  background: #fafbfc;
+  padding: 1em 1em 1.5em 1em;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+  margin-top: 2em;
 }
-
-.article-info h4 {
-  margin: 0 0 0.2em 0;
-  font-size: 1.07em;
+.related-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
 }
-
-.article-meta {
-  color: #888;
+.related-article {
+  display: flex;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s;
+  width: 280px;
+  max-width: 100%;
+  min-height: 44px;
+}
+.related-article:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.09);
+}
+/* --- Compact small icon for related --- */
+.related-thumb {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-right: 1px solid #eee;
+  border-radius: 5px 0 0 5px;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+.related-info {
+  padding: 0.35em 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.related-title {
+  font-weight: bold;
+  font-size: 1.08em;
+  margin-bottom: 0.18em;
+}
+.related-meta {
+  color: #999;
   font-size: 0.95em;
-  margin: 0 0 0.3em 0;
+  margin-bottom: 0.22em;
+}
+.related-teaser {
+  font-size: 0.98em;
+  color: #444;
 }
 
-.article-teaser {
-  margin: 0;
-  color: #444;
-  font-size: 0.98em;
+/* Compact text padding for previews */
+.article-info {
+  padding: 0.5em 0.7em;
+}
+@media (max-width: 700px) {
+  .related-list {
+    flex-direction: column;
+  }
+  .related-article {
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
