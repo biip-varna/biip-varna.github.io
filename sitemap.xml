@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main English pages -->
   <url>
     <loc>https://biip-varna.github.io/</loc>
   </url>
@@ -40,8 +41,17 @@
   <url>
     <loc>https://biip-varna.github.io/contact.html</loc>
   </url>
+
+  <!-- English Articles -->
   <url>
     <loc>https://biip-varna.github.io/articles/bulgarias-democratic-challenge.html</loc>
   </url>
-  <!-- Add more URLs for each article/page as needed -->
+  <url>
+    <loc>https://biip-varna.github.io/articles/bulgaria-must-leave-soviet-armament-behind.html</loc>
+  </url>
+  <url>
+    <loc>https://biip-varna.github.io/articles/when-bulgarian-democracy-falters.html</loc>
+  </url>
+
+  <!-- If you have other articles, add more here -->
 </urlset>
