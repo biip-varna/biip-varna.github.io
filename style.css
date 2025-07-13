@@ -225,3 +225,102 @@ footer {
     width: 100%;
     height: 120px;
     border-right: none;
+
+/* --- REGION GRID CARDS --- */
+.region-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.7em;
+  justify-content: center;
+  margin-top: 2.2em;
+}
+
+.region-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  min-height: 140px;
+  padding: 22px 12px 18px 12px;
+  border-radius: 18px;
+  background: linear-gradient(150deg, #e5efff 65%, #f9fafc 100%);
+  box-shadow: 0 3px 12px rgba(0,50,120,0.06);
+  text-decoration: none;
+  color: #1a222b;
+  font-size: 1.09em;
+  position: relative;
+  transition: box-shadow 0.21s, transform 0.13s, background 0.3s;
+  cursor: pointer;
+  border: 1px solid #e6eef8;
+}
+
+.region-card .region-icon {
+  font-size: 2.6em;
+  margin-bottom: 0.23em;
+  text-shadow: 0 1px 2px rgba(20,70,200,0.09);
+}
+
+.region-title {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.07em;
+  letter-spacing: 0.01em;
+}
+
+.region-card-cee     { background: linear-gradient(140deg,#e6f1ff 60%, #e2f3e6 100%);}
+.region-card-west    { background: linear-gradient(140deg,#f9e9ff 65%, #fafafc 100%);}
+.region-card-africa  { background: linear-gradient(140deg,#fff7e5 65%, #fafafc 100%);}
+.region-card-america { background: linear-gradient(140deg,#e8f8ff 65%, #f3f9f3 100%);}
+.region-card-asia    { background: linear-gradient(140deg,#fff0f0 65%, #f9fafc 100%);}
+
+/* Card hover effect */
+.region-card:hover,
+.region-card:focus {
+  box-shadow: 0 6px 28px rgba(0,70,190,0.11), 0 1.5px 6px rgba(0,0,0,0.09);
+  background: linear-gradient(155deg,#f5fafe 45%, #e1f2fd 90%);
+  transform: translateY(-4px) scale(1.038);
+  border-color: #aad4fa;
+  color: #104da6;
+  outline: none;
+}
+.region-card-cee:hover     { background: linear-gradient(140deg,#dbefff 65%, #e2f3e6 100%);}
+.region-card-west:hover    { background: linear-gradient(140deg,#f2e1fa 65%, #f8f8fa 100%);}
+.region-card-africa:hover  { background: linear-gradient(140deg,#ffe4a2 65%, #f5f5f8 100%);}
+.region-card-america:hover { background: linear-gradient(140deg,#c6e6fb 65%, #e5f9e8 100%);}
+.region-card-asia:hover    { background: linear-gradient(140deg,#ffe6e6 65%, #f7fafb 100%);}
+.region-card:active        { transform: scale(0.98); }
+
+.region-card:not(a) {
+  cursor: default;
+  opacity: 0.6;
+}
+
+/* Responsive grid for small screens */
+@media (max-width: 800px) {
+  .region-grid {
+    gap: 1em;
+  }
+  .region-card {
+    min-width: 135px;
+    min-height: 110px;
+    font-size: 1em;
+    padding: 17px 6px 14px 6px;
+  }
+}
+@media (max-width: 600px) {
+  .region-grid {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8em;
+    margin-top: 1.5em;
+  }
+  .region-card {
+    width: 100%;
+    min-width: 0;
+    font-size: 1em;
+    padding: 14px 4px 12px 4px;
+    margin: 0;
+  }
+}
+
