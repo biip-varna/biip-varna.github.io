@@ -81,7 +81,7 @@ footer {
   }
 }
 
-/* --- ARTICLE PREVIEW / THUMBNAIL BLOCKS --- */
+/* --- ARTICLE PREVIEW / THUMBNAIL BLOCKS (now same as related) --- */
 
 .article-preview-list {
   display: flex;
@@ -96,19 +96,43 @@ footer {
   box-shadow: 0 1px 3px rgba(0,0,0,0.03);
   overflow: hidden;
   transition: box-shadow 0.2s;
+  min-height: 44px;                /* same as related-article */
 }
 
 .article-preview:hover {
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
 
-/* --- Smaller thumbnail for compact card --- */
+/* --- Compact square icon, same as related-thumb --- */
 .article-thumb {
-  width: 56px;     /* was 70px, now smaller */
-  height: 42px;    /* was 52px, now smaller */
+  width: 44px;
+  height: 44px;
   object-fit: cover;
-  border-right: 1px solid #e5e5e5;
+  border-right: 1px solid #eee;
+  border-radius: 5px 0 0 5px;
   flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.article-info {
+  padding: 0.35em 0.5em;           /* same as related-info */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.article-info h4 {
+  margin: 0 0 0.18em 0;
+  font-size: 1.08em;
+}
+.article-meta {
+  color: #888;
+  font-size: 0.95em;
+  margin: 0 0 0.22em 0;
+}
+.article-teaser {
+  margin: 0;
+  color: #444;
+  font-size: 0.98em;
 }
 
 /* --- Related Articles Section --- */
@@ -140,7 +164,6 @@ footer {
 .related-article:hover {
   box-shadow: 0 4px 16px rgba(0,0,0,0.09);
 }
-/* --- Compact small icon for related --- */
 .related-thumb {
   width: 44px;
   height: 44px;
@@ -171,10 +194,6 @@ footer {
   color: #444;
 }
 
-/* Compact text padding for previews */
-.article-info {
-  padding: 0.5em 0.7em;
-}
 @media (max-width: 700px) {
   .related-list {
     flex-direction: column;
@@ -187,11 +206,14 @@ footer {
 @media (max-width: 600px) {
   .article-preview {
     flex-direction: column;
+    min-height: unset;
   }
   .article-thumb {
     width: 100%;
     height: 120px;
     border-right: none;
     border-bottom: 1px solid #e5e5e5;
+    border-radius: 5px 5px 0 0;
+    margin-right: 0;
   }
 }
