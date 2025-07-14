@@ -308,7 +308,7 @@ footer {
   .region-card { width: 100%; min-width: 0; font-size: 1em; padding: 11px 4px 10px 4px;}
 }
 
-/* EXPERT CARD THUMBNAILS (LARGER) */
+/* --- EXPERT CARD THUMBNAILS (LARGER, PORTRAIT) --- */
 .expert-preview-list {
   display: flex;
   flex-wrap: wrap;
@@ -362,7 +362,6 @@ footer {
   font-size: 1em;
   color: #444;
 }
-
 @media (max-width: 800px) {
   .expert-preview-list {
     flex-direction: column;
