@@ -308,4 +308,60 @@ footer {
   .region-card { width: 100%; min-width: 0; font-size: 1em; padding: 11px 4px 10px 4px;}
 }
 
+.expert-preview-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  margin-top: 2em;
+}
+.expert-preview {
+  display: flex;
+  background: #f8f8fa;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  overflow: hidden;
+  width: 340px;
+  max-width: 100%;
+  min-height: 60px;
+  text-decoration: none;
+  transition: box-shadow 0.2s;
+}
+.expert-preview:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.11);
+}
+.expert-thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-right: 1px solid #e3e3e3;
+  flex-shrink: 0;
+  background: #e5e5ee;
+}
+.expert-info {
+  padding: 0.7em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.expert-name {
+  font-weight: bold;
+  font-size: 1.09em;
+  margin-bottom: 0.18em;
+}
+.expert-title {
+  color: #3377aa;
+  font-size: 0.97em;
+  margin-bottom: 0.14em;
+}
+.expert-teaser {
+  color: #444;
+  font-size: 0.98em;
+}
+
+/* Responsive for mobile */
+@media (max-width: 700px) {
+  .expert-preview-list { flex-direction: column; }
+  .expert-preview { width: 100%; }
+}
+
 
