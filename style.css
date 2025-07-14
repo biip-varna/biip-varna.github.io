@@ -308,60 +308,73 @@ footer {
   .region-card { width: 100%; min-width: 0; font-size: 1em; padding: 11px 4px 10px 4px;}
 }
 
+/* EXPERT CARD THUMBNAILS (LARGER) */
 .expert-preview-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5em;
+  gap: 2em;
+  justify-content: flex-start;
   margin-top: 2em;
 }
 .expert-preview {
   display: flex;
-  background: #f8f8fa;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  background: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
   overflow: hidden;
-  width: 340px;
-  max-width: 100%;
-  min-height: 60px;
   text-decoration: none;
-  transition: box-shadow 0.2s;
+  color: inherit;
+  transition: box-shadow 0.22s;
+  width: 370px;
+  max-width: 100%;
+  min-height: 120px;
 }
 .expert-preview:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.11);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.10);
 }
 .expert-thumb {
-  width: 60px;
-  height: 60px;
+  width: 88px;
+  height: 110px;
   object-fit: cover;
-  border-right: 1px solid #e3e3e3;
+  border-right: 1px solid #e6e6e6;
+  border-radius: 10px 0 0 10px;
   flex-shrink: 0;
-  background: #e5e5ee;
+  margin-right: 16px;
+  background: #eee;
 }
 .expert-info {
-  padding: 0.7em 1em;
+  padding: 1em 1em 0.7em 0.4em;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .expert-name {
   font-weight: bold;
-  font-size: 1.09em;
-  margin-bottom: 0.18em;
+  font-size: 1.13em;
+  margin-bottom: 0.25em;
 }
 .expert-title {
-  color: #3377aa;
-  font-size: 0.97em;
-  margin-bottom: 0.14em;
+  color: #5981b3;
+  font-size: 1em;
+  margin-bottom: 0.22em;
 }
 .expert-teaser {
+  font-size: 1em;
   color: #444;
-  font-size: 0.98em;
 }
 
-/* Responsive for mobile */
-@media (max-width: 700px) {
-  .expert-preview-list { flex-direction: column; }
-  .expert-preview { width: 100%; }
+@media (max-width: 800px) {
+  .expert-preview-list {
+    flex-direction: column;
+    gap: 1.3em;
+  }
+  .expert-preview {
+    width: 100%;
+    min-height: 90px;
+  }
+  .expert-thumb {
+    width: 72px;
+    height: 90px;
+  }
 }
-
 
