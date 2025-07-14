@@ -282,8 +282,8 @@ footer {
   box-shadow: 0 4px 20px rgba(0,0,0,0.10);
 }
 .expert-thumb {
-  width: 88px;
-  height: 110px;
+  width: 300px;
+  height: 200px;
   object-fit: cover;
   border-right: 1px solid #e6e6e6;
   border-radius: 10px 0 0 10px;
