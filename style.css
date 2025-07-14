@@ -81,8 +81,7 @@ footer {
   }
 }
 
-/* --- ARTICLE PREVIEW / THUMBNAIL BLOCKS (now same as related) --- */
-
+/* --- ARTICLE PREVIEW / THUMBNAIL BLOCKS --- */
 .article-preview-list {
   display: flex;
   flex-wrap: wrap;
@@ -101,12 +100,9 @@ footer {
   max-width: 340px;
   box-sizing: border-box;
 }
-
 .article-preview:hover {
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
-
-/* --- Compact square icon, same as related-thumb --- */
 .article-thumb {
   width: 44px;
   height: 44px;
@@ -116,7 +112,6 @@ footer {
   flex-shrink: 0;
   margin-right: 10px;
 }
-
 .article-info {
   padding: 0.35em 0.5em;
   display: flex;
@@ -197,35 +192,6 @@ footer {
   color: #444;
 }
 
-@media (max-width: 700px) {
-  .article-preview-list {
-    flex-direction: column;
-    gap: 1.5em;
-  }
-  .article-preview {
-    max-width: 100%;
-    flex-basis: 100%;
-  }
-  .related-list {
-    flex-direction: column;
-  }
-  .related-article {
-    width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .article-preview {
-    flex-direction: column;
-    min-height: unset;
-    max-width: 100%;
-    flex-basis: 100%;
-  }
-  .article-thumb {
-    width: 100%;
-    height: 120px;
-    border-right: none;
-
 /* --- REGION GRID CARDS --- */
 .region-grid {
   display: flex;
@@ -234,7 +200,6 @@ footer {
   justify-content: center;
   margin-top: 2.2em;
 }
-
 .region-card {
   display: flex;
   flex-direction: column;
@@ -254,14 +219,12 @@ footer {
   border: 1px solid #e6eef8;
   margin-bottom: 0.2em;
 }
-
 .region-card .region-icon {
   font-size: 2.5em;
   margin-bottom: 0.3em;
   text-shadow: 0 1px 2px rgba(20,70,200,0.09);
   user-select: none;
 }
-
 .region-title {
   font-weight: bold;
   text-align: center;
@@ -269,21 +232,18 @@ footer {
   margin-bottom: 0.1em;
   letter-spacing: 0.01em;
 }
-
 .region-soon {
   color: #aaa;
   font-size: 0.94em;
   margin-top: 0.27em;
   font-style: italic;
 }
-
 .region-card-cee     { background: linear-gradient(140deg,#e6f1ff 60%, #e2f3e6 100%);}
 .region-card-west    { background: linear-gradient(140deg,#f9e9ff 62%, #fafafc 100%);}
 .region-card-africa  { background: linear-gradient(140deg,#fff7e5 67%, #fafafc 100%);}
 .region-card-america { background: linear-gradient(140deg,#e8f8ff 60%, #f3f9f3 100%);}
 .region-card-asia    { background: linear-gradient(140deg,#ffe6ef 62%, #f9fafc 100%);}
 .region-card:active        { transform: scale(0.97); }
-
 .region-card:focus,
 .region-card:hover {
   box-shadow: 0 6px 24px rgba(0,70,190,0.14), 0 1.5px 6px rgba(0,0,0,0.07);
@@ -291,21 +251,10 @@ footer {
   color: #104da6;
   outline: none;
 }
-
 .region-card:not(a) {
   cursor: default;
   opacity: 0.63;
   pointer-events: none;
-}
-
-/* Responsive grid for small screens */
-@media (max-width: 800px) {
-  .region-grid { gap: 1em; }
-  .region-card { min-width: 135px; min-height: 100px; font-size: 1em; padding: 15px 7px 11px 7px;}
-}
-@media (max-width: 600px) {
-  .region-grid { flex-direction: column; align-items: stretch; gap: 0.8em; margin-top: 1.3em;}
-  .region-card { width: 100%; min-width: 0; font-size: 1em; padding: 11px 4px 10px 4px;}
 }
 
 /* --- EXPERT CARD THUMBNAILS (LARGER, PORTRAIT) --- */
@@ -362,18 +311,45 @@ footer {
   font-size: 1em;
   color: #444;
 }
+
+/* ---- Responsive: Tablets ---- */
 @media (max-width: 800px) {
-  .expert-preview-list {
-    flex-direction: column;
-    gap: 1.3em;
-  }
-  .expert-preview {
-    width: 100%;
-    min-height: 90px;
-  }
-  .expert-thumb {
-    width: 72px;
-    height: 90px;
-  }
+  .region-grid { gap: 1em; }
+  .region-card { min-width: 135px; min-height: 100px; font-size: 1em; padding: 15px 7px 11px 7px;}
+  .expert-preview-list { flex-direction: column; gap: 1.3em; }
+  .expert-preview { width: 100%; min-height: 90px; }
+  .expert-thumb { width: 72px; height: 90px; }
 }
 
+/* ---- Responsive: Mobiles ---- */
+@media (max-width: 700px) {
+  .article-preview-list {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+  .article-preview {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+  .related-list {
+    flex-direction: column;
+  }
+  .related-article {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .region-grid { flex-direction: column; align-items: stretch; gap: 0.8em; margin-top: 1.3em;}
+  .region-card { width: 100%; min-width: 0; font-size: 1em; padding: 11px 4px 10px 4px;}
+  .article-preview {
+    flex-direction: column;
+    min-height: unset;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+  .article-thumb {
+    width: 100%;
+    height: 120px;
+    border-right: none;
+  }
+}
