@@ -6,6 +6,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+  <style>
+    .expert-preview-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5em;
+      justify-content: flex-start;
+      margin-top: 2em;
+    }
+    .expert-preview {
+      display: flex;
+      flex-direction: row;
+      background: #fafafa;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      max-width: 360px;
+      min-height: 120px;
+      transition: box-shadow 0.2s;
+    }
+    .expert-preview:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.09);
+    }
+    .expert-thumb {
+      width: 88px;
+      height: 110px;
+      object-fit: cover;
+      border-right: 1px solid #ddd;
+      flex-shrink: 0;
+    }
+    .expert-info {
+      padding: 0.8em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .expert-name {
+      font-weight: bold;
+      margin-bottom: 0.2em;
+      font-size: 1.05em;
+    }
+    .expert-title {
+      font-size: 0.95em;
+      color: #5981b3;
+      margin-bottom: 0.3em;
+    }
+    .expert-teaser {
+      font-size: 0.9em;
+      color: #555;
+    }
+    @media (max-width: 600px) {
+      .expert-preview {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 <header>
