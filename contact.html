@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Контакт</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 <header>
@@ -13,31 +15,43 @@
   <p class="motto">„Всеки един има дълг да върши възможното.“ – Васил Априлов</p>
 </header>
 <nav>
-<a href="index.html">Начало</a> |
-<a href="about.html">За нас</a> |
-<a href="regions.html">Региони</a> |
-<a href="submit.html">Публикуване</a> |
-<a href="contact.html">Контакт</a> |
-<a href="index-en.html">EN</a>
+  <a href="index.html">Начало</a> |
+  <a href="about.html">За нас</a> |
+  <a href="regions.html">Региони</a> |
+  <a href="submit.html">Публикуване</a> |
+  <a href="contact.html">Контакт</a> |
+  <a href="contact-en.html">EN</a>
 </nav>
 <main>
-  <p>Свържете се с нас на: <strong><a href="mailto:biip@mailfence.com">biip@mailfence.com</a></strong></p>
+  <a href="mailto:biip@mailfence.com" class="email-button">biip@mailfence.com</a>
 
-  <p>Последвайте ни в <a href="https://www.linkedin.com/company/bulgarian-institute-for-international-politics/" target="_blank">LinkedIn</a> и <a href="https://invite.viber.com/?g2=AQB%2FRrEc0tcyGFT7zH52Iu7lYBuFJmgPbcQOeQqX0WqCt0U%2BpELfFGEmxTMe313E" target="_blank">Viber</a>.</p>
+  <div class="contact-grid">
+    <a href="https://www.linkedin.com/company/bulgarian-institute-for-international-politics/" class="contact-card" target="_blank">
+      <img src="icons/linkedin.svg" alt="LinkedIn">
+      <span>Последвайте ни в LinkedIn</span>
+    </a>
+    <a href="https://invite.viber.com/?g2=AQB%2FRrEc0tcyGFT7zH52Iu7lYBuFJmgPbcQOeQqX0WqCt0U%2BpELfFGEmxTMe313E" class="contact-card" target="_blank">
+      <img src="icons/viber.svg" alt="Viber">
+      <span>Присъединете се към нас във Viber</span>
+    </a>
+    <a href="https://t.me/kd7912" class="contact-card" target="_blank">
+      <img src="icons/telegram.svg" alt="Telegram">
+      <span>Свържете се с д-р Керанов в Telegram</span>
+    </a>
+  </div>
 
-  <p>Можете да се свържете с д-р Керанов и чрез <a href="https://t.me/kd7912" target="_blank">Telegram</a>.</p>
-<section style="margin-top:2em;">
-  <p>За медийни запитвания, интервюта или участие в публични дискусии и събития, моля свържете се с нас на: <a href="mailto:biip@mailfence.com">biip@mailfence.com</a></p>
-  <p>Екипът на БИМП е на разположение за коментари, анализи и експертно участие по теми, свързани с международната политика, външната политика на България и регионалните процеси.</p>
-</section>
+  <section style="margin-top:2em;">
+    <a href="mailto:biip@mailfence.com" class="email-button">Медийни запитвания и участия</a>
+    <p>Екипът на БИМП е на разположение за коментари, анализи и експертно участие по теми, свързани с международната политика, външната политика на България и регионалните процеси.</p>
+  </section>
 </main>
 <footer>
-<p>
-Български институт за международна политика |
-Bulgaarse Instituut vir Internasionale Politiek |
-Болгарський інститут міжнародної політики |
-Bulharský inštitút pre medzinárodnú politiku
-</p>
+  <p>
+    Български институт за международна политика |
+    Bulgaarse Instituut vir Internasionale Politiek |
+    Болгарський інститут міжнародної політики |
+    Bulharský inštitút pre medzinárodnú politiku
+  </p>
 </footer>
 </body>
 </html>
