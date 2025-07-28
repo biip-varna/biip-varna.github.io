@@ -356,31 +356,52 @@ footer {
 
 .contact-grid {
   display: flex;
-  gap: 2em;
-  justify-content: center;
   flex-wrap: wrap;
+  gap: 1.5em;
+  justify-content: center;
   margin-top: 2em;
 }
+
 .contact-card {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 1em 1.5em;
-  background: #fafafa;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   text-decoration: none;
-  color: inherit;
-  transition: box-shadow 0.2s;
+  color: #222;
+  background-color: #f3f3f3;
+  border-radius: 12px;
+  padding: 1em;
+  width: 180px;
+  transition: background-color 0.3s ease;
 }
+
 .contact-card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  background-color: #e0e0e0;
 }
+
 .contact-card img {
-  width: 32px;
-  height: 32px;
-  margin-right: 0.8em;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.5em;
 }
-.contact-card span {
-  font-size: 1.05em;
+
+.email-button {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  background-color: #004080;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  margin: 1em auto;
+  display: block;
+  text-align: center;
+  max-width: 400px;
+  transition: background-color 0.3s ease;
 }
+
+.email-button:hover {
+  background-color: #002d5a;
+}
+
 
