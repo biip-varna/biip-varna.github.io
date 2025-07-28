@@ -353,3 +353,34 @@ footer {
     border-right: none;
   }
 }
+
+.contact-grid {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+.contact-card {
+  display: flex;
+  align-items: center;
+  padding: 1em 1.5em;
+  background: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s;
+}
+.contact-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+.contact-card img {
+  width: 32px;
+  height: 32px;
+  margin-right: 0.8em;
+}
+.contact-card span {
+  font-size: 1.05em;
+}
+
