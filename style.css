@@ -431,4 +431,10 @@ footer {
   background: #4a6a94;
 }
 
+/* center the mail buttons */
+.email-button {
+  display: block !important;
+  margin: 1em auto 2em auto !important;
+  text-align: center;
+}
 
