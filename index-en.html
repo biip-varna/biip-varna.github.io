@@ -6,6 +6,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+ <style>
+    .expert-preview-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5em;
+      justify-content: flex-start;
+      margin-top: 2em;
+    }
+    .expert-preview {
+      display: flex;
+      flex-direction: row;
+      background: #fafafa;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      max-width: 360px;
+      min-height: 120px;
+      transition: box-shadow 0.2s;
+    }
+    .expert-preview:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.09);
+    }
+    .expert-thumb {
+      width: 88px;
+      height: 110px;
+      object-fit: cover;
+      border-right: 1px solid #ddd;
+      flex-shrink: 0;
+    }
+    .expert-info {
+      padding: 0.8em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .expert-name {
+      font-weight: bold;
+      margin-bottom: 0.2em;
+      font-size: 1.05em;
+    }
+    .expert-title {
+      font-size: 0.95em;
+      color: #5981b3;
+      margin-bottom: 0.3em;
+    }
+    .expert-teaser {
+      font-size: 0.9em;
+      color: #555;
+    }
+    @media (max-width: 600px) {
+      .expert-preview {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 <header>
@@ -28,6 +85,81 @@
   <p>Through commentary, analysis, and multilingual publishing, we provide a platform for early-career voices, underrepresented thinkers, and established experts to engage in meaningful political dialogue.</p>
   <p>BIIP operates voluntarily, without commercial interests or external funding. We believe that thoughtful ideas deserve space!</p>
  <p>UIC 208390337</p>
+
+<b><p>Our Experts</p></b>
+  <div class="expert-preview-list">
+    <a href="experts/keranov-en.html" class="expert-preview">
+      <img src="experts/images/Keranov.jpg" alt="Dr. Dimitar Keranov" class="expert-thumb">
+      <div class="expert-info">
+        <div class="expert-name">Dr. Dimitar Keranov, MRSSAf</div>
+        <div class="expert-title">Member of the Managing Board; Expert on Africa & CEE</div>
+        <div class="expert-teaser">
+          Specializes in democratization issues in Africa, Central & Eastern Europe.
+        </div>
+      </div>
+    </a>
+<a class="expert-preview">
+  <img src="experts/images/KKeranov.png" alt="Konstantin Keranov" class="expert-thumb">
+  <div class="expert-info">
+    <div class="expert-name">Konstantin Keranov</div>
+    <div class="expert-title">Member of the Managing Board; Expert on Digital Economy & Emerging Technologies</div>
+    <div class="expert-teaser">
+      Specializes in the impact of emerging technologies—such as AI—on the digital economy, with a focus on innovation & business strategy.
+    </div>
+  </div>
+</a>
+    <a href="experts/naama-en.html" class="expert-preview">
+      <img src="experts/images/Naama.jpg" alt="Prof. Karim Fahir Naama" class="expert-thumb">
+      <div class="expert-info">
+        <div class="expert-name">Prof. Karim Fahir Naama, D.Econ.Sci., D.Pol.Sci.</div>
+        <div class="expert-title">Expert on International Relations & Middle East</div>
+        <div class="expert-teaser">
+          Specializes in international relations with focus on Arab countries & the Middle East.
+        </div>
+      </div>
+    </a>
+<a href="experts/auzunov-english.html" class="expert-preview">
+  <img src="experts/images/Uzunov.jpg" alt="Dr. Alexander Uzunov" class="expert-thumb">
+  <div class="expert-info">
+    <div class="expert-name">Dr. Alexander Uzunov</div>
+    <div class="expert-title">Expert on National Security & Geopolitics</div>
+    <div class="expert-teaser">
+      Specializes in global & regional affairs with a focus on geopolitics & national security.
+    </div>
+  </div>
+</a>
+<a href="experts/dvaculik-english.html" class="expert-preview">
+  <img src="experts/images/Vaculik.png" alt="JUDr. PhDr. David Vaculík" class="expert-thumb">
+  <div class="expert-info">
+    <div class="expert-name">JUDr. PhDr. David Vaculík</div>
+    <div class="expert-title">Expert on Czech Politics</div>
+    <div class="expert-teaser">
+      Specializes in the political landscape & governance of modern-day Czech Republic.
+    </div>
+  </div>
+</a>
+<a class="expert-preview">
+  <img src="experts/images/Schutte.png" alt="Sonet Schutte" class="expert-thumb">
+  <div class="expert-info">
+    <div class="expert-name">Sonet Schutte</div>
+    <div class="expert-title">Expert on Public Engagement & Communications</div>
+    <div class="expert-teaser">
+      Specializes in strategic messaging, event management, & stakeholder outreach across public policy & international affairs.
+    </div>
+  </div>
+</a>
+<a href="experts/arovinalti-english.html" class="expert-preview">
+  <img src="experts/images/Rovinalti.jpg" alt="Luca Rovinalti" class="expert-thumb">
+  <div class="expert-info">
+    <div class="expert-name">Luca Rovinalti, MBA</div>
+    <div class="expert-title">Political Consultant; Expert on EU Affairs</div>
+    <div class="expert-teaser">
+      Specializes in European institutional processes & strategic political communication.
+    </div>
+  </div>
+</a>
+
+  </div>
 
   <!-- Popular Articles Section -->
   <section style="margin-top:2em;">
