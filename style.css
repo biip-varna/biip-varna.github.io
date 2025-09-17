@@ -463,7 +463,7 @@ footer {
   font-size: 0.95em;
   color: #555;
 }
-@media (max-width: 600px) {
+@media (max-width: 400px) {
   .btn-primary { width: 100%; }
 }
 
