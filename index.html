@@ -377,7 +377,7 @@ window.DATA = {
     "1969 г.": ["Нигерия"],
     "1970 г.": ["Ливан"],
     "1972 г.": ["Либия"],
-    "1973": ["Сомалия"],
+    "1973 г.": ["Сомалия"],
     "1974 г.": ["Бангладеш", "Мавритания"],
     "1975 г.": ["Ангола"],
     "1976 г.": ["Мозамбик"],
@@ -465,7 +465,9 @@ window.DATA = {
       return fallback;
     }
     // Sort by year for nicer cycling
-    facts.sort((a,b)=>Number(a.year)-Number(b.year));
+    const toNum = y => parseInt(String(y).replace(/\D/g, ''), 10);
+facts.sort((a,b)=> toNum(a.year) - toNum(b.year));
+
     return facts;
   }
 
