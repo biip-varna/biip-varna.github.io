@@ -289,6 +289,160 @@ Unified Identification Code: 208390337.</p>
       <a href="regions-en.html" style="font-size:0.95em;">See all articles by region &rarr;</a>
     </p>
   </section>
+
+<!-- BEGIN: Fact of the Day (rotates daily, no cookies) -->
+<section id="daily-fact" style="margin-top:2em;">
+  <h3 style="margin-bottom:.4em;">📅 Political Fact of the Day</h3>
+  <div id="daily-fact-card" style="
+    border:1px solid #e7e7e7; border-radius:10px; padding:1em 1.2em;
+    background:#fafafa;">
+    <div id="daily-fact-text" style="font-size:1.02em; line-height:1.55; color:#222;"></div>
+    <div id="daily-fact-meta" style="margin-top:.5em; font-size:.92em; color:#666;"></div>
+  </div>
+  <div style="margin-top:.6em; font-size:.9em; color:#777;">
+    Source: Lyubomir Ognyanov, <em>“International Relations and Foreign Policy of Bulgaria (1944–1989)”</em>,  
+    Paradigma, Sofia, 2021.
+  </div>
+</section>
+
+<script>
+// Local dataset (English version)
+window.DATA = {
+  relations: {
+    "1945": ["USSR", "Poland", "Czechoslovakia", "Albania", "Yugoslavia", "Italy"],
+    "1946": ["Romania", "Hungary", "Austria", "Belgium"],
+    "1947": ["France", "Israel"],
+    "1948": ["Switzerland", "Turkey", "Iran"],
+    "1951": ["Pakistan"],
+    "1954": ["India"],
+    "1955": ["Burma (Myanmar)"],
+    "1956": ["Egypt"],
+    "1957": ["Indonesia"],
+    "1958": ["Sudan"],
+    "1959": ["Ethiopia", "Morocco"],
+    "1960": ["Guinea"],
+    "1961": ["Ghana"],
+    "1962": ["Algeria"],
+    "1963": ["Cuba"],
+    "1964": ["Cambodia", "Congo (Leopoldville)", "Syria"],
+    "1965": ["Iraq"],
+    "1966": ["Tanzania"],
+    "1967": ["Uganda"],
+    "1968": ["Kenya", "Zambia"],
+    "1969": ["Nigeria"],
+    "1970": ["Lebanon"],
+    "1972": ["Libya"],
+    "1973": ["Somalia"],
+    "1974": ["Bangladesh", "Mauritania"],
+    "1975": ["Angola"],
+    "1976": ["Mozambique"],
+    "1977": ["Cape Verde"],
+    "1978": ["Seychelles"],
+    "1979": ["Benin"],
+    "1980": ["Nicaragua"],
+    "1981": ["Zimbabwe"],
+    "1982": ["Suriname"],
+    "1983": ["Grenada"],
+    "1984": ["Laos"],
+    "1985": ["Mali"],
+    "1986": ["Malta"],
+    "1987": ["Nicaragua (restored)"],
+    "1988": ["Brunei"],
+    "1989": ["Bahrain"]
+  },
+  visits: {
+    "1947": ["Josip Broz Tito, Yugoslavia"],
+    "1948": ["Enver Hoxha, Albania"],
+    "1955": ["Nikita Khrushchev, USSR"],
+    "1956": ["Gamal Abdel Nasser, Egypt"],
+    "1962": ["Ahmed Ben Bella, Algeria"],
+    "1963": ["Fidel Castro, Cuba"],
+    "1965": ["Ahmed Hassan al-Bakr, Iraq"],
+    "1968": ["Jomo Kenyatta, Kenya"],
+    "1970": ["Muammar Gaddafi, Libya"],
+    "1976": ["Samora Machel, Mozambique"],
+    "1978": ["Seretse Khama, Botswana"],
+    "1979": ["Kenneth Kaunda, Zambia"],
+    "1981": ["Robert Mugabe, Zimbabwe"],
+    "1984": ["Julius Nyerere, Tanzania"],
+    "1986": ["Javier Pérez de Cuéllar, UN"]
+  }
+};
+</script>
+
+<script>
+// Helper: day of year (UTC)
+function dayOfYearUTC(d = new Date()){
+  const start = Date.UTC(d.getUTCFullYear(), 0, 1);
+  const now = Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate());
+  return Math.floor((now - start) / 86400000) + 1; // 1..366
+}
+
+// Build the facts list from global DATA
+function buildFacts(){
+  const facts = [];
+
+  if (typeof DATA !== "undefined") {
+    // Diplomatic relations
+    if (DATA.relations){
+      Object.keys(DATA.relations).forEach(year=>{
+        (DATA.relations[year] || []).forEach(country=>{
+          facts.push({
+            text: `${year} — Diplomatic relations established with: ${country}.`,
+            year: year,
+            type: "relations"
+          });
+        });
+      });
+    }
+    // Official visits
+    if (DATA.visits){
+      Object.keys(DATA.visits).forEach(year=>{
+        (DATA.visits[year] || []).forEach(item=>{
+          facts.push({
+            text: `${year} — Official visit: ${item}.`,
+            year: year,
+            type: "visit"
+          });
+        });
+      });
+    }
+  }
+
+  // Fallback data
+  if (facts.length === 0){
+    const fallback = [
+      { text: "1945 — Diplomatic relations established with the USSR, Poland, Czechoslovakia, Albania, Yugoslavia, and Italy.", year: "1945", type: "relations" },
+      { text: "1956 — Official visit to Bulgaria: Gamal Abdel Nasser, Egypt.", year: "1956", type: "visit" },
+      { text: "1963 — Diplomatic relations established with Cuba.", year: "1963", type: "relations" }
+    ];
+    return fallback;
+  }
+
+  const toNum = y => parseInt(String(y).replace(/\D/g, ''), 10);
+  facts.sort((a,b)=> toNum(a.year) - toNum(b.year));
+  return facts;
+}
+
+// Render
+(function renderDailyFact(){
+  const list = buildFacts();
+  const idx = (dayOfYearUTC() - 1) % list.length;
+  const fact = list[idx];
+
+  const txt = document.getElementById("daily-fact-text");
+  const meta = document.getElementById("daily-fact-meta");
+  if (!txt || !meta) return;
+
+  txt.textContent = fact.text;
+  meta.textContent = (fact.type === "relations")
+    ? "Category: Establishment of diplomatic relations with other states"
+    : "Category: Official visits to Bulgaria";
+})();
+</script>
+<!-- END: Fact of the Day -->
+
+
 </main>
 <section style="text-align: center; margin: 3em 0;">
   <h3>Get in Touch</h3>
