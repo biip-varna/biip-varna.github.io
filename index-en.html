@@ -191,6 +191,116 @@ Unified Identification Code: 208390337.</p>
 </div>
 
   </div>
+<!-- BEGIN: BIIP Expert Quote (EN, compact + full-quote toggle) -->
+<section id="biip-expert-voice" style="
+  margin: 1.5em 0;
+  background:#fafafa;
+  border:1px solid #eee;
+  border-left:4px solid #0057B7;
+  padding: 1rem 1rem .9rem;
+  border-radius: 10px;
+">
+  <h3 style="margin:0 0 .6rem 0; font-size:1em; color:#111;">🗣️ BIIP Expert Voices</h3>
+
+  <div style="display:flex; align-items:flex-start; gap:.75rem; flex-wrap:wrap;">
+    <img src="experts/images/Keranov.jpg" alt="Dr. Dimitar Keranov"
+         style="width:64px; height:80px; object-fit:cover; border-radius:8px; border:1px solid #ddd; flex:0 0 64px;">
+
+    <div style="flex:1; min-width:240px;">
+      <!-- Short excerpt -->
+      <blockquote style="
+        margin:0;
+        padding:.55rem .7rem;
+        border-left:3px solid #cfd8ff;
+        background:#fff;
+        border-radius:6px;
+        font-size:.95em;
+        line-height:1.5;
+        color:#222;
+        font-style:italic;
+      ">
+        “Cooperation with Russia and China brings short-term gains but creates long-term risks for democracy…”
+      </blockquote>
+
+      <!-- Full quote (hidden by default) -->
+      <div id="biip-full-quote-en" style="
+        display:none;
+        margin-top:.5rem;
+        padding:.55rem .7rem;
+        border-left:3px solid #cfd8ff;
+        background:#fff;
+        border-radius:6px;
+        font-size:.95em;
+        line-height:1.5;
+        color:#222;
+        font-style:italic;
+      ">
+        “Cooperation with Russia and China offers short-term economic and political benefits to governments in the region,
+        yet it also creates long-term risks for democracy. These powers often encourage centralized authority and weaken
+        the role of civil society and the opposition. For example, China’s model of authoritarian capitalism has become
+        an inspiration for some leaders who see in it an alternative to Western democracies.”
+      </div>
+
+      <!-- Toggle button -->
+      <button id="biip-toggle-quote-en" type="button" aria-expanded="false" aria-controls="biip-full-quote-en" style="
+        margin-top:.5rem;
+        background:#0057B7;
+        color:#fff;
+        border:none;
+        border-radius:6px;
+        padding:.45rem .7rem;
+        font-size:.88em;
+        cursor:pointer;
+      ">
+        Show full quote
+      </button>
+
+      <!-- One-line context -->
+      <div style="margin:.6rem 0 0 0; font-size:.88em; color:#555;">
+        <span style="text-transform:uppercase; letter-spacing:.02em; font-weight:600; color:#555;">Topic:</span>
+        The role of Russia and China in South Africa, Zimbabwe, Namibia, and Mozambique
+      </div>
+
+      <!-- Meta (tight) -->
+      <div style="font-size:.88em; color:#555; display:flex; flex-wrap:wrap; gap:.35em .6em; align-items:center; margin-top:.35rem;">
+        <strong>Dr. Dimitar Keranov, MRSSAf</strong>
+        <span style="opacity:.5;">•</span>
+        <span>Expert on Africa & CEE</span>
+        <span style="opacity:.5;">•</span>
+        <a href="experts/keranov-en.html" style="color:#0057B7; text-decoration:none;">Profile</a>
+      </div>
+
+      <!-- Collapsible source to keep card short -->
+      <details style="margin-top:.5rem; font-size:.86em; color:#555;">
+        <summary style="cursor:pointer; color:#0057B7; list-style:none;">
+          📖 Source (2025)
+        </summary>
+        <div style="margin-top:.4rem; background:#fff; border:1px solid #eee; border-radius:6px; padding:.55rem .65rem; line-height:1.4;">
+          <em>ИСТОРИЯ И ПОЛИТИКА НА ЮЖНА АФРИКА, ЗИМБАБВЕ, НАМИБИЯ, АНГОЛА И МОЗАМБИК: ПЪТЯТ КЪМ НЕЗАВИСИМОСТ И ДЕМОКРАЦИЯ</em><br>
+          <em>GESKIEDENIS EN POLITIEK VAN SUID-AFRIKA, ZIMBABWE, NAMIBIË, ANGOLA EN MOSAMBIEK: DIE PAD NA ONAFHANKLIKHEID EN DEMOKRASIE</em><br>
+          <span style="font-weight:600;">Publisher:</span> ENA, Varna<br>
+          <span style="font-weight:600;">ISBN:</span> 978-619-7255-24-9
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  const btn = document.getElementById('biip-toggle-quote-en');
+  const full = document.getElementById('biip-full-quote-en');
+  if (!btn || !full) return;
+
+  btn.addEventListener('click', () => {
+    const isOpen = full.style.display === 'block';
+    full.style.display = isOpen ? 'none' : 'block';
+    btn.setAttribute('aria-expanded', String(!isOpen));
+    btn.textContent = isOpen ? 'Show full quote' : 'Hide full quote';
+  });
+})();
+</script>
+<!-- END: BIIP Expert Quote (EN, compact + full-quote toggle) -->
 
   <!-- Popular Articles Section -->
   <section style="margin-top:2em;">
