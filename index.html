@@ -264,82 +264,113 @@
 
 
 </section>
-<!-- BEGIN: BIIP Expert Quote Box (compact, tidy) -->
+<!-- BEGIN: BIIP Expert Quote (compact + full-quote toggle) -->
 <section id="biip-expert-voice" style="
-  margin: 2em 0;
+  margin: 1.5em 0;
   background:#fafafa;
   border:1px solid #eee;
   border-left:4px solid #0057B7;
-  padding: 1.2em 1.2em 1.1ем;
-  border-radius: 8px;
+  padding: 1rem 1rem .9rem;
+  border-radius: 10px;
 ">
-  <h3 style="margin:0 0 .8em 0; font-size:1.05em; color:#111;">🗣️ Гласовете на БИМП</h3>
+  <h3 style="margin:0 0 .6rem 0; font-size:1em; color:#111;">🗣️ Гласовете на БИМП</h3>
 
-  <div style="display:flex; align-items:flex-start; gap:.9em; flex-wrap:wrap;">
+  <div style="display:flex; align-items:flex-start; gap:.75rem; flex-wrap:wrap;">
     <img src="experts/images/Keranov.jpg" alt="д-р Димитър Керанов"
-         style="width:72px; height:90px; object-fit:cover; border-radius:8px; border:1px solid #ddd; flex:0 0 72px;">
+         style="width:64px; height:80px; object-fit:cover; border-radius:8px; border:1px solid #ddd; flex:0 0 64px;">
 
-    <div style="flex:1; min-width:260px;">
-      <!-- Quote -->
+    <div style="flex:1; min-width:240px;">
+      <!-- Short excerpt -->
       <blockquote style="
-        margin:0 0 .65em 0;
-        padding:.6em .8em;
+        margin:0;
+        padding:.55rem .7rem;
         border-left:3px solid #cfd8ff;
         background:#fff;
         border-radius:6px;
-        font-size:.98em;
-        line-height:1.55;
+        font-size:.95em;
+        line-height:1.5;
+        color:#222;
+        font-style:italic;
+      ">
+        „Сътрудничеството с Русия и Китай предлага краткосрочни ползи, но създава дългосрочни рискове за демокрацията…“
+      </blockquote>
+
+      <!-- Full quote (hidden by default) -->
+      <div id="biip-full-quote" style="
+        display:none;
+        margin-top:.5rem;
+        padding:.55rem .7rem;
+        border-left:3px solid #cfd8ff;
+        background:#fff;
+        border-radius:6px;
+        font-size:.95em;
+        line-height:1.5;
         color:#222;
         font-style:italic;
       ">
         „Сътрудничеството с Русия и Китай предлага краткосрочни икономически и политически ползи за правителствата в региона, но същевременно създава дългосрочни рискове за демокрацията. Тези сили често насърчават централизирана власт и отслабват ролята на гражданското общество и опозицията. Например, китайският модел на авторитарен капитализъм става вдъхновение за някои лидери, които виждат в него алтернатива на западните демокрации.“
-      </blockquote>
+      </div>
 
-      <!-- Context line (topic) -->
-      <div style="margin:.2em 0 .7em 0; font-size:.9em; color:#444;">
-        <span style="text-transform:uppercase; letter-spacing:.02em; font-weight:600; color:#555;">Коментар по тема:</span>
+      <!-- Toggle button -->
+      <button id="biip-toggle-quote" type="button" aria-expanded="false" aria-controls="biip-full-quote" style="
+        margin-top:.5rem;
+        background:#0057B7;
+        color:#fff;
+        border:none;
+        border-radius:6px;
+        padding:.45rem .7rem;
+        font-size:.88em;
+        cursor:pointer;
+      ">
+        Покажи пълния цитат
+      </button>
+
+      <!-- One-line context -->
+      <div style="margin:.6rem 0 0 0; font-size:.88em; color:#555;">
+        <span style="text-transform:uppercase; letter-spacing:.02em; font-weight:600; color:#555;">Тема:</span>
         Ролята на Русия и Китай в Южна Африка, Зимбабве, Намибия и Мозамбик
       </div>
 
-      <!-- Meta -->
-      <div style="font-size:.92em; color:#555; display:flex; flex-wrap:wrap; gap:.35em .6em; align-items:center;">
+      <!-- Meta (tight) -->
+      <div style="font-size:.88em; color:#555; display:flex; flex-wrap:wrap; gap:.35em .6em; align-items:center; margin-top:.35rem;">
         <strong>д-р Димитър Керанов, MRSSAf</strong>
-        <span style="opacity:.6;">•</span>
+        <span style="opacity:.5;">•</span>
         <span>Експерт Африка и ЦИЕ</span>
-        <span style="opacity:.6;">•</span>
+        <span style="opacity:.5;">•</span>
         <a href="experts/keranov.html" style="color:#0057B7; text-decoration:none;">Профил</a>
       </div>
 
-      <!-- Source (book) -->
-      <div style="
-        margin-top:.55em;
-        font-size:.9em;
-        color:#555;
-        background:#fff;
-        border:1px solid #eee;
-        border-radius:6px;
-        padding:.6em .75em;
-        line-height:1.45;
-      ">
-        <div style="display:flex; align-items:center; gap:.5em; flex-wrap:wrap;">
-          <span aria-hidden="true">📖</span>
-          <span style="font-weight:600;">Източник:</span>
-          <span>(2025)</span>
-        </div>
-        <div style="margin-top:.45em;">
+      <!-- Collapsible source to keep card short -->
+      <details style="margin-top:.5rem; font-size:.86em; color:#555;">
+        <summary style="cursor:pointer; color:#0057B7; list-style:none;">
+          📖 Източник (2025)
+        </summary>
+        <div style="margin-top:.4rem; background:#fff; border:1px solid #eee; border-radius:6px; padding:.55rem .65rem; line-height:1.4;">
           <em>ИСТОРИЯ И ПОЛИТИКА НА ЮЖНА АФРИКА, ЗИМБАБВЕ, НАМИБИЯ, АНГОЛА И МОЗАМБИК: ПЪТЯТ КЪМ НЕЗАВИСИМОСТ И ДЕМОКРАЦИЯ</em><br>
-          <em>GESKIEDENIS EN POLITIEK VAN SUID-AFRIKA, ZIMBABWE, NAMIBIË, ANGOLA EN MOSAMBIEK: DIE PAD NA ONAFHANKLIKHEID EN DEMOKRASIE</em>
-        </div>
-        <div style="margin-top:.4em; color:#555;">
+          <em>GESKIEDENIS EN POLITIEK VAN SUID-AFRIKA, ZIMBABWE, NAMIBIË, ANGOLA EN MOSAMBIEK: DIE PAD NA ONAFHANKLIKHEID EN DEMOKRASIE</em><br>
           <span style="font-weight:600;">Издателство:</span> ЕНА, Варна<br>
           <span style="font-weight:600;">ISBN:</span> 978-619-7255-24-9
         </div>
-      </div>
+      </details>
     </div>
   </div>
 </section>
-<!-- END: BIIP Expert Quote Box -->
 
+<script>
+(function(){
+  const btn = document.getElementById('biip-toggle-quote');
+  const full = document.getElementById('biip-full-quote');
+  if (!btn || !full) return;
+
+  btn.addEventListener('click', () => {
+    const isOpen = full.style.display === 'block';
+    full.style.display = isOpen ? 'none' : 'block';
+    btn.setAttribute('aria-expanded', String(!isOpen));
+    btn.textContent = isOpen ? 'Покажи пълния цитат' : 'Скрий пълния цитат';
+  });
+})();
+</script>
+<!-- END: BIIP Expert Quote (compact + full-quote toggle) -->
 
 
 
