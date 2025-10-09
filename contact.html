@@ -1,57 +1,136 @@
 <!DOCTYPE html>
-<html lang="bg">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Контакт</title>
+  <title>Contact</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="contact.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 <header>
-  <img src="logo.png" class="logo" alt="Лого на БИМП">
-  <h1>Контакт</h1>
-  <p class="motto">„Всеки един има дълг да върши възможното.“ – Васил Априлов</p>
+  <img src="logo.png" class="logo" alt="BIIP Logo">
+  <h1>Contact</h1>
+  <p class="motto">“Each person has a duty to do what is possible.” – Vasil Aprilov</p>
 </header>
-<nav>
-  <a href="index.html">Начало</a> |
-  <a href="about.html">За нас</a> |
-  <a href="regions.html">Региони</a> |
-  <a href="submit.html">Публикуване</a> |
-  <a href="contact.html">Контакт</a> |
-  <a href="contact-en.html">EN</a>
-</nav>
-<main>
-  <a href="mailto:biip@mailfence.com" class="email-button">✉️ Свържете се с нас: biip@mailfence.com</a>
 
-  <div class="contact-grid">
-    <a href="https://www.linkedin.com/company/bulgarian-institute-for-international-politics/" class="contact-card" target="_blank">
+<nav>
+  <a href="index-en.html">Home</a> |
+  <a href="about-en.html">About</a> |
+  <a href="regions-en.html">Regions</a> |
+  <a href="submit-en.html">Submissions</a> |
+  <a href="contact-en.html">Contact</a> |
+  <a href="contact.html">BG</a>
+</nav>
+
+<main>
+  <!-- Primary contact button -->
+  <a href="mailto:biip@mailfence.com" class="email-button" aria-label="Email BIIP">
+    ✉️ Contact us: biip@mailfence.com
+  </a>
+
+  <!-- Quick actions -->
+  <section style="margin-top:1.5em;">
+    <h3>Quick actions</h3>
+    <div style="display:flex; gap:.6em; flex-wrap:wrap;">
+      <a href="mailto:biip@mailfence.com?subject=General%20inquiry%20to%20BIIP"
+         class="email-button" style="background:#2f6fdd;" aria-label="General inquiry email">
+         ✉️ General inquiry
+      </a>
+
+      <a href="mailto:biip@mailfence.com?subject=Media%20request:%20Interview%20or%20Commentary%20with%20BIIP"
+         class="email-button" style="background:#0a7;" aria-label="Media request email">
+         🎙 Media request
+      </a>
+
+      <a href="submit-en.html" class="email-button" style="background:#6e59b3;" aria-label="Go to submissions">
+        📝 Submit an article
+      </a>
+
+      <a href="mailto:biip@mailfence.com?subject=Partnership%20or%20collaboration%20proposal"
+         class="email-button" style="background:#cc7a00;" aria-label="Partnerships email">
+         🤝 Partnerships
+      </a>
+    </div>
+    <p style="color:#666; font-size:.95em; margin-top:.6em;">
+      We usually reply within 5–10 working days.
+    </p>
+  </section>
+
+  <!-- Social/contact grid -->
+  <div class="contact-grid" style="margin-top:1.5em;">
+    <a href="https://www.linkedin.com/company/bulgarian-institute-for-international-politics/"
+       class="contact-card" target="_blank" rel="noopener" aria-label="BIIP on LinkedIn">
       <img src="icons/linkedin.svg" alt="LinkedIn">
-      <span>Последвайте ни в LinkedIn</span>
+      <span>Follow us on LinkedIn</span>
     </a>
-    <a href="https://invite.viber.com/?g2=AQB%2FRrEc0tcyGFT7zH52Iu7lYBuFJmgPbcQOeQqX0WqCt0U%2BpELfFGEmxTMe313E" class="contact-card" target="_blank">
+    <a href="https://invite.viber.com/?g2=AQB%2FRrEc0tcyGFT7zH52Iu7lYBuFJmgPbcQOeQqX0WqCt0U%2BpELfFGEmxTMe313E"
+       class="contact-card" target="_blank" rel="noopener" aria-label="Join us on Viber">
       <img src="icons/viber.svg" alt="Viber">
-      <span>Присъединете се към нас във Viber</span>
+      <span>Join us on Viber</span>
     </a>
-    <a href="https://t.me/kd7912" class="contact-card" target="_blank">
+    <a href="https://t.me/kd7912" class="contact-card" target="_blank" rel="noopener" aria-label="Contact Dr. Keranov on Telegram">
       <img src="icons/telegram.svg" alt="Telegram">
-      <span>Свържете се с д-р Керанов в Telegram</span>
+      <span>Message Dr. Keranov on Telegram</span>
     </a>
   </div>
 
-  <section style="margin-top:2em;">
-    <a href="mailto:biip@mailfence.com" class="email-button">📣 Медийни запитвания и участия: biip@mailfence.com</a>
-    <p>Екипът на БИМП е на разположение за коментари, анализи и експертно участие по теми, свързани с международната политика, външната политика на България и регионалните процеси.</p>
+  <!-- Media & Press -->
+  <section style="margin-top:1.5em; background:#f8f8f8; padding:1em 1.2em; border-left:4px solid #0057B7;">
+    <h3 style="margin-top:0;">Media & Press</h3>
+    <p style="margin:.5em 0 0 0;">
+      BIIP experts are available for interviews and commentary on Bulgaria, the EU, and international affairs.
+      For media requests, please include your outlet, topic, and deadline.
+      Contact: <a href="mailto:biip@mailfence.com">biip@mailfence.com</a>
+    </p>
+  </section>
+
+  <!-- Meet Our Experts CTA -->
+  <section style="margin-top:2em; text-align:center;">
+    <h3>Meet Our Experts</h3>
+    <p style="max-width:600px; margin:0 auto; color:#444;">
+      The Bulgarian Institute for International Politics (BIIP) brings together experts and contributors from Bulgaria and abroad, 
+      specializing in fields such as geopolitics, democracy, digital governance, and security.  
+    </p>
+    <a href="about-en.html" target="_blank" style="
+      display:inline-block;
+      margin-top:1em;
+      background-color:#0057B7;
+      color:white;
+      padding:0.7em 1.4em;
+      border-radius:6px;
+      text-decoration:none;
+      font-weight:bold;
+      font-size:0.95em;
+    ">
+      👥 View all experts
+    </a>
   </section>
 </main>
+
 <footer>
   <p>
-    Български институт за международна политика |
+    Bulgarian Institute for International Politics |
     Bulgaarse Instituut vir Internasionale Politiek |
     Болгарський інститут міжнародної політики |
-    Bulharský inštitút pre medzinárodnú politiku
+    Bulharský inštitút pre medzinárodnu politiku
   </p>
 </footer>
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "Bulgarian Institute for International Politics (BIIP)",
+  "url": "https://biip-varna.github.io/",
+  "logo": "https://biip-varna.github.io/logo.png",
+  "email": "mailto:biip@mailfence.com",
+  "sameAs": [
+    "https://www.linkedin.com/company/bulgarian-institute-for-international-politics/",
+    "https://t.me/kd7912"
+  ]
+}
+</script>
 </body>
 </html>
