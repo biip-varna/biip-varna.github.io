@@ -264,66 +264,84 @@
 
 
 </section>
-<!-- BEGIN: BIIP Expert Quote Box -->
+<!-- BEGIN: BIIP Expert Quote Box (compact, tidy) -->
 <section id="biip-expert-voice" style="
-  margin: 2.5em 0;
-  background: #f9f9f9;
-  border-left: 4px solid #0057B7;
-  padding: 1.5em;
+  margin: 2em 0;
+  background:#fafafa;
+  border:1px solid #eee;
+  border-left:4px solid #0057B7;
+  padding: 1.2em 1.2em 1.1ем;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 ">
-  <h3 style="margin-top:0;">🗣️ Гласовете на БИМП</h3>
-  <div id="biip-quote-card" style="
-    display: flex;
-    align-items: center;
-    gap: 1em;
-    flex-wrap: wrap;
-  ">
-    <img id="q-photo" src="" alt="Експерт" style="
-      width: 80px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 8px;
-      border: 1px solid #ddd;
-    ">
-    <div style="flex:1; min-width:220px;">
-      <blockquote id="q-text" style="
-        font-size:1.05em;
-        font-style:italic;
-        margin:0 0 .5em 0;
+  <h3 style="margin:0 0 .8em 0; font-size:1.05em; color:#111;">🗣️ Гласовете на БИМП</h3>
+
+  <div style="display:flex; align-items:flex-start; gap:.9em; flex-wrap:wrap;">
+    <img src="experts/images/Keranov.jpg" alt="д-р Димитър Керанов"
+         style="width:72px; height:90px; object-fit:cover; border-radius:8px; border:1px solid #ddd; flex:0 0 72px;">
+
+    <div style="flex:1; min-width:260px;">
+      <!-- Quote -->
+      <blockquote style="
+        margin:0 0 .65em 0;
+        padding:.6em .8em;
+        border-left:3px solid #cfd8ff;
+        background:#fff;
+        border-radius:6px;
+        font-size:.98em;
+        line-height:1.55;
         color:#222;
-      "></blockquote>
-      <div id="q-meta" style="font-size:0.93em; color:#555;">
-        <strong id="q-name"></strong> — <span id="q-role"></span> · 
-        <a id="q-link" href="#" style="color:#0057B7; text-decoration:none;">Профил</a>
+        font-style:italic;
+      ">
+        „Сътрудничеството с Русия и Китай предлага краткосрочни икономически и политически ползи за правителствата в региона, но същевременно създава дългосрочни рискове за демокрацията. Тези сили често насърчават централизирана власт и отслабват ролята на гражданското общество и опозицията. Например, китайският модел на авторитарен капитализъм става вдъхновение за някои лидери, които виждат в него алтернатива на западните демокрации.“
+      </blockquote>
+
+      <!-- Context line (topic) -->
+      <div style="margin:.2em 0 .7em 0; font-size:.9em; color:#444;">
+        <span style="text-transform:uppercase; letter-spacing:.02em; font-weight:600; color:#555;">Коментар по тема:</span>
+        Ролята на Русия и Китай в Южна Африка, Зимбабве, Намибия и Мозамбик
+      </div>
+
+      <!-- Meta -->
+      <div style="font-size:.92em; color:#555; display:flex; flex-wrap:wrap; gap:.35em .6em; align-items:center;">
+        <strong>д-р Димитър Керанов, MRSSAf</strong>
+        <span style="opacity:.6;">•</span>
+        <span>Експерт Африка и ЦИЕ</span>
+        <span style="opacity:.6;">•</span>
+        <a href="experts/keranov.html" style="color:#0057B7; text-decoration:none;">Профил</a>
+      </div>
+
+      <!-- Source (book) -->
+      <div style="
+        margin-top:.55em;
+        font-size:.9em;
+        color:#555;
+        background:#fff;
+        border:1px solid #eee;
+        border-radius:6px;
+        padding:.6em .75em;
+        line-height:1.45;
+      ">
+        <div style="display:flex; align-items:center; gap:.5em; flex-wrap:wrap;">
+          <span aria-hidden="true">📖</span>
+          <span style="font-weight:600;">Източник:</span>
+          <span>(2025)</span>
+        </div>
+        <div style="margin-top:.45em;">
+          <em>ИСТОРИЯ И ПОЛИТИКА НА ЮЖНА АФРИКА, ЗИМБАБВЕ, НАМИБИЯ, АНГОЛА И МОЗАМБИК: ПЪТЯТ КЪМ НЕЗАВИСИМОСТ И ДЕМОКРАЦИЯ</em><br>
+          <em>GESKIEDENIS EN POLITIEK VAN SUID-AFRIKA, ZIMBABWE, NAMIBIË, ANGOLA EN MOSAMBIEK: DIE PAD NA ONAFHANKLIKHEID EN DEMOKRASIE</em>
+        </div>
+        <div style="margin-top:.4em; color:#555;">
+          <span style="font-weight:600;">Издателство:</span> ЕНА, Варна<br>
+          <span style="font-weight:600;">ISBN:</span> 978-619-7255-24-9
+        </div>
       </div>
     </div>
   </div>
 </section>
-
-<script>
-const BIIP_QUOTES = [
-  {
-    name: "д-р Димитър Керанов, MRSSAf",
-    role: "Експерт Африка и ЦИЕ",
-    photo: "experts/images/Keranov.jpg",
-    quote: "„Всяка смислена политика започва с честен разговор за фактите.“",
-    link: "experts/keranov.html"
-  }
-];
-
-// Renders the expert quote dynamically
-(function renderExpertQuote(){
-  const item = BIIP_QUOTES[0]; // only one for now
-  document.getElementById("q-photo").src = item.photo;
-  document.getElementById("q-text").textContent = item.quote;
-  document.getElementById("q-name").textContent = item.name;
-  document.getElementById("q-role").textContent = item.role;
-  document.getElementById("q-link").href = item.link;
-})();
-</script>
 <!-- END: BIIP Expert Quote Box -->
+
+
+
 
   <!-- Популярни статии (на английски език) -->
   <section style="margin-top:2em;">
