@@ -467,3 +467,62 @@ footer {
   .btn-primary { width: 100%; }
 }
 
+/* PDF Download Kachel */
+.download-kachel{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  margin:2em 0 1.5em 0;
+  padding:1.1em 1.1em;
+  background:#f8f8f8;
+  border-left:4px solid #bbb;
+  border-radius:12px;
+}
+
+.download-kachel__text{
+  min-width:0;
+}
+
+.download-kachel__meta{
+  margin-top:.25em;
+  color:#666;
+  font-size:.92em;
+}
+
+.download-kachel__btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  white-space:nowrap;
+  padding:.7em 1.05em;
+  border-radius:10px;
+  font-weight:700;
+  text-decoration:none;
+  border:1px solid rgba(0,0,0,.15);
+  background:#fff;
+  color:#111;
+  transition:transform .08s ease, box-shadow .12s ease, background .12s ease;
+}
+
+.download-kachel__btn:hover{
+  background:#f2f2f2;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+  transform:translateY(-1px);
+}
+
+.download-kachel__btn:active{
+  transform:translateY(0);
+  box-shadow:none;
+}
+
+@media (max-width:640px){
+  .download-kachel{
+    flex-direction:column;
+    align-items:stretch;
+  }
+  .download-kachel__btn{
+    width:100%;
+  }
+}
+
