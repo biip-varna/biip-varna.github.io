@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Experts | BIIP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+  <style>
+    .page-intro { color:#555; max-width: 920px; }
+
+    .toolbox{
+      margin: 1.6em 0 1.2em;
+      background:#fafafa;
+      border:1px solid #e3e3e3;
+      border-radius:12px;
+      padding:1em 1em .9em;
+    }
+    .toolbox-row{
+      display:flex;
+      gap:.9em;
+      flex-wrap:wrap;
+      align-items:flex-end;
+      justify-content:space-between;
+    }
+    .field{
+      display:flex;
+      flex-direction:column;
+      gap:.35em;
+      min-width:220px;
+      flex:1 1 260px;
+    }
+    .field label{
+      font-size:.85em;
+      color:#666;
+      font-weight:600;
+      letter-spacing:.02em;
+    }
+    .field input, .field select{
+      font: inherit;
+      padding:.6em .7em;
+      border-radius:10px;
+      border:1px solid #ddd;
+      background:#fff;
+      outline:none;
+    }
+    .field input:focus, .field select:focus{
+      border-color:#b8c7ff;
+      box-shadow:0 0 0 3px rgba(0,87,183,.10);
+    }
+
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.5em;
+      margin-top:.9em;
+    }
+    .chip{
+      border:1px solid #ddd;
+      background:#fff;
+      padding:.35em .6em;
+      border-radius:999px;
+      font-size:.88em;
+      cursor:pointer;
+      user-select:none;
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .chip:hover{ transform: translateY(-1px); box-shadow:0 2px 8px rgba(0,0,0,.06); }
+    .chip[aria-pressed="true"]{
+      border-color:#cfd8ff;
+      box-shadow:0 0 0 3px rgba(0,87,183,.10);
+      font-weight:700;
+    }
+
+    .meta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.8em;
+      align-items:center;
+      justify-content:space-between;
+      margin-top:.9em;
+      color:#666;
+      font-size:.92em;
+    }
+    .meta-row .btn{
+      border:1px solid #ddd;
+      background:#fff;
+      padding:.45em .7em;
+      border-radius:10px;
+      cursor:pointer;
+      font: inherit;
+    }
+    .meta-row .btn:hover{ box-shadow:0 2px 8px rgba(0,0,0,.06); }
+
+    /* Cards */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap:1.1em;
+      margin-top:1.2em;
+    }
+    @media (max-width: 980px){ .grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 620px){ .grid{ grid-template-columns: 1fr; } }
+
+    .card{
+      display:flex;
+      gap:.95em;
+      align-items:flex-start;
+      padding:1em 1em .95em;
+      background:#fafafa;
+      border:1px solid #e6e6e6;
+      border-radius:14px;
+      text-decoration:none;
+      color:inherit;
+      transition: transform .14s ease, box-shadow .14s ease;
+    }
+    a.card:hover{
+      transform: translateY(-2px);
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+    }
+    .card.is-static{ cursor:default; }
+
+    .avatar{
+      width:72px;
+      height:92px;
+      object-fit:cover;
+      border-radius:12px;
+      border:1px solid #ddd;
+      flex: 0 0 72px;
+      background:#fff;
+    }
+    .card h3{
+      margin:0 0 .18em 0;
+      font-size:1.02em;
+      line-height:1.25;
+    }
+    .role{
+      margin:0 0 .35em 0;
+      font-size:.92em;
+      color:#5f7aa6;
+      font-weight:700;
+    }
+    .teaser{
+      margin:0;
+      color:#555;
+      font-size:.92em;
+      line-height:1.45;
+    }
+    .tagline{
+      display:flex;
+      gap:.4em;
+      flex-wrap:wrap;
+      margin-top:.55em;
+    }
+    .tag{
+      font-size:.82em;
+      padding:.18em .5em;
+      border-radius:999px;
+      border:1px solid #e0e0e0;
+      background:#fff;
+      color:#666;
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <img src="logo.png" class="logo" alt="BIIP Logo">
+  <h1>Experts</h1>
+  <p class="motto">“Each person has a duty to do what is possible.” – Vasil Aprilov</p>
+</header>
+
+<nav>
+  <a href="index-en.html">Home</a> |
+  <a href="about-en.html">About</a> |
+  <a href="regions-en.html">Regions</a> |
+  <a href="submit-en.html">Submissions</a> |
+  <a href="contact-en.html">Contact</a> |
+  <a href="experts.html">BG</a>
+</nav>
+
+<main>
+  <p class="page-intro">
+    BIIP’s expert network brings together authors and analysts across fields—from international relations and security to technology and communications.
+    Use the search and filters to find experts by topic. Where an English profile page exists, you can open it by clicking the card.
+  </p>
+
+  <section class="toolbox" aria-label="Search and filters">
+    <div class="toolbox-row">
+      <div class="field">
+        <label for="q">Search (name, field, keywords)</label>
+        <input id="q" type="search" placeholder='e.g., "geopolitics", "EU", "technology"...'>
+      </div>
+
+      <div class="field" style="max-width:260px;">
+        <label for="sort">Sort</label>
+        <select id="sort">
+          <option value="manual">Recommended</option>
+          <option value="az">Name (A–Z)</option>
+          <option value="role">Field/role</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="chips" aria-label="Topic filters">
+      <button class="chip" type="button" data-tag="IR" aria-pressed="false">International Relations</button>
+      <button class="chip" type="button" data-tag="SEC" aria-pressed="false">Security & Geopolitics</button>
+      <button class="chip" type="button" data-tag="EU" aria-pressed="false">EU Affairs</button>
+      <button class="chip" type="button" data-tag="TECH" aria-pressed="false">Technology</button>
+      <button class="chip" type="button" data-tag="COMMS" aria-pressed="false">Communications</button>
+      <button class="chip" type="button" data-tag="AFR" aria-pressed="false">Africa</button>
+      <button class="chip" type="button" data-tag="CZ" aria-pressed="false">Czech Politics</button>
+      <button class="chip" type="button" data-tag="ME" aria-pressed="false">Middle East</button>
+      <button class="chip" type="button" data-tag="AIR" aria-pressed="false">Aviation Policy</button>
+    </div>
+
+    <div class="meta-row">
+      <div>
+        <strong id="count">0</strong> experts
+        <span style="opacity:.6;">•</span>
+        <span id="activeFilters">no filters</span>
+      </div>
+      <div>
+        <button class="btn" id="clear" type="button">Clear filters</button>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Experts list">
+    <div id="grid" class="grid"></div>
+  </section>
+</main>
+
+<footer>
+  <p>
+    Български институт за международна политика |
+    Bulgarisches Institut für Internationale Politik |
+    Bugarski institut za međunarodnu politiku |
+    Bulgaars Instituut voor Internationale Politiek |
+    Instituti bullgar për politikë ndërkombëtare |
+    Istituto Bulgaro di Politica Internazionale |
+    Bulharský inštitút pre medzinárodnú politiku
+  </p>
+</footer>
+
+<script>
+/* Experts (EN) — matches the text you already use in about-en.html */
+const EXPERTS = [
+  {
+    name: "Dr. Dimitar Keranov, MRSSAf",
+    role: "Member of the Managing Board; Expert on Africa & CEE",
+    teaser: "Specializes in democratization issues in Africa, Central & Eastern Europe.",
+    img: "experts/images/Keranov.jpg",
+    href: "experts/keranov-en.html",
+    tags: ["AFR","IR","SEC"]
+  },
+  {
+    name: "Konstantin Keranov",
+    role: "Member of the Managing Board; Expert on Digital Economy & Emerging Technologies",
+    teaser: "Specializes in the impact of emerging technologies—such as AI—on the digital economy, with a focus on innovation & business strategy.",
+    img: "experts/images/KKeranov.png",
+    href: null,
+    tags: ["TECH"]
+  },
+  {
+    name: "Prof. Karim Fahir Naama, D.Econ.Sci., D.Pol.Sci.",
+    role: "Expert on International Relations & Middle East",
+    teaser: "Specializes in international relations with focus on Arab countries & the Middle East.",
+    img: "experts/images/Naama.jpg",
+    href: "experts/naama-en.html",
+    tags: ["IR","ME"]
+  },
+  {
+    name: "Dr. Alexander Uzunov",
+    role: "Expert on National Security & Geopolitics",
+    teaser: "Specializes in global & regional affairs with a focus on geopolitics & national security.",
+    img: "experts/images/Uzunov.jpg",
+    href: "experts/auzunov-english.html",
+    tags: ["SEC","IR"]
+  },
+  {
+    name: "Assoc. Prof. Dr. Kaloyan Smilkov",
+    role: "Expert on International Relations and Comparative Political Science",
+    teaser: "Focuses on the interaction between law, culture, and politics.",
+    img: "experts/images/Smilkov.png",
+    href: "experts/ksmilkov-english.html",
+    tags: ["IR"]
+  },
+  {
+    name: "Sergey Petrov — Aradzhioni",
+    role: "Expert on International Security and Geopolitics",
+    teaser: "Political analyst and author with an educational background in political science, security, and economics.",
+    img: "experts/images/petrov.jpg",
+    href: "experts/aradzhioni.html",
+    tags: ["SEC","IR"]
+  },
+  {
+    name: "JUDr. PhDr. David Vaculík",
+    role: "Expert on Czech Politics",
+    teaser: "Specializes in the political landscape & governance of modern-day Czech Republic.",
+    img: "experts/images/Vaculik.png",
+    href: "experts/dvaculik-english.html",
+    tags: ["CZ"]
+  },
+  {
+    name: "Sonet Schutte",
+    role: "Expert on Public Engagement & Communications",
+    teaser: "Specializes in strategic messaging, event management, & stakeholder outreach across public policy & international affairs.",
+    img: "experts/images/Schutte.png",
+    href: null,
+    tags: ["COMMS"]
+  },
+  {
+    name: "Luca Rovinalti, MBA",
+    role: "Political Consultant; Expert on EU Affairs",
+    teaser: "Specializes in European institutional processes & strategic political communication.",
+    img: "experts/images/Rovinalti.jpg",
+    href: "experts/arovinalti-english.html",
+    tags: ["EU","COMMS"]
+  },
+  {
+    name: "Pavel Stefanov",
+    role: "Expert on Aviation Policy and International Airspace Governance",
+    teaser: "Focuses on international airspace governance and its intersection with politics.",
+    img: "experts/images/stefanov.jpg",
+    href: null,
+    tags: ["AIR"]
+  }
+];
+
+const TAG_LABEL = {
+  IR: "International Relations",
+  SEC: "Security & Geopolitics",
+  EU: "EU Affairs",
+  TECH: "Technology",
+  COMMS: "Communications",
+  AFR: "Africa",
+  CZ: "Czech Politics",
+  ME: "Middle East",
+  AIR: "Aviation Policy"
+};
+
+const state = { q:"", tags:new Set(), sort:"manual" };
+const grid = document.getElementById("grid");
+const countEl = document.getElementById("count");
+const activeFiltersEl = document.getElementById("activeFilters");
+
+function norm(s){ return String(s||"").toLowerCase(); }
+function tagText(tags){ return (tags||[]).map(t => TAG_LABEL[t] || t).join(", "); }
+
+function activeFiltersText(){
+  const t = [...state.tags].map(x => TAG_LABEL[x] || x);
+  if (!state.q && t.length===0) return "no filters";
+  const parts = [];
+  if (state.q) parts.push(`search: "${state.q}"`);
+  if (t.length) parts.push(`topics: ${t.join(", ")}`);
+  return parts.join(" • ");
+}
+
+function matches(ex){
+  const q = norm(state.q).trim();
+  const hay = norm([ex.name, ex.role, ex.teaser, tagText(ex.tags)].join(" "));
+  if (q && !hay.includes(q)) return false;
+  for (const t of state.tags){
+    if (!ex.tags.includes(t)) return false;
+  }
+  return true;
+}
+
+function sortList(list){
+  const arr = [...list];
+  if (state.sort === "az") arr.sort((a,b)=> a.name.localeCompare(b.name, "en"));
+  else if (state.sort === "role") arr.sort((a,b)=> a.role.localeCompare(b.role, "en"));
+  return arr;
+}
+
+function render(){
+  const filtered = EXPERTS.filter(matches);
+  const list = sortList(filtered);
+
+  grid.innerHTML = list.map(ex => {
+    const tags = (ex.tags||[]).slice(0,3).map(t => `<span class="tag">${TAG_LABEL[t] || t}</span>`).join("");
+    const inner = `
+      <img class="avatar" src="${ex.img}" alt="${ex.name}">
+      <div>
+        <h3>${ex.name}</h3>
+        <div class="role">${ex.role}</div>
+        <p class="teaser">${ex.teaser}</p>
+        <div class="tagline">${tags}</div>
+      </div>
+    `;
+
+    if (ex.href){
+      return `<a class="card" href="${ex.href}" aria-label="Open expert page: ${ex.name}">${inner}</a>`;
+    }
+    return `<div class="card is-static" aria-label="${ex.name}">${inner}</div>`;
+  }).join("");
+
+  countEl.textContent = String(list.length);
+  activeFiltersEl.textContent = activeFiltersText();
+}
+
+/* Controls */
+document.getElementById("q").addEventListener("input", (e)=>{ state.q = e.target.value; render(); });
+document.getElementById("sort").addEventListener("change", (e)=>{ state.sort = e.target.value; render(); });
+
+document.querySelectorAll(".chip").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    const tag = btn.dataset.tag;
+    const isOn = btn.getAttribute("aria-pressed") === "true";
+    btn.setAttribute("aria-pressed", String(!isOn));
+    if (isOn) state.tags.delete(tag); else state.tags.add(tag);
+    render();
+  });
+});
+
+document.getElementById("clear").addEventListener("click", ()=>{
+  state.q = "";
+  state.tags.clear();
+  state.sort = "manual";
+  document.getElementById("q").value = "";
+  document.getElementById("sort").value = "manual";
+  document.querySelectorAll(".chip").forEach(btn=> btn.setAttribute("aria-pressed","false"));
+  render();
+});
+
+render();
+</script>
+</body>
+</html>
