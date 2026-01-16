@@ -114,18 +114,17 @@
       text-decoration:none;
       color:inherit;
       transition: transform .14s ease, box-shadow .14s ease;
-      position:relative;
-      overflow:hidden;
     }
-    .card:hover{ transform: translateY(-2px); box-shadow:0 10px 30px rgba(0,0,0,.08); }
 
-    .card.is-disabled{
-      cursor:default;
-      opacity:.88;
+    /* Only clickable cards get hover effects */
+    a.card:hover{
+      transform: translateY(-2px);
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
     }
-    .card.is-disabled:hover{
-      transform:none;
-      box-shadow:none;
+
+    /* Non-clickable cards: neutral, not “disabled-looking” */
+    .card.is-static{
+      cursor:default;
     }
 
     .avatar{
@@ -168,25 +167,6 @@
       background:#fff;
       color:#666;
     }
-
-    .badge{
-      position:absolute;
-      right:12px;
-      top:12px;
-      font-size:.82em;
-      padding:.22em .5em;
-      border-radius:999px;
-      border:1px solid #e0e0e0;
-      background:#fff;
-      color:#777;
-      white-space:nowrap;
-    }
-
-    .hint{
-      margin-top:.6em;
-      color:#777;
-      font-size:.9em;
-    }
   </style>
 </head>
 
@@ -209,7 +189,7 @@
 <main>
   <p class="page-intro">
     Мрежата от експерти на БИМП обединява автори и анализатори с различни профили – от международни отношения и сигурност до технологии и комуникации.
-    Използвайте търсачката и филтрите, за да откриете експерти по тема. При наличен профил, кликнете, за да отворите страницата на експерта.
+    Използвайте търсачката и филтрите, за да откриете експерти по тема. Когато има активна профилна страница, кликнете върху картата.
   </p>
 
   <section class="toolbox" aria-label="Филтри и търсене">
@@ -251,10 +231,6 @@
         <button class="btn" id="clear" type="button">Изчисти филтрите</button>
       </div>
     </div>
-
-    <div class="hint">
-      Само експертите с активни профилни страници са кликаеми.
-    </div>
   </section>
 
   <section aria-label="Списък с експерти">
@@ -268,7 +244,7 @@
     Bulgarisches Institut für Internationale Politik |
     Bulgaarse Instituut vir Internasionale Politiek |
     Bulgaars Instituut voor Internationale Politiek |
-    Болгарський інститут міжнародної політики |
+    Болгарський інститут международной политики |
     Istituto Bulgaro di Politica Internazionale |
     Instituti bullgar për politikë ndërkombëtare
   </p>
@@ -278,7 +254,6 @@
 /* DATA */
 const EXPERTS = [
   {
-    id: "keranov",
     name: "Д-р Димитър Керанов, MRSSAf",
     role: "Член на УС; Експерт Африка и ЦИЕ",
     teaser: "Специализира по проблемите на демокрацията в Африка, Централна и Източна Европа.",
@@ -287,7 +262,6 @@ const EXPERTS = [
     tags: ["AFR","IR","SEC"]
   },
   {
-    id: "kkeranov",
     name: "Константин Керанов",
     role: "Член на УС; Експерт Дигитална икономика и нови технологии",
     teaser: "Специализира във въздействието на новите технологии – като напр. изкуствен интелект – върху дигиталната икономика, с фокус иновации и бизнес стратегии.",
@@ -296,7 +270,6 @@ const EXPERTS = [
     tags: ["TECH"]
   },
   {
-    id: "naama",
     name: "Проф. д. ик. н., д. пол. н. Карим Фахир Наама",
     role: "Експерт Международни отношения и Близък изток",
     teaser: "Специализира в международните отношения с фокус върху арабските страни и Близкия изток.",
@@ -305,7 +278,6 @@ const EXPERTS = [
     tags: ["IR","ME"]
   },
   {
-    id: "uzunov",
     name: "Д-р Александър Узунов",
     role: "Експерт Национална сигурност и геополитика",
     teaser: "Специализира в глобалната и регионална политика с фокус върху геополитика и национална сигурност.",
@@ -314,7 +286,6 @@ const EXPERTS = [
     tags: ["SEC","IR"]
   },
   {
-    id: "smilkov",
     name: "Доц. д-р Калоян Смилков",
     role: "Експерт Международни отношения и сравнителни политически науки",
     teaser: "Специализира във взаимодействието между право, култура и политика в съвременните общества.",
@@ -323,7 +294,6 @@ const EXPERTS = [
     tags: ["IR"]
   },
   {
-    id: "petrov",
     name: "Сергей Петров — Араджиони",
     role: "Експерт Международна сигурност и геополитика",
     teaser: "Политически анализатор и автор с образование в областта на политическите науки, сигурността и икономиката.",
@@ -332,7 +302,6 @@ const EXPERTS = [
     tags: ["SEC","IR"]
   },
   {
-    id: "vaculik",
     name: "JUDr. PhDr. Давид Вацулик",
     role: "Експерт Чешка политика",
     teaser: "Специализира в съвременната политическа система и управлението на Чехия.",
@@ -341,7 +310,6 @@ const EXPERTS = [
     tags: ["CZ"]
   },
   {
-    id: "schutte",
     name: "Сонет Шуте",
     role: "Експерт Комуникации и работа с обществеността",
     teaser: "Специализира в стратегическа комуникация, организиране на събития и работа с различни целеви групи в сферата на политиката и международните отношения.",
@@ -350,7 +318,6 @@ const EXPERTS = [
     tags: ["COMMS"]
   },
   {
-    id: "rovinalti",
     name: "Лука Ровиналти, MBA",
     role: "Политически консултант; Експерт Европейски въпроси",
     teaser: "Специализира в европейските институционални процеси и стратегическата политическа комуникация.",
@@ -359,7 +326,6 @@ const EXPERTS = [
     tags: ["EU","COMMS"]
   },
   {
-    id: "stefanov",
     name: "Павел Стефанов",
     role: "Експерт Авиационна политика и международно управление на въздушното пространство",
     teaser: "Фокусира се върху координацията на международните въздушни коридори и взаимодействието им с политиката.",
@@ -412,7 +378,7 @@ function sortList(list){
   const arr = [...list];
   if (state.sort === "az") arr.sort((a,b)=> a.name.localeCompare(b.name, "bg"));
   else if (state.sort === "role") arr.sort((a,b)=> a.role.localeCompare(b.role, "bg"));
-  return arr; // manual keeps order
+  return arr;
 }
 
 function render(){
@@ -421,13 +387,7 @@ function render(){
 
   grid.innerHTML = list.map(ex => {
     const tags = (ex.tags||[]).slice(0,3).map(t => `<span class="tag">${TAG_LABEL[t] || t}</span>`).join("");
-    const clickable = !!ex.href;
-
-    const badge = clickable
-      ? `<span class="badge">Профил →</span>`
-      : `<span class="badge">Профилът предстои</span>`;
-
-    const content = `
+    const inner = `
       <img class="avatar" src="${ex.img}" alt="${ex.name}">
       <div>
         <h3>${ex.name}</h3>
@@ -435,13 +395,12 @@ function render(){
         <p class="teaser">${ex.teaser}</p>
         <div class="tagline">${tags}</div>
       </div>
-      ${badge}
     `;
 
-    if (clickable){
-      return `<a class="card" href="${ex.href}" aria-label="Отвори страницата на експерта: ${ex.name}">${content}</a>`;
+    if (ex.href){
+      return `<a class="card" href="${ex.href}" aria-label="Отвори страницата на експерта: ${ex.name}">${inner}</a>`;
     }
-    return `<div class="card is-disabled" aria-label="${ex.name} (профилът предстои)">${content}</div>`;
+    return `<div class="card is-static" aria-label="${ex.name}">${inner}</div>`;
   }).join("");
 
   countEl.textContent = String(list.length);
