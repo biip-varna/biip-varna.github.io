@@ -8,9 +8,9 @@
   <script src="script.js" defer></script>
 
   <style>
-    /* Page shell aligns with your existing site */
-    .page-intro { color:#555; max-width: 860px; }
-    .toolbox {
+    .page-intro { color:#555; max-width: 900px; }
+
+    .toolbox{
       margin: 1.6em 0 1.2em;
       background:#fafafa;
       border:1px solid #e3e3e3;
@@ -93,19 +93,16 @@
     }
     .meta-row .btn:hover{ box-shadow:0 2px 8px rgba(0,0,0,.06); }
 
-    /* Grid cards (new look) */
+    /* Cards */
     .grid{
       display:grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap:1.1em;
       margin-top:1.2em;
     }
-    @media (max-width: 980px){
-      .grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (max-width: 620px){
-      .grid{ grid-template-columns: 1fr; }
-    }
+    @media (max-width: 980px){ .grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 620px){ .grid{ grid-template-columns: 1fr; } }
+
     .card{
       display:flex;
       gap:.95em;
@@ -114,7 +111,6 @@
       background:#fafafa;
       border:1px solid #e6e6e6;
       border-radius:14px;
-      cursor:pointer;
       text-decoration:none;
       color:inherit;
       transition: transform .14s ease, box-shadow .14s ease;
@@ -122,6 +118,16 @@
       overflow:hidden;
     }
     .card:hover{ transform: translateY(-2px); box-shadow:0 10px 30px rgba(0,0,0,.08); }
+
+    .card.is-disabled{
+      cursor:default;
+      opacity:.88;
+    }
+    .card.is-disabled:hover{
+      transform:none;
+      box-shadow:none;
+    }
+
     .avatar{
       width:72px;
       height:92px;
@@ -162,83 +168,20 @@
       background:#fff;
       color:#666;
     }
-    .card .go{
+
+    .badge{
       position:absolute;
       right:12px;
       top:12px;
-      font-size:.92em;
-      color:#888;
-    }
-
-    /* Modal */
-    .modal-backdrop{
-      display:none;
-      position:fixed;
-      inset:0;
-      background: rgba(0,0,0,.45);
-      z-index:999;
-      padding: 4vh 4vw;
-      overflow:auto;
-    }
-    .modal{
-      max-width: 880px;
-      margin: 0 auto;
-      background:#fff;
-      border-radius:14px;
-      border:1px solid #e6e6e6;
-      box-shadow:0 20px 70px rgba(0,0,0,.25);
-      overflow:hidden;
-    }
-    .modal-head{
-      display:flex;
-      gap:1em;
-      padding:1.1em 1.1em 1em;
-      background:#fafafa;
-      border-bottom:1px solid #e6e6e6;
-      align-items:center;
-    }
-    .modal-head img{
-      width:86px; height:110px; object-fit:cover;
-      border-radius:12px; border:1px solid #ddd;
-      background:#fff;
-      flex:0 0 86px;
-    }
-    .modal-head h3{ margin:0; font-size:1.2em; }
-    .modal-head .sub{ margin:.2em 0 0; color:#5f7aa6; font-weight:700; }
-    .modal-body{
-      padding:1.1em 1.1em 1.2em;
-      color:#333;
-      line-height:1.55;
-    }
-    .modal-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:.6em;
-      margin-top:1em;
-    }
-    .pill-link{
-      display:inline-block;
-      text-decoration:none;
-      border:1px solid #ddd;
-      padding:.45em .7em;
+      font-size:.82em;
+      padding:.22em .5em;
       border-radius:999px;
-      color:#111;
+      border:1px solid #e0e0e0;
       background:#fff;
-      font-size:.92em;
+      color:#777;
+      white-space:nowrap;
     }
-    .pill-link:hover{ box-shadow:0 2px 10px rgba(0,0,0,.08); }
-    .close-btn{
-      margin-left:auto;
-      border:1px solid #ddd;
-      background:#fff;
-      padding:.45em .7em;
-      border-radius:10px;
-      cursor:pointer;
-      font: inherit;
-    }
-    .close-btn:hover{ box-shadow:0 2px 10px rgba(0,0,0,.08); }
 
-    /* Small helper text */
     .hint{
       margin-top:.6em;
       color:#777;
@@ -266,10 +209,9 @@
 <main>
   <p class="page-intro">
     Мрежата от експерти на БИМП обединява автори и анализатори с различни профили – от международни отношения и сигурност до технологии и комуникации.
-    Използвайте търсачката и филтрите, за да откриете подходящи експерти по тема.
+    Използвайте търсачката и филтрите, за да откриете експерти по тема. При наличен профил, кликнете, за да отворите страницата на експерта.
   </p>
 
-  <!-- TOOLBOX -->
   <section class="toolbox" aria-label="Филтри и търсене">
     <div class="toolbox-row">
       <div class="field">
@@ -280,7 +222,7 @@
       <div class="field" style="max-width:260px;">
         <label for="sort">Подреждане</label>
         <select id="sort">
-          <option value="manual">Препоръчано (по подразбиране)</option>
+          <option value="manual">Препоръчано</option>
           <option value="az">Име (A–Я)</option>
           <option value="role">Роля/област</option>
         </select>
@@ -309,10 +251,12 @@
         <button class="btn" id="clear" type="button">Изчисти филтрите</button>
       </div>
     </div>
-    <div class="hint">Кликнете върху карта, за да видите бърз профил и връзка към страницата на експерта.</div>
+
+    <div class="hint">
+      Само експертите с активни профилни страници са кликаеми.
+    </div>
   </section>
 
-  <!-- GRID -->
   <section aria-label="Списък с експерти">
     <div id="grid" class="grid"></div>
   </section>
@@ -330,36 +274,14 @@
   </p>
 </footer>
 
-<!-- MODAL -->
-<div id="backdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Профил на експерт">
-  <div class="modal">
-    <div class="modal-head">
-      <img id="mImg" src="" alt="">
-      <div>
-        <h3 id="mName"></h3>
-        <div class="sub" id="mRole"></div>
-        <div class="hint" id="mTags" style="margin-top:.35em;"></div>
-      </div>
-      <button class="close-btn" id="mClose" type="button">Затвори</button>
-    </div>
-    <div class="modal-body">
-      <p id="mBio" style="margin-top:0;"></p>
-      <div class="modal-actions" id="mLinks"></div>
-    </div>
-  </div>
-</div>
-
 <script>
-/* ----------------------------
-   DATA (edit here when needed)
------------------------------ */
+/* DATA */
 const EXPERTS = [
   {
     id: "keranov",
     name: "Д-р Димитър Керанов, MRSSAf",
     role: "Член на УС; Експерт Африка и ЦИЕ",
     teaser: "Специализира по проблемите на демокрацията в Африка, Централна и Източна Европа.",
-    bio: "Политически анализатор и политолог. Работи по теми като демокрация, корупция, авторитарно влияние и външна политика – със специален фокус върху Африка и Централна/Източна Европа.",
     img: "experts/images/Keranov.jpg",
     href: "experts/keranov.html",
     tags: ["AFR","IR","SEC"]
@@ -368,8 +290,7 @@ const EXPERTS = [
     id: "kkeranov",
     name: "Константин Керанов",
     role: "Член на УС; Експерт Дигитална икономика и нови технологии",
-    teaser: "Въздействие на ИИ и новите технологии върху дигиталната икономика, с фокус върху иновации и бизнес стратегии.",
-    bio: "Фокус върху дигиталната икономика, технологични трансформации и стратегически измерения на иновациите.",
+    teaser: "Специализира във въздействието на новите технологии – като напр. изкуствен интелект – върху дигиталната икономика, с фокус иновации и бизнес стратегии.",
     img: "experts/images/KKeranov.png",
     href: null,
     tags: ["TECH"]
@@ -378,8 +299,7 @@ const EXPERTS = [
     id: "naama",
     name: "Проф. д. ик. н., д. пол. н. Карим Фахир Наама",
     role: "Експерт Международни отношения и Близък изток",
-    teaser: "Международни отношения с фокус върху арабските страни и Близкия изток.",
-    bio: "Изследователски и експертен профил в областта на международните отношения и регионалната динамика в Близкия изток.",
+    teaser: "Специализира в международните отношения с фокус върху арабските страни и Близкия изток.",
     img: "experts/images/Naama.jpg",
     href: "experts/naama.html",
     tags: ["IR","ME"]
@@ -388,8 +308,7 @@ const EXPERTS = [
     id: "uzunov",
     name: "Д-р Александър Узунов",
     role: "Експерт Национална сигурност и геополитика",
-    teaser: "Глобална и регионална политика с фокус върху геополитика и национална сигурност.",
-    bio: "Анализ на стратегическа конкуренция, заплахи за сигурността и геополитически процеси.",
+    teaser: "Специализира в глобалната и регионална политика с фокус върху геополитика и национална сигурност.",
     img: "experts/images/Uzunov.jpg",
     href: "experts/uzunov.html",
     tags: ["SEC","IR"]
@@ -398,8 +317,7 @@ const EXPERTS = [
     id: "smilkov",
     name: "Доц. д-р Калоян Смилков",
     role: "Експерт Международни отношения и сравнителни политически науки",
-    teaser: "Взаимодействие между право, култура и политика в съвременните общества.",
-    bio: "Фокус върху сравнителна политика, политическа теория и институционална динамика.",
+    teaser: "Специализира във взаимодействието между право, култура и политика в съвременните общества.",
     img: "experts/images/Smilkov.png",
     href: "experts/smilkov.html",
     tags: ["IR"]
@@ -409,7 +327,6 @@ const EXPERTS = [
     name: "Сергей Петров — Араджиони",
     role: "Експерт Международна сигурност и геополитика",
     teaser: "Политически анализатор и автор с образование в областта на политическите науки, сигурността и икономиката.",
-    bio: "Международна сигурност, геополитика и политико-икономически анализ.",
     img: "experts/images/petrov.jpg",
     href: "experts/petrov.html",
     tags: ["SEC","IR"]
@@ -418,8 +335,7 @@ const EXPERTS = [
     id: "vaculik",
     name: "JUDr. PhDr. Давид Вацулик",
     role: "Експерт Чешка политика",
-    teaser: "Съвременната политическа система и управлението на Чехия.",
-    bio: "Фокус върху институции, партии, политики и управленски процеси в Чехия.",
+    teaser: "Специализира в съвременната политическа система и управлението на Чехия.",
     img: "experts/images/Vaculik.png",
     href: "experts/vaculik.html",
     tags: ["CZ"]
@@ -428,8 +344,7 @@ const EXPERTS = [
     id: "schutte",
     name: "Сонет Шуте",
     role: "Експерт Комуникации и работа с обществеността",
-    teaser: "Стратегическа комуникация, организиране на събития и работа с целеви групи.",
-    bio: "Профил в сферата на стратегическата комуникация и публичната дипломация.",
+    teaser: "Специализира в стратегическа комуникация, организиране на събития и работа с различни целеви групи в сферата на политиката и международните отношения.",
     img: "experts/images/Schutte.png",
     href: null,
     tags: ["COMMS"]
@@ -438,8 +353,7 @@ const EXPERTS = [
     id: "rovinalti",
     name: "Лука Ровиналти, MBA",
     role: "Политически консултант; Експерт Европейски въпроси",
-    teaser: "Европейски институционални процеси и стратегическа политическа комуникация.",
-    bio: "Фокус върху европейски политики, процеси на вземане на решения и консултантска практика.",
+    teaser: "Специализира в европейските институционални процеси и стратегическата политическа комуникация.",
     img: "experts/images/Rovinalti.jpg",
     href: "experts/rovinalti.html",
     tags: ["EU","COMMS"]
@@ -448,15 +362,13 @@ const EXPERTS = [
     id: "stefanov",
     name: "Павел Стефанов",
     role: "Експерт Авиационна политика и международно управление на въздушното пространство",
-    teaser: "Координация на международни въздушни коридори и взаимодействието им с политиката.",
-    bio: "Авиационна политика, регулации и международна координация на въздушното пространство.",
+    teaser: "Фокусира се върху координацията на международните въздушни коридори и взаимодействието им с политиката.",
     img: "experts/images/stefanov.jpg",
     href: null,
     tags: ["AIR"]
   }
 ];
 
-// Tag labels (BG)
 const TAG_LABEL = {
   IR: "Международни отношения",
   SEC: "Сигурност & геополитика",
@@ -469,22 +381,14 @@ const TAG_LABEL = {
   AIR: "Авиация"
 };
 
-/* ----------------------------
-   State
------------------------------ */
-const state = {
-  q: "",
-  tags: new Set(),
-  sort: "manual"
-};
+const state = { q:"", tags:new Set(), sort:"manual" };
+const grid = document.getElementById("grid");
+const countEl = document.getElementById("count");
+const activeFiltersEl = document.getElementById("activeFilters");
 
-/* ----------------------------
-   Helpers
------------------------------ */
-function norm(s){ return String(s || "").toLowerCase(); }
-function tagText(tags){
-  return (tags || []).map(t => TAG_LABEL[t] || t).join(", ");
-}
+function norm(s){ return String(s||"").toLowerCase(); }
+function tagText(tags){ return (tags||[]).map(t => TAG_LABEL[t] || t).join(", "); }
+
 function activeFiltersText(){
   const t = [...state.tags].map(x => TAG_LABEL[x] || x);
   if (!state.q && t.length===0) return "без филтри";
@@ -496,7 +400,7 @@ function activeFiltersText(){
 
 function matches(ex){
   const q = norm(state.q).trim();
-  const hay = norm([ex.name, ex.role, ex.teaser, ex.bio, tagText(ex.tags)].join(" "));
+  const hay = norm([ex.name, ex.role, ex.teaser, tagText(ex.tags)].join(" "));
   if (q && !hay.includes(q)) return false;
   for (const t of state.tags){
     if (!ex.tags.includes(t)) return false;
@@ -506,20 +410,10 @@ function matches(ex){
 
 function sortList(list){
   const arr = [...list];
-  if (state.sort === "az"){
-    arr.sort((a,b)=> a.name.localeCompare(b.name, "bg"));
-  } else if (state.sort === "role"){
-    arr.sort((a,b)=> a.role.localeCompare(b.role, "bg"));
-  } // manual keeps original order
-  return arr;
+  if (state.sort === "az") arr.sort((a,b)=> a.name.localeCompare(b.name, "bg"));
+  else if (state.sort === "role") arr.sort((a,b)=> a.role.localeCompare(b.role, "bg"));
+  return arr; // manual keeps order
 }
-
-/* ----------------------------
-   Render
------------------------------ */
-const grid = document.getElementById("grid");
-const countEl = document.getElementById("count");
-const activeFiltersEl = document.getElementById("activeFilters");
 
 function render(){
   const filtered = EXPERTS.filter(matches);
@@ -527,113 +421,43 @@ function render(){
 
   grid.innerHTML = list.map(ex => {
     const tags = (ex.tags||[]).slice(0,3).map(t => `<span class="tag">${TAG_LABEL[t] || t}</span>`).join("");
-    const go = ex.href ? "Профил →" : "Детайли →";
-    return `
-      <div class="card" role="button" tabindex="0" data-id="${ex.id}" aria-label="Отвори профил: ${ex.name}">
-        <img class="avatar" src="${ex.img}" alt="${ex.name}">
-        <div>
-          <div class="go">${go}</div>
-          <h3>${ex.name}</h3>
-          <div class="role">${ex.role}</div>
-          <p class="teaser">${ex.teaser}</p>
-          <div class="tagline">${tags}</div>
-        </div>
+    const clickable = !!ex.href;
+
+    const badge = clickable
+      ? `<span class="badge">Профил →</span>`
+      : `<span class="badge">Профилът предстои</span>`;
+
+    const content = `
+      <img class="avatar" src="${ex.img}" alt="${ex.name}">
+      <div>
+        <h3>${ex.name}</h3>
+        <div class="role">${ex.role}</div>
+        <p class="teaser">${ex.teaser}</p>
+        <div class="tagline">${tags}</div>
       </div>
+      ${badge}
     `;
+
+    if (clickable){
+      return `<a class="card" href="${ex.href}" aria-label="Отвори страницата на експерта: ${ex.name}">${content}</a>`;
+    }
+    return `<div class="card is-disabled" aria-label="${ex.name} (профилът предстои)">${content}</div>`;
   }).join("");
 
   countEl.textContent = String(list.length);
   activeFiltersEl.textContent = activeFiltersText();
-
-  bindCards();
 }
 
-function bindCards(){
-  const cards = grid.querySelectorAll(".card");
-  cards.forEach(c=>{
-    c.addEventListener("click", ()=> openModal(c.dataset.id));
-    c.addEventListener("keydown", (e)=>{
-      if (e.key === "Enter" || e.key === " "){
-        e.preventDefault();
-        openModal(c.dataset.id);
-      }
-    });
-  });
-}
-
-/* ----------------------------
-   Modal
------------------------------ */
-const backdrop = document.getElementById("backdrop");
-const mClose = document.getElementById("mClose");
-const mImg = document.getElementById("mImg");
-const mName = document.getElementById("mName");
-const mRole = document.getElementById("mRole");
-const mBio = document.getElementById("mBio");
-const mTags = document.getElementById("mTags");
-const mLinks = document.getElementById("mLinks");
-
-function openModal(id){
-  const ex = EXPERTS.find(x=>x.id===id);
-  if (!ex) return;
-
-  mImg.src = ex.img;
-  mImg.alt = ex.name;
-  mName.textContent = ex.name;
-  mRole.textContent = ex.role;
-  mBio.textContent = ex.bio || ex.teaser || "";
-  mTags.textContent = ex.tags && ex.tags.length ? ("Теми: " + tagText(ex.tags)) : "";
-
-  // Links
-  const links = [];
-  if (ex.href){
-    links.push(`<a class="pill-link" href="${ex.href}">Отвори страницата на експерта →</a>`);
-  }
-  // Optional: mailto placeholder if you later add emails
-  // if (ex.email){ links.push(`<a class="pill-link" href="mailto:${ex.email}">Email</a>`); }
-
-  // Always provide a way back to regions
-  links.push(`<a class="pill-link" href="regions.html">Виж публикации →</a>`);
-  mLinks.innerHTML = links.join("");
-
-  backdrop.style.display = "block";
-  document.body.style.overflow = "hidden";
-  mClose.focus();
-}
-
-function closeModal(){
-  backdrop.style.display = "none";
-  document.body.style.overflow = "";
-}
-
-mClose.addEventListener("click", closeModal);
-backdrop.addEventListener("click", (e)=>{
-  if (e.target === backdrop) closeModal();
-});
-document.addEventListener("keydown", (e)=>{
-  if (backdrop.style.display === "block" && e.key === "Escape") closeModal();
-});
-
-/* ----------------------------
-   Controls
------------------------------ */
-document.getElementById("q").addEventListener("input", (e)=>{
-  state.q = e.target.value;
-  render();
-});
-
-document.getElementById("sort").addEventListener("change", (e)=>{
-  state.sort = e.target.value;
-  render();
-});
+/* Controls */
+document.getElementById("q").addEventListener("input", (e)=>{ state.q = e.target.value; render(); });
+document.getElementById("sort").addEventListener("change", (e)=>{ state.sort = e.target.value; render(); });
 
 document.querySelectorAll(".chip").forEach(btn=>{
   btn.addEventListener("click", ()=>{
     const tag = btn.dataset.tag;
     const isOn = btn.getAttribute("aria-pressed") === "true";
     btn.setAttribute("aria-pressed", String(!isOn));
-    if (isOn) state.tags.delete(tag);
-    else state.tags.add(tag);
+    if (isOn) state.tags.delete(tag); else state.tags.add(tag);
     render();
   });
 });
@@ -648,7 +472,6 @@ document.getElementById("clear").addEventListener("click", ()=>{
   render();
 });
 
-/* Initial render */
 render();
 </script>
 </body>
