@@ -369,11 +369,56 @@
   }
 
   /* ── INIT ────────────────────────────────────────────────────── */
+
+  /* ── Share Buttons ───────────────────────────────────────────── */
+  function initShareButtons() {
+    var article = document.querySelector('article');
+    if (!article) return;
+
+    var lang  = getLang();
+    var url   = encodeURIComponent(window.location.href);
+    var titleEl = document.querySelector('title');
+    var title = encodeURIComponent(
+      titleEl ? titleEl.textContent.replace(/\s*\|\s*(БИМП|BIIP).*/i, '').trim() : ''
+    );
+
+    var label = lang === 'en' ? 'Share:' : 'Сподели:';
+
+    var html =
+      '<div class="share-bar">' +
+        '<span class="share-label">' + label + '</span>' +
+        '<a href="https://www.linkedin.com/sharing/share-offsite/?url=' + url + '" ' +
+           'target="_blank" rel="noopener noreferrer" class="share-btn share-linkedin" ' +
+           'aria-label="Share on LinkedIn">LinkedIn</a>' +
+        '<a href="https://twitter.com/intent/tweet?url=' + url + '&text=' + title + '" ' +
+           'target="_blank" rel="noopener noreferrer" class="share-btn share-twitter" ' +
+           'aria-label="Share on X / Twitter">𝕏</a>' +
+        '<a href="https://www.facebook.com/sharer/sharer.php?u=' + url + '" ' +
+           'target="_blank" rel="noopener noreferrer" class="share-btn share-facebook" ' +
+           'aria-label="Share on Facebook">Facebook</a>' +
+        '<a href="https://t.me/share/url?url=' + url + '&text=' + title + '" ' +
+           'target="_blank" rel="noopener noreferrer" class="share-btn share-telegram" ' +
+           'aria-label="Share on Telegram">Telegram</a>' +
+        '<a href="https://api.whatsapp.com/send?text=' + title + '%20' + url + '" ' +
+           'target="_blank" rel="noopener noreferrer" class="share-btn share-whatsapp" ' +
+           'aria-label="Share on WhatsApp">WhatsApp</a>' +
+      '</div>';
+
+    // Insert before the back-link or at end of article
+    var backLink = document.querySelector('.back-link');
+    if (backLink) {
+      backLink.insertAdjacentHTML('beforebegin', html);
+    } else {
+      article.insertAdjacentHTML('afterend', html);
+    }
+  }
+
   function runAll() {
     try { initReadingTime(); }    catch(e) { console.warn('readingTime:', e); }
     try { initLangSwitcher(); }   catch(e) { console.warn('langSwitcher:', e); }
     try { initCiteButton(); }     catch(e) { console.warn('citeButton:', e); }
     try { initRelatedArticles(); }catch(e) { console.warn('relatedArticles:', e); }
+    try { initShareButtons(); }   catch(e) { console.warn('shareButtons:', e); }
     try { initLatestFeed(); }     catch(e) { console.warn('latestFeed:', e); }
     try { initAuthorArticles(); } catch(e) { console.warn('authorArticles:', e); }
   }

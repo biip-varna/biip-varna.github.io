@@ -619,3 +619,38 @@ footer {
 .back-link:hover {
   text-decoration: underline;
 }
+
+/* ── Share bar ───────────────────────────────────────────────── */
+.share-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5em;
+  margin: 1.5em 0 1em 0;
+}
+.share-label {
+  font-weight: bold;
+  font-size: 0.95em;
+  color: #444;
+  margin-right: 0.3em;
+}
+.share-btn {
+  display: inline-block;
+  padding: 0.35em 0.9em;
+  border-radius: 5px;
+  font-size: 0.88em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  transition: opacity 0.15s;
+  white-space: nowrap;
+}
+.share-btn:hover {
+  opacity: 0.85;
+  color: #fff;
+}
+.share-linkedin  { background: #0a66c2; }
+.share-twitter   { background: #000; }
+.share-facebook  { background: #1877f2; }
+.share-telegram  { background: #26a5e4; }
+.share-whatsapp  { background: #25d366; }
