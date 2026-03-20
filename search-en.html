@@ -218,7 +218,8 @@
     resultsEl.innerHTML = filtered.map(function(item){
       var imgSrc = item.img.startsWith('http') ? item.img : item.img;
       // For relative article images, prepend articles/
-      var displayImg = imgSrc;
+      // Encode spaces in path for use in src attribute
+      var displayImg = imgSrc.replace(/ /g, '%20');
       var highlighted_title = highlight(item.title, terms);
       var highlighted_desc  = highlight(item.desc, terms);
       var meta = [];

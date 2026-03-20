@@ -43,13 +43,7 @@ nav a:hover {
   background: #eaeaea;
 }
 
-@media (max-width: 600px) {
-  nav a {
-    font-size: 14px;
-    padding: 10px 7px;
-    margin: 0 2px;
-  }
-  nav .toggle-button,
+
 
 .toggle-button {
   float: right;
@@ -603,3 +597,17 @@ footer {
 }
 
 /* Skip to main content link (accessibility) */
+@media (max-width: 640px) {
+  nav {
+    padding: 6px 4px;
+    line-height: 2;
+  }
+  nav a {
+    font-size: 13px;
+    padding: 6px 5px;
+    margin: 0 1px;
+  }
+  nav span[aria-hidden] {
+    display: none;
+  }
+}
