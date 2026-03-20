@@ -48,6 +48,20 @@ nav a:hover {
   background: #eaeaea;
 }
 
+@media (max-width: 600px) {
+  nav a {
+    font-size: 14px;
+    padding: 10px 7px;
+    margin: 0 2px;
+  }
+  nav .toggle-button,
+  nav button[aria-label="Toggle dark mode"] {
+    margin: 6px 6px 0 0;
+    padding: 3px 8px;
+    font-size: 13px;
+  }
+}
+
 .toggle-button {
   float: right;
   margin: 10px;
@@ -432,19 +446,18 @@ footer {
 
 /* Button grid for contact page quick-actions */
 .button-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 0.6em;
-}
-.button-grid .email-button {
-  flex: 1 1 auto;
-  min-width: 160px;
 }
 
 @media (max-width: 500px) {
+  .button-grid {
+    grid-template-columns: 1fr 1fr;
+  }
   .button-grid .email-button {
-    flex: 1 1 100%;
-    min-width: 0;
+    font-size: 0.85em;
+    padding: 0.6em 0.5em;
   }
 }
 
