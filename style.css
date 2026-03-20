@@ -36,7 +36,7 @@ nav a {
   color: #333;
   text-decoration: none;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 22px;
   padding: 10px 10px;
   margin: 2px 1px;
   border-radius: 6px;
@@ -608,13 +608,3 @@ footer {
 }
 
 /* Skip to main content link (accessibility) */
-
-  nav a {
-    font-size: 13px;
-    padding: 6px 5px;
-    margin: 0 1px;
-  }
-  nav span[aria-hidden] {
-    display: none;
-  }
-}
