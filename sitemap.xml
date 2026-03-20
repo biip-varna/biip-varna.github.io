@@ -7,18 +7,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://biip-varna.github.io/about-en.html</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://biip-varna.github.io/about.html</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://biip-varna.github.io/about.html</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -26,18 +14,6 @@
   </url>
   <url>
     <loc>https://biip-varna.github.io/africa-en.html</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://biip-varna.github.io/africa-en.html</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://biip-varna.github.io/afrika.html</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
@@ -229,25 +205,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://biip-varna.github.io/asia.html</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://biip-varna.github.io/bulgaria-soviet-en.html</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://biip-varna.github.io/bulgaria-soviet-en.html</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://biip-varna.github.io/cee-en.html</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
@@ -265,18 +223,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://biip-varna.github.io/contact-en.html</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://biip-varna.github.io/contact.html</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://biip-varna.github.io/contact.html</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>yearly</changefreq>
@@ -284,18 +230,6 @@
   </url>
   <url>
     <loc>https://biip-varna.github.io/eksperti.html</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://biip-varna.github.io/eksperti.html</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://biip-varna.github.io/experts-english.html</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -397,25 +331,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://biip-varna.github.io/impressum.html</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://biip-varna.github.io/index-en.html</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://biip-varna.github.io/index-en.html</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://biip-varna.github.io/index.html</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -439,18 +355,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://biip-varna.github.io/regions-en.html</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://biip-varna.github.io/regions.html</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://biip-varna.github.io/regions.html</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -463,25 +367,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://biip-varna.github.io/submit-en.html</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://biip-varna.github.io/submit.html</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://biip-varna.github.io/submit.html</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://biip-varna.github.io/tsentralna-iztochna-evropa.html</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
@@ -503,5 +389,17 @@
     <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://biip-varna.github.io/search.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://biip-varna.github.io/search-en.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
