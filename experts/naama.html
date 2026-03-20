@@ -42,7 +42,6 @@
 </head>
 <body>
 <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;background:#fff;padding:4px 8px;font-weight:bold;">Skip to main content</a>
-<script>if(localStorage.getItem('theme')==='dark')document.body.classList.add('dark');</script>
 <header>
   <img src="../logo.png" class="logo" alt="Лого на БИМП">
   <h1>Проф. д. ик. н., д. пол. н. Карим Фахир Наама</h1>
@@ -54,8 +53,7 @@
   <a href="../regions.html">Региони</a> <span aria-hidden="true"> | </span>
   <a href="../submit.html">Публикуване</a> <span aria-hidden="true"> | </span>
   <a href="../contact.html">Контакт</a> <span aria-hidden="true"> | </span>
-  <a href="../index-en.html">EN</a>
-<button type="button" onclick="document.body.classList.toggle('dark');localStorage.setItem('theme',document.body.classList.contains('dark')?'dark':'light')" aria-label="Toggle dark mode" style="background:none;border:1px solid #ccc;border-radius:6px;padding:4px 10px;cursor:pointer;font-size:14px;float:right;margin:8px 10px 0 0;">🌙</button>
+  <span aria-hidden="true"> | </span><a href="../search.html" aria-label="Search">🔍</a> <a href="../index-en.html">EN</a>
 </nav>
 <main id="main-content">
   <img src="images/Naama-Karim.jpg" alt="Проф. д. ик. н. Карим Фахир Наама" style="max-width:70%; height:70%; margin: 1em 0 2em 0; border-radius: 12px;" loading="lazy">
@@ -80,5 +78,6 @@
     Болгарський інститут міжнародної політики
   </p>
 </footer>
+<script src="../biip.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search | BIIP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Търсете в публикациите на Българския институт за международна политика.">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#0057B7">
+  <style>
+    #search-input {
+      width: 100%;
+      padding: 0.75em 1em;
+      font-size: 1.1em;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+      margin-bottom: 0.5em;
+      transition: border-color 0.2s;
+    }
+    #search-input:focus {
+      outline: none;
+      border-color: #0057B7;
+    }
+    .search-filters {
+      display: flex;
+      gap: 0.5em;
+      flex-wrap: wrap;
+      margin-bottom: 1.2em;
+    }
+    .filter-btn {
+      background: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      padding: 0.3em 0.9em;
+      font-size: 0.88em;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: #0057B7;
+      border-color: #0057B7;
+      color: #fff;
+    }
+    #search-results {
+      margin-top: 1em;
+    }
+    .result-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 1em;
+      padding: 0.9em 0;
+      border-bottom: 1px solid #eee;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.15s;
+      border-radius: 6px;
+    }
+    .result-card:hover {
+      background: #f5f8ff;
+    }
+    .result-card img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+    .result-info h3 {
+      margin: 0 0 0.2em 0;
+      font-size: 1.05em;
+      color: #1a3a6b;
+    }
+    .result-info .result-meta {
+      color: #888;
+      font-size: 0.88em;
+      margin: 0 0 0.3em 0;
+    }
+    .result-info .result-desc {
+      color: #444;
+      font-size: 0.93em;
+      margin: 0;
+    }
+    .result-highlight {
+      background: #fff3b0;
+      border-radius: 2px;
+    }
+    #search-count {
+      color: #666;
+      font-size: 0.92em;
+      margin-bottom: 0.5em;
+    }
+    .no-results {
+      text-align: center;
+      padding: 2em;
+      color: #888;
+    }
+    body.dark #search-input {
+      background: #2a2a2a;
+      border-color: #555;
+      color: #eee;
+    }
+    body.dark .result-card:hover { background: #2a2a2a; }
+    body.dark .result-info h3 { color: #90b8f8; }
+    body.dark .result-info .result-desc { color: #bbb; }
+    body.dark .filter-btn { background: #333; border-color: #555; color: #ddd; }
+    body.dark .filter-btn.active, body.dark .filter-btn:hover {
+      background: #0057B7; border-color: #0057B7; color: #fff;
+    }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header>
+  <img src="logo.png" class="logo" alt="Лого на БИМП">
+  <h1>Search</h1>
+</header>
+<nav aria-label="Main navigation">
+  <a href="index-en.html">Home</a> <span aria-hidden="true"> | </span>
+  <a href="about-en.html">About</a> <span aria-hidden="true"> | </span>
+  <a href="regions-en.html">Regions</a> <span aria-hidden="true"> | </span>
+  <a href="submit-en.html">Submissions</a> <span aria-hidden="true"> | </span>
+  <a href="contact-en.html">Contact</a> <span aria-hidden="true"> | </span>
+  <a href="search.html">BG</a>
+  
+</nav>
+
+<main id="main-content">
+  <label for="search-input" style="font-weight:bold;display:block;margin-bottom:0.4em;">
+    Search BIIP publications:
+  </label>
+  <input type="search" id="search-input" placeholder="e.g. Bulgaria, Moldova, NATO…" autofocus autocomplete="off">
+
+  <div class="search-filters" id="lang-filters">
+    <button type="button" class="filter-btn active" data-lang="all">All</button>
+    <button type="button" class="filter-btn" data-lang="en">🇧🇬 Български</button>
+    <button type="button" class="filter-btn" data-lang="en">🇬🇧 English</button>
+  </div>
+
+  <div id="search-count"></div>
+  <div id="search-results" aria-live="polite" aria-atomic="true"></div>
+</main>
+
+<footer>
+  <p>Bulgarian Institute for International Politics | BIIP</p>
+</footer>
+
+<script>
+(function(){
+  var index = [];
+  var currentLang = 'all';
+  var currentQuery = '';
+
+  fetch('search-index.json')
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      index = data;
+      // Pre-load query from URL ?q=
+      var params = new URLSearchParams(window.location.search);
+      var q = params.get('q') || '';
+      if (q) {
+        document.getElementById('search-input').value = q;
+        doSearch(q);
+      }
+    })
+    .catch(function(){ /* index unavailable */ });
+
+  document.getElementById('search-input').addEventListener('input', function(){
+    currentQuery = this.value.trim();
+    doSearch(currentQuery);
+  });
+
+  document.querySelectorAll('.filter-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      currentLang = btn.getAttribute('data-lang');
+      doSearch(currentQuery);
+    });
+  });
+
+  function doSearch(q) {
+    var resultsEl = document.getElementById('search-results');
+    var countEl   = document.getElementById('search-count');
+
+    if (!q || q.length < 2) {
+      resultsEl.innerHTML = '';
+      countEl.textContent = '';
+      return;
+    }
+
+    var terms = q.toLowerCase().split(/\s+/).filter(Boolean);
+
+    var filtered = index.filter(function(item){
+      if (currentLang !== 'all' && item.lang !== currentLang) return false;
+      var haystack = [item.title, item.desc, item.author, item.body].join(' ').toLowerCase();
+      return terms.every(function(t){ return haystack.indexOf(t) !== -1; });
+    });
+
+    // Score: title match > desc match > body match
+    filtered.sort(function(a, b){
+      var aScore = score(a, terms);
+      var bScore = score(b, terms);
+      return bScore - aScore;
+    });
+
+    countEl.textContent = filtered.length + ' results';
+
+    if (filtered.length === 0) {
+      resultsEl.innerHTML = '<div class="no-results">No results found.</div>';
+      return;
+    }
+
+    resultsEl.innerHTML = filtered.map(function(item){
+      var imgSrc = item.img.startsWith('http') ? item.img : item.img;
+      // For relative article images, prepend articles/
+      var displayImg = imgSrc;
+      var highlighted_title = highlight(item.title, terms);
+      var highlighted_desc  = highlight(item.desc, terms);
+      var meta = [];
+      if (item.author) meta.push(item.author);
+      if (item.date)   meta.push(item.date);
+      return '<a href="' + item.url + '" class="result-card">' +
+        '<img src="' + displayImg + '" alt="" loading="lazy" width="60" height="60">' +
+        '<div class="result-info">' +
+          '<h3>' + highlighted_title + '</h3>' +
+          (meta.length ? '<p class="result-meta">' + meta.join(' · ') + '</p>' : '') +
+          '<p class="result-desc">' + highlighted_desc + '</p>' +
+        '</div>' +
+      '</a>';
+    }).join('');
+  }
+
+  function score(item, terms) {
+    var s = 0;
+    var t = item.title.toLowerCase();
+    var d = item.desc.toLowerCase();
+    terms.forEach(function(term){
+      if (t.indexOf(term) !== -1) s += 10;
+      if (d.indexOf(term) !== -1) s += 5;
+    });
+    return s;
+  }
+
+  function highlight(text, terms) {
+    if (!text) return '';
+    var escaped = text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    terms.forEach(function(term){
+      var re = new RegExp('(' + term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')', 'gi');
+      escaped = escaped.replace(re, '<mark class="result-highlight">$1</mark>');
+    });
+    return escaped;
+  }
+})();
+</script>
+<script src="biip.js" defer></script>
+</body>
+</html>
