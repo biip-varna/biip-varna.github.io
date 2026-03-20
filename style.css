@@ -99,6 +99,9 @@ footer {
   flex: 1 1 320px;
   max-width: 340px;
   box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 .article-preview:hover {
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
@@ -385,24 +388,6 @@ footer {
   margin-bottom: 0.5em;
 }
 
-.email-button {
-  display: inline-block;
-  padding: 0.75em 1.5em;
-  background-color: #004080;
-  color: #fff;
-  font-weight: bold;
-  border-radius: 8px;
-  text-decoration: none;
-  margin: 1em auto;
-  display: block;
-  text-align: center;
-  max-width: 400px;
-  transition: background-color 0.3s ease;
-}
-
-.email-button:hover {
-  background-color: #002d5a;
-}
 
 .section-title {
   font-size: 1.3em;
@@ -417,19 +402,6 @@ footer {
   margin: 0.5em 0 1.5em 0;
 }
 
-.email-button {
-  display: inline-block;
-  margin: 0.5em 0 2em 0;
-  padding: 0.6em 1.2em;
-  background: #5981b3;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-}
-.email-button:hover {
-  background: #4a6a94;
-}
 
 /* center the mail buttons */
 .email-button {
@@ -590,4 +562,63 @@ footer {
   .no-print{
     display:none !important;
   }
+}
+
+/* Skip to main content link (accessibility) */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  padding: 8px 16px;
+  background: #0057B7;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1em;
+  z-index: 9999;
+  text-decoration: none;
+  border-radius: 0 0 6px 0;
+  outline: 3px solid #ffcc00;
+}
+
+/* Dark mode: nav separator pipes */
+body.dark nav {
+  background: #2a2a2a;
+}
+body.dark nav a {
+  color: #ddd;
+}
+body.dark nav a:hover {
+  color: #90b8f8;
+  background: #333;
+}
+body.dark .article-preview,
+body.dark .related-article,
+body.dark .expert-preview {
+  background: #2a2a2a;
+  color: #eaeaea;
+}
+body.dark footer {
+  background: #2a2a2a;
+  color: #aaa;
+}
+body.dark .region-card {
+  background: linear-gradient(150deg, #1e2d42 60%, #1a2535 100%);
+  color: #d0dff5;
+  border-color: #2a3d56;
+}
+body.dark .box {
+  background: #222;
+}
+body.dark .related-articles {
+  background: #222;
 }

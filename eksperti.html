@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <title>Експерти | БИМП</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Експертите на БИМП – профили на анализаторите и изследователите на института.">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  
 
   <style>
     .page-intro { color:#555; max-width: 900px; }
@@ -168,25 +169,45 @@
       color:#666;
     }
   </style>
+  <link rel="canonical" href="https://politicalscience.institute/eksperti.html">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Експерти | БИМП">
+  <meta property="og:description" content="Експертите на БИМП – профили на анализаторите и изследователите на института.">
+  <meta property="og:url" content="https://politicalscience.institute/eksperti.html">
+  <meta property="og:image" content="https://politicalscience.institute/logo.png">
+  <meta property="og:site_name" content="Български институт за международна политика">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Експерти | БИМП">
+  <meta name="twitter:description" content="Експертите на БИМП – профили на анализаторите и изследователите на института.">
+  <meta name="twitter:image" content="https://politicalscience.institute/logo.png">
+  <meta name="theme-color" content="#0057B7">
 </head>
 
 <body>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;background:#fff;padding:4px 8px;font-weight:bold;">Skip to main content</a>
+<script>if(localStorage.getItem('theme')==='dark')document.body.classList.add('dark');</script>
 <header>
   <img src="logo.png" class="logo" alt="Лого на БИМП">
   <h1>Експерти</h1>
   <p class="motto">„Всеки един има дълг да върши възможното.“ – Васил Априлов</p>
 </header>
 
-<nav>
-  <a href="index.html">Начало</a> |
-  <a href="about.html">За нас</a> |
-  <a href="regions.html">Региони</a> |
-  <a href="submit.html">Публикуване</a> |
-  <a href="contact.html">Контакт</a> |
+<nav aria-label="Главна навигация">
+  <a href="index.html">Начало</a> <span aria-hidden="true"> | </span>
+  <a href="about.html">За нас</a> <span aria-hidden="true"> | </span>
+  <a href="regions.html">Региони</a> <span aria-hidden="true"> | </span>
+  <a href="submit.html">Публикуване</a> <span aria-hidden="true"> | </span>
+  <a href="contact.html">Контакт</a> <span aria-hidden="true"> | </span>
   <a href="experts-english.html">EN</a>
+<button type="button" onclick="document.body.classList.toggle('dark');localStorage.setItem('theme',document.body.classList.contains('dark')?'dark':'light')" aria-label="Toggle dark mode" style="background:none;border:1px solid #ccc;border-radius:6px;padding:4px 10px;cursor:pointer;font-size:14px;float:right;margin:8px 10px 0 0;">🌙</button>
 </nav>
 
-<main>
+<main id="main-content">
   <p class="page-intro">
     Мрежата от експерти на БИМП обединява автори и анализатори с различни профили – от международни отношения и сигурност до технологии и комуникации.
     Използвайте търсачката и филтрите, за да откриете експерти по тема. Когато има активна профилна страница, кликнете върху картата.
@@ -388,9 +409,9 @@ function render(){
   grid.innerHTML = list.map(ex => {
     const tags = (ex.tags||[]).slice(0,3).map(t => `<span class="tag">${TAG_LABEL[t] || t}</span>`).join("");
     const inner = `
-      <img class="avatar" src="${ex.img}" alt="${ex.name}">
+      <img class="avatar" src="${ex.img}" alt="${ex.name}" loading="lazy" width="80" height="80">
       <div>
-        <h3>${ex.name}</h3>
+        <h2>${ex.name}</h2>
         <div class="role">${ex.role}</div>
         <p class="teaser">${ex.teaser}</p>
         <div class="tagline">${tags}</div>

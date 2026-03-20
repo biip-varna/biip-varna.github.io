@@ -2,36 +2,60 @@
 <html lang="bg">
 <head>
   <meta charset="UTF-8">
-  <title>Контакт</title>
+  <title>Контакт | БИМП</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Свържете се с Българския институт за международна политика – контактна форма и информация.">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  
+  <link rel="canonical" href="https://politicalscience.institute/contact.html">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Контакт">
+  <meta property="og:description" content="Свържете се с Българския институт за международна политика – контактна форма и информация.">
+  <meta property="og:url" content="https://politicalscience.institute/contact.html">
+  <meta property="og:image" content="https://politicalscience.institute/logo.png">
+  <meta property="og:site_name" content="Български институт за международна политика">
+  <link rel="alternate" hreflang="bg" href="https://politicalscience.institute/contact.html">
+  <link rel="alternate" hreflang="en" href="https://politicalscience.institute/contact-en.html">
+  <link rel="alternate" hreflang="x-default" href="https://politicalscience.institute/contact.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Контакт">
+  <meta name="twitter:description" content="Свържете се с Българския институт за международна политика – контактна форма и информация.">
+  <meta name="twitter:image" content="https://politicalscience.institute/logo.png">
+  <meta name="theme-color" content="#0057B7">
 </head>
 <body>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;background:#fff;padding:4px 8px;font-weight:bold;">Skip to main content</a>
+<script>if(localStorage.getItem('theme')==='dark')document.body.classList.add('dark');</script>
 <header>
   <img src="logo.png" class="logo" alt="Лого на БИМП">
   <h1>Контакт</h1>
   <p class="motto">„Всеки един има дълг да върши възможното.“ – Васил Априлов</p>
 </header>
 
-<nav>
-  <a href="index.html">Начало</a> |
-  <a href="about.html">За нас</a> |
-  <a href="regions.html">Региони</a> |
-  <a href="submit.html">Публикуване</a> |
-  <a href="contact.html">Контакт</a> |
+<nav aria-label="Главна навигация">
+  <a href="index.html">Начало</a> <span aria-hidden="true"> | </span>
+  <a href="about.html">За нас</a> <span aria-hidden="true"> | </span>
+  <a href="regions.html">Региони</a> <span aria-hidden="true"> | </span>
+  <a href="submit.html">Публикуване</a> <span aria-hidden="true"> | </span>
+  <a href="contact.html">Контакт</a> <span aria-hidden="true"> | </span>
   <a href="contact-en.html">EN</a>
+<button type="button" onclick="document.body.classList.toggle('dark');localStorage.setItem('theme',document.body.classList.contains('dark')?'dark':'light')" aria-label="Toggle dark mode" style="background:none;border:1px solid #ccc;border-radius:6px;padding:4px 10px;cursor:pointer;font-size:14px;float:right;margin:8px 10px 0 0;">🌙</button>
 </nav>
 
-<main>
+<main id="main-content">
   <!-- Основен бутон за контакт -->
-  <a href="mailto:biip@mailfence.com" class="email-button" aria-label="Имейл към БИМП">
+  <address><a href="mailto:biip@mailfence.com" class="email-button" aria-label="Имейл към БИМП">
     ✉️ Свържете се с нас: biip@mailfence.com
-  </a>
+  </a></address>
 
   <!-- Бързи действия -->
   <section style="margin-top:1.5em;">
-    <h3>Бързи действия</h3>
+    <h2>Бързи действия</h2>
     <div style="display:flex; gap:.6em; flex-wrap:wrap;">
       <a href="mailto:biip@mailfence.com?subject=General%20inquiry%20to%20BIIP"
          class="email-button" style="background:#2f6fdd;" aria-label="Общо запитване по имейл">
@@ -61,18 +85,18 @@
   <div class="contact-grid" style="margin-top:1.5em;">
     <a href="https://www.linkedin.com/company/bulgarian-institute-for-international-politics/"
        class="contact-card" target="_blank" rel="noopener" aria-label="БИМП в LinkedIn">
-      <img src="icons/linkedin.svg" alt="LinkedIn">
+      <img src="icons/linkedin.svg" alt="LinkedIn" loading="lazy">
       <span>Последвайте ни в LinkedIn</span>
     </a>
     <a href="https://t.me/kd7912" class="contact-card" target="_blank" rel="noopener" aria-label="Свържете се с д-р Керанов в Telegram">
-      <img src="icons/telegram.svg" alt="Telegram">
+      <img src="icons/telegram.svg" alt="Telegram" loading="lazy">
       <span>Свържете се с д-р Керанов в Telegram</span>
     </a>
   </div>
 
   <!-- Медии и преса -->
   <section style="margin-top:1.5em; background:#f8f8f8; padding:1em 1.2em; border-left:4px solid #0057B7;">
-    <h3 style="margin-top:0;">Медии и преса</h3>
+    <h2 style="margin-top:0;">Медии и преса</h2>
     <p style="margin:.5em 0 0 0;">
       Експертите на БИМП са на разположение за интервюта и коментари по теми, свързани с България, ЕС и международните отношения.
       За медийни запитвания, моля включете медия, тема и срок. Контакт: <a href="mailto:bimp@contactoffice.com">bimp@contactoffice.com</a>
@@ -81,12 +105,12 @@
 
   <!-- CTA към всички експерти -->
   <section style="margin-top:2em; text-align:center;">
-    <h3>Запознайте се с нашите експерти</h3>
+    <h2>Запознайте се с нашите експерти</h2>
     <p style="max-width:600px; margin:0 auto; color:#444;">
       Българският институт за международна политика обединява експерти и автори от България и чужбина
       с фокус върху геополитика, демокрация, дигитално управление и сигурност.
     </p>
-    <a href="eksperti.html" target="_blank" style="
+    <a href="eksperti.html" target="_blank" rel="noopener noreferrer" style="
       display:inline-block;
       margin-top:1em;
       background-color:#0057B7;

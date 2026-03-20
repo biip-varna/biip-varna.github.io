@@ -2,10 +2,11 @@
 <html lang="bg">
 <head>
   <meta charset="UTF-8">
-  <title>За нас</title>
+  <title>За нас | БИМП</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="За Българския институт за международна политика – мисия, екип и история на организацията.">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  
   <style>
     .expert-preview-list {
       display: flex;
@@ -63,22 +64,45 @@
       }
     }
   </style>
+  <link rel="canonical" href="https://politicalscience.institute/about.html">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="За нас">
+  <meta property="og:description" content="За Българския институт за международна политика – мисия, екип и история на организацията.">
+  <meta property="og:url" content="https://politicalscience.institute/about.html">
+  <meta property="og:image" content="https://politicalscience.institute/logo.png">
+  <meta property="og:site_name" content="Български институт за международна политика">
+  <link rel="alternate" hreflang="bg" href="https://politicalscience.institute/about.html">
+  <link rel="alternate" hreflang="en" href="https://politicalscience.institute/about-en.html">
+  <link rel="alternate" hreflang="x-default" href="https://politicalscience.institute/about.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="За нас">
+  <meta name="twitter:description" content="За Българския институт за международна политика – мисия, екип и история на организацията.">
+  <meta name="twitter:image" content="https://politicalscience.institute/logo.png">
+  <meta name="theme-color" content="#0057B7">
 </head>
 <body>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;background:#fff;padding:4px 8px;font-weight:bold;">Skip to main content</a>
+<script>if(localStorage.getItem('theme')==='dark')document.body.classList.add('dark');</script>
 <header>
   <img src="logo.png" class="logo" alt="Лого на БИМП">
   <h1>За нас</h1>
   <p class="motto">„Всеки един има дълг да върши възможното.“ – Васил Априлов</p>
 </header>
-<nav>
-  <a href="index.html">Начало</a> |
-  <a href="about.html">За нас</a> |
-  <a href="regions.html">Региони</a> |
-  <a href="submit.html">Публикуване</a> |
-  <a href="contact.html">Контакт</a> |
+<nav aria-label="Главна навигация">
+  <a href="index.html">Начало</a> <span aria-hidden="true"> | </span>
+  <a href="about.html">За нас</a> <span aria-hidden="true"> | </span>
+  <a href="regions.html">Региони</a> <span aria-hidden="true"> | </span>
+  <a href="submit.html">Публикуване</a> <span aria-hidden="true"> | </span>
+  <a href="contact.html">Контакт</a> <span aria-hidden="true"> | </span>
   <a href="about-en.html">EN</a>
+<button type="button" onclick="document.body.classList.toggle('dark');localStorage.setItem('theme',document.body.classList.contains('dark')?'dark':'light')" aria-label="Toggle dark mode" style="background:none;border:1px solid #ccc;border-radius:6px;padding:4px 10px;cursor:pointer;font-size:14px;float:right;margin:8px 10px 0 0;">🌙</button>
 </nav>
-<main>
+<main id="main-content">
   <p>Българският институт за международна политика (БИМП) е независимо, нестопанско сдружение, посветено на анализ, политически размисъл и международен диалог.</p>
   <p>Основан през юли 2025 г. в гр. Варна, Институтът предоставя платформа както за начинаещи анализатори, така и за утвърдени експерти да допринасят смислено към обществения дебат.</p>
   <p>Нашата цел е да насърчаваме балансирано и критично мислене по политически въпроси в България, Европа и света.</p>
@@ -90,7 +114,7 @@
 </div>
 <!-- Призив за публикации (страница За нас) -->
 <section style="margin: 1.5em 0; background:#f8f8f8; padding:1.2em; border-left:4px solid #0057B7;">
-  <h3 style="margin-top:0;">Публикувайте в БИМП</h3>
+  <h2 style="margin-top:0;">Публикувайте в БИМП</h2>
   <p style="margin:.5em 0;">
     Имате качествен анализ или коментар? Приемаме текстове на български и английски за политиката в България, Европа и света.
   </p>
@@ -101,10 +125,10 @@
   </a>
 </section>
 
- <b><p>Нашите експерти</p></b>
+ <h2>Нашите експерти</h2>
   <div class="expert-preview-list">
     <a href="experts/keranov.html" class="expert-preview">
-      <img src="experts/images/Keranov.jpg" alt="Д-р Димитър Керанов" class="expert-thumb">
+      <img src="experts/images/Keranov.jpg" alt="Д-р Димитър Керанов" class="expert-thumb" loading="lazy" width="88" height="110">
       <div class="expert-info">
         <div class="expert-name">Д-р Димитър Керанов, MRSSAf</div>
         <div class="expert-title">Член на УС; Експерт Африка и ЦИЕ</div>
@@ -114,7 +138,7 @@
       </div>
     </a>
 <a class="expert-preview">
-  <img src="experts/images/KKeranov.png" alt="Константин Керанов" class="expert-thumb">
+  <img src="experts/images/KKeranov.png" alt="Константин Керанов" class="expert-thumb" loading="lazy" width="88" height="110">
   <div class="expert-info">
     <div class="expert-name">Константин Керанов</div>
     <div class="expert-title">Член на УС; Експерт Дигитална икономика и нови технологии</div>
@@ -124,7 +148,7 @@
   </div>
 </a>
     <a href="experts/naama.html" class="expert-preview">
-      <img src="experts/images/Naama.jpg" alt="Проф. д. ик. н., д. пол. н. Карим Фахир Наама" class="expert-thumb">
+      <img src="experts/images/Naama.jpg" alt="Проф. д. ик. н., д. пол. н. Карим Фахир Наама" class="expert-thumb" loading="lazy" width="88" height="110">
       <div class="expert-info">
         <div class="expert-name">Проф. д. ик. н., д. пол. н. Карим Фахир Наама</div>
         <div class="expert-title">Експерт Международни отношения и Близък изток</div>
@@ -134,7 +158,7 @@
       </div>
     </a>
 <a href="experts/uzunov.html" class="expert-preview">
-  <img src="experts/images/Uzunov.jpg" alt="Д-р Александър Узунов" class="expert-thumb">
+  <img src="experts/images/Uzunov.jpg" alt="Д-р Александър Узунов" class="expert-thumb" loading="lazy" width="88" height="110">
   <div class="expert-info">
     <div class="expert-name">Д-р Александър Узунов</div>
     <div class="expert-title">Експерт Национална сигурност и геополитика</div>
@@ -144,7 +168,7 @@
   </div>
 </a>
 <a href="experts/petrov.html" class="expert-preview">
-  <img src="experts/images/petrov.jpg" alt="Сергей Петров — Араджиони" class="expert-thumb">
+  <img src="experts/images/petrov.jpg" alt="Сергей Петров — Араджиони" class="expert-thumb" loading="lazy" width="88" height="110">
   <div class="expert-info">
     <div class="expert-name">Сергей Петров — Араджиони</div>
     <div class="expert-title">Експерт Международна сигурност и геополитика</div>
@@ -155,7 +179,7 @@
   </div>
 </a>
 <a href="experts/smilkov.html" class="expert-preview">
-  <img src="experts/images/Smilkov.png" alt="Доц. д-р Калоян Смилков" class="expert-thumb">
+  <img src="experts/images/Smilkov.png" alt="Доц. д-р Калоян Смилков" class="expert-thumb" loading="lazy" width="88" height="110">
   <div class="expert-info">
     <div class="expert-name">Доц. д-р Калоян Смилков</div>
     <div class="expert-title">Експерт Международни отношения и сравнителни политически науки</div>
@@ -165,7 +189,7 @@
   </div>
 </a>
 <a href="experts/vaculik.html" class="expert-preview">
-  <img src="experts/images/Vaculik.png" alt="JUDr. PhDr. Давид Вацулик" class="expert-thumb">
+  <img src="experts/images/Vaculik.png" alt="JUDr. PhDr. Давид Вацулик" class="expert-thumb" loading="lazy" width="88" height="110">
   <div class="expert-info">
     <div class="expert-name">JUDr. PhDr. Давид Вацулик</div>
     <div class="expert-title">Експерт Чешка политика</div>
@@ -175,7 +199,7 @@
   </div>
 </a>
 <a class="expert-preview">
-  <img src="experts/images/Schutte.png" alt="Сонет Шуте" class="expert-thumb">
+  <img src="experts/images/Schutte.png" alt="Сонет Шуте" class="expert-thumb" loading="lazy" width="88" height="110">
   <div class="expert-info">
     <div class="expert-name">Сонет Шуте</div>
     <div class="expert-title">Експерт Комуникации и работа с обществеността</div>
@@ -185,7 +209,7 @@
   </div>
 </a>
 <a href="experts/rovinalti.html" class="expert-preview">
-  <img src="experts/images/Rovinalti.jpg" alt="Лука Ровиналти" class="expert-thumb">
+  <img src="experts/images/Rovinalti.jpg" alt="Лука Ровиналти" class="expert-thumb" loading="lazy" width="88" height="110">
   <div class="expert-info">
     <div class="expert-name">Лука Ровиналти, MBA</div>
     <div class="expert-title">Политически консултант; Експерт Европейски въпроси</div>
@@ -195,7 +219,7 @@
   </div>
 </a>
 <div class="expert-preview">
-  <img src="experts/images/stefanov.jpg" alt="Павел Стефанов" class="expert-thumb">
+  <img src="experts/images/stefanov.jpg" alt="Павел Стефанов" class="expert-thumb" loading="lazy" width="88" height="110">
   <div class="expert-info">
     <div class="expert-name">Павел Стефанов</div>
     <div class="expert-title">Експерт Авиационна политика и международно управление на въздушното пространство</div>
@@ -207,7 +231,7 @@
 
   </div>
 
-  <b><p>Многоезична идентичност</p></b>
+  <h2>Многоезична идентичност</h2>
   <p>Пълното име на института се появява на множество езици, което отразява неговия международен и плуралистичен характер:</p>
   <p>Български: Български институт за международна политика</p>
   <p>Английски: Bulgarian Institute for International Politics</p>
@@ -228,7 +252,7 @@
 
 
 <section id="logo" style="margin-top:1.5em;">
-  <b><p>Нашето лого</p></b>
+  <h2>Нашето лого</h2>
   <figure style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
     <img src="logo.png" alt="Лого на БИМП: хералдически лъв, държащ глобус"
          style="display:block;max-width:240px;height:auto;">
@@ -241,14 +265,14 @@
 
 
  
-  <b><p>Нашето мото</p></b>
+  <h2>Нашето мото</h2>
   <p>„Всеки един има дълг да върши възможното.“ – Васил Априлов</p>
   <p>Васил Априлов (1789–1847) е български възрожденски просветител, общественик и един от създателите на светското образование в България. Неговите думи отразяват убеждението, че личната отговорност започва с това да правим възможното – независимо колко малко – в служба на знанието и обществото.</p>
-  <p><small>Цитатът е от книгата <i><a href="https://bulgarianhistory.shop/product/500-misli-na-belezhiti-balgari/4/189" target="_blank">500 мисли на бележити българи</a></i>, издадена от Българска история.</small></p>
+  <p><small>Цитатът е от книгата <i><a href="https://bulgarianhistory.shop/product/500-misli-na-belezhiti-balgari/4/189" target="_blank" rel="noopener noreferrer">500 мисли на бележити българи</a></i>, издадена от Българска история.</small></p>
 
 <!-- BEGIN: BIIP Projects -->
 <section style="margin-top:2.5em;">
-  <h3 style="margin-bottom:0.5em;">Проектите на БИМП</h3>
+  <h3 style="margin-bottom:0.5em;">Проектите на БИМП</h2>
   <p style="font-size:0.95em; color:#555; margin-bottom:1em;">
     Освен аналитичните статии, БИМП развива собствените си инициативи и проекти за регионален диалог.
   </p>
@@ -304,7 +328,7 @@
 
 
 <section style="margin: 3em 0; background: #f8f8f8; padding: 1.5em; border-left: 4px solid #0057B7;">
-  <h3>Подкрепете независимия анализ</h3>
+  <h2>Подкрепете независимия анализ</h2>
   <p>БИМП е изцяло независимо сдружение с нестопанска цел. Разчитаме на доброволна подкрепа и гражданска ангажираност.</p>
   <p>Ако желаете да подкрепите нашата мисия, можете да:</p>
   <ul style="margin-left: 1.2em;">
@@ -317,35 +341,35 @@
 
 <!-- Partners Section -->
 <section style="margin: 3em 0; padding: 1.5em; background:#f8f8f8; border-left:4px solid #0057B7;">
-  <h3 style="margin-top:0;">Партньорства</h3>
+  <h2 style="margin-top:0;">Партньорства</h2>
   <p style="margin-bottom:1em;">
     БИМП си партнира с организации в България и чужбина, които споделят нашите ценности за качество и професионализъм.
   </p>
 
   <div style="display:flex; align-items:center; gap:1.5em; flex-wrap:wrap;">
     <!-- Partner 1: IPN -->
-    <a href="https://politicalscience.institute/" target="_blank"
+    <a href="https://politicalscience.institute/" target="_blank" rel="noopener noreferrer"
        style="display:flex; align-items:center; text-decoration:none; color:inherit;">
       <img src="partners/IPN logo.png"
            alt="Институт за политически науки – партньор на БИМП"
-           style="height:70px; width:auto; object-fit:contain; border:1px solid #ddd; padding:6px; background:white; border-radius:6px;">
+           style="height:70px; width:auto; object-fit:contain; border:1px solid #ddd; padding:6px; background:white; border-radius:6px;" loading="lazy">
       <span style="font-size:1em; font-weight:bold;">Институт за политически науки</span>
     </a>
 
     <!-- Partner 2: Friendship Bridge -->
-    <a href="https://friendshipbridge.eu/bg/" target="_blank"
+    <a href="https://friendshipbridge.eu/bg/" target="_blank" rel="noopener noreferrer"
        style="display:flex; align-items:center; text-decoration:none; color:inherit;">
       <img src="partners/most.png"
            alt="Мостът на приятелството – партньор на БИМП"
-           style="height:70px; width:auto; object-fit:contain; border:1px solid #ddd; padding:6px; background:white; border-radius:6px;">
+           style="height:70px; width:auto; object-fit:contain; border:1px solid #ddd; padding:6px; background:white; border-radius:6px;" loading="lazy">
       <span style="font-size:1em; font-weight:bold;">Мостът на приятелството</span>
     </a>
    <!-- Partner 3: EU Context -->
-    <a href="https://eucontext.eu/Home" target="_blank"
+    <a href="https://eucontext.eu/Home" target="_blank" rel="noopener noreferrer"
        style="display:flex; align-items:center; text-decoration:none; color:inherit;">
       <img src="partners/eucontext.png"
            alt="EU Context – партньор на БИМП"
-           style="height:70px; width:auto; object-fit:contain; border:1px solid #ddd; padding:6px; background:white; border-radius:6px;">
+           style="height:70px; width:auto; object-fit:contain; border:1px solid #ddd; padding:6px; background:white; border-radius:6px;" loading="lazy">
       <span style="font-size:1em; font-weight:bold;">EU Context</span>
     </a>
   </div>

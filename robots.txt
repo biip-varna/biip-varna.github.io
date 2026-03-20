@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://biip-varna.github.io/sitemap.xml
-Sitemap: https://biip-varna.github.io/sitemap.txt
+Sitemap: https://politicalscience.institute/sitemap.xml
+Sitemap: https://politicalscience.institute/sitemap.txt
