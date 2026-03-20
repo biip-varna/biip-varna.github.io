@@ -1,780 +1,482 @@
 [
   {
-    "url": "articles/chn.html",
-    "title": "Пекин и Москва в Западните Балкани",
-    "desc": "Руското политическо влияние и китайското икономическо присъствие се преплитат, създавайки рискове за демократичната устойчивост и европейската интеграция в региона.",
-    "author": "Димитър Керанов",
-    "authorId": "keranov",
-    "date": "2026-03-17",
-    "lang": "bg",
-    "img": "articles/article images/chn.png",
-    "tags": [
-      "balkans",
-      "china",
-      "russia",
-      "disinformation"
-    ],
-    "body": "Публикувано на: 17.03.2026 г. | Автор: д-р Димитър Керанов Пекин и Москва в Западните Балкани Западните Балкани остават стратегически уязвим регион, в който външното влияние продължава да се наслагва върху незавършени реформи, институционални слабости и непълна политическа консолидация. В този контекст Русия и Китай използват различни инструменти, но често постигат сходен резултат: създаване на среда, в която демократичната устойчивост отслабва, а европейската интеграция се забавя, размива или п",
-    "type": "article"
-  },
-  {
-    "url": "articles/syntheticbg.html",
-    "title": "Синтетичното съдържание като проблем на институционалното доверие",
-    "desc": "Синтетичното съдържание не е само технологичен проблем – то поставя въпроса за доверието в институциите и устойчивостта на демократичната публична среда.",
-    "author": "Константин Керанов",
-    "authorId": "konstantin-keranov",
-    "date": "2026-03-05",
-    "lang": "bg",
-    "img": "articles/article images/synthetic.png",
-    "tags": [
-      "disinformation",
-      "ai",
-      "bulgaria"
-    ],
-    "body": "Публикувано на: 05.03.2026 г. | Автор: Константин Керанов Синтетичното съдържание като проблем на институционалното доверие Разпространението на синтетично съдържание поставя нов натиск върху публичната среда, но основният риск не се изчерпва с това, че се създават по-убедителни подвеждащи текстове или изображения. По-същественият проблем е, че подобно съдържание може да отслаби доверието в официалната информация, в публичната комуникация и в способността на институциите да действат като надежде",
-    "type": "article"
-  },
-  {
-    "url": "articles/bgsecurity.html",
-    "title": "Bulgaria and Security at the Edge of Europe",
-    "desc": "An analysis of Bulgaria's security posture, NATO commitments, and the challenges of modernising its defence sector.",
-    "author": "Dr. Dimitar Keranov",
-    "authorId": "keranov",
-    "date": "2026-03-09",
-    "lang": "en",
-    "img": "articles/article images/bgrsecurity.png",
-    "tags": [
-      "bulgaria",
-      "security",
-      "nato"
-    ],
-    "body": "Published on: 09.03.2026 | Authors: Dr. Dimitar Keranov, MRSSAf &amp; Konstantin Keranov Bulgaria and Security at the Edge of Europe For much of the post-accession period, questions of European security appeared relatively abstract in Bulgaria. That situation has changed substantially. Security for Bulgaria has become tangible and structural, shaped directly by geography, economic interdependence, and regional instability. Bulgaria occupies the southeastern frontier of the European Union. It fac",
-    "type": "article"
-  },
-  {
-    "url": "articles/bruxbg.html",
-    "title": "Brussels to Sofia: EU Policy in Bulgaria",
-    "desc": "How EU funding, rules, and conditionality shape governance, security, and resilience in Bulgaria.",
-    "author": "Dr. Dimitar Keranov",
-    "authorId": "keranov",
-    "date": "2026-02-09",
-    "lang": "en",
-    "img": "articles/article images/bruxbg.png",
-    "tags": [
-      "bulgaria",
-      "eu",
-      "governance"
-    ],
-    "body": "Published on: 09.02.2026 | Authors: Dr. Dimitar Keranov, MRSSAf &amp; Luca Rovinalti Brussels to Sofia: EU Policy in Bulgaria In Sofia, “Europe” is not only a debate about values or geopolitics. In practice, EU policy shapes budgets, institutional incentives, enforcement credibility, and Bulgaria’s role on the EU’s external border—where internal EU rules and external security risks increasingly overlap. When people in Sofia talk about “Europe,” they often mean more than values or geopolitics. In",
-    "type": "article"
-  },
-  {
-    "url": "articles/ep-feb26.html",
-    "title": "European Parliament Seat Projection – February 2026",
-    "desc": "Analysis of the European Parliament seat projection for February 2026 and what it means for the von der Leyen coalition.",
-    "author": "BIIP",
-    "authorId": "biip",
-    "date": "2026-02-27",
-    "lang": "en",
-    "img": "articles/article images/eustars.png",
-    "tags": [
-      "eu",
-      "europeanparliament"
-    ],
-    "body": "Published on: 27.02.2026 | Based on an analysis by Dr. Manuel Müller European Parliament Seat Projection – February 2026 The February 2026 European Parliament seat projection shows a limited improvement for parts of the left-of-centre camp after months of decline. Both S&amp;D and the Left are gaining slightly, while the Greens/EFA remain at their previous level. These changes are described as small and not sufficient to constitute a broader trend reversal. At the same time, the largest losses a",
-    "type": "article"
-  },
-  {
-    "url": "articles/bg-ro-vm.html",
-    "title": "България и Румъния трябва да разширяват сътрудничеството си",
-    "desc": "Интервю с д-р Димитър Керанов за европейската интеграция на Молдова и българо-румънското партньорство.",
-    "author": "Владимир Митев",
-    "authorId": "vladimir-mitev",
-    "date": "2026-01-09",
-    "lang": "bg",
-    "img": "articles/article images/bg-ro-vm.png",
-    "tags": [
-      "bulgaria",
-      "romania",
-      "moldova",
-      "eu"
-    ],
-    "body": "Публикувано на: 09.01.2026 г. | Автор: Владимир Митев | Източник: Мостът на приятелството Резюме на интервюто с политолога д-р Димитър Керанов Интервюто разглежда новата динамика в българо-молдовските отношения, европейската интеграция на Молдова и регионалното сътрудничество в Югоизточна Европа след началото на пълномащабната руска инвазия в Украйна. Основни акценти: Европейската интеграция на Молдова: Д-р Керанов, намиращ се в Кишинев, смята, че Молдова е политически готова да се присъедини къ",
-    "type": "article"
-  },
-  {
-    "url": "articles/bul-ro-en.html",
-    "title": "Bulgaria and Romania Must Expand Cooperation in All Areas",
-    "desc": "Interview with Dr. Dimitar Keranov on Moldova's EU integration and Bulgarian-Romanian partnership.",
-    "author": "Vladimir Mitev",
-    "authorId": "vladimir-mitev",
-    "date": "2026-01-09",
-    "lang": "en",
-    "img": "articles/article images/bg-ro-vm.png",
-    "tags": [
-      "bulgaria",
-      "romania",
-      "moldova",
-      "eu"
-    ],
-    "body": "Published: 9 January 2026 | Updated: 9 January 2026 | Author: Vladimir Mitev | Source: The Bridge of Friendship Summary The document is an interview with Bulgarian political scientist Dr. Dimitar Keranov about Bulgarian-Moldovan relations, regional security, and international relations in Southeast Europe following the start of Russia’s large-scale military invasion of Ukraine. Key points from the interview: Moldova’s Europeanization: Dr. Keranov is in Chisinau and observes the country advancing",
-    "type": "article"
-  },
-  {
-    "url": "articles/bulgarias-democratic-challenge.html",
-    "title": "Bulgaria's Democratic Challenge",
-    "desc": "An analysis of Bulgaria's democratic backsliding, capture by oligarchic networks, and the prospects for reform.",
-    "author": "Dr. Dimitar Keranov",
-    "authorId": "keranov",
-    "date": "2026-01-01",
-    "lang": "en",
-    "img": "articles/article images/Bulgaria Democratic Challenge Article.png",
-    "tags": [
-      "bulgaria",
-      "democracy",
-      "governance"
-    ],
-    "body": "Published: 13 July 2025 &nbsp;|&nbsp; Author: Dr. Dimitar Keranov Bulgaria’s Democratic Challenge Bulgaria has been a member of the European Union since 2007. It joined NATO in 2004 and became part of Schengen in 2024. The adoption of the Euro is scheduled for January 1, 2026, a milestone of European integration. On paper, Bulgaria’s path is clear: full integration into the Euro-Atlantic community. But beneath the surface, challenges remain. Russian influence in Bulgaria has not vanished. It per",
-    "type": "article"
-  },
-  {
-    "url": "articles/the-euro-in-bulgaria-is-a-good-idea.html",
-    "title": "The Euro in Bulgaria Is a Good Idea",
-    "desc": "Why Bulgaria's adoption of the euro is economically and politically beneficial despite public hesitancy.",
-    "author": "Dr. Dimitar Keranov",
-    "authorId": "keranov",
-    "date": "2026-01-01",
-    "lang": "en",
-    "img": "articles/article images/euro bg.png",
-    "tags": [
-      "bulgaria",
-      "eu",
-      "economy"
-    ],
-    "body": "Published: 16 July 2025 | Author: Dr. Dimitar Keranov, MRSSAf The Euro in Bulgaria Is a Good Idea Bulgaria is set to join the eurozone on January 1, 2026. For years, the country’s debate about the euro has been dominated by concerns over inflation, price explosions, and loss of economic control. But similar fears existed in Croatia before it adopted the new currency in 2023 — and they did not materialize. According to the European Central Bank, Croatia’s transition was a success, with no explosi",
-    "type": "article"
-  },
-  {
-    "url": "articles/evroro-v-bg-dobra-ideya.html",
-    "title": "Еврото в България е добра идея",
-    "desc": "Защо въвеждането на еврото в България е икономически и политически изгодно въпреки обществените резерви.",
-    "author": "Димитър Керанов",
-    "authorId": "keranov",
-    "date": "2025-07-16",
-    "lang": "bg",
-    "img": "articles/article images/euro bg.png",
-    "tags": [
-      "bulgaria",
-      "eu",
-      "economy"
-    ],
-    "body": "Публикувано на: 16.07.2025 г. | Автор: д-р Димитър Керанов Еврото в България е добра идея България ще се присъедини към еврозоната на 1 януари 2026 г. От години дебатът у нас около еврото обаче е доминиран от опасения за инфлация, рязък скок на цените и загуба на икономически контрол. Но същите страхове съществуваха и в Хърватия, преди страната да приеме новата валута през 2023 г. — и те не се оправдаха. Според Европейската централна банка преходът на Хърватия към еврото е бил успешен, без взрив",
-    "type": "article"
-  },
-  {
-    "url": "articles/taraclia-vote-en.html",
-    "title": "Minority Politics in Moldova: Taraclia's Vote",
-    "desc": "How Taraclia's Russian-language info space and Bulgaria's cultural links shape minority politics in Moldova.",
-    "author": "Dr. Dimitar Keranov",
-    "authorId": "keranov",
-    "date": "2025-10-09",
-    "lang": "en",
-    "img": "articles/article images/Taraclia.png",
-    "tags": [
-      "moldova",
-      "minorities",
-      "eu",
-      "bulgaria"
-    ],
-    "body": "Published on: 09.10.2025 | Author: Dr. Dimitar Keranov, MRSSAf Minority Politics in Moldova: Taraclia’s Vote PAS secured a national majority to keep EU-accession reforms moving, but Taraclia—home to Moldova’s Bulgarian minority—again voted heavily for the pro-Russia Patriotic Bloc. The district’s Russian-language information space shapes these preferences, while Bulgaria’s education and cultural links offer the most practical channel for gradual EU-oriented engagement. Moldova’s September 28, 20",
-    "type": "article"
-  },
-  {
-    "url": "articles/no-corruption-bg.html",
-    "title": "There Is No Corruption in Bulgaria",
-    "desc": "A sharp analysis of how Bulgaria's systemic corruption is denied and normalised by political elites.",
-    "author": "Dr. Dimitar Keranov",
-    "authorId": "keranov",
-    "date": "2025-09-23",
-    "lang": "en",
-    "img": "articles/article images/pm.png",
-    "tags": [
-      "bulgaria",
-      "governance",
-      "corruption"
-    ],
-    "body": "Published on: 23.09.2025 | Author: Dr. Dimitar Keranov There Is No Corruption in Bulgaria When Prime Minister Rosen Zhelyazkov told students at the University of National and World Economy in Sofia that the perception of corruption is greater than the reality, it sent the wrong signal. Independent data points elsewhere: Bulgaria ranks 76th globally on Transparency International’s 2024 Corruption Perceptions Index—among the lowest in the EU—and nearly half of Bulgarians (48%) say corruption incre",
-    "type": "article"
-  },
-  {
-    "url": "articles/beijing-bgr.html",
-    "title": "Signal from Beijing: What Bulgaria Just Told the World",
-    "desc": "What Bulgaria's diplomatic signal toward China reveals about its foreign policy orientation.",
-    "author": "Dr. Dimitar Keranov",
-    "authorId": "keranov",
-    "date": "2025-09-06",
-    "lang": "en",
-    "img": "articles/article images/beijing.png",
-    "tags": [
-      "china",
-      "bulgaria",
-      "diplomacy"
-    ],
-    "body": "Published on: 06.09.2025 | Author: Dr. Dimitar Keranov Atanas Zafirov, Bulgaria’s Deputy Prime Minister and leader of the Bulgarian Socialist Party — the successor of the former communist dictatorship party — chose to travel to Beijing this week, appearing at the Chinese military parade alongside Xi Jinping, Vladimir Putin, Alexander Lukashenko, and Kim Jong Un. For a NATO and EU member, this is not simply poor judgment; it is a warning sign. The optics highlight both the contradictions of Bulga",
-    "type": "article"
-  },
-  {
-    "url": "articles/moskva-moldova.html",
-    "title": "Терорът на Москва над Молдова",
-    "desc": "Анализ на съветския терор над Молдова, неговите жертви и отражението върху съвременното геополитическо напрежение.",
-    "author": "Димитър Керанов",
-    "authorId": "keranov",
-    "date": "2025-08-08",
-    "lang": "bg",
-    "img": "articles/article images/pm.png",
-    "tags": [
-      "moldova",
-      "russia",
-      "security"
-    ],
-    "body": "Снимка: Авторът Публикувано на: 08.08.2025 г. | Автор: д-р Димитър Керанов Терорът на Москва над Молдова Миналия месец посетих Кишинев и разгледах изложба, посветена на съветския терор. Доказателствата, основани на архивни материали, бяха дълбоко шокиращи. През 1940 г. Съветският съюз анексира Бесарабия от Румъния и я обединява с територия от левия бряг на Днестър, който вече е била под съветски контрол, за да създаде по този начин Съветска Молдова. Последват десетилетия на репресии: масови депо",
-    "type": "article"
-  },
-  {
-    "url": "articles/moscow-md.html",
-    "title": "Moscow's Terror over Moldova: A Dark Chapter with Echoes Today",
-    "desc": "A commentary on Soviet terror in Moldova, its victims, and the echoes of repression in current geopolitical tensions.",
-    "author": "Dr. Dimitar Keranov",
-    "authorId": "keranov",
-    "date": "2025-08-08",
-    "lang": "en",
-    "img": "articles/article images/pm.png",
-    "tags": [
-      "moldova",
-      "russia",
-      "security"
-    ],
-    "body": "Photo taken by the author Published on: 08.08.2025 | Author: Dr. Dimitar Keranov Moscow's Terror over Moldova: A Dark Chapter with Echoes Today Last month I visited Chişinău and attended an exhibition on Soviet terror. The evidence, based on archival material, was deeply disturbing. In 1940, the Soviet Union annexed Bessarabia from Romania and merged it with part of the left bank of the Dniester already under Soviet control to form Soviet Moldova. What followed was decades of repression: forced ",
-    "type": "article"
-  },
-  {
-    "url": "articles/yuar-orazhiya.html",
-    "title": "Атомните бомби на Южна Африка",
-    "desc": "История и анализ на южноафриканската ядрена програма и нейното значение за регионалната сигурност.",
-    "author": "Димитър Керанов",
-    "authorId": "keranov",
-    "date": "2025-08-08",
-    "lang": "bg",
-    "img": "articles/article images/yuzhna-afrika-orazhiya.png",
-    "tags": [
-      "africa",
-      "southafrica",
-      "security"
-    ],
-    "body": "Публикувано на: 08.08.2025 г. | Автор: д-р Димитър Керанов Атомните бомби на Южна Африка Южна Африка започва разработването на ядрени оръжия по време на Студената война – като средство за възпиране срещу съветското влияние в региона. През 80-те години страната тайно създава шест атомни бомби – единствената държава в Африка, направила това. В началото на 90-те, с края на апартейда и разпадането на СССР, правителството на президента Ф. В. де Клерк взема решение да прекрати програмата и да се откаж",
-    "type": "article"
-  },
-  {
-    "url": "articles/proektsia-ep-juli25.html",
-    "title": "Може ли „коалицията на фон дер Лайен“ да загуби мнозинството си?",
-    "desc": "Резюме на юлската проекция за местата в Европейския парламент и въпроса дали центристката коалиция може да запази мнозинството си.",
-    "author": "Мануел Мюлер",
-    "authorId": "manuel-muller",
-    "date": "2025-08-08",
-    "lang": "bg",
-    "img": "articles/article images/eustars.png",
-    "tags": [
-      "eu",
-      "europeanparliament"
-    ],
-    "body": "Публикувано: 04.07.2025 г.; Препубликувано от БИМП: 08.08.2025 г. | Автор: д-р Мануел Мюлер Проекция на местата в Европейския парламент – юли 2025 В юлската си проекция д-р Мануел Мюлер разглежда дали т.нар. „коалиция на фон дер Лайен“ (ЕНП, С&amp;Д, „Обнови Европа“) може да запази работното си мнозинство на фона на нарастващата подкрепа за крайнодесните групи. Авторът проследява тенденциите по страни, сравнява базов и динамичен сценарий и обсъжда потенциални партньорства – включително дали ЕНП ",
-    "type": "article"
-  },
-  {
-    "url": "articles/ep-coalition-preview-summary.html",
-    "title": "Could the von der Leyen coalition lose its majority?",
-    "desc": "Summary of the July 2025 European Parliament seat projection and whether the centrist coalition can hold its majority.",
-    "author": "Manuel Müller",
-    "authorId": "manuel-muller",
-    "date": "2025-08-08",
-    "lang": "en",
-    "img": "articles/article images/eustars.png",
-    "tags": [
-      "eu",
-      "europeanparliament"
-    ],
-    "body": "Published on: 04.07.2025; Republished by BIIP on: 08.08.2025 | Author: Dr. Manuel Müller European Parliament Seat Projection – July 2025 In his detailed July 2025 projection, Dr. Manuel Müller explores whether the “von der Leyen coalition” (EPP, S&D, RE) in the European Parliament can maintain its majority amid growing support for far-right groups. The article presents the latest seat distribution, dynamic political shifts, and potential future alliances—including whether the EPP will lean towar",
-    "type": "article"
-  },
-  {
-    "url": "articles/digitalna-ikonomika.html",
-    "title": "Дигиталната икономика и предизвикателствата пред политиката",
-    "desc": "Как новите технологии трансформират икономиката и какви политически решения са необходими.",
-    "author": "Константин Керанов",
-    "authorId": "konstantin-keranov",
-    "date": "2025-08-05",
-    "lang": "bg",
-    "img": "articles/article images/digitalna-ikonomika.png",
-    "tags": [
-      "digitaleconomy",
-      "ai"
-    ],
-    "body": "Публикувано на: 05.08.2025 г. | Автор: Константин Керанов Дигиталната икономика и предизвикателствата пред политиката С разрастването на дигиталната икономика се променят не само бизнес моделите, но и контекстът, в който функционират публичните институции. Новите технологии създават значителни възможности за иновации, растеж и достъп до услуги, но същевременно поставят предизвикателства пред традиционните регулаторни и управленски модели. Управлението на дигиталните процеси изисква адаптиране – ",
-    "type": "article"
-  },
-  {
-    "url": "articles/digital-economy-english.html",
-    "title": "The Digital Economy and the Challenges for Policy",
-    "desc": "How new technologies are transforming the economy and what policy responses are needed.",
-    "author": "Konstantin Keranov",
-    "authorId": "konstantin-keranov",
-    "date": "2025-08-05",
-    "lang": "en",
-    "img": "articles/article images/digital2.png",
-    "tags": [
-      "digitaleconomy",
-      "ai"
-    ],
-    "body": "Published on: 05.08.2025 | Author: Konstantin Keranov The Digital Economy and the Challenges for Policy As the digital economy expands, it transforms not only business models but also the broader context in which public institutions operate. New technologies offer significant opportunities for innovation, growth, and improved access to services, while simultaneously posing challenges to traditional regulatory and governance frameworks. Managing digital processes requires adaptation—both at the n",
-    "type": "article"
-  },
-  {
-    "url": "articles/bg-md.html",
-    "title": "България и Молдова – приятелство и общи предизвикателства",
-    "desc": "Коментар върху българо-молдовските отношения, българската общност в Молдова и общите външни предизвикателства.",
-    "author": "Димитър Керанов",
-    "authorId": "keranov",
-    "date": "2025-07-31",
-    "lang": "bg",
-    "img": "articles/article images/bg-md.png",
-    "tags": [
-      "bulgaria",
-      "moldova",
-      "eu"
-    ],
-    "body": "Публикувано на: 31.07.2025 г. | Автор: д-р Димитър Керанов България и Молдова – приятелство и общи предизвикателства Посещението на българския министър-председател в Молдова и подкрепата му за европейското бъдеще на Кишинев е ясен знак за продължаващото сътрудничество и солидарност между двете държави. Те споделят дългогодишни исторически и културни връзки, а днешната политическа подкрепа е логично продължение на това партньорство. Особено важна е ролята на българската общност в Молдова, съсредо",
-    "type": "article"
-  },
-  {
-    "url": "articles/bg-md-friendship-english.html",
-    "title": "Bulgaria and Moldova – Friendship and Shared Challenges",
-    "desc": "A commentary on Bulgarian-Moldovan relations, the Bulgarian community in Moldova, and shared external challenges.",
-    "author": "Dr. Dimitar Keranov",
-    "authorId": "keranov",
-    "date": "2025-07-31",
-    "lang": "en",
-    "img": "articles/article images/bg-md2.png",
-    "tags": [
-      "bulgaria",
-      "moldova",
-      "eu"
-    ],
-    "body": "Published on: 31.07.2025 | Author: Dr. Dimitar Keranov Bulgaria and Moldova – Friendship and Shared Challenges The visit of the Bulgarian Prime Minister to Moldova and his support for Chisinau’s European future is a clear sign of ongoing cooperation and solidarity between the two countries. They share long-standing historical and cultural ties, and today’s political support is a natural continuation of this partnership. Particularly important is the role of the Bulgarian community in Moldova, ma",
-    "type": "article"
-  },
-  {
-    "url": "articles/pretoria-bg.html",
-    "title": "Дипломатическото отдръпване на Претория",
-    "desc": "Анализ на дипломатическия обрат на Южна Африка и неговото значение за двустранните отношения.",
-    "author": "Димитър Керанов",
-    "authorId": "keranov",
-    "date": "2025-07-26",
-    "lang": "bg",
-    "img": "articles/article images/SA-BG.png",
-    "tags": [
-      "africa",
-      "southafrica",
-      "diplomacy"
-    ],
-    "body": "Публикувано на: 26.07.2025 г. | Автор: д-р Димитър Керанов Дипломатическото отдръпване на Претория Решението на Република Южна Африка да закрие посолството си в София – събитие, което остана почти незабелязано в българското публично пространство – е тревожен сигнал. Не само като дипломатически жест, но и като отражение на променящи се глобални приоритети. Южна Африка е водещ член на БРИКС и поддържа стабилни, приятелски отношения с Русия. България, от своя страна, е член на ЕС и НАТО, и е обявен",
-    "type": "article"
-  },
-  {
-    "url": "articles/pretoria-diplomatic-withdrawal.html",
-    "title": "Pretoria's Diplomatic Withdrawal",
-    "desc": "Analysis of South Africa's diplomatic reversal and its significance for bilateral relations.",
-    "author": "Dr. Dimitar Keranov",
-    "authorId": "keranov",
-    "date": "2025-07-26",
-    "lang": "en",
-    "img": "articles/article images/SA-BG.png",
-    "tags": [
-      "africa",
-      "southafrica",
-      "diplomacy"
-    ],
-    "body": "Published: 26 July 2025 | Author: Dr. Dimitar Keranov Pretoria’s Diplomatic Withdrawal The decision by the Republic of South Africa to close its embassy in Sofia — an event that went largely unnoticed in the Bulgarian public sphere — is a troubling signal. Not only as a diplomatic gesture, but also as a reflection of shifting global priorities. South Africa is a leading member of BRICS and maintains stable, friendly relations with Russia. Bulgaria, for its part, is a member of the EU and NATO, a",
-    "type": "article"
-  },
-  {
-    "url": "articles/kogato-romania-te-zabrani.html",
-    "title": "Когато Румъния те забрани",
-    "desc": "Анализ на румънската забрана и нейното отражение върху двустранните отношения и свободата на словото.",
-    "author": "Димитър Керанов",
-    "authorId": "keranov",
-    "date": "2025-07-26",
-    "lang": "bg",
-    "img": "articles/article images/RO flag.png",
-    "tags": [
-      "bulgaria",
-      "romania"
-    ],
-    "body": "Публикувано на: 26.07.2025 г. | Автор: д-р Димитър Керанов Когато Румъния те забрани Скорошното решение на Румъния да забрани на кмета на Кишинев Йон Чебан — широко възприеман като проруско настроен — да влиза в страната, а с това и в цялото Шенгенско пространство, за срок от пет години поради съображения за национална сигурност, изпраща ясно послание: има последствия за онези, които се възприемат като заплаха за европейския път и демократичното развитие на Молдова. Молдова е на кръстопът, а вън",
-    "type": "article"
-  },
-  {
-    "url": "articles/when-romania-bans-you.html",
-    "title": "When Romania Bans You",
-    "desc": "Analysis of Romania's ban and its implications for bilateral relations and freedom of speech.",
-    "author": "Dr. Dimitar Keranov",
-    "authorId": "keranov",
-    "date": "2025-07-09",
-    "lang": "en",
-    "img": "articles/article images/RO flag.png",
-    "tags": [
-      "bulgaria",
-      "romania"
-    ],
-    "body": "Published: 26 July 2025 | Author: Dr. Dimitar Keranov, MRSSAf When Romania Bans You Romania’s recent decision to ban Chișinău mayor Ion Ceban—widely perceived as pro-Russian—from entering the country, citing national security, and with that the entire Schengen Area, for five years, sent a clear message: there are consequences for those seen as undermining Moldova’s EU path and democratic trajectory. Moldova is at a crossroads, and external influence—especially from Moscow and politicians accused",
-    "type": "article"
-  },
-  {
-    "url": "articles/tryabva-okonchatelno-da-se-razdelim-sas-savetskoto-vaorazhenie.html",
-    "title": "Трябва окончателно да се разделим със съветското въоръжение",
-    "desc": "Защо България трябва да ускори замяната на съветското оръжие с натовско-съвместимо оборудване.",
-    "author": "Димитър Керанов",
-    "authorId": "keranov",
-    "date": "2025-07-13",
-    "lang": "bg",
-    "img": "articles/article images/soviet armament bg.png",
-    "tags": [
-      "bulgaria",
-      "security",
-      "nato"
-    ],
-    "body": "Публикувано на: 13.07.2025 г. | Автор: д-р Димитър Керанов Трябва окончателно да се разделим със съветското въоръжение Русия официално ни е обявила за неприятелска държава. Факт . Въпреки това, голяма част от българската армия все още разчита на остарели съветски системи — изцяло зависими от руски резервни части, поддръжка и технологии. За държава-член на НАТО това не е нито устойчиво, нито сериозно. Докато продължаваме да имаме съветско въоръжение, ние подкопаваме собствената си сигурност, дове",
-    "type": "article"
-  },
-  {
-    "url": "articles/bulgaria-must-leave-soviet-armament-behind.html",
-    "title": "Bulgaria Must Leave Soviet Armament Behind",
-    "desc": "Why Bulgaria must accelerate replacing Soviet-era weapons with NATO-compatible equipment.",
-    "author": "Dimitar Keranov",
-    "authorId": "keranov",
-    "date": "2025-04-14",
-    "lang": "en",
-    "img": "articles/article images/soviet armament bg.png",
-    "tags": [
-      "bulgaria",
-      "security",
-      "nato"
-    ],
-    "body": "Published: 13 July 2025 &nbsp;|&nbsp; Author: Dr. Dimitar Keranov Bulgaria Must Leave Soviet Armament Behind - Fully and Finally Bulgaria today faces a simple fact: Russia has officially declared it an unfriendly state . Yet much of the country’s military still relies on obsolete Soviet systems — all dependent on Russian parts, maintenance, and know-how. For a NATO member, this is neither sustainable nor serious. Keeping Soviet armament undermines Bulgaria’s security, its alliances, and its cred",
-    "type": "article"
-  },
-  {
-    "url": "articles/when-bulgarian-democracy-falters.html",
-    "title": "When Bulgarian Democracy Falters",
-    "desc": "A look at the structural causes of democratic decline in Bulgaria and what reform would require.",
-    "author": "Dr. Dimitar Keranov",
-    "authorId": "keranov",
-    "date": "2025-07-12",
-    "lang": "en",
-    "img": "articles/article images/When Bulgarian Democracy Falters Article.png",
-    "tags": [
-      "bulgaria",
-      "democracy",
-      "governance"
-    ],
-    "body": "Published: 13 July 2025 &nbsp;|&nbsp; Author: Dr. Dimitar Keranov When Bulgarian Democracy Falters In an official statement dated 12 July 2025, the liberal-centrist Renew Europe Group in the European Parliament condemned the “escalating assault on democratic institutions and the rule of law in Bulgaria, exemplified by the politically motivated arrest of Varna Mayor Blagomir Kotsev on 8 July 2025.” Kotsev is a member of We Continue the Change – Democratic Bulgaria (PP–DB), which is affiliated wit",
-    "type": "article"
-  },
-  {
-    "url": "experts/aradzhioni.html",
-    "title": "Sergey Petrov — Aradzhioni – Expert",
-    "desc": "Сергей Петров-Araджиони – политически анализатор, специализиращ международна сигурност и геополитика.",
+    "url": "about-en.html",
+    "title": "About",
+    "desc": "About the Bulgarian Institute for International Politics – mission, team and history of the organization.",
     "author": "",
-    "authorId": "",
-    "date": "",
-    "lang": "en",
-    "img": "experts/logo.png",
-    "tags": [
-      "expert"
-    ],
-    "body": "Expert on International Security and Geopolitics Sergey Petrov — Aradzhioni is a political analyst and author. He holds an educational background in political science, security, and economics. He has a particular interest in political anthropology and social philosophy. He is the editor and co-author of the collection “The Time We Live In (Conversations)” . He is currently a PhD candidate at the B",
-    "type": "expert"
-  },
-  {
-    "url": "experts/arovinalti-english.html",
-    "title": "Luca Rovinalti, MBA – Expert",
-    "desc": "Luca Rovinalti – expert in European politics and international relations.",
-    "author": "",
-    "authorId": "",
-    "date": "",
-    "lang": "en",
-    "img": "experts/logo.png",
-    "tags": [
-      "expert"
-    ],
-    "body": "Political Consultant; Expert on EU Affairs Luca Rovinalti is a political consultant specializing in European institutional processes and strategic political communication. He brings a cross-border perspective and a results-oriented approach to public affairs. He holds diplomas from the Diplomatic Academy in Prague and the European Academy of Diplomacy in Warsaw. Rovinalti is a member of the Forbes",
-    "type": "expert"
-  },
-  {
-    "url": "experts/auzunov-english.html",
-    "title": "Dr. Alexander Uzunov – Expert",
-    "desc": "Dr Alexander Uzunov – specialist in national security and geopolitics.",
-    "author": "",
-    "authorId": "",
-    "date": "",
-    "lang": "en",
-    "img": "experts/logo.png",
-    "tags": [
-      "expert"
-    ],
-    "body": "Expert on National Security and Geopolitics Political scientist specializing in national security and geopolitics. Dr. Alexander Uzunov holds a BA in Political Science and an MA in Diplomacy and National Security from Veliko Tarnovo University. He obtained a PhD in Political Science and currently holds the academic rank of Assistant Professor. He has authored a number of analyses in global and reg",
-    "type": "expert"
-  },
-  {
-    "url": "experts/dvaculik-english.html",
-    "title": "JUDr. PhDr. David Vaculík – Expert",
-    "desc": "Daniel Vaculik – political scientist specialising in Central European politics.",
-    "author": "",
-    "authorId": "",
-    "date": "",
-    "lang": "en",
-    "img": "experts/logo.png",
-    "tags": [
-      "expert"
-    ],
-    "body": "Expert on Czech Politics JUDr. PhDr. David Vaculík holds doctorates in Political Science and in Law from Charles University in Prague. As part of BIIP’s expert network, he provides insights into contemporary Czech political dynamics and contributes to fostering deeper understanding of the region’s policy challenges. &larr; Back to all experts",
-    "type": "expert"
-  },
-  {
-    "url": "experts/keranov-en.html",
-    "title": "Dr. Dimitar Keranov – Expert",
-    "desc": "Dr Dimitar Keranov – political scientist specialising in democratisation in Africa and Central and Eastern Europe.",
-    "author": "",
-    "authorId": "",
-    "date": "",
-    "lang": "en",
-    "img": "experts/logo.png",
-    "tags": [
-      "expert"
-    ],
-    "body": "Member of the Managing Board; Expert on Africa and Central and Eastern Europe Bulgarian-German political scientist, africanist, and polyglot. Dr. Dimitar Keranov is one of the founders and a member of the Managing Board of the Bulgarian Institute for International Politics. He holds a PhD in Political Science with a focus on democratization in Africa. His expertise also covers international relati",
-    "type": "expert"
-  },
-  {
-    "url": "experts/keranov.html",
-    "title": "Д-р Димитър Керанов – Експерт",
-    "desc": "Д-р Димитър Керанов – политолог, специализиращ демокрацията в Африка и Централна и Източна Европа.",
-    "author": "",
-    "authorId": "",
-    "date": "",
-    "lang": "bg",
-    "img": "experts/logo.png",
-    "tags": [
-      "expert"
-    ],
-    "body": "Член на Управителния съвет; Експерт по Африка и Централна и Източна Европа Българо-германски политолог, африканист и полиглот. Д-р Димитър Керанов е основател и член на Управителния съвет на Българския институт за международна политика. Притежава докторска степен по политология с фокус върху демократизацията в Африка. Неговата експертиза обхваща също така международни отношения и вътрешнополитичес",
-    "type": "expert"
-  },
-  {
-    "url": "experts/ksmilkov-english.html",
-    "title": "Assoc. Prof. Dr. Kaloyan Smilkov – Expert",
-    "desc": "Assoc. Prof. Kaloyan Smilkov – expert in international relations and comparative political science.",
-    "author": "",
-    "authorId": "",
-    "date": "",
-    "lang": "en",
-    "img": "experts/logo.png",
-    "tags": [
-      "expert"
-    ],
-    "body": "Expert in International Relations and Comparative Political Science Kaloyan Smilkov is a Bulgarian political and legal anthropologist and an expert in international relations and comparative political science. He is an established scholar with long-standing academic and research experience. His work focuses on the interaction between law, culture, and politics in contemporary societies. In his aca",
-    "type": "expert"
-  },
-  {
-    "url": "experts/naama-en.html",
-    "title": "Prof. Karim Fahir Naama – Expert",
-    "desc": "Prof. Karim Fahir Naama – expert in international relations with a focus on Arab countries and the Middle East.",
-    "author": "",
-    "authorId": "",
-    "date": "",
-    "lang": "en",
-    "img": "experts/logo.png",
-    "tags": [
-      "expert"
-    ],
-    "body": "Expert on International Relations and Middle East Economist, lecturer, and translator with extensive experience in international relations. Prof. Karim Fahir Naama holds two doctoral degrees and is a specialist in international economics with a focus on the Arab countries and the Middle East. He has authored a significant number of monographs, studies, and articles. His key areas of expertise incl",
-    "type": "expert"
-  },
-  {
-    "url": "experts/naama.html",
-    "title": "Проф. д. ик. н Карим Фахир Наама – Експерт",
-    "desc": "Проф. Карим Фахир Наама – експерт по международни отношения и Близкия изток.",
-    "author": "",
-    "authorId": "",
-    "date": "",
-    "lang": "bg",
-    "img": "experts/logo.png",
-    "tags": [
-      "expert"
-    ],
-    "body": "Експерт по международни отношения и Близък изток Икономист, преподавател и преводач с дългогодишен опит в международните отношения. Проф. д. ик. н. Карим Фахир Наама е специалист в областта на международната икономика, с фокус върху арабските страни и Близкия изток. Притежава две докторски степени и е автор на значителен брой монографии, студии и статии. Сред неговите ключови области на експертиза",
-    "type": "expert"
-  },
-  {
-    "url": "experts/petrov.html",
-    "title": "Сергей Петров — Араджиони – Експерт",
-    "desc": "Сергей Петров-Araджиони – политически анализатор и автор в областта на международната сигурност.",
-    "author": "",
-    "authorId": "",
-    "date": "",
-    "lang": "bg",
-    "img": "experts/logo.png",
-    "tags": [
-      "expert"
-    ],
-    "body": "Експерт по международна сигурност и геополитика Сергей Петров — Араджиони е политически анализатор и автор. Разполага с образование в сферата на политическите науки, сигурността и икономиката. Особен интерес проявява към политическата антропология и социалната философия. Съставител и съавтор е в сборника „Времето, в което живеем (разговори)“ . В момента е докторант към Българската академия на наук",
-    "type": "expert"
-  },
-  {
-    "url": "experts/rovinalti.html",
-    "title": "Лука Ровиналти, MBA – Експерт",
-    "desc": "Лука Ровиналти – експерт по европейска политика и международни отношения.",
-    "author": "",
-    "authorId": "",
-    "date": "",
-    "lang": "bg",
-    "img": "experts/logo.png",
-    "tags": [
-      "expert"
-    ],
-    "body": "Политически консултант; Експерт по европейските въпроси Лука Ровиналти е политически консултант, специализиращ в европейските институционални процеси и стратегическата политическа комуникация. Той носи трансгранична перспектива и резултатно-ориентиран подход в сферата на публичните политики. Завършил е Дипломатическата академия в Прага и Европейската академия по дипломация във Варшава. Ровиналти е",
-    "type": "expert"
-  },
-  {
-    "url": "experts/smilkov.html",
-    "title": "Доц. д-р Калоян Смилков – Експерт",
-    "desc": "Доц. д-р Калоян Смилков – експерт по международни отношения и сравнителни политически науки.",
-    "author": "",
-    "authorId": "",
-    "date": "",
-    "lang": "bg",
-    "img": "experts/logo.png",
-    "tags": [
-      "expert"
-    ],
-    "body": "Експерт по международни отношения и сравнителни политически науки Калоян Смилков е български политически и юридически антрополог и експерт по международни отношения и сравнителни политически науки. Той е утвърден изследовател с дългогодишен академичен и научен опит. Научните му интереси са насочени към взаимодействието между право, култура и политика в съвременните общества. В научната си работа д",
-    "type": "expert"
-  },
-  {
-    "url": "experts/uzunov.html",
-    "title": "Д-р Александър Узунов – Експерт",
-    "desc": "Д-р Александър Узунов – специалист по национална сигурност и геополитика.",
-    "author": "",
-    "authorId": "",
-    "date": "",
-    "lang": "bg",
-    "img": "experts/logo.png",
-    "tags": [
-      "expert"
-    ],
-    "body": "Експерт по национална сигурност и геополитика Политолог, експерт по национална сигурност и геополитика. Д-р Александър Узунов е бакалавър по Политология и магистър по Дипломация и национална сигурност към Великотърновския университет. Притежава докторска степен по Политология и заема академичната длъжност главен асистент. Автор е на редица анализи в сферата на глобалната и регионалната политика, с",
-    "type": "expert"
-  },
-  {
-    "url": "experts/vaculik.html",
-    "title": "JUDr. PhDr. Давид Вацулик – Експерт",
-    "desc": "Даниел Вацулик – политолог, специализиращ централноевропейски политики.",
-    "author": "",
-    "authorId": "",
-    "date": "",
-    "lang": "bg",
-    "img": "experts/logo.png",
-    "tags": [
-      "expert"
-    ],
-    "body": "Експерт по чешка политика JUDr. PhDr. Давид Вацулик притежава докторски степени по политология и право от Карловия университет в Прага. Като част от експертната мрежа на БИМП, той предоставя експертен поглед върху съвременната политическа динамика в Чехия и допринася за по-задълбочено разбиране на политическите предизвикателства в региона. &larr; Обратно към всички експерти",
-    "type": "expert"
-  },
-  {
-    "url": "index.html",
-    "title": "Български институт за международна политика",
-    "desc": "Български институт за международна политика (БИМП) – независимо аналитично издание от Варна. Статии, коментари и анализи за България, Европа и света.",
-    "author": "",
-    "authorId": "",
-    "date": "",
-    "lang": "bg",
-    "img": "logo.png",
-    "tags": [],
-    "body": "",
-    "type": "page"
-  },
-  {
-    "url": "index-en.html",
-    "title": "Bulgarian Institute for International Politics",
-    "desc": "Bulgarian Institute for International Politics (BIIP) – an independent analytical publication from Varna. Articles, commentary and analysis on Bulgaria,...",
-    "author": "",
-    "authorId": "",
     "date": "",
     "lang": "en",
     "img": "logo.png",
-    "tags": [],
-    "body": "",
-    "type": "page"
+    "body": "The Bulgarian Institute for International Politics (BIIP) is an independent think-tank dedicated to civic analysis, political reflection, and international dialogue. Founded in July 2025 and based in the Black Sea city of Varna, Bulgaria, the Institute provides a platform for early-career analysts, underrepresented thinkers, and established experts to contribute meaningfully to public discourse. BIIP is legally registered under Bulgarian law. We aim to foster inclusive, balanced, and critical th"
   },
   {
     "url": "about.html",
     "title": "За нас",
     "desc": "За Българския институт за международна политика – мисия, екип и история на организацията.",
     "author": "",
-    "authorId": "",
     "date": "",
     "lang": "bg",
     "img": "logo.png",
-    "tags": [],
-    "body": "",
-    "type": "page"
+    "body": "Българският институт за международна политика (БИМП) е независимо, нестопанско сдружение, посветено на анализ, политически размисъл и международен диалог. Основан през юли 2025 г. в гр. Варна, Институтът предоставя платформа както за начинаещи анализатори, така и за утвърдени експерти да допринасят смислено към обществения дебат. Нашата цел е да насърчаваме балансирано и критично мислене по политически въпроси в България, Европа и света. Вижте всички статии → Изданието „Региони“ e основната публ"
   },
   {
-    "url": "about-en.html",
-    "title": "About",
-    "desc": "About the Bulgarian Institute for International Politics – mission, team and history of the organization.",
+    "url": "africa-en.html",
+    "title": "Regions - Africa and Middle East - ISSN 3033-2516",
+    "desc": "Analysis and commentary on Africa and the Middle East from the Bulgarian Institute for International Policy.",
     "author": "",
-    "authorId": "",
+    "date": "",
+    "lang": "en",
+    "img": "articles/article images/digital2.png",
+    "body": "Africa and Middle East The Digital Economy and the Challenges for Policy by Konstantin Keranov How can policy keep up with technology? A look at the balance between innovation and public interest. Pretoria’s Diplomatic Withdrawal by Dr. Dimitar Keranov South Africa’s decision to close its embassy in Sofia is a diplomatic signal and reflects shifting geopolitical priorities."
+  },
+  {
+    "url": "afrika.html",
+    "title": "Региони - Африка и Близък изток - ISSN 3033-2516",
+    "desc": "Анализи и коментари за Африка и Близкия изток от Българския институт за международна политика.",
+    "author": "",
+    "date": "",
+    "lang": "bg",
+    "img": "articles/article images/synthetic.png",
+    "body": "Африка и Близък изток Синтетичното съдържание като проблем на институционалното доверие от Константин Керанов Синтетичното съдържание не е само технологичен проблем – то поставя въпроса за доверието в институциите и устойчивостта на демократичната публична среда. Атомните бомби на Южна Африка от д-р Димитър Керанов Историята на единствената държава, която доброволно демонтира създадените от нея ядрени оръжия – и защо този случай остава актуален днес. Дигиталната икономика и предизвикателствата п"
+  },
+  {
+    "url": "articles/beijing-bgr.html",
+    "title": "Signal from Beijing: What Bulgaria Just Told the World",
+    "desc": "Commentary on Deputy PM Atanas Zafirov’s Beijing visit and what it signals about Bulgaria’s alignment as an EU and NATO member.",
+    "author": "Dr. Dimitar Keranov",
+    "date": "2025-09-06",
+    "lang": "en",
+    "img": "articles/article images/beijing.png",
+    "body": "Published on: 06.09.2025 | Author: Dr. Dimitar Keranov Atanas Zafirov, Bulgaria’s Deputy Prime Minister and leader of the Bulgarian Socialist Party — the successor of the former communist dictatorship party — chose to travel to Beijing this week, appearing at the Chinese military parade alongside Xi Jinping, Vladimir Putin, Alexander Lukashenko, and Kim Jong Un. For a NATO and EU member, this is not simply poor judgment; it is a warning sign. The optics highlight both the contradictions of Bulga"
+  },
+  {
+    "url": "articles/bg-md-friendship-english.html",
+    "title": "Bulgaria and Moldova – Friendship and Shared Challenges",
+    "desc": "A commentary on Bulgarian–Moldovan relations, the Bulgarian community in Moldova, and shared external challenges.",
+    "author": "Dr. Dimitar Keranov",
+    "date": "2025-07-31",
+    "lang": "en",
+    "img": "articles/article images/bg-md2.png",
+    "body": "Published on: 31.07.2025 | Author: Dr. Dimitar Keranov Bulgaria and Moldova – Friendship and Shared Challenges The visit of the Bulgarian Prime Minister to Moldova and his support for Chisinau’s European future is a clear sign of ongoing cooperation and solidarity between the two countries. They share long-standing historical and cultural ties, and today’s political support is a natural continuation of this partnership. Particularly important is the role of the Bulgarian community in Moldova, ma"
+  },
+  {
+    "url": "articles/bg-md.html",
+    "title": "България и Молдова – приятелство и общи предизвикателства",
+    "desc": "Коментар за българо-молдовските отношения, българската общност в Молдова и предстоящите предизвикателства.",
+    "author": "д-р Димитър Керанов",
+    "date": "2025-07-31",
+    "lang": "bg",
+    "img": "articles/article images/bg-md.png",
+    "body": "Публикувано на: 31.07.2025 г. | Автор: д-р Димитър Керанов България и Молдова – приятелство и общи предизвикателства Посещението на българския министър-председател в Молдова и подкрепата му за европейското бъдеще на Кишинев е ясен знак за продължаващото сътрудничество и солидарност между двете държави. Те споделят дългогодишни исторически и културни връзки, а днешната политическа подкрепа е логично продължение на това партньорство. Особено важна е ролята на българската общност в Молдова, съсредо"
+  },
+  {
+    "url": "articles/bg-ro-vm.html",
+    "title": "Димитър Керанов: България и Румъния трябва да разширяват сътрудничеството си във всички сфери",
+    "desc": "Резюме на интервю за европейската интеграция на Молдова, ролята на България, българо-румънското партньорство, енергийната сигурност и регионалната...",
+    "author": "Владимир Митев",
+    "date": "2026-01-09",
+    "lang": "bg",
+    "img": "articles/article images/bg-ro-vm.png",
+    "body": "Публикувано на: 09.01.2026 г. | Автор: Владимир Митев | Източник: Мостът на приятелството Резюме на интервюто с политолога д-р Димитър Керанов Интервюто разглежда новата динамика в българо-молдовските отношения, европейската интеграция на Молдова и регионалното сътрудничество в Югоизточна Европа след началото на пълномащабната руска инвазия в Украйна. Основни акценти: Европейската интеграция на Молдова: Д-р Керанов, намиращ се в Кишинев, смята, че Молдова е политически готова да се присъедини къ"
+  },
+  {
+    "url": "articles/bgsecurity.html",
+    "title": "Bulgaria and Security at the Edge of Europe",
+    "desc": "How geography, hybrid threats, and institutional capacity shape Bulgaria’s role in European and transatlantic security.",
+    "author": "Dr. Dimitar Keranov",
+    "date": "2026-03-09",
+    "lang": "en",
+    "img": "articles/article images/bgrsecurity.png",
+    "body": "Published on: 09.03.2026 | Authors: Dr. Dimitar Keranov, MRSSAf &amp; Konstantin Keranov Bulgaria and Security at the Edge of Europe For much of the post-accession period, questions of European security appeared relatively abstract in Bulgaria. That situation has changed substantially. Security for Bulgaria has become tangible and structural, shaped directly by geography, economic interdependence, and regional instability. Bulgaria occupies the southeastern frontier of the European Union. It fac"
+  },
+  {
+    "url": "articles/bruxbg.html",
+    "title": "Brussels to Sofia: EU Policy in Bulgaria",
+    "desc": "How EU funding, rules, and conditionality shape governance, security, and resilience in Bulgaria—and what Brussels should watch and Sofia should prioritize.",
+    "author": "Dr. Dimitar Keranov",
+    "date": "2026-02-09",
+    "lang": "en",
+    "img": "articles/article images/bruxbg.png",
+    "body": "Published on: 09.02.2026 | Authors: Dr. Dimitar Keranov, MRSSAf &amp; Luca Rovinalti Brussels to Sofia: EU Policy in Bulgaria In Sofia, “Europe” is not only a debate about values or geopolitics. In practice, EU policy shapes budgets, institutional incentives, enforcement credibility, and Bulgaria’s role on the EU’s external border—where internal EU rules and external security risks increasingly overlap. When people in Sofia talk about “Europe,” they often mean more than values or geopolitics. In"
+  },
+  {
+    "url": "articles/bul-ro-en.html",
+    "title": "Dimitar Keranov: Bulgaria and Romania must expand cooperation in all areas",
+    "desc": "Summary of an interview on Bulgarian–Moldovan relations, Russian disinformation, energy and infrastructure connectivity, and the need for deeper...",
+    "author": "Vladimir Mitev",
+    "date": "2026-01-09",
+    "lang": "en",
+    "img": "articles/article images/bg-ro-vm.png",
+    "body": "Published: 9 January 2026 | Updated: 9 January 2026 | Author: Vladimir Mitev | Source: The Bridge of Friendship Summary The document is an interview with Bulgarian political scientist Dr. Dimitar Keranov about Bulgarian-Moldovan relations, regional security, and international relations in Southeast Europe following the start of Russia’s large-scale military invasion of Ukraine. Key points from the interview: Moldova’s Europeanization: Dr. Keranov is in Chisinau and observes the country advancing"
+  },
+  {
+    "url": "articles/bulgaria-must-leave-soviet-armament-behind.html",
+    "title": "Bulgaria Must Leave Soviet Armament Behind - Fully and Finally",
+    "desc": "Why Bulgaria, a NATO member, must fully replace obsolete Soviet military systems to ensure its security and credibility.",
+    "author": "Dimitar Keranov",
+    "date": "2025-04-14",
+    "lang": "en",
+    "img": "articles/article images/Bulgaria Must Leave Soviet Armament Behind Article.png",
+    "body": "Published: 13 July 2025 &nbsp;|&nbsp; Author: Dr. Dimitar Keranov Bulgaria Must Leave Soviet Armament Behind - Fully and Finally Bulgaria today faces a simple fact: Russia has officially declared it an unfriendly state . Yet much of the country’s military still relies on obsolete Soviet systems — all dependent on Russian parts, maintenance, and know-how. For a NATO member, this is neither sustainable nor serious. Keeping Soviet armament undermines Bulgaria’s security, its alliances, and its cred"
+  },
+  {
+    "url": "articles/bulgarias-democratic-challenge.html",
+    "title": "Bulgaria’s Democratic Challenge",
+    "desc": "Despite formal EU and NATO integration, Bulgaria faces enduring challenges from Russian influence, corruption, and uncertain political will.",
+    "author": "Dr. Dimitar Keranov",
+    "date": "2026-01-01",
+    "lang": "en",
+    "img": "logo.png",
+    "body": "Published: 13 July 2025 &nbsp;|&nbsp; Author: Dr. Dimitar Keranov Bulgaria’s Democratic Challenge Bulgaria has been a member of the European Union since 2007. It joined NATO in 2004 and became part of Schengen in 2024. The adoption of the Euro is scheduled for January 1, 2026, a milestone of European integration. On paper, Bulgaria’s path is clear: full integration into the Euro-Atlantic community. But beneath the surface, challenges remain. Russian influence in Bulgaria has not vanished. It per"
+  },
+  {
+    "url": "articles/chn.html",
+    "title": "Пекин и Москва в Западните Балкани",
+    "desc": "Анализ на руското и китайското влияние в Западните Балкани и отражението му върху демократичната устойчивост и европейската интеграция.",
+    "author": "Димитър Керанов",
+    "date": "2026-03-17",
+    "lang": "bg",
+    "img": "articles/article images/chn.png",
+    "body": "Публикувано на: 17.03.2026 г. | Автор: д-р Димитър Керанов Пекин и Москва в Западните Балкани Западните Балкани остават стратегически уязвим регион, в който външното влияние продължава да се наслагва върху незавършени реформи, институционални слабости и непълна политическа консолидация. В този контекст Русия и Китай използват различни инструменти, но често постигат сходен резултат: създаване на среда, в която демократичната устойчивост отслабва, а европейската интеграция се забавя, размива или п"
+  },
+  {
+    "url": "articles/digital-economy-english.html",
+    "title": "The Digital Economy and the Challenges for Policy",
+    "desc": "Commentary on how the digital economy impacts public policy and regulation.",
+    "author": "Konstantin Keranov",
+    "date": "2025-08-05",
+    "lang": "en",
+    "img": "articles/article images/digital2.png",
+    "body": "Published on: 05.08.2025 | Author: Konstantin Keranov The Digital Economy and the Challenges for Policy As the digital economy expands, it transforms not only business models but also the broader context in which public institutions operate. New technologies offer significant opportunities for innovation, growth, and improved access to services, while simultaneously posing challenges to traditional regulatory and governance frameworks. Managing digital processes requires adaptation—both at the n"
+  },
+  {
+    "url": "articles/digitalna-ikonomika.html",
+    "title": "Дигиталната икономика и предизвикателствата пред политиката",
+    "desc": "Коментар за въздействието на дигиталната икономика върху публичните политики и регулациите.",
+    "author": "Константин Керанов",
+    "date": "2025-08-05",
+    "lang": "bg",
+    "img": "articles/article images/digitalna-ikonomika.png",
+    "body": "Публикувано на: 05.08.2025 г. | Автор: Константин Керанов Дигиталната икономика и предизвикателствата пред политиката С разрастването на дигиталната икономика се променят не само бизнес моделите, но и контекстът, в който функционират публичните институции. Новите технологии създават значителни възможности за иновации, растеж и достъп до услуги, но същевременно поставят предизвикателства пред традиционните регулаторни и управленски модели. Управлението на дигиталните процеси изисква адаптиране – "
+  },
+  {
+    "url": "articles/ep-coalition-preview-summary.html",
+    "title": "Could the “von der Leyen coalition” lose its majority?",
+    "desc": "Summary and link to Manuel Müller's July 2025 European Parliament seat projection.",
+    "author": "Manuel Müller",
+    "date": "2025-08-08",
+    "lang": "en",
+    "img": "articles/article images/eustars.png",
+    "body": "Published on: 04.07.2025; Republished by BIIP on: 08.08.2025 | Author: Dr. Manuel Müller European Parliament Seat Projection – July 2025 In his detailed July 2025 projection, Dr. Manuel Müller explores whether the “von der Leyen coalition” (EPP, S&D, RE) in the European Parliament can maintain its majority amid growing support for far-right groups. The article presents the latest seat distribution, dynamic political shifts, and potential future alliances—including whether the EPP will lean towar"
+  },
+  {
+    "url": "articles/ep-feb26.html",
+    "title": "European Parliament Seat Projection – February 2026",
+    "desc": "Faithful summary of Manuel Müller's February 2026 European Parliament seat projection.",
+    "author": "Bulgarian Institute for International Politics",
+    "date": "2026-02-27",
+    "lang": "en",
+    "img": "articles/article images/eustars.png",
+    "body": "Published on: 27.02.2026 | Based on an analysis by Dr. Manuel Müller European Parliament Seat Projection – February 2026 The February 2026 European Parliament seat projection shows a limited improvement for parts of the left-of-centre camp after months of decline. Both S&amp;D and the Left are gaining slightly, while the Greens/EFA remain at their previous level. These changes are described as small and not sufficient to constitute a broader trend reversal. At the same time, the largest losses a"
+  },
+  {
+    "url": "articles/evroro-v-bg-dobra-ideya.html",
+    "title": "Еврото в България е добра идея",
+    "desc": "Коментар от д-р Димитър Керанов защо приемането на еврото е правилна стъпка за България.",
+    "author": "д-р Димитър Керанов",
+    "date": "2025-07-16",
+    "lang": "bg",
+    "img": "articles/article images/euro bg.png",
+    "body": "Публикувано на: 16.07.2025 г. | Автор: д-р Димитър Керанов Еврото в България е добра идея България ще се присъедини към еврозоната на 1 януари 2026 г. От години дебатът у нас около еврото обаче е доминиран от опасения за инфлация, рязък скок на цените и загуба на икономически контрол. Но същите страхове съществуваха и в Хърватия, преди страната да приеме новата валута през 2023 г. — и те не се оправдаха. Според Европейската централна банка преходът на Хърватия към еврото е бил успешен, без взрив"
+  },
+  {
+    "url": "articles/kogato-romania-te-zabrani.html",
+    "title": "Когато Румъния те забрани",
+    "desc": "Решението на Румъния да забрани достъп на Йон Чебан до страната и Шенгенското пространство носи ясен политически сигнал.",
+    "author": "д-р Димитър Керанов",
+    "date": "2025-07-26",
+    "lang": "bg",
+    "img": "articles/article images/RO flag2.png",
+    "body": "Публикувано на: 26.07.2025 г. | Автор: д-р Димитър Керанов Когато Румъния те забрани Скорошното решение на Румъния да забрани на кмета на Кишинев Йон Чебан — широко възприеман като проруско настроен — да влиза в страната, а с това и в цялото Шенгенско пространство, за срок от пет години поради съображения за национална сигурност, изпраща ясно послание: има последствия за онези, които се възприемат като заплаха за европейския път и демократичното развитие на Молдова. Молдова е на кръстопът, а вън"
+  },
+  {
+    "url": "articles/moscow-md.html",
+    "title": "Moscow's Terror over Moldova: A Dark Chapter with Echoes Today",
+    "desc": "A commentary on Soviet terror in Moldova, its victims, and the echoes of repression in current geopolitical tensions.",
+    "author": "Dr. Dimitar Keranov",
+    "date": "2025-08-08",
+    "lang": "en",
+    "img": "articles/article images/sssr.jpg",
+    "body": "Photo taken by the author Published on: 08.08.2025 | Author: Dr. Dimitar Keranov Moscow's Terror over Moldova: A Dark Chapter with Echoes Today Last month I visited Chişinău and attended an exhibition on Soviet terror. The evidence, based on archival material, was deeply disturbing. In 1940, the Soviet Union annexed Bessarabia from Romania and merged it with part of the left bank of the Dniester already under Soviet control to form Soviet Moldova. What followed was decades of repression: forced "
+  },
+  {
+    "url": "articles/moskva-moldova.html",
+    "title": "Терорът на Москва над Молдова",
+    "desc": "Коментар за съветския терор в Молдова, жертвите и отражението на репресиите в съвременния геополитически контекст.",
+    "author": "Д-р Димитър Керанов",
+    "date": "2025-08-08",
+    "lang": "bg",
+    "img": "articles/article images/sssr.jpg",
+    "body": "Снимка: Авторът Публикувано на: 08.08.2025 г. | Автор: д-р Димитър Керанов Терорът на Москва над Молдова Миналия месец посетих Кишинев и разгледах изложба, посветена на съветския терор. Доказателствата, основани на архивни материали, бяха дълбоко шокиращи. През 1940 г. Съветският съюз анексира Бесарабия от Румъния и я обединява с територия от левия бряг на Днестър, който вече е била под съветски контрол, за да създаде по този начин Съветска Молдова. Последват десетилетия на репресии: масови депо"
+  },
+  {
+    "url": "articles/no-corruption-bg.html",
+    "title": "There Is No Corruption in Bulgaria",
+    "desc": "A commentary on recent remarks by Bulgaria’s prime minister and the country’s corruption and media freedom indicators.",
+    "author": "Dr. Dimitar Keranov",
+    "date": "2025-09-23",
+    "lang": "en",
+    "img": "articles/article images/pm.png",
+    "body": "Published on: 23.09.2025 | Author: Dr. Dimitar Keranov There Is No Corruption in Bulgaria When Prime Minister Rosen Zhelyazkov told students at the University of National and World Economy in Sofia that the perception of corruption is greater than the reality, it sent the wrong signal. Independent data points elsewhere: Bulgaria ranks 76th globally on Transparency International’s 2024 Corruption Perceptions Index—among the lowest in the EU—and nearly half of Bulgarians (48%) say corruption incre"
+  },
+  {
+    "url": "articles/pretoria-bg.html",
+    "title": "Дипломатическото отдръпване на Претория",
+    "desc": "Южна Африка затваря посолството си в София – тревожен сигнал за външнополитически приоритети.",
+    "author": "д-р Димитър Керанов",
+    "date": "2025-07-26",
+    "lang": "bg",
+    "img": "articles/article images/SA-BG.png",
+    "body": "Публикувано на: 26.07.2025 г. | Автор: д-р Димитър Керанов Дипломатическото отдръпване на Претория Решението на Република Южна Африка да закрие посолството си в София – събитие, което остана почти незабелязано в българското публично пространство – е тревожен сигнал. Не само като дипломатически жест, но и като отражение на променящи се глобални приоритети. Южна Африка е водещ член на БРИКС и поддържа стабилни, приятелски отношения с Русия. България, от своя страна, е член на ЕС и НАТО, и е обявен"
+  },
+  {
+    "url": "articles/pretoria-diplomatic-withdrawal.html",
+    "title": "Pretoria’s Diplomatic Withdrawal",
+    "desc": "South Africa’s embassy closure in Bulgaria reflects changing global priorities and waning diplomatic interest.",
+    "author": "Dr. Dimitar Keranov",
+    "date": "2025-07-26",
+    "lang": "en",
+    "img": "articles/article images/SABG1.png",
+    "body": "Published: 26 July 2025 | Author: Dr. Dimitar Keranov Pretoria’s Diplomatic Withdrawal The decision by the Republic of South Africa to close its embassy in Sofia — an event that went largely unnoticed in the Bulgarian public sphere — is a troubling signal. Not only as a diplomatic gesture, but also as a reflection of shifting global priorities. South Africa is a leading member of BRICS and maintains stable, friendly relations with Russia. Bulgaria, for its part, is a member of the EU and NATO, a"
+  },
+  {
+    "url": "articles/proektsia-ep-juli25.html",
+    "title": "Може ли „коалицията на фон дер Лайен“ да загуби мнозинството си?",
+    "desc": "Резюме и препратка към юлската (2025) проекция за местата в Европейския парламент на Мануел Мюлер.",
+    "author": "Мануел Мюлер",
+    "date": "2025-08-08",
+    "lang": "bg",
+    "img": "articles/article images/eustars.png",
+    "body": "Публикувано: 04.07.2025 г.; Препубликувано от БИМП: 08.08.2025 г. | Автор: д-р Мануел Мюлер Проекция на местата в Европейския парламент – юли 2025 В юлската си проекция д-р Мануел Мюлер разглежда дали т.нар. „коалиция на фон дер Лайен“ (ЕНП, С&amp;Д, „Обнови Европа“) може да запази работното си мнозинство на фона на нарастващата подкрепа за крайнодесните групи. Авторът проследява тенденциите по страни, сравнява базов и динамичен сценарий и обсъжда потенциални партньорства – включително дали ЕНП "
+  },
+  {
+    "url": "articles/syntheticbg.html",
+    "title": "Синтетичното съдържание като проблем на институционалното доверие",
+    "desc": "Коментар за синтетичното съдържание, дезинформацията и институционалното доверие в условията на хибридни информационни заплахи.",
+    "author": "Константин Керанов",
+    "date": "2026-03-05",
+    "lang": "bg",
+    "img": "articles/article images/synthetic.png",
+    "body": "Публикувано на: 05.03.2026 г. | Автор: Константин Керанов Синтетичното съдържание като проблем на институционалното доверие Разпространението на синтетично съдържание поставя нов натиск върху публичната среда, но основният риск не се изчерпва с това, че се създават по-убедителни подвеждащи текстове или изображения. По-същественият проблем е, че подобно съдържание може да отслаби доверието в официалната информация, в публичната комуникация и в способността на институциите да действат като надежде"
+  },
+  {
+    "url": "articles/taraclia-vote-en.html",
+    "title": "Minority Politics in Moldova: Taraclia’s Vote",
+    "desc": "How Taraclia’s Russian-language info space and Bulgaria’s cultural links shape minority politics in Moldova after the September 28, 2025 election.",
+    "author": "Dr. Dimitar Keranov",
+    "date": "2025-10-09",
+    "lang": "en",
+    "img": "articles/article images/Taraclia.png",
+    "body": "Published on: 09.10.2025 | Author: Dr. Dimitar Keranov, MRSSAf Minority Politics in Moldova: Taraclia’s Vote PAS secured a national majority to keep EU-accession reforms moving, but Taraclia—home to Moldova’s Bulgarian minority—again voted heavily for the pro-Russia Patriotic Bloc. The district’s Russian-language information space shapes these preferences, while Bulgaria’s education and cultural links offer the most practical channel for gradual EU-oriented engagement. Moldova’s September 28, 20"
+  },
+  {
+    "url": "articles/the-euro-in-bulgaria-is-a-good-idea.html",
+    "title": "The Euro in Bulgaria Is a Good Idea",
+    "desc": "Why adopting the euro benefits Bulgaria economically and symbolically. Insights from Dr. Dimitar Keranov, MRSSAf.",
+    "author": "Dr. Dimitar Keranov, MRSSAf",
+    "date": "2026-01-01",
+    "lang": "en",
+    "img": "articles/article images/Euro good idea.png",
+    "body": "Published: 16 July 2025 | Author: Dr. Dimitar Keranov, MRSSAf The Euro in Bulgaria Is a Good Idea Bulgaria is set to join the eurozone on January 1, 2026. For years, the country’s debate about the euro has been dominated by concerns over inflation, price explosions, and loss of economic control. But similar fears existed in Croatia before it adopted the new currency in 2023 — and they did not materialize. According to the European Central Bank, Croatia’s transition was a success, with no explosi"
+  },
+  {
+    "url": "articles/tryabva-okonchatelno-da-se-razdelim-sas-savetskoto-vaorazhenie.html",
+    "title": "Трябва окончателно да се разделим със съветското въоръжение",
+    "desc": "Защо България трябва окончателно да замени съветските военни системи. Коментар от д-р Димитър Керанов.",
+    "author": "д-р Димитър Керанов",
+    "date": "2025-07-13",
+    "lang": "bg",
+    "img": "articles/article images/soviet armament bg.png",
+    "body": "Публикувано на: 13.07.2025 г. | Автор: д-р Димитър Керанов Трябва окончателно да се разделим със съветското въоръжение Русия официално ни е обявила за неприятелска държава. Факт . Въпреки това, голяма част от българската армия все още разчита на остарели съветски системи — изцяло зависими от руски резервни части, поддръжка и технологии. За държава-член на НАТО това не е нито устойчиво, нито сериозно. Докато продължаваме да имаме съветско въоръжение, ние подкопаваме собствената си сигурност, дове"
+  },
+  {
+    "url": "articles/when-bulgarian-democracy-falters.html",
+    "title": "When Bulgarian Democracy Falters",
+    "desc": "Analysis of political persecution and democratic backsliding in Bulgaria in 2025, focusing on the case of Mayor Blagomir Kotsev.",
+    "author": "Dr. Dimitar Keranov",
+    "date": "2025-07-12",
+    "lang": "en",
+    "img": "articles/article images/Bulgaria Democratic Challenge Article.png",
+    "body": "Published: 13 July 2025 &nbsp;|&nbsp; Author: Dr. Dimitar Keranov When Bulgarian Democracy Falters In an official statement dated 12 July 2025, the liberal-centrist Renew Europe Group in the European Parliament condemned the “escalating assault on democratic institutions and the rule of law in Bulgaria, exemplified by the politically motivated arrest of Varna Mayor Blagomir Kotsev on 8 July 2025.” Kotsev is a member of We Continue the Change – Democratic Bulgaria (PP–DB), which is affiliated wit"
+  },
+  {
+    "url": "articles/when-romania-bans-you.html",
+    "title": "When Romania Bans You",
+    "desc": "Romania’s ban of Chișinău mayor Ion Ceban sends a clear signal to pro-Russian actors. Commentary by Dr. Dimitar Keranov.",
+    "author": "Dr. Dimitar Keranov, MRSSAf",
+    "date": "2025-07-09",
+    "lang": "en",
+    "img": "articles/article images/RO flag.png",
+    "body": "Published: 26 July 2025 | Author: Dr. Dimitar Keranov, MRSSAf When Romania Bans You Romania’s recent decision to ban Chișinău mayor Ion Ceban—widely perceived as pro-Russian—from entering the country, citing national security, and with that the entire Schengen Area, for five years, sent a clear message: there are consequences for those seen as undermining Moldova’s EU path and democratic trajectory. Moldova is at a crossroads, and external influence—especially from Moscow and politicians accused"
+  },
+  {
+    "url": "articles/yuar-orazhiya.html",
+    "title": "Атомните бомби на Южна Африка",
+    "desc": "Историческият случай на Южна Африка, която доброволно се отказа от своите ядрени оръжия – и неговата актуалност днес.",
+    "author": "д-р Димитър Керанов",
+    "date": "2025-08-08",
+    "lang": "bg",
+    "img": "articles/article images/yuzhna-afrika-orazhiya.png",
+    "body": "Публикувано на: 08.08.2025 г. | Автор: д-р Димитър Керанов Атомните бомби на Южна Африка Южна Африка започва разработването на ядрени оръжия по време на Студената война – като средство за възпиране срещу съветското влияние в региона. През 80-те години страната тайно създава шест атомни бомби – единствената държава в Африка, направила това. В началото на 90-те, с края на апартейда и разпадането на СССР, правителството на президента Ф. В. де Клерк взема решение да прекрати програмата и да се откаж"
+  },
+  {
+    "url": "asia.html",
+    "title": "Региони - Азия и Океания - ISSN 3033-2516",
+    "desc": "Анализи и коментари, свързани с Азия и Океания от БИМП.",
+    "author": "",
+    "date": "",
+    "lang": "bg",
+    "img": "articles/article images/chn.png",
+    "body": "Азия и Океания Пекин и Москва в Западните Балкани от д-р Димитър Керанов Руското политическо влияние и китайското икономическо присъствие се преплитат, създавайки рискове за демократичната устойчивост и европейската интеграция в региона."
+  },
+  {
+    "url": "bulgaria-soviet-en.html",
+    "title": "Bulgaria as a Former Soviet Republic",
+    "desc": "An analysis of Bulgaria's position as a Soviet satellite, not a republic. Written by Dr. Dimitar Keranov.",
+    "author": "Dr. Dimitar Keranov",
     "date": "",
     "lang": "en",
     "img": "logo.png",
-    "tags": [],
-    "body": "",
-    "type": "page"
+    "body": "Published: 12 July 2025 &nbsp;|&nbsp; Author: Dr. Dimitar Keranov Bulgaria as a Former Soviet Republic Despite the frequency with which it is repeated in both popular and professional discourse, the claim that Bulgaria was part of the Soviet Union is incorrect. While the country was a loyal Soviet satellite and ideologically aligned with Moscow during the Cold War, Bulgaria was never one of the fifteen constituent republics of the USSR. It was a separate country. Communist Bulgaria (1944–1989) f"
   },
   {
-    "url": "regions.html",
-    "title": "Региони - ISSN 3033-2516",
-    "desc": "Регионите на БИМП – статии и анализи за Централна и Източна Европа, Африка, Азия и Западните Балкани.",
+    "url": "cee-en.html",
+    "title": "Regions - Europe - ISSN 3033-2516",
+    "desc": "Articles and analyses related to Central and Eastern Europe at BIIP.",
     "author": "",
-    "authorId": "",
+    "date": "",
+    "lang": "en",
+    "img": "articles/article images/bgrsecurity.png",
+    "body": "Europe Bulgaria and Security at the Edge of Europe by Dr. Dimitar Keranov & Konstantin Keranov Geography, hybrid threats, and institutional capacity are reshaping Bulgaria’s role in European and transatlantic security. Brussels to Sofia: EU Policy in Bulgaria by Dr. Dimitar Keranov, Luca Rovinalti How EU funding, rules, and conditionality shape governance and resilience in Bulgaria—and what Brussels should watch and Sofia should prioritize. European Parliament Seat Projection – February 2026 by "
+  },
+  {
+    "url": "contact-en.html",
+    "title": "Contact",
+    "desc": "Contact the Bulgarian Institute for International Politics – contact form and information.",
+    "author": "",
+    "date": "",
+    "lang": "en",
+    "img": "logo.png",
+    "body": "✉️ Contact us: biip@mailfence.com Quick actions ✉️ General inquiry 🎙 Media request 📝 Submit an article 🤝 Partnerships We usually reply within 3 working days. Follow us on LinkedIn Message Dr. Keranov on Telegram Media & Press BIIP experts are available for interviews and commentary on Bulgaria, the EU, and international affairs. For media requests, please include your outlet, topic, and deadline. Contact: bimp@contactoffice.com Meet Our Experts The Bulgarian Institute for International Politics "
+  },
+  {
+    "url": "contact.html",
+    "title": "Контакт",
+    "desc": "Свържете се с Българския институт за международна политика – контактна форма и информация.",
+    "author": "",
     "date": "",
     "lang": "bg",
     "img": "logo.png",
-    "tags": [],
-    "body": "",
-    "type": "page"
+    "body": "✉️ Свържете се с нас: biip@mailfence.com Бързи действия ✉️ Общо запитване 🎙 Медийно запитване 📝 Изпратете статия 🤝 Партньорства Обикновено отговаряме в рамките на 3 работни дни. Последвайте ни в LinkedIn Свържете се с д-р Керанов в Telegram Медии и преса Експертите на БИМП са на разположение за интервюта и коментари по теми, свързани с България, ЕС и международните отношения. За медийни запитвания, моля включете медия, тема и срок. Контакт: bimp@contactoffice.com Запознайте се с нашите експерти "
+  },
+  {
+    "url": "eksperti.html",
+    "title": "Експерти",
+    "desc": "Експертите на БИМП – профили на анализаторите и изследователите на института.",
+    "author": "",
+    "date": "",
+    "lang": "bg",
+    "img": "logo.png",
+    "body": "Мрежата от експерти на БИМП обединява автори и анализатори с различни профили – от международни отношения и сигурност до технологии и комуникации. Използвайте търсачката и филтрите, за да откриете експерти по тема. Когато има активна профилна страница, кликнете върху картата. Търсене (име, област, ключови думи) Подреждане Препоръчано Име (A–Я) Роля/област Международни отношения Сигурност & геополитика Европейски въпроси Технологии Комуникации Африка Чехия Близък изток Авиация 0 експерта • без фи"
+  },
+  {
+    "url": "experts-english.html",
+    "title": "Experts",
+    "desc": "BIIP Experts – profiles of the institute's analysts and researchers.",
+    "author": "",
+    "date": "",
+    "lang": "en",
+    "img": "logo.png",
+    "body": "BIIP’s expert network brings together authors and analysts across fields—from international relations and security to technology and communications. Use the search and filters to find experts by topic. Where an English profile page exists, you can open it by clicking the card. Search (name, field, keywords) Sort Recommended Name (A–Z) Field/role International Relations Security & Geopolitics EU Affairs Technology Communications Africa Czech Politics Middle East Aviation Policy 0 experts • no fil"
+  },
+  {
+    "url": "impressum.html",
+    "title": "Импресум / Impressum – Български институт за международна политика - Региони",
+    "desc": "Импресум на Българския институт за международна политика – правна информация и издателски данни.",
+    "author": "",
+    "date": "",
+    "lang": "bg",
+    "img": "logo.png",
+    "body": "Заглавие на изданието: Региони Издател: Сдружение „Български институт за международна политика“ (ЕИК: 208390337) Място на издаване: Варна, България Отговорен редактор: д-р Димитър Керанов, MRSSAf Редакционна колегия: доц. д-р Калоян Смилков; проф. д. ик. н., д. пол. н. Карим Фахир Наама; Сергей Петров-Араджиони; д-р Александър Узунов Начало на издаване: 2025 г. Периодичност: Непрекъснато обновяване Езици: Български и английски Контакт: biip@mailfence.com Обхват: Изданието „Региони“ е основната п"
+  },
+  {
+    "url": "index-en.html",
+    "title": "Bulgarian Institute for International Politics",
+    "desc": "Bulgarian Institute for International Politics (BIIP) – an independent analytical publication from Varna. Articles, commentary and analysis on Bulgaria,...",
+    "author": "",
+    "date": "",
+    "lang": "en",
+    "img": "articles/article images/bruxbg.png",
+    "body": "Welcome to the Bulgarian Institute for International Politics We are an independent think-tank based in Varna, Bulgaria. Our mission is to support inclusive, critical, and civic-minded reflection on politics — in Bulgaria, Europe, and beyond. Through commentary, analysis, and multilingual publishing, we provide a platform for early-career voices, underrepresented thinkers, and established experts to engage in meaningful political dialogue. We believe that thoughtful ideas deserve space! BIIP is "
+  },
+  {
+    "url": "index.html",
+    "title": "Български институт за международна политика",
+    "desc": "Български институт за международна политика (БИМП) – независимо аналитично издание от Варна. Статии, коментари и анализи за България, Европа и света.",
+    "author": "",
+    "date": "",
+    "lang": "bg",
+    "img": "articles/article images/chn.png",
+    "body": "Добре дошли в Българския институт за международна политика Ние сме независимо, нестопанско сдружение със седалище във Варна, България. Нашата мисия е да насърчаваме размисъл върху политиката – в България, Европа, и отвъд. Чрез коментари, анализи и публикации предоставяме платформа както на начинаещи анализатори, така и на утвърдени експерти да участват в смислен политически диалог. Вярваме, че стойностните идеи заслужават пространство! Единен идентификационен код: 208390337. Вижте всички статии "
   },
   {
     "url": "regions-en.html",
     "title": "Regions - ISSN 3033-2516",
     "desc": "BIIP Regions – articles and analysis on Central and Eastern Europe, Africa, Asia and the Western Balkans.",
     "author": "",
-    "authorId": "",
     "date": "",
     "lang": "en",
     "img": "logo.png",
-    "tags": [],
-    "body": "",
-    "type": "page"
+    "body": "The publication “Regions” is the main periodical of the Bulgarian Institute for International Politcs (BIIP). Click on a region below to view articles and insights related to its politics, society, and current events. New articles are added regularly. ISSN: 3033-2516 🌍 Europe 🌍 Africa and Middle East 🌎 North &amp; South America Coming soon 🌏 Asia &amp; Oceania Coming soon Impressum"
+  },
+  {
+    "url": "regions.html",
+    "title": "Региони - ISSN 3033-2516",
+    "desc": "Регионите на БИМП – статии и анализи за Централна и Източна Европа, Африка, Азия и Западните Балкани.",
+    "author": "",
+    "date": "",
+    "lang": "bg",
+    "img": "logo.png",
+    "body": "Изданието „Региони“ е основната публикация на Българския институт за международна политика (БИМП). Натиснете върху регион, за да видите статии и материали, свързани с неговата политика, общество и актуални събития. Нови материали се добавят редовно. ISSN: 3033-2516 🌍 Европа 🌍 Африка и Близък изток 🌏 Азия и Океания 🌎 Северна и Южна Америка Импресум"
+  },
+  {
+    "url": "submit-en.html",
+    "title": "Submit a Publication",
+    "desc": "Submit an article to BIIP – guidelines and requirements for authors.",
+    "author": "",
+    "date": "",
+    "lang": "en",
+    "img": "logo.png",
+    "body": "What We Publish The Bulgarian Institute for International Politics (BIIP) welcomes contributions from a broad range of authors — including political scientists, journalists, early-career researchers, and independent civic thinkers. We publish concise, well-argued, and engaging texts that address political developments in Bulgaria, Europe, and the wider international context. Where your work is published: “Regions” “Regions” is the main publication of the Bulgarian Institute for International Pol"
+  },
+  {
+    "url": "submit.html",
+    "title": "Изпрати публикация",
+    "desc": "Публикувайте материал в БИМП – изисквания и насоки за автори.",
+    "author": "",
+    "date": "",
+    "lang": "bg",
+    "img": "logo.png",
+    "body": "Какво публикуваме Българският институт за международна политика (БИМП) приветства авторски текстове от политолози, журналисти, млади изследователи и независими граждански мислители. Публикуваме кратки, аргументирани и въздействащи текстове, които разглеждат политически събития и тенденции в България, Европа и по света. Къде се публикува вашият текст: „Региони“ „Региони“ е основното издание на Българския институт за международна политика (БИМП) с ISSN 3033-2516 . В него се публикуват аналитични с"
+  },
+  {
+    "url": "tsentralna-iztochna-evropa.html",
+    "title": "Региони - Европа - ISSN 3033-2516",
+    "desc": "Анализи и коментари, свързани с Централна и Източна Европа от БИМП.",
+    "author": "",
+    "date": "",
+    "lang": "bg",
+    "img": "articles/article images/chn.png",
+    "body": "Европа Пекин и Москва в Западните Балкани от д-р Димитър Керанов Руското политическо влияние и китайското икономическо присъствие се преплитат, създавайки рискове за демократичната устойчивост и европейската интеграция в региона. Синтетичното съдържание като проблем на институционалното доверие от Константин Керанов Синтетичното съдържание не е само технологичен проблем – то поставя въпроса за доверието в институциите и устойчивостта на демократичната публична среда. България и Румъния трябва да"
   }
 ]
