@@ -391,6 +391,41 @@
     }
   }
 
+
+  /* ── FEATURE: Regions Latest Feed ───────────────────────────── */
+  function initRegionsLatestFeed() {
+    var feed = document.getElementById('regions-latest-feed');
+    if (!feed || !ARTICLES) return;
+    var lang = getLang();
+
+    // Sort all articles by date descending, show latest 6
+    var sorted = ARTICLES.slice().sort(function(a, b) {
+      return (b.date || '').localeCompare(a.date || '');
+    }).slice(0, 6);
+
+    if (!sorted.length) { feed.innerHTML = ''; return; }
+
+    var html = '';
+    sorted.forEach(function(a) {
+      var fname = a.file.split('/').pop();
+      var href = 'articles/' + fname;
+      var imgPath = 'articles/' + a.img.replace(/ /g, '%20');
+      var langLabel = a.lang === 'en'
+        ? '<span class="lang-badge lang-en">EN</span>'
+        : '<span class="lang-badge lang-bg">БГ</span>';
+      var dateStr = a.date ? a.date.split('-').reverse().join('.') : '';
+      html +=
+        '<a href="' + href + '" class="latest-item">' +
+          '<img src="' + imgPath + '" alt="" class="latest-thumb" width="52" height="52" loading="lazy">' +
+          '<div class="latest-info">' +
+            '<div class="latest-title">' + a.title + '</div>' +
+            '<div class="latest-meta">' + langLabel + dateStr + (a.author ? ' · ' + a.author : '') + '</div>' +
+          '</div>' +
+        '</a>';
+    });
+    feed.innerHTML = html;
+  }
+
   function runAll() {
     try { initReadingTime(); }    catch(e) { console.warn('readingTime:', e); }
     try { initLangSwitcher(); }   catch(e) { console.warn('langSwitcher:', e); }
@@ -398,6 +433,7 @@
     try { initRelatedArticles(); }catch(e) { console.warn('relatedArticles:', e); }
     try { initShareButtons(); }   catch(e) { console.warn('shareButtons:', e); }
     try { initAuthorArticles(); } catch(e) { console.warn('authorArticles:', e); }
+    try { initRegionsLatestFeed(); } catch(e) { console.warn('regionsLatestFeed:', e); }
   }
 
   function init() {
