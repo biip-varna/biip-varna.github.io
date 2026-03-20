@@ -50,11 +50,7 @@ nav a:hover {
 
 /* On mobile: tighten font & padding so all items fit without scrolling */
 @media (max-width: 640px) {
-  nav a {
-    font-size: 17px;
-    padding: 12px 10px;
-    margin: 0 2px;
-  }
+  /* Keep font same as desktop - nav scrolls horizontally if needed */
   nav span[aria-hidden] {
     display: none;
   }
