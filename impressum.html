@@ -2,98 +2,462 @@
 <html lang="bg">
 <head>
   <meta charset="UTF-8">
-  <title>Импресум / Impressum – Български институт за международна политика - Региони</title>
+  <title>Импресум / Impressum | БИМП – Региони</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Импресум на Българския институт за международна политика – правна информация и издателски данни.">
+  <meta name="description" content="Импресум на изданието „Региони" – правна информация и издателски данни на Българския институт за международна политика.">
   <link rel="stylesheet" href="style.css">
-  
   <link rel="canonical" href="https://biip-varna.github.io/impressum.html">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="logo.png" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Импресум / Impressum – Български институт за международна политика - Региони">
-  <meta property="og:description" content="Импресум на Българския институт за международна политика – правна информация и издателски данни.">
+  <meta property="og:title" content="Импресум / Impressum | БИМП – Региони">
+  <meta property="og:description" content="Импресум на изданието „Региони" – правна информация и издателски данни на Българския институт за международна политика.">
   <meta property="og:url" content="https://biip-varna.github.io/impressum.html">
   <meta property="og:image" content="https://biip-varna.github.io/logo.png">
   <meta property="og:site_name" content="Български институт за международна политика">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Импресум / Impressum – Български институт за международна политика - Региони">
-  <meta name="twitter:description" content="Импресум на Българския институт за международна политика – правна информация и издателски данни.">
+  <link rel="alternate" hreflang="bg" href="https://biip-varna.github.io/impressum.html">
+  <link rel="alternate" hreflang="x-default" href="https://biip-varna.github.io/impressum.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Импресум / Impressum | БИМП – Региони">
+  <meta name="twitter:description" content="Издателски данни на БИМП – изданието „Региони", ISSN 3033-2516.">
   <meta name="twitter:image" content="https://biip-varna.github.io/logo.png">
   <meta name="theme-color" content="#0057B7">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Periodical",
+    "name": "Региони / Regions",
+    "issn": "3033-2516",
+    "inLanguage": ["bg", "en"],
+    "publisher": {
+      "@type": "Organization",
+      "name": "Български институт за международна политика",
+      "alternateName": "Bulgarian Institute for International Politics",
+      "url": "https://biip-varna.github.io",
+      "logo": "https://biip-varna.github.io/logo.png",
+      "email": "biip@mailfence.com",
+      "foundingDate": "2025",
+      "location": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Varna",
+          "addressCountry": "BG"
+        }
+      }
+    },
+    "editor": {
+      "@type": "Person",
+      "name": "Dimitar Keranov",
+      "honorificPrefix": "Dr."
+    },
+    "url": "https://biip-varna.github.io/regions.html",
+    "dateCreated": "2025"
+  }
+  </script>
+
+  <style>
+    /* ── Impressum page styles ─────────────────────────── */
+    .imp-page {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 300;
+      color: #1a1a2e;
+    }
+
+    /* Masthead banner */
+    .imp-masthead {
+      background: #0a1628;
+      color: #fff;
+      padding: 3em 2em 2.5em;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .imp-masthead::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 39px,
+          rgba(255,255,255,0.03) 39px,
+          rgba(255,255,255,0.03) 40px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 39px,
+          rgba(255,255,255,0.03) 39px,
+          rgba(255,255,255,0.03) 40px
+        );
+      pointer-events: none;
+    }
+    .imp-masthead-label {
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.72em;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #7ca4d4;
+      margin-bottom: 0.6em;
+    }
+    .imp-masthead-title {
+      font-family: 'Playfair Display', 'Times New Roman', serif;
+      font-size: clamp(2em, 5vw, 3.2em);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: 0.01em;
+      margin: 0 0 0.3em 0;
+      color: #fff;
+    }
+    .imp-masthead-sub {
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.92em;
+      color: #a0b8d0;
+      font-style: italic;
+      margin-bottom: 1.6em;
+    }
+    .imp-issn-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6em;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 100px;
+      padding: 0.45em 1.1em;
+      font-size: 0.82em;
+      color: #c8daf0;
+      letter-spacing: 0.05em;
+    }
+    .imp-issn-pill a {
+      color: #7ca4d4;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(124,164,212,0.4);
+      transition: color 0.15s;
+    }
+    .imp-issn-pill a:hover { color: #a8c8f0; }
+    .imp-issn-dot {
+      width: 5px; height: 5px;
+      background: #0057B7;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    /* Content wrapper */
+    .imp-body {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 1.2em 3em;
+    }
+
+    /* Section card */
+    .imp-section {
+      margin-top: 2.5em;
+      background: #fff;
+      border: 1px solid #e8edf5;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,30,80,0.06);
+    }
+    .imp-section-header {
+      background: #f5f8ff;
+      border-bottom: 1px solid #e0e8f5;
+      padding: 0.9em 1.6em;
+      display: flex;
+      align-items: center;
+      gap: 0.7em;
+    }
+    .imp-section-flag {
+      font-size: 1.3em;
+      line-height: 1;
+    }
+    .imp-section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05em;
+      font-weight: 600;
+      color: #0a1628;
+      margin: 0;
+      letter-spacing: 0.01em;
+    }
+    .imp-section-lang {
+      margin-left: auto;
+      font-size: 0.75em;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #0057B7;
+      background: #e8f0fe;
+      padding: 0.2em 0.55em;
+      border-radius: 4px;
+    }
+
+    /* Data rows */
+    .imp-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .imp-table tr {
+      border-bottom: 1px solid #f0f4fa;
+    }
+    .imp-table tr:last-child {
+      border-bottom: none;
+    }
+    .imp-table td {
+      padding: 0.85em 1.6em;
+      vertical-align: top;
+      font-size: 0.96em;
+      line-height: 1.5;
+    }
+    .imp-table td:first-child {
+      width: 38%;
+      font-weight: 400;
+      color: #5a6a80;
+      font-size: 0.88em;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+    .imp-table td:last-child {
+      color: #1a1a2e;
+    }
+    .imp-table tr:hover td {
+      background: #fafcff;
+    }
+    .imp-table a {
+      color: #0057B7;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0,87,183,0.25);
+      transition: border-color 0.15s;
+    }
+    .imp-table a:hover {
+      border-color: #0057B7;
+    }
+
+    /* ISSN highlight row */
+    .imp-issn-row td {
+      background: #f0f5ff;
+    }
+    .imp-issn-row td:last-child {
+      font-weight: 400;
+      color: #0057B7;
+    }
+
+    /* Divider between sections */
+    .imp-divider {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      margin: 2em 0 0;
+      color: #bbc8d8;
+      font-size: 0.8em;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .imp-divider::before,
+    .imp-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #e0e8f5;
+    }
+
+    @media (max-width: 540px) {
+      .imp-table td:first-child {
+        white-space: normal;
+        width: 40%;
+      }
+      .imp-masthead { padding: 2em 1.2em 2em; }
+    }
+  </style>
 </head>
-<body>
+<body class="imp-page">
 <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;background:#fff;padding:4px 8px;font-weight:bold;">Skip to main content</a>
 
-<!-- SAME HEADER AS INDEX -->
 <header>
   <img src="logo.png" class="logo" alt="Лого на БИМП">
-  <h1>Български институт за международна политика - Региони</h1>
-  <p class="motto">„Всеки един има дълг да върши възможното.“ – Васил Априлов</p>
+  <h1>Импресум / Impressum</h1>
+  <p class="motto">„Всеки един има дълг да върши възможното." – Васил Априлов</p>
 </header>
 
-<!-- SAME NAV AS INDEX (+ HIGHLIGHT CURRENT IF YOU WANT) -->
 <nav aria-label="Главна навигация">
   <a href="index.html">Начало</a> <span aria-hidden="true"> | </span>
   <a href="about.html">За нас</a> <span aria-hidden="true"> | </span>
   <a href="regions.html">Региони</a> <span aria-hidden="true"> | </span>
   <a href="submit.html">Публикуване</a> <span aria-hidden="true"> | </span>
-  <a href="contact.html">Контакт</a> <span aria-hidden="true"> | </span><a href="search.html" aria-label="Search">🔍</a> <a href="index-en.html">EN</a>
+  <a href="contact.html">Контакт</a> <span aria-hidden="true"> | </span>
+  <a href="search.html" aria-label="Search">🔍</a>
 </nav>
 
+<main id="main-content">
 
-  <main id="main-content">
-    <!-- Български -->
-    <section>
-      <p><strong>Заглавие на изданието:</strong> Региони</p>
-      <p><strong>Издател:</strong> Сдружение „Български институт за международна политика“ (ЕИК: 208390337)</p>
-      <p><strong>Място на издаване:</strong> Варна, България</p>
-      <p><strong>Отговорен редактор:</strong> д-р Димитър Керанов, MRSSAf</p>
-<p><strong>Редакционна колегия:</strong> доц. д-р Калоян Смилков; проф. д. ик. н., д. пол. н. Карим Фахир Наама; Сергей Петров-Араджиони; д-р Александър Узунов</p>
-      <p><strong>Начало на издаване:</strong> 2025 г.</p>
-      <p><strong>Периодичност:</strong> Непрекъснато обновяване</p>
-      <p><strong>Езици:</strong> Български и английски</p>
-      <p><strong>Контакт:</strong> <a href="mailto:biip@mailfence.com" target="_blank" rel="noopener noreferrer">biip@mailfence.com</a></p>
-      <p><strong>Обхват:</strong> Изданието „Региони“ е основната публикация на БИМП, включваща анализи и коментари с тематика международна политика.</p>
- <p><strong>ISSN:</strong> 3033-2516 (<a href="https://portal.issn.org/resource/ISSN/3033-2516" target="_blank" rel="noopener noreferrer">
-потвърден запис в Международния регистър на ISSN
-</a>)</p>
-    </section>
+  <!-- Masthead -->
+  <div class="imp-masthead">
+    <p class="imp-masthead-label">Официален импресум · Official Impressum</p>
+    <h2 class="imp-masthead-title">Региони / Regions</h2>
+    <p class="imp-masthead-sub">Издание на Българския институт за международна политика</p>
+    <div class="imp-issn-pill">
+      <span class="imp-issn-dot"></span>
+      ISSN 3033-2516 ·
+      <a href="https://portal.issn.org/resource/ISSN/3033-2516" target="_blank" rel="noopener noreferrer">
+        Международен регистър на ISSN
+      </a>
+    </div>
+  </div>
 
-    <hr style="margin:2em 0;">
+  <div class="imp-body">
 
-    <!-- English -->
-    <section>
-      <p><strong>Title of the publication:</strong> Regions</p>
-      <p><strong>Publisher:</strong> Association “Bulgarian Institute for International Politics” (UIC: 208390337)</p>
-      <p><strong>Place of publication:</strong> Varna, Bulgaria</p>
-      <p><strong>Editor-in-Chief:</strong> Dr. Dimitar Keranov, MRSSAf</p>
-<p><strong>Editorial Board:</strong> Assoc. Prof. Dr. Kaloyan Smilkov; Prof. Karim Fahir Naama, D.Econ.Sci., D.Pol.Sci.; Sergey Petrov-Aradzhioni; Dr. Alexander Uzunov</p>
-      <p><strong>First year of publication:</strong> 2025</p>
-      <p><strong>Frequency:</strong> Continuous updating</p>
-      <p><strong>Languages:</strong> Bulgarian and English</p>
-      <p><strong>Contact:</strong> <a href="mailto:biip@mailfence.com" target="_blank" rel="noopener noreferrer">biip@mailfence.com</a></p>
-      <p><strong>Scope:</strong> The publication “Regions” is the main periodical of BIIP, featuring analyses and commentaries on international politics.</p>
-<p><strong>ISSN:</strong> 3033-2516 (<a href="https://portal.issn.org/resource/ISSN/3033-2516" target="_blank" rel="noopener noreferrer">
-verified record in the ISSN International Register
-</a>)</p>
+    <!-- Bulgarian section -->
+    <div class="imp-section" aria-labelledby="imp-bg-heading">
+      <div class="imp-section-header">
+        <span class="imp-section-flag">🇧🇬</span>
+        <h2 id="imp-bg-heading">Издателски данни</h2>
+        <span class="imp-section-lang">БГ</span>
+      </div>
+      <table class="imp-table">
+        <tbody>
+          <tr>
+            <td>Заглавие</td>
+            <td>Региони</td>
+          </tr>
+          <tr>
+            <td>Издател</td>
+            <td>Сдружение „Български институт за международна политика" (ЕИК: 208390337)</td>
+          </tr>
+          <tr>
+            <td>Уебсайт</td>
+            <td><a href="https://biip-varna.github.io">biip-varna.github.io</a></td>
+          </tr>
+          <tr>
+            <td>Място на издаване</td>
+            <td>Варна, България</td>
+          </tr>
+          <tr>
+            <td>Основан</td>
+            <td>юли 2025 г.</td>
+          </tr>
+          <tr>
+            <td>Начало на издаване</td>
+            <td>2025 г.</td>
+          </tr>
+          <tr>
+            <td>Периодичност</td>
+            <td>Непрекъснато обновяване</td>
+          </tr>
+          <tr>
+            <td>Езици</td>
+            <td>Български и английски</td>
+          </tr>
+          <tr>
+            <td>Отговорен редактор</td>
+            <td>д-р Димитър Керанов, MRSSAf</td>
+          </tr>
+          <tr>
+            <td>Редакционна колегия</td>
+            <td>доц. д-р Калоян Смилков; проф. д. ик. н., д. пол. н. Карим Фахир Наама; Сергей Петров-Араджиони; д-р Александър Узунов</td>
+          </tr>
+          <tr>
+            <td>Обхват</td>
+            <td>Изданието „Региони" е основната публикация на БИМП, включваща анализи и коментари с тематика международна политика.</td>
+          </tr>
+          <tr class="imp-issn-row">
+            <td>ISSN</td>
+            <td>3033-2516 · <a href="https://portal.issn.org/resource/ISSN/3033-2516" target="_blank" rel="noopener noreferrer">потвърден запис</a></td>
+          </tr>
+          <tr>
+            <td>Контакт</td>
+            <td><a href="mailto:biip@mailfence.com">biip@mailfence.com</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-    </section>
-  </main>
+    <div class="imp-divider">· · ·</div>
+
+    <!-- English section -->
+    <div class="imp-section" aria-labelledby="imp-en-heading">
+      <div class="imp-section-header">
+        <span class="imp-section-flag">🇬🇧</span>
+        <h2 id="imp-en-heading">Publication Details</h2>
+        <span class="imp-section-lang">EN</span>
+      </div>
+      <table class="imp-table">
+        <tbody>
+          <tr>
+            <td>Title</td>
+            <td>Regions</td>
+          </tr>
+          <tr>
+            <td>Publisher</td>
+            <td>Association "Bulgarian Institute for International Politics" (UIC: 208390337)</td>
+          </tr>
+          <tr>
+            <td>Website</td>
+            <td><a href="https://biip-varna.github.io">biip-varna.github.io</a></td>
+          </tr>
+          <tr>
+            <td>Place of publication</td>
+            <td>Varna, Bulgaria</td>
+          </tr>
+          <tr>
+            <td>Founded</td>
+            <td>July 2025</td>
+          </tr>
+          <tr>
+            <td>First year of publication</td>
+            <td>2025</td>
+          </tr>
+          <tr>
+            <td>Frequency</td>
+            <td>Continuous updating</td>
+          </tr>
+          <tr>
+            <td>Languages</td>
+            <td>Bulgarian and English</td>
+          </tr>
+          <tr>
+            <td>Editor-in-Chief</td>
+            <td>Dr. Dimitar Keranov, MRSSAf</td>
+          </tr>
+          <tr>
+            <td>Editorial Board</td>
+            <td>Assoc. Prof. Dr. Kaloyan Smilkov; Prof. Karim Fahir Naama, D.Econ.Sci., D.Pol.Sci.; Sergey Petrov-Aradzhioni; Dr. Alexander Uzunov</td>
+          </tr>
+          <tr>
+            <td>Scope</td>
+            <td>The publication "Regions" is the main periodical of BIIP, featuring analyses and commentaries on international politics.</td>
+          </tr>
+          <tr class="imp-issn-row">
+            <td>ISSN</td>
+            <td>3033-2516 · <a href="https://portal.issn.org/resource/ISSN/3033-2516" target="_blank" rel="noopener noreferrer">verified record</a></td>
+          </tr>
+          <tr>
+            <td>Contact</td>
+            <td><a href="mailto:biip@mailfence.com">biip@mailfence.com</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div><!-- /.imp-body -->
+
+</main>
 
 <footer>
- 
   <p>
     Български институт за международна политика |
-    Bulga­risches Institut für Internationale Politik |
+    Bulgarisches Institut für Internationale Politik |
     Institut bulgare de politique internationale |
     Instituto Búlgaro de Política Internacional |
     Bolgár Nemzetközi Politikai Intézet |
     Bugarski institut za međunarodnu politiku
   </p>
 </footer>
-
 <script src="biip.js" defer></script>
 </body>
 </html>
