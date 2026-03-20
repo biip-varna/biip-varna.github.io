@@ -403,11 +403,49 @@ footer {
 }
 
 
-/* center the mail buttons */
+/* Email / action buttons */
 .email-button {
-  display: block !important;
-  margin: 1em auto 2em auto !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65em 1.1em;
+  background: #5981b3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.95em;
   text-align: center;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+.email-button:hover {
+  background: #4a6a94;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+/* Standalone centred button (not inside a flex row) */
+.email-button-wrap {
+  text-align: center;
+  margin: 1em 0 1.5em;
+}
+
+/* Button grid for contact page quick-actions */
+.button-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+}
+.button-grid .email-button {
+  flex: 1 1 auto;
+  min-width: 160px;
+}
+
+@media (max-width: 500px) {
+  .button-grid .email-button {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
 }
 
 .cta-wrap {
