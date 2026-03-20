@@ -127,25 +127,6 @@
     return document.documentElement.lang || 'bg';
   }
 
-  function tagLabel(tag, lang) {
-    return lang === 'en' ? (TAG_LABEL_EN[tag] || tag) : (TAG_LABEL_BG[tag] || tag);
-  }
-
-  function imgSrc(img) {
-    // Determine depth of current page
-    var depth = window.location.pathname.split('/').length - 2;
-    var prefix = '';
-    for (var i = 0; i < depth; i++) prefix += '../';
-    return prefix + img.replace(/ /g, '%20');
-  }
-
-  function articleUrl(file) {
-    var depth = window.location.pathname.split('/').length - 2;
-    var prefix = '';
-    for (var i = 0; i < depth; i++) prefix += '../';
-    return prefix + file;
-  }
-
   /* ── FEATURE 1: Reading Time ─────────────────────────────────── */
   function initReadingTime() {
     var article = document.querySelector('article');
@@ -314,68 +295,6 @@
     article.insertAdjacentHTML('beforeend', html);
   }
 
-  /* ── FEATURE 5: Tag badges on articles ──────────────────────── */
-  function initTagBadges() {
-    if (!ARTICLES) return;
-    var article = document.querySelector('article');
-    if (!article) return;
-    var file = currentFile();
-    var lang = getLang();
-    var current = null;
-    for (var i = 0; i < ARTICLES.length; i++) {
-      if (ARTICLES[i].file.split('/').pop() === file) { current = ARTICLES[i]; break; }
-    }
-    if (!current || !current.tags || !current.tags.length) return;
-
-    var datePara = article.querySelector('p[style*="color:#888"]');
-    if (!datePara) return;
-
-    var tagHtml = '<div class="article-tags" style="margin-top:0.5em;">';
-    current.tags.forEach(function(tag) {
-      var depth = window.location.pathname.split('/').length - 2;
-      var prefix = '';
-      for (var i = 0; i < depth; i++) prefix += '../';
-      tagHtml += '<a href="' + prefix + 'topics.html?topic=' + encodeURIComponent(tag) +
-        '" class="tag-badge">' + tagLabel(tag, lang) + '</a> ';
-    });
-    tagHtml += '</div>';
-    datePara.insertAdjacentHTML('afterend', tagHtml);
-  }
-
-  /* ── FEATURE 6: Social Share Buttons ────────────────────────── */
-  function initShareButtons() {
-    var article = document.querySelector('article');
-    if (!article) return;
-    var lang    = getLang();
-    var url     = encodeURIComponent(window.location.href);
-    var titleEl = document.querySelector('title');
-    var title   = encodeURIComponent(titleEl ? titleEl.textContent.replace(/\s*\|\s*(БИМП|BIIP).*/i,'').trim() : '');
-
-    var shareLabel  = lang === 'en' ? 'Share:' : 'Сподели:';
-    var linkedinUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
-    var twitterUrl  = 'https://twitter.com/intent/tweet?url=' + url + '&text=' + title;
-    var facebookUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
-
-    var html =
-      '<div class="share-buttons">' +
-        '<span class="share-label">' + shareLabel + '</span>' +
-        '<a href="' + linkedinUrl + '" target="_blank" rel="noopener noreferrer" ' +
-          'class="share-btn share-linkedin" aria-label="Share on LinkedIn">in</a>' +
-        '<a href="' + twitterUrl + '" target="_blank" rel="noopener noreferrer" ' +
-          'class="share-btn share-twitter" aria-label="Share on X/Twitter">𝕏</a>' +
-        '<a href="' + facebookUrl + '" target="_blank" rel="noopener noreferrer" ' +
-          'class="share-btn share-facebook" aria-label="Share on Facebook">f</a>' +
-      '</div>';
-
-    // Insert after the date paragraph
-    var datePara = article.querySelector('p[style*="color:#888"]');
-    if (datePara) {
-      datePara.insertAdjacentHTML('afterend', html);
-    } else {
-      article.insertAdjacentHTML('afterbegin', html);
-    }
-  }
-
   /* ── FEATURE 7: Latest Articles on Homepage ─────────────────── */
   function initLatestFeed() {
     if (!ARTICLES) return;
@@ -449,75 +368,14 @@
     container.innerHTML = html;
   }
 
-  /* ── FEATURE 9: Topics Page ──────────────────────────────────── */
-  function initTopicsPage() {
-    if (!ARTICLES) return;
-    var container = document.getElementById('topics-page');
-    if (!container) return;
-
-    var lang  = getLang();
-    var params = new URLSearchParams(window.location.search);
-    var topic = params.get('topic');
-
-    // Build tag cloud if no topic selected
-    if (!topic) {
-      var tagCounts = {};
-      ARTICLES.forEach(function(a) {
-        if (a.lang !== lang) return;
-        (a.tags || []).forEach(function(t) {
-          tagCounts[t] = (tagCounts[t] || 0) + 1;
-        });
-      });
-      var heading = lang === 'en' ? 'Browse by Topic' : 'Разгледай по тема';
-      var html = '<h1>' + heading + '</h1><div class="tag-cloud">';
-      Object.keys(tagCounts).sort().forEach(function(tag) {
-        html += '<a href="topics.html?topic=' + encodeURIComponent(tag) + '" class="tag-badge tag-large">' +
-          tagLabel(tag, lang) + ' <span class="tag-count">(' + tagCounts[tag] + ')</span></a> ';
-      });
-      html += '</div>';
-      container.innerHTML = html;
-      return;
-    }
-
-    // Show articles for selected topic
-    var filtered = ARTICLES.filter(function(a) {
-      return a.lang === lang && a.tags && a.tags.indexOf(topic) !== -1;
-    });
-    filtered.sort(function(a, b){ return (b.date || '').localeCompare(a.date || ''); });
-
-    var topicName = tagLabel(topic, lang);
-    var backLabel = lang === 'en' ? '← All topics' : '← Всички теми';
-    var html = '<p><a href="topics.html">' + backLabel + '</a></p>' +
-      '<h1>' + topicName + ' <span style="font-weight:normal;color:#888;font-size:0.7em;">(' + filtered.length + ')</span></h1>' +
-      '<div class="article-preview-list">';
-
-    filtered.forEach(function(a) {
-      html +=
-        '<a href="' + a.file + '" class="article-preview">' +
-          '<img src="' + a.img.replace(/ /g, '%20') + '" alt="" class="article-thumb" ' +
-            'width="44" height="44" loading="lazy">' +
-          '<div class="article-info">' +
-            '<h4>' + a.title + '</h4>' +
-            '<p class="article-meta">' + (a.author || '') + (a.date ? ' · ' + a.date : '') + '</p>' +
-            '<p class="article-teaser">' + (a.desc || '') + '</p>' +
-          '</div>' +
-        '</a>';
-    });
-    html += '</div>';
-    container.innerHTML = html;
-  }
-
   /* ── INIT ────────────────────────────────────────────────────── */
   function runAll() {
     try { initReadingTime(); }    catch(e) { console.warn('readingTime:', e); }
     try { initLangSwitcher(); }   catch(e) { console.warn('langSwitcher:', e); }
     try { initCiteButton(); }     catch(e) { console.warn('citeButton:', e); }
-    try { initTagBadges(); }      catch(e) { console.warn('tagBadges:', e); }
-    try { initShareButtons(); }   catch(e) { console.warn('shareButtons:', e); }
     try { initRelatedArticles(); }catch(e) { console.warn('relatedArticles:', e); }
     try { initLatestFeed(); }     catch(e) { console.warn('latestFeed:', e); }
     try { initAuthorArticles(); } catch(e) { console.warn('authorArticles:', e); }
-    try { initTopicsPage(); }     catch(e) { console.warn('topicsPage:', e); }
   }
 
   function init() {

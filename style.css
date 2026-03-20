@@ -608,3 +608,14 @@ footer {
 }
 
 /* Skip to main content link (accessibility) */
+/* Back link on article pages */
+.back-link {
+  display: inline-block;
+  margin: 1.5em 0 0.5em 0;
+  color: #5981b3;
+  text-decoration: none;
+  font-size: 0.95em;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
