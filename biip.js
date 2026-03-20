@@ -64,6 +64,8 @@
     'keranov-en.html': 'keranov.html',
     'naama.html': 'naama-en.html',
     'naama-en.html': 'naama.html',
+    'asia.html': 'asia-en.html',
+    'asia-en.html': 'asia.html',
   };
 
   /* ── Tag labels ──────────────────────────────────────────────── */
