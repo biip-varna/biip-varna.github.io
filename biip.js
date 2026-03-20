@@ -127,6 +127,14 @@
     return document.documentElement.lang || 'bg';
   }
 
+  function imgSrc(img) {
+    if (!img) return '';
+    // img is stored as "article images/xxx.png" (relative to articles/ folder)
+    // Related articles render on article pages which are in articles/ folder
+    // So path is correct as-is, just encode spaces
+    return img.replace(/ /g, '%20');
+  }
+
   /* ── FEATURE 1: Reading Time ─────────────────────────────────── */
   function initReadingTime() {
     var article = document.querySelector('article');
@@ -295,38 +303,6 @@
     article.insertAdjacentHTML('beforeend', html);
   }
 
-  /* ── FEATURE 7: Latest Articles on Homepage ─────────────────── */
-  function initLatestFeed() {
-    if (!ARTICLES) return;
-    var lang = getLang();
-
-    // Look for the placeholder we'll inject into
-    var container = document.getElementById('latest-articles-feed');
-    if (!container) return;
-
-    // Get articles in this language sorted by date desc
-    var filtered = ARTICLES.filter(function(a){ return a.lang === lang; });
-    filtered.sort(function(a, b){ return (b.date || '').localeCompare(a.date || ''); });
-    var latest = filtered.slice(0, 6);
-
-    var html = '<div class="article-preview-list">';
-    latest.forEach(function(a) {
-      html +=
-        '<a href="' + a.file + '" class="article-preview">' +
-          '<img src="' + a.img.replace(/ /g, '%20') + '" alt="" class="article-thumb" ' +
-            'width="44" height="44" loading="lazy">' +
-          '<div class="article-info">' +
-            '<h4>' + a.title + '</h4>' +
-            '<p class="article-meta">' + (a.author || '') +
-              (a.date ? ' · ' + a.date : '') + '</p>' +
-            '<p class="article-teaser">' + (a.desc || '') + '</p>' +
-          '</div>' +
-        '</a>';
-    });
-    html += '</div>';
-    container.innerHTML = html;
-  }
-
   /* ── FEATURE 8: Author Article List on Expert Pages ─────────── */
   function initAuthorArticles() {
     if (!ARTICLES) return;
@@ -419,7 +395,6 @@
     try { initCiteButton(); }     catch(e) { console.warn('citeButton:', e); }
     try { initRelatedArticles(); }catch(e) { console.warn('relatedArticles:', e); }
     try { initShareButtons(); }   catch(e) { console.warn('shareButtons:', e); }
-    try { initLatestFeed(); }     catch(e) { console.warn('latestFeed:', e); }
     try { initAuthorArticles(); } catch(e) { console.warn('authorArticles:', e); }
   }
 
