@@ -189,11 +189,13 @@
       : '';
 
     function fmtAPA(name) {
-      var parts = name.trim().split(' ');
-      if (parts.length < 2) return name;
+      // Strip honorific prefixes so "Dr. Dimitar Keranov" -> "Keranov, D." not "Keranov, D. D."
+      var stripped = name.trim().replace(/^(Dr\.?|Prof\.?|Assoc\.?|д-р|Д-р|проф\.?|доц\.?)\s+/i, '');
+      var parts = stripped.split(' ');
+      if (parts.length < 2) return stripped;
       var last = parts[parts.length - 1];
-      var first = parts.slice(0, -1).map(function(p){ return p[0] ? p[0] + '.' : ''; }).join(' ');
-      return last + ', ' + first;
+      var initials = parts.slice(0, -1).map(function(p){ return p[0] ? p[0] + '.' : ''; }).join(' ');
+      return last + ', ' + initials;
     }
 
     var chicago = (author ? author.split(';')[0].trim() + '. ' : '') +
