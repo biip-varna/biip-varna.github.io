@@ -1021,3 +1021,97 @@ footer {
 }
 .lang-en { background: #e8f5e9; color: #2e7d32; }
 .lang-bg { background: #e8f0fe; color: #0057B7; }
+
+/* ── New article badge ───────────────────────────────────────── */
+.badge-new {
+  display: inline-block;
+  background: #e53935;
+  color: #fff;
+  font-size: 0.7em;
+  font-weight: 700;
+  padding: 0.1em 0.45em;
+  border-radius: 3px;
+  vertical-align: middle;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+
+/* ── Email share button ──────────────────────────────────────── */
+.share-email { background: #555; }
+
+/* ── Random article button ───────────────────────────────────── */
+.random-article-wrap {
+  margin-top: 1.5em;
+  padding: 1.2em 1.4em;
+  background: #f4f7fc;
+  border-radius: 10px;
+  border: 1px solid #dce4f0;
+  text-align: center;
+}
+.random-label {
+  margin: 0 0 0.7em 0;
+  font-size: 0.95em;
+  color: #555;
+}
+.random-btn {
+  display: inline-block;
+  padding: 0.55em 1.4em;
+  background: #0057B7;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.random-btn:hover { background: #004299; }
+
+/* ── Author expert card ──────────────────────────────────────── */
+.author-card {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 0.9em 1.1em;
+  margin: 1.5em 0;
+  background: #f8fafd;
+  border: 1px solid #dce4f0;
+  border-radius: 10px;
+}
+.author-card-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #ddd;
+}
+.author-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15em;
+  min-width: 0;
+}
+.author-card-label {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #888;
+  font-weight: 600;
+}
+.author-card-name {
+  font-weight: 700;
+  font-size: 1em;
+  color: #0a1628;
+}
+.author-card-role {
+  font-size: 0.88em;
+  color: #5981b3;
+}
+.author-card-link {
+  font-size: 0.85em;
+  color: #0057B7;
+  text-decoration: none;
+  margin-top: 0.15em;
+}
+.author-card-link:hover { text-decoration: underline; }

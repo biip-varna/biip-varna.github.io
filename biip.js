@@ -94,20 +94,58 @@
     'minorities': 'Minorities', 'romania': 'Romania',
   };
 
-  /* ── Author → expert page map ────────────────────────────────── */
+  /* ── Author → expert profile map ────────────────────────────── */
   var AUTHOR_PAGE = {
-    'keranov':           { bg: 'experts/keranov.html',    en: 'experts/keranov-en.html' },
-    'konstantin-keranov':{ bg: 'experts/smilkov.html',    en: 'experts/ksmilkov-english.html' },
-    'biip':              { bg: 'eksperti.html',            en: 'experts-english.html' },
+    'keranov':            { bg: 'experts/keranov.html',          en: 'experts/keranov-en.html',
+                            img: 'experts/images/Keranov.jpg',
+                            role_bg: 'Експерт Африка и ЦИЕ',    role_en: 'Expert on Africa & CEE' },
+    'konstantin-keranov': { bg: null, en: null,
+                            img: 'experts/images/KKeranov.png',
+                            role_bg: 'Експерт Дигитална икономика',
+                            role_en: 'Expert on Digital Economy & Emerging Technologies' },
+    'uzunov':             { bg: 'experts/uzunov.html',           en: 'experts/auzunov-english.html',
+                            img: 'experts/images/Uzunov.jpg',
+                            role_bg: 'Експерт Национална сигурност',
+                            role_en: 'Expert on National Security & Geopolitics' },
+    'smilkov':            { bg: 'experts/smilkov.html',          en: 'experts/ksmilkov-english.html',
+                            img: 'experts/images/Smilkov.png',
+                            role_bg: 'Експерт Международни отношения',
+                            role_en: 'Expert on International Relations' },
+    'petrov':             { bg: 'experts/petrov.html',           en: 'experts/aradzhioni.html',
+                            img: 'experts/images/petrov.jpg',
+                            role_bg: 'Експерт Международна сигурност',
+                            role_en: 'Expert on International Security' },
+    'naama':              { bg: 'experts/naama.html',            en: 'experts/naama-en.html',
+                            img: 'experts/images/Naama.jpg',
+                            role_bg: 'Експерт Близък изток',
+                            role_en: 'Expert on Middle East & International Relations' },
+    'rovinalti':          { bg: 'experts/rovinalti.html',        en: 'experts/arovinalti-english.html',
+                            img: 'experts/images/Rovinalti.jpg',
+                            role_bg: 'Политически консултант; Европейски въпроси',
+                            role_en: 'Political Consultant; Expert on EU Affairs' },
+    'vaculik':            { bg: 'experts/vaculik.html',          en: 'experts/dvaculik-english.html',
+                            img: 'experts/images/Vaculik.png',
+                            role_bg: 'Експерт Чешка политика',
+                            role_en: 'Expert on Czech Politics' },
+    'biip':               { bg: 'eksperti.html',                 en: 'experts-english.html',
+                            img: null, role_bg: null, role_en: null },
   };
   // Canonical author names for matching
   var AUTHOR_ALIASES = {
-    'keranov': ['keranov', 'д-р димитър керанов', 'dr. dimitar keranov',
-                'dimitar keranov', 'димитър керанов', 'dr. dimitar keranov, mrssaf'],
+    'keranov':            ['keranov', 'д-р димитър керанов', 'dr. dimitar keranov',
+                           'dimitar keranov', 'димитър керанов', 'dr. dimitar keranov, mrssaf'],
     'konstantin-keranov': ['константин керанов', 'konstantin keranov'],
-    'manuel-muller': ['мануел мюлер', 'manuel müller', 'manuel muller'],
-    'vladimir-mitev': ['владимир митев', 'vladimir mitev'],
-    'biip': ['bulgarian institute for international politics', 'biip', 'бимп'],
+    'uzunov':             ['д-р александър узунов', 'dr. alexander uzunov',
+                           'александър узунов', 'alexander uzunov'],
+    'smilkov':            ['доц. д-р калоян смилков', 'assoc. prof. dr. kaloyan smilkov',
+                           'калоян смилков', 'kaloyan smilkov'],
+    'petrov':             ['сергей петров', 'sergey petrov', 'aradjioni', 'aradzhioni'],
+    'naama':              ['карим фахир наама', 'karim fahir naama', 'prof. karim fahir naama'],
+    'rovinalti':          ['лука ровиналти', 'luca rovinalti'],
+    'vaculik':            ['давид вацулик', 'david vaculík', 'david vaculik'],
+    'manuel-muller':      ['мануел мюлер', 'manuel müller', 'manuel muller'],
+    'vladimir-mitev':     ['владимир митев', 'vladimir mitev'],
+    'biip':               ['bulgarian institute for international politics', 'biip', 'бимп'],
   };
 
   function normalizeAuthorId(authorStr) {
@@ -122,6 +160,11 @@
   }
 
   /* ── Helpers ─────────────────────────────────────────────────── */
+  function isNew(dateStr) {
+    if (!dateStr) return false;
+    return (Date.now() - new Date(dateStr).getTime()) < 30 * 24 * 60 * 60 * 1000;
+  }
+
   function currentFile() {
     var parts = window.location.pathname.split('/');
     return parts[parts.length - 1] || 'index.html';
@@ -385,6 +428,10 @@
         '<a href="https://api.whatsapp.com/send?text=' + title + '%20' + url + '" ' +
            'target="_blank" rel="noopener noreferrer" class="share-btn share-whatsapp" ' +
            'aria-label="Share on WhatsApp">WhatsApp</a>' +
+        '<a href="mailto:?subject=' + title + '&body=' + title + '%0A%0A' + url + '" ' +
+           'class="share-btn share-email" ' +
+           'aria-label="' + (lang === 'en' ? 'Share via email' : 'Сподели по имейл') + '">' +
+           (lang === 'en' ? 'Email' : 'Имейл') + '</a>' +
       '</div>';
 
     // Insert before the back-link or at end of article
@@ -463,10 +510,13 @@
         var langBadge = a.lang === 'en'
           ? '<span class="sc-lang-badge sc-en">EN</span>'
           : '<span class="sc-lang-badge sc-bg">БГ</span>';
+        var newBadge = isNew(a.date)
+          ? '<span class="badge-new">' + (lang === 'en' ? 'New' : 'Ново') + '</span>'
+          : '';
         return '<a href="' + href + '" class="sc-card">' +
           '<img src="' + imgSrc + '" alt="" class="sc-img" loading="lazy" width="120" height="80">' +
           '<div class="sc-body">' +
-            '<div class="sc-meta">' + langBadge + dateStr + rt + (a.author ? ' · ' + a.author : '') + '</div>' +
+            '<div class="sc-meta">' + langBadge + newBadge + dateStr + rt + (a.author ? ' · ' + a.author : '') + '</div>' +
             '<h3 class="sc-title">' + a.title + '</h3>' +
             '<p class="sc-teaser">' + (a.teaser || '') + '</p>' +
           '</div>' +
@@ -618,12 +668,15 @@
         : '<span class="lang-badge lang-bg">БГ</span>';
       var dateStr = a.date ? a.date.split('-').reverse().join('.') : '';
       var rtLabel = a.readTime ? ' · ' + a.readTime + (lang === 'en' ? ' min read' : ' мин') : '';
+      var newBadge = isNew(a.date)
+        ? '<span class="badge-new">' + (lang === 'en' ? 'New' : 'Ново') + '</span>'
+        : '';
       html +=
         '<a href="' + href + '" class="latest-item">' +
           '<img src="' + imgPath + '" alt="" class="latest-thumb" width="52" height="52" loading="lazy">' +
           '<div class="latest-info">' +
             '<div class="latest-title">' + a.title + '</div>' +
-            '<div class="latest-meta">' + langLabel + dateStr + (a.author ? ' · ' + a.author : '') + rtLabel + '</div>' +
+            '<div class="latest-meta">' + langLabel + newBadge + dateStr + (a.author ? ' · ' + a.author : '') + rtLabel + '</div>' +
           '</div>' +
         '</a>';
     });
@@ -638,14 +691,98 @@
     });
   }
 
+  /* ── FEATURE: Random Article Button ─────────────────────────── */
+  function initRandomArticleButton() {
+    var latestFeed = document.getElementById('regions-latest-feed');
+    if (!latestFeed || !ARTICLES) return;
+    var lang = getLang();
+    var pool = ARTICLES.filter(function(a) { return a.lang === lang; });
+    if (!pool.length) pool = ARTICLES;
+
+    var label  = lang === 'en' ? 'Read something different' : 'Прочетете нещо различно';
+    var btnTxt = lang === 'en' ? '&#127922; Surprise me' : '&#127922; Изненадайте ме';
+
+    var wrap = document.createElement('div');
+    wrap.className = 'random-article-wrap';
+    wrap.innerHTML =
+      '<p class="random-label">' + label + '</p>' +
+      '<button type="button" class="random-btn" id="random-article-btn">' + btnTxt + '</button>';
+    latestFeed.parentNode.appendChild(wrap);
+
+    document.getElementById('random-article-btn').addEventListener('click', function() {
+      var pick   = pool[Math.floor(Math.random() * pool.length)];
+      var depth  = window.location.pathname.split('/').length - 2;
+      var prefix = '';
+      for (var i = 0; i < depth; i++) prefix += '../';
+      window.location.href = prefix + pick.file;
+    });
+  }
+
+  /* ── FEATURE: Author Expert Card ────────────────────────────── */
+  function initAuthorCard() {
+    var article = document.querySelector('article');
+    if (!article || !ARTICLES) return;
+    var lang    = getLang();
+    var file    = window.location.pathname.split('/').pop();
+    var current = ARTICLES.find(function(a) { return a.file.split('/').pop() === file; });
+    if (!current || !current.author) return;
+
+    // Use first author for multi-author articles
+    var authorName = current.author.split(';')[0].trim();
+    var authorId   = normalizeAuthorId(authorName);
+    if (!authorId) return;
+    var expert = AUTHOR_PAGE[authorId];
+    if (!expert || !expert.img) return;
+
+    var profileHref = expert[lang] || expert.bg || expert.en;
+    var role        = expert['role_' + lang] || expert.role_en || expert.role_bg || '';
+    var viewLabel   = lang === 'en' ? 'View full profile →' : 'Виж пълния профил →';
+    var byLabel     = lang === 'en' ? 'About the author' : 'За автора';
+
+    var depth  = window.location.pathname.split('/').length - 2;
+    var prefix = '';
+    for (var i = 0; i < depth; i++) prefix += '../';
+
+    var profileLink = profileHref
+      ? '<a href="' + prefix + profileHref + '" class="author-card-link">' + viewLabel + '</a>'
+      : '';
+
+    var html =
+      '<div class="author-card">' +
+        '<img src="' + prefix + expert.img + '" alt="' + authorName + '" ' +
+             'class="author-card-img" width="64" height="64" loading="lazy">' +
+        '<div class="author-card-info">' +
+          '<div class="author-card-label">' + byLabel + '</div>' +
+          '<div class="author-card-name">' + authorName + '</div>' +
+          (role ? '<div class="author-card-role">' + role + '</div>' : '') +
+          profileLink +
+        '</div>' +
+      '</div>';
+
+    // Insert before share bar (which was inserted by initShareButtons)
+    var shareBar = document.querySelector('.share-bar');
+    if (shareBar) {
+      shareBar.insertAdjacentHTML('beforebegin', html);
+    } else {
+      var backLink = document.querySelector('.back-link');
+      if (backLink) {
+        backLink.insertAdjacentHTML('beforebegin', html);
+      } else {
+        article.insertAdjacentHTML('afterend', html);
+      }
+    }
+  }
+
   function runAll() {
     try { initReadingTime(); }    catch(e) { console.warn('readingTime:', e); }
     try { initLangSwitcher(); }   catch(e) { console.warn('langSwitcher:', e); }
     try { initCiteButton(); }     catch(e) { console.warn('citeButton:', e); }
     try { initRelatedArticles(); }catch(e) { console.warn('relatedArticles:', e); }
     try { initShareButtons(); }   catch(e) { console.warn('shareButtons:', e); }
+    try { initAuthorCard(); }     catch(e) { console.warn('authorCard:', e); }
     try { initAuthorArticles(); } catch(e) { console.warn('authorArticles:', e); }
     try { initRegionsLatestFeed(); } catch(e) { console.warn('regionsLatestFeed:', e); }
+    try { initRandomArticleButton(); } catch(e) { console.warn('randomArticle:', e); }
     try { initSectionFeed(); }      catch(e) { console.warn('sectionFeed:', e); }
     try { initReadingProgress(); }  catch(e) { console.warn('readingProgress:', e); }
     try { initBackToTop(); }        catch(e) { console.warn('backToTop:', e); }
