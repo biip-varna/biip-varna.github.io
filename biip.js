@@ -565,7 +565,7 @@
     };
 
     fetch('https://api.open-meteo.com/v1/forecast?latitude=43.2167&longitude=27.9167&current=temperature_2m,weathercode&wind_speed_unit=ms&timezone=Europe%2FSofia')
-      .then(function(r) { return r.json(); })
+      .then(function(r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function(data) {
         var temp = Math.round(data.current.temperature_2m);
         var code = data.current.weathercode;
@@ -649,7 +649,7 @@
     for (var i = 0; i < depth; i++) prefix += '../';
 
     fetch(prefix + 'articles.json')
-      .then(function(r) { return r.json(); })
+      .then(function(r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function(data) {
         ARTICLES = data;
         runAll();
