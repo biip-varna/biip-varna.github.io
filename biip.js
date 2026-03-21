@@ -395,6 +395,96 @@
 
 
 
+
+  /* ── FEATURE: Section Page Article Feed ─────────────────────── */
+  function initSectionFeed() {
+    var feed = document.getElementById('section-article-feed');
+    if (!feed || !ARTICLES) return;
+
+    var lang     = getLang();
+    var tags     = (feed.getAttribute('data-tags') || '').split(',').map(function(t){ return t.trim(); }).filter(Boolean);
+    var allLangs = feed.getAttribute('data-all-langs') === 'true';
+
+    // Filter articles
+    var filtered = ARTICLES.filter(function(a) {
+      var langOk = allLangs ? true : a.lang === lang;
+      var tagOk  = tags.length === 0 || (a.tags || []).some(function(t){ return tags.indexOf(t) !== -1; });
+      return langOk && tagOk;
+    });
+
+    // Sort newest first
+    filtered.sort(function(a, b){ return (b.date || '').localeCompare(a.date || ''); });
+
+    // Update count badge
+    var countEl = document.getElementById('section-article-count');
+    if (countEl) {
+      var total = ARTICLES.filter(function(a){
+        return (a.tags||[]).some(function(t){ return tags.indexOf(t) !== -1; });
+      }).length;
+      countEl.textContent = total + (lang === 'en' ? ' article' + (total !== 1 ? 's' : '') : ' статии');
+    }
+
+    if (!filtered.length) {
+      feed.innerHTML = '<p style="color:#888; padding:1em 0;">' +
+        (lang === 'en' ? 'No articles yet in this section.' : 'Все още няма статии в този раздел.') + '</p>';
+      return;
+    }
+
+    // Language filter buttons
+    var bgCount = ARTICLES.filter(function(a){
+      return a.lang === 'bg' && (a.tags||[]).some(function(t){ return tags.indexOf(t) !== -1; });
+    }).length;
+    var enCount = ARTICLES.filter(function(a){
+      return a.lang === 'en' && (a.tags||[]).some(function(t){ return tags.indexOf(t) !== -1; });
+    }).length;
+
+    var filterHtml = '';
+    if (bgCount > 0 && enCount > 0) {
+      filterHtml =
+        '<div class="section-filter" style="display:flex;gap:0.5em;margin-bottom:1.2em;flex-wrap:wrap;">' +
+          '<button type="button" class="sf-btn sf-active" data-lang="all">' +
+            (lang === 'en' ? 'All' : 'Всички') + ' (' + filtered.length + ')' +
+          '</button>' +
+          '<button type="button" class="sf-btn" data-lang="bg">БГ (' + bgCount + ')</button>' +
+          '<button type="button" class="sf-btn" data-lang="en">EN (' + enCount + ')</button>' +
+        '</div>';
+    }
+
+    function renderCards(articles) {
+      return articles.map(function(a) {
+        var fname   = a.file.split('/').pop();
+        var href    = 'articles/' + fname;
+        var imgSrc  = ('articles/' + a.img).replace(/ /g, '%20');
+        var dateStr = a.date ? a.date.split('-').reverse().join('.') : '';
+        var rt      = a.readTime ? ' · ' + a.readTime + (lang === 'en' ? ' min' : ' мин') : '';
+        var langBadge = a.lang === 'en'
+          ? '<span class="sc-lang-badge sc-en">EN</span>'
+          : '<span class="sc-lang-badge sc-bg">БГ</span>';
+        return '<a href="' + href + '" class="sc-card">' +
+          '<img src="' + imgSrc + '" alt="" class="sc-img" loading="lazy" width="120" height="80">' +
+          '<div class="sc-body">' +
+            '<div class="sc-meta">' + langBadge + dateStr + rt + (a.author ? ' · ' + a.author : '') + '</div>' +
+            '<h3 class="sc-title">' + a.title + '</h3>' +
+            '<p class="sc-teaser">' + (a.teaser || '') + '</p>' +
+          '</div>' +
+        '</a>';
+      }).join('');
+    }
+
+    feed.innerHTML = filterHtml + '<div id="sc-cards">' + renderCards(filtered) + '</div>';
+
+    // Filter button logic
+    feed.querySelectorAll('.sf-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        feed.querySelectorAll('.sf-btn').forEach(function(b){ b.classList.remove('sf-active'); });
+        btn.classList.add('sf-active');
+        var chosen = btn.getAttribute('data-lang');
+        var subset = chosen === 'all' ? filtered : filtered.filter(function(a){ return a.lang === chosen; });
+        document.getElementById('sc-cards').innerHTML = renderCards(subset);
+      });
+    });
+  }
+
   /* ── FEATURE: Reading Progress Bar ──────────────────────────── */
   function initReadingProgress() {
     if (!document.querySelector('article')) return;
@@ -545,6 +635,7 @@
     try { initShareButtons(); }   catch(e) { console.warn('shareButtons:', e); }
     try { initAuthorArticles(); } catch(e) { console.warn('authorArticles:', e); }
     try { initRegionsLatestFeed(); } catch(e) { console.warn('regionsLatestFeed:', e); }
+    try { initSectionFeed(); }      catch(e) { console.warn('sectionFeed:', e); }
     try { initReadingProgress(); }  catch(e) { console.warn('readingProgress:', e); }
     try { initBackToTop(); }         catch(e) { console.warn('backToTop:', e); }
   }
