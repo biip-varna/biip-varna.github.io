@@ -66,6 +66,8 @@
     'naama-en.html': 'naama.html',
     'asia.html': 'asia-en.html',
     'asia-en.html': 'asia.html',
+    'proektsia-ep-juli25.html': 'ep-coalition-preview-summary.html',
+    'ep-coalition-preview-summary.html': 'proektsia-ep-juli25.html',
   };
 
   /* ── Tag labels ──────────────────────────────────────────────── */
