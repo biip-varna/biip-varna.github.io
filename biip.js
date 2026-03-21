@@ -630,6 +630,14 @@
     feed.innerHTML = html;
   }
 
+  function initPrintButtons() {
+    document.addEventListener('click', function(e) {
+      if (e.target && e.target.classList.contains('print-kachel__btn')) {
+        window.print();
+      }
+    });
+  }
+
   function runAll() {
     try { initReadingTime(); }    catch(e) { console.warn('readingTime:', e); }
     try { initLangSwitcher(); }   catch(e) { console.warn('langSwitcher:', e); }
@@ -640,7 +648,8 @@
     try { initRegionsLatestFeed(); } catch(e) { console.warn('regionsLatestFeed:', e); }
     try { initSectionFeed(); }      catch(e) { console.warn('sectionFeed:', e); }
     try { initReadingProgress(); }  catch(e) { console.warn('readingProgress:', e); }
-    try { initBackToTop(); }         catch(e) { console.warn('backToTop:', e); }
+    try { initBackToTop(); }        catch(e) { console.warn('backToTop:', e); }
+    try { initPrintButtons(); }     catch(e) { console.warn('printButtons:', e); }
   }
 
   function init() {

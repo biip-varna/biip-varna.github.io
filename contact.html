@@ -2,6 +2,8 @@
 <html lang="bg">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self' https://api.open-meteo.com; font-src 'self'; object-src 'none'; base-uri 'self';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Контакт | БИМП</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Свържете се с Българския институт за международна политика – контактна форма и информация.">
@@ -81,11 +83,11 @@
   <!-- Социални канали -->
   <div class="contact-grid" style="margin-top:1.5em;">
     <a href="https://www.linkedin.com/company/bulgarian-institute-for-international-politics/"
-       class="contact-card" target="_blank" rel="noopener" aria-label="БИМП в LinkedIn">
+       class="contact-card" target="_blank" rel="noopener noreferrer" aria-label="БИМП в LinkedIn">
       <img src="icons/linkedin.svg" alt="LinkedIn" loading="lazy">
       <span>Последвайте ни в LinkedIn</span>
     </a>
-    <a href="https://t.me/kd7912" class="contact-card" target="_blank" rel="noopener" aria-label="Свържете се с д-р Керанов в Telegram">
+    <a href="https://t.me/kd7912" class="contact-card" target="_blank" rel="noopener noreferrer" aria-label="Свържете се с д-р Керанов в Telegram">
       <img src="icons/telegram.svg" alt="Telegram" loading="lazy">
       <span>Свържете се с д-р Керанов в Telegram</span>
     </a>
