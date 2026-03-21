@@ -49,6 +49,8 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 1.2em;
       margin: 0 auto 2.5em auto;
+      width: 100%;
+      box-sizing: border-box;
     }
     @media (max-width: 640px) {
       .region-grid { grid-template-columns: 1fr; }
@@ -64,6 +66,11 @@
       border: 1px solid #e0e8f5;
       background: #f5f8ff;
       transition: box-shadow 0.18s, transform 0.18s;
+      width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     a.region-card:hover {
       box-shadow: 0 6px 24px rgba(0,87,183,0.13);
