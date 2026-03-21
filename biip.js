@@ -132,7 +132,7 @@
   };
   // Canonical author names for matching
   var AUTHOR_ALIASES = {
-    'keranov':            ['keranov', 'д-р димитър керанов', 'dr. dimitar keranov',
+    'keranov':            ['д-р димитър керанов', 'dr. dimitar keranov',
                            'dimitar keranov', 'димитър керанов', 'dr. dimitar keranov, mrssaf'],
     'konstantin-keranov': ['константин керанов', 'konstantin keranov'],
     'uzunov':             ['д-р александър узунов', 'dr. alexander uzunov',
