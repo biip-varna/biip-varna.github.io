@@ -383,8 +383,9 @@
       if (a.lang !== lang) return false;
       // Match by authorId directly or via alias normalisation
       if (a.authorId === authorId) return true;
-      var normId = normalizeAuthorId(a.author);
-      return normId === authorId;
+      return a.author.split(';').some(function(name) {
+        return normalizeAuthorId(name.trim()) === authorId;
+      });
     });
     authored.sort(function(a, b){ return (b.date || '').localeCompare(a.date || ''); });
 
@@ -398,7 +399,7 @@
     authored.forEach(function(a) {
       html +=
         '<a href="../' + a.file + '" class="article-preview">' +
-          '<img src="../' + a.img.replace(/ /g, '%20') + '" alt="" class="article-thumb" ' +
+          '<img src="../articles/' + a.img.replace(/ /g, '%20') + '" alt="" class="article-thumb" ' +
             'width="44" height="44" loading="lazy">' +
           '<div class="article-info">' +
             '<h4>' + a.title + '</h4>' +
