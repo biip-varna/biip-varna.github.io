@@ -1127,3 +1127,21 @@ footer {
   margin-top: 0.15em;
 }
 .author-card-link:hover { text-decoration: underline; }
+
+/* ── Expert tag pills ────────────────────────────────────────── */
+.expert-tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45em;
+  margin: 0.6em 0 1.4em 0;
+}
+.expert-tag {
+  display: inline-block;
+  background: #e8f0fe;
+  color: #0057B7;
+  font-size: 0.78em;
+  font-weight: 600;
+  padding: 0.2em 0.65em;
+  border-radius: 100px;
+  letter-spacing: 0.01em;
+}

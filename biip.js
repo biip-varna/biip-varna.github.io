@@ -98,35 +98,51 @@
   var AUTHOR_PAGE = {
     'keranov':            { bg: 'experts/keranov.html',          en: 'experts/keranov-en.html',
                             img: 'experts/images/Keranov.jpg',
-                            role_bg: 'Експерт Африка и ЦИЕ',    role_en: 'Expert on Africa & CEE' },
+                            role_bg: 'Експерт Африка и ЦИЕ',    role_en: 'Expert on Africa & CEE',
+                            tags_en: ['Africa', 'CEE', 'Democracy', 'Security', 'International Relations'],
+                            tags_bg: ['Африка', 'ЦИЕ', 'Демокрация', 'Сигурност', 'Международни отношения'] },
     'konstantin-keranov': { bg: null, en: null,
                             img: 'experts/images/KKeranov.png',
                             role_bg: 'Експерт Дигитална икономика',
-                            role_en: 'Expert on Digital Economy & Emerging Technologies' },
+                            role_en: 'Expert on Digital Economy & Emerging Technologies',
+                            tags_en: ['Digital Economy', 'AI', 'Technology', 'Innovation'],
+                            tags_bg: ['Дигитална икономика', 'ИИ', 'Технологии', 'Иновации'] },
     'uzunov':             { bg: 'experts/uzunov.html',           en: 'experts/auzunov-english.html',
                             img: 'experts/images/Uzunov.jpg',
                             role_bg: 'Експерт Национална сигурност',
-                            role_en: 'Expert on National Security & Geopolitics' },
+                            role_en: 'Expert on National Security & Geopolitics',
+                            tags_en: ['National Security', 'Geopolitics', 'International Relations'],
+                            tags_bg: ['Национална сигурност', 'Геополитика', 'Международни отношения'] },
     'smilkov':            { bg: 'experts/smilkov.html',          en: 'experts/ksmilkov-english.html',
                             img: 'experts/images/Smilkov.png',
                             role_bg: 'Експерт Международни отношения',
-                            role_en: 'Expert on International Relations' },
+                            role_en: 'Expert on International Relations',
+                            tags_en: ['International Relations', 'Comparative Politics', 'Law & Culture'],
+                            tags_bg: ['Международни отношения', 'Сравнителна политика', 'Право и култура'] },
     'petrov':             { bg: 'experts/petrov.html',           en: 'experts/aradzhioni.html',
-                            img: 'experts/images/petrov.jpg',
+                            img: 'experts/images/petrovs.jpg',
                             role_bg: 'Експерт Международна сигурност',
-                            role_en: 'Expert on International Security' },
+                            role_en: 'Expert on International Security',
+                            tags_en: ['International Security', 'Geopolitics', 'Political Analysis'],
+                            tags_bg: ['Международна сигурност', 'Геополитика', 'Политически анализ'] },
     'naama':              { bg: 'experts/naama.html',            en: 'experts/naama-en.html',
-                            img: 'experts/images/Naama.jpg',
+                            img: 'experts/images/Naama-Karim.jpg',
                             role_bg: 'Експерт Близък изток',
-                            role_en: 'Expert on Middle East & International Relations' },
+                            role_en: 'Expert on Middle East & International Relations',
+                            tags_en: ['Middle East', 'Arab World', 'International Relations'],
+                            tags_bg: ['Близък изток', 'Арабски свят', 'Международни отношения'] },
     'rovinalti':          { bg: 'experts/rovinalti.html',        en: 'experts/arovinalti-english.html',
-                            img: 'experts/images/Rovinalti.jpg',
+                            img: 'experts/images/Rovinalti-Luca.jpg',
                             role_bg: 'Политически консултант; Европейски въпроси',
-                            role_en: 'Political Consultant; Expert on EU Affairs' },
+                            role_en: 'Political Consultant; Expert on EU Affairs',
+                            tags_en: ['EU Affairs', 'European Institutions', 'Political Communication'],
+                            tags_bg: ['Европейски въпроси', 'Европейски институции', 'Политическа комуникация'] },
     'vaculik':            { bg: 'experts/vaculik.html',          en: 'experts/dvaculik-english.html',
                             img: 'experts/images/Vaculik.png',
                             role_bg: 'Експерт Чешка политика',
-                            role_en: 'Expert on Czech Politics' },
+                            role_en: 'Expert on Czech Politics',
+                            tags_en: ['Czech Politics', 'Central Europe', 'Governance'],
+                            tags_bg: ['Чешка политика', 'Централна Европа', 'Управление'] },
     'biip':               { bg: 'eksperti.html',                 en: 'experts-english.html',
                             img: null, role_bg: null, role_en: null },
   };
@@ -691,6 +707,27 @@
     });
   }
 
+  /* ── FEATURE: Expert Tag Pills ──────────────────────────────── */
+  function initExpertTags() {
+    var container = document.getElementById('author-articles');
+    if (!container) return;
+    var authorId = container.getAttribute('data-author-id');
+    if (!authorId) return;
+    var expert = AUTHOR_PAGE[authorId];
+    if (!expert) return;
+    var lang = getLang();
+    var tags = expert['tags_' + lang] || expert.tags_en || [];
+    if (!tags.length) return;
+
+    var html = '<div class="expert-tag-row">' +
+      tags.map(function(t) { return '<span class="expert-tag">' + t + '</span>'; }).join('') +
+      '</div>';
+
+    // Insert after the first <h2> inside <main>
+    var h2 = document.querySelector('main h2');
+    if (h2) h2.insertAdjacentHTML('afterend', html);
+  }
+
   /* ── FEATURE: Random Article Button ─────────────────────────── */
   function initRandomArticleButton() {
     var latestFeed = document.getElementById('regions-latest-feed');
@@ -792,6 +829,7 @@
     try { initRelatedArticles(); }catch(e) { console.warn('relatedArticles:', e); }
     try { initShareButtons(); }   catch(e) { console.warn('shareButtons:', e); }
     try { initAuthorCard(); }     catch(e) { console.warn('authorCard:', e); }
+    try { initExpertTags(); }     catch(e) { console.warn('expertTags:', e); }
     try { initAuthorArticles(); } catch(e) { console.warn('authorArticles:', e); }
     try { initRegionsLatestFeed(); } catch(e) { console.warn('regionsLatestFeed:', e); }
     try { initRandomArticleButton(); } catch(e) { console.warn('randomArticle:', e); }
