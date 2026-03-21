@@ -293,10 +293,11 @@
       if (a.lang !== lang) return false;
       return a.tags && a.tags.some(function(t){ return current.tags.indexOf(t) !== -1; });
     }).slice(0, 3);
-    if (!related.length) return;
 
     var existing = article.querySelector('.related-articles');
     if (existing) existing.remove();
+
+    if (!related.length) return;
 
     var heading = lang === 'en' ? 'Related Articles' : 'Свързани статии';
     var html = '<section class="related-articles"><h2>' + heading + '</h2><div class="related-list">';
