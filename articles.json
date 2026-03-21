@@ -11,7 +11,8 @@
       "china",
       "bulgaria",
       "diplomacy"
-    ]
+    ],
+    "readTime": 1
   },
   {
     "file": "articles/bg-md-friendship-english.html",
@@ -25,7 +26,8 @@
       "bulgaria",
       "moldova",
       "eu"
-    ]
+    ],
+    "readTime": 2
   },
   {
     "file": "articles/bg-md.html",
@@ -39,7 +41,8 @@
       "bulgaria",
       "moldova",
       "eu"
-    ]
+    ],
+    "readTime": 2
   },
   {
     "file": "articles/bg-ro-vm.html",
@@ -54,7 +57,8 @@
       "romania",
       "moldova",
       "eu"
-    ]
+    ],
+    "readTime": 2
   },
   {
     "file": "articles/bgsecurity.html",
@@ -68,7 +72,8 @@
       "bulgaria",
       "security",
       "nato"
-    ]
+    ],
+    "readTime": 4
   },
   {
     "file": "articles/bruxbg.html",
@@ -82,7 +87,8 @@
       "bulgaria",
       "eu",
       "governance"
-    ]
+    ],
+    "readTime": 2
   },
   {
     "file": "articles/bul-ro-en.html",
@@ -97,7 +103,8 @@
       "romania",
       "moldova",
       "eu"
-    ]
+    ],
+    "readTime": 2
   },
   {
     "file": "articles/bulgaria-must-leave-soviet-armament-behind.html",
@@ -111,7 +118,8 @@
       "bulgaria",
       "security",
       "nato"
-    ]
+    ],
+    "readTime": 1
   },
   {
     "file": "articles/bulgarias-democratic-challenge.html",
@@ -125,7 +133,8 @@
       "bulgaria",
       "democracy",
       "governance"
-    ]
+    ],
+    "readTime": 1
   },
   {
     "file": "articles/chn.html",
@@ -140,7 +149,8 @@
       "china",
       "russia",
       "disinformation"
-    ]
+    ],
+    "readTime": 3
   },
   {
     "file": "articles/digital-economy-english.html",
@@ -153,7 +163,8 @@
     "tags": [
       "digitaleconomy",
       "ai"
-    ]
+    ],
+    "readTime": 1
   },
   {
     "file": "articles/digitalna-ikonomika.html",
@@ -166,7 +177,8 @@
     "tags": [
       "digitaleconomy",
       "ai"
-    ]
+    ],
+    "readTime": 1
   },
   {
     "file": "articles/double-embrace.html",
@@ -182,7 +194,8 @@
       "china",
       "security",
       "disinformation"
-    ]
+    ],
+    "readTime": 5
   },
   {
     "file": "articles/ep-coalition-preview-summary.html",
@@ -195,7 +208,8 @@
     "tags": [
       "eu",
       "europeanparliament"
-    ]
+    ],
+    "readTime": 1
   },
   {
     "file": "articles/ep-feb26.html",
@@ -208,7 +222,8 @@
     "tags": [
       "eu",
       "europeanparliament"
-    ]
+    ],
+    "readTime": 2
   },
   {
     "file": "articles/evroro-v-bg-dobra-ideya.html",
@@ -222,7 +237,8 @@
       "bulgaria",
       "eu",
       "economy"
-    ]
+    ],
+    "readTime": 1
   },
   {
     "file": "articles/kogato-romania-te-zabrani.html",
@@ -235,7 +251,8 @@
     "tags": [
       "bulgaria",
       "romania"
-    ]
+    ],
+    "readTime": 1
   },
   {
     "file": "articles/moscow-md.html",
@@ -249,7 +266,8 @@
       "moldova",
       "russia",
       "security"
-    ]
+    ],
+    "readTime": 2
   },
   {
     "file": "articles/moskva-moldova.html",
@@ -263,7 +281,8 @@
       "moldova",
       "russia",
       "security"
-    ]
+    ],
+    "readTime": 2
   },
   {
     "file": "articles/no-corruption-bg.html",
@@ -277,7 +296,8 @@
       "bulgaria",
       "governance",
       "corruption"
-    ]
+    ],
+    "readTime": 1
   },
   {
     "file": "articles/pretoria-bg.html",
@@ -291,7 +311,8 @@
       "africa",
       "southafrica",
       "diplomacy"
-    ]
+    ],
+    "readTime": 1
   },
   {
     "file": "articles/pretoria-diplomatic-withdrawal.html",
@@ -305,7 +326,8 @@
       "africa",
       "southafrica",
       "diplomacy"
-    ]
+    ],
+    "readTime": 1
   },
   {
     "file": "articles/proektsia-ep-juli25.html",
@@ -318,7 +340,8 @@
     "tags": [
       "eu",
       "europeanparliament"
-    ]
+    ],
+    "readTime": 1
   },
   {
     "file": "articles/syntheticbg.html",
@@ -332,7 +355,8 @@
       "disinformation",
       "ai",
       "bulgaria"
-    ]
+    ],
+    "readTime": 2
   },
   {
     "file": "articles/taraclia-vote-en.html",
@@ -346,7 +370,8 @@
       "moldova",
       "minorities",
       "eu"
-    ]
+    ],
+    "readTime": 3
   },
   {
     "file": "articles/the-euro-in-bulgaria-is-a-good-idea.html",
@@ -360,7 +385,8 @@
       "bulgaria",
       "eu",
       "economy"
-    ]
+    ],
+    "readTime": 1
   },
   {
     "file": "articles/tryabva-okonchatelno-da-se-razdelim-sas-savetskoto-vaorazhenie.html",
@@ -374,7 +400,8 @@
       "bulgaria",
       "security",
       "nato"
-    ]
+    ],
+    "readTime": 1
   },
   {
     "file": "articles/when-bulgarian-democracy-falters.html",
@@ -388,7 +415,8 @@
       "bulgaria",
       "democracy",
       "governance"
-    ]
+    ],
+    "readTime": 2
   },
   {
     "file": "articles/when-romania-bans-you.html",
@@ -401,7 +429,8 @@
     "tags": [
       "bulgaria",
       "romania"
-    ]
+    ],
+    "readTime": 1
   },
   {
     "file": "articles/yuar-orazhiya.html",
@@ -415,6 +444,7 @@
       "africa",
       "southafrica",
       "security"
-    ]
+    ],
+    "readTime": 1
   }
 ]

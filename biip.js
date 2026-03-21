@@ -394,6 +394,114 @@
   }
 
 
+
+  /* ── FEATURE: Reading Progress Bar ──────────────────────────── */
+  function initReadingProgress() {
+    if (!document.querySelector('article')) return;
+    var bar = document.createElement('div');
+    bar.id = 'reading-progress';
+    bar.setAttribute('role', 'progressbar');
+    bar.setAttribute('aria-label', 'Reading progress');
+    bar.setAttribute('aria-valuemin', '0');
+    bar.setAttribute('aria-valuemax', '100');
+    document.body.insertBefore(bar, document.body.firstChild);
+
+    function update() {
+      var article = document.querySelector('article');
+      var rect = article.getBoundingClientRect();
+      var total = article.offsetHeight - window.innerHeight;
+      var scrolled = Math.max(0, -rect.top);
+      var pct = total > 0 ? Math.min(100, (scrolled / total) * 100) : 0;
+      bar.style.width = pct + '%';
+      bar.setAttribute('aria-valuenow', Math.round(pct));
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  }
+
+  /* ── FEATURE: Back to Top Button ─────────────────────────────── */
+  function initBackToTop() {
+    var lang = getLang();
+    var label = lang === 'en' ? 'Back to top' : 'Към началото';
+    var btn = document.createElement('button');
+    btn.id = 'back-to-top';
+    btn.type = 'button';
+    btn.setAttribute('aria-label', label);
+    btn.setAttribute('title', label);
+    btn.innerHTML = '&#8679;';
+    document.body.appendChild(btn);
+
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 400) {
+        btn.classList.add('visible');
+      } else {
+        btn.classList.remove('visible');
+      }
+    }, { passive: true });
+
+    btn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ── FEATURE: Weather Widget (Varna, no cookies/tracking) ─────── */
+  function initWeatherWidget() {
+    var placeholder = document.getElementById('varna-weather');
+    if (!placeholder) return;
+    var lang = getLang();
+
+    var codes = {
+      0:  { en: 'Clear sky',        bg: 'Ясно небе',          icon: '☀️' },
+      1:  { en: 'Mainly clear',     bg: 'Предимно ясно',      icon: '🌤️' },
+      2:  { en: 'Partly cloudy',    bg: 'Частично облачно',   icon: '⛅' },
+      3:  { en: 'Overcast',         bg: 'Облачно',            icon: '☁️' },
+      45: { en: 'Foggy',            bg: 'Мъгливо',            icon: '🌫️' },
+      48: { en: 'Foggy',            bg: 'Мъгливо',            icon: '🌫️' },
+      51: { en: 'Light drizzle',    bg: 'Слаб ръмеж',         icon: '🌦️' },
+      53: { en: 'Drizzle',          bg: 'Ръмеж',              icon: '🌦️' },
+      55: { en: 'Heavy drizzle',    bg: 'Силен ръмеж',        icon: '🌦️' },
+      61: { en: 'Light rain',       bg: 'Слаб дъжд',          icon: '🌧️' },
+      63: { en: 'Rain',             bg: 'Дъжд',               icon: '🌧️' },
+      65: { en: 'Heavy rain',       bg: 'Силен дъжд',         icon: '🌧️' },
+      71: { en: 'Light snow',       bg: 'Слаб сняг',          icon: '🌨️' },
+      73: { en: 'Snow',             bg: 'Сняг',               icon: '❄️' },
+      75: { en: 'Heavy snow',       bg: 'Силен сняг',         icon: '❄️' },
+      80: { en: 'Rain showers',     bg: 'Валежи',             icon: '🌦️' },
+      81: { en: 'Rain showers',     bg: 'Валежи',             icon: '🌦️' },
+      82: { en: 'Heavy showers',    bg: 'Силни валежи',       icon: '⛈️' },
+      95: { en: 'Thunderstorm',     bg: 'Гръмотевична буря',  icon: '⛈️' },
+      96: { en: 'Thunderstorm',     bg: 'Гръмотевична буря',  icon: '⛈️' },
+      99: { en: 'Thunderstorm',     bg: 'Гръмотевична буря',  icon: '⛈️' }
+    };
+
+    fetch('https://api.open-meteo.com/v1/forecast?latitude=43.2167&longitude=27.9167&current=temperature_2m,weathercode&wind_speed_unit=ms&timezone=Europe%2FSofia')
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        var temp = Math.round(data.current.temperature_2m);
+        var code = data.current.weathercode;
+        var info = codes[code] || { en: '', bg: '', icon: '🌡️' };
+        var desc = lang === 'en' ? info.en : info.bg;
+        var locLabel = lang === 'en' ? 'Varna, now' : 'Варна, в момента';
+        var sourceLabel = lang === 'en'
+          ? 'Weather data: Open-Meteo (no tracking, no cookies)'
+          : 'Данни за времето: Open-Meteo (без проследяване, без бисквитки)';
+
+        placeholder.innerHTML =
+          '<div class="weather-widget">' +
+            '<span class="weather-icon">' + info.icon + '</span>' +
+            '<div class="weather-info">' +
+              '<div class="weather-temp">' + temp + '°C</div>' +
+              '<div class="weather-desc">' + desc + '</div>' +
+            '</div>' +
+            '<span class="weather-location">📍 ' + locLabel + '</span>' +
+            '<span class="weather-source">' + sourceLabel + '</span>' +
+          '</div>';
+      })
+      .catch(function() {
+        placeholder.innerHTML = ''; // silent fail — no broken UI
+      });
+  }
+
   /* ── FEATURE: Regions Latest Feed ───────────────────────────── */
   function initRegionsLatestFeed() {
     var feed = document.getElementById('regions-latest-feed');
@@ -416,12 +524,13 @@
         ? '<span class="lang-badge lang-en">EN</span>'
         : '<span class="lang-badge lang-bg">БГ</span>';
       var dateStr = a.date ? a.date.split('-').reverse().join('.') : '';
+      var rtLabel = a.readTime ? ' · ' + a.readTime + (lang === 'en' ? ' min read' : ' мин') : '';
       html +=
         '<a href="' + href + '" class="latest-item">' +
           '<img src="' + imgPath + '" alt="" class="latest-thumb" width="52" height="52" loading="lazy">' +
           '<div class="latest-info">' +
             '<div class="latest-title">' + a.title + '</div>' +
-            '<div class="latest-meta">' + langLabel + dateStr + (a.author ? ' · ' + a.author : '') + '</div>' +
+            '<div class="latest-meta">' + langLabel + dateStr + (a.author ? ' · ' + a.author : '') + rtLabel + '</div>' +
           '</div>' +
         '</a>';
     });
@@ -436,9 +545,13 @@
     try { initShareButtons(); }   catch(e) { console.warn('shareButtons:', e); }
     try { initAuthorArticles(); } catch(e) { console.warn('authorArticles:', e); }
     try { initRegionsLatestFeed(); } catch(e) { console.warn('regionsLatestFeed:', e); }
+    try { initReadingProgress(); }  catch(e) { console.warn('readingProgress:', e); }
+    try { initBackToTop(); }         catch(e) { console.warn('backToTop:', e); }
   }
 
   function init() {
+    // Back to top on all pages
+    try { initBackToTop(); } catch(e) {}
     // Load articles.json first, then run all features
     var depth = window.location.pathname.split('/').length - 2;
     var prefix = '';
@@ -449,10 +562,12 @@
       .then(function(data) {
         ARTICLES = data;
         runAll();
+        try { initWeatherWidget(); } catch(e) { console.warn('weather:', e); }
       })
       .catch(function(e) {
         console.warn('biip: could not load articles.json, running without article data', e);
         runAll(); // still run lang switcher, cite button etc.
+        try { initWeatherWidget(); } catch(e) { console.warn('weather:', e); }
       });
   }
 

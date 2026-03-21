@@ -654,3 +654,168 @@ footer {
 .share-facebook  { background: #1877f2; }
 .share-telegram  { background: #26a5e4; }
 .share-whatsapp  { background: #25d366; }
+
+
+/* ── Reading Progress Bar ────────────────────────────────────────── */
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #0057B7, #4a9eff);
+  z-index: 9999;
+  transition: width 0.1s linear;
+  pointer-events: none;
+}
+
+/* ── Back to Top Button ──────────────────────────────────────────── */
+#back-to-top {
+  position: fixed;
+  bottom: 1.8em;
+  right: 1.5em;
+  width: 42px;
+  height: 42px;
+  background: #0057B7;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1em;
+  line-height: 42px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,87,183,0.35);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.25s, transform 0.25s;
+  z-index: 8888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+#back-to-top:hover {
+  background: #0048a0;
+}
+
+/* ── Weather Widget ──────────────────────────────────────────────── */
+.weather-widget {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  background: #f0f5ff;
+  border: 1px solid #d8e4f5;
+  border-radius: 10px;
+  padding: 0.7em 1.1em;
+  margin: 1.5em 0;
+  font-size: 0.95em;
+  color: #333;
+  flex-wrap: wrap;
+}
+.weather-icon {
+  font-size: 1.8em;
+  line-height: 1;
+}
+.weather-info { flex: 1; min-width: 120px; }
+.weather-temp {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #0057B7;
+}
+.weather-desc {
+  font-size: 0.85em;
+  color: #666;
+  margin-top: 0.1em;
+}
+.weather-location {
+  font-size: 0.78em;
+  color: #999;
+  margin-left: auto;
+  white-space: nowrap;
+}
+.weather-source {
+  font-size: 0.72em;
+  color: #aaa;
+  width: 100%;
+  margin-top: 0.2em;
+}
+
+/* ── Improved Print Styles ───────────────────────────────────────── */
+@media print {
+  /* Hide everything non-essential */
+  header, nav, .no-print, .share-bar, .cite-trigger-btn,
+  #back-to-top, #reading-progress, .print-kachel,
+  .weather-widget, .related-articles, footer,
+  #cite-modal { display: none !important; }
+
+  body {
+    font-family: Georgia, serif;
+    font-size: 11pt;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+  main {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  article {
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3 {
+    color: #000;
+    page-break-after: avoid;
+  }
+
+  /* Show the site URL as a print header */
+  main::before {
+    content: "biip-varna.github.io  |  Bulgarian Institute for International Politics";
+    display: block;
+    font-size: 8pt;
+    color: #666;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 6pt;
+    margin-bottom: 18pt;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Show full URLs after links */
+  article a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: #555;
+    word-break: break-all;
+  }
+  /* But not for mailto or internal nav links */
+  article a[href^="mailto"]::after { content: ""; }
+
+  /* Print footer with URL */
+  article::after {
+    content: "Публикувано на / Published at: " attr(data-url);
+    display: block;
+    font-size: 8pt;
+    color: #666;
+    border-top: 1px solid #ccc;
+    padding-top: 6pt;
+    margin-top: 24pt;
+    font-family: Arial, sans-serif;
+  }
+
+  img {
+    max-width: 100%;
+    page-break-inside: avoid;
+  }
+
+  p, li {
+    orphans: 3;
+    widows: 3;
+  }
+}
