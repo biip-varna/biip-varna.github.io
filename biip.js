@@ -727,36 +727,48 @@
     var current = ARTICLES.find(function(a) { return a.file.split('/').pop() === file; });
     if (!current || !current.author) return;
 
-    // Use first author for multi-author articles
-    var authorName = current.author.split(';')[0].trim();
-    var authorId   = normalizeAuthorId(authorName);
-    if (!authorId) return;
-    var expert = AUTHOR_PAGE[authorId];
-    if (!expert || !expert.img) return;
-
-    var profileHref = expert[lang] || expert.bg || expert.en;
-    var role        = expert['role_' + lang] || expert.role_en || expert.role_bg || '';
-    var viewLabel   = lang === 'en' ? 'View full profile →' : 'Виж пълния профил →';
-    var byLabel     = lang === 'en' ? 'About the author' : 'За автора';
-
     var depth  = window.location.pathname.split('/').length - 2;
     var prefix = '';
     for (var i = 0; i < depth; i++) prefix += '../';
 
-    var profileLink = profileHref
-      ? '<a href="' + prefix + profileHref + '" class="author-card-link">' + viewLabel + '</a>'
-      : '';
+    var viewLabel = lang === 'en' ? 'View full profile →' : 'Виж пълния профил →';
+
+    // Build a card for every author who has profile data
+    var authorNames = current.author.split(';').map(function(s) { return s.trim(); });
+    var cards = [];
+    authorNames.forEach(function(authorName) {
+      var authorId = normalizeAuthorId(authorName);
+      if (!authorId) return;
+      var expert = AUTHOR_PAGE[authorId];
+      if (!expert || !expert.img) return;
+      var profileHref = expert[lang] || expert.bg || expert.en;
+      var role        = expert['role_' + lang] || expert.role_en || expert.role_bg || '';
+      var profileLink = profileHref
+        ? '<a href="' + prefix + profileHref + '" class="author-card-link">' + viewLabel + '</a>'
+        : '';
+      cards.push(
+        '<div class="author-card">' +
+          '<img src="' + prefix + expert.img + '" alt="' + authorName + '" ' +
+               'class="author-card-img" width="64" height="64" loading="lazy">' +
+          '<div class="author-card-info">' +
+            '<div class="author-card-name">' + authorName + '</div>' +
+            (role ? '<div class="author-card-role">' + role + '</div>' : '') +
+            profileLink +
+          '</div>' +
+        '</div>'
+      );
+    });
+
+    if (!cards.length) return;
+
+    var byLabel = cards.length > 1
+      ? (lang === 'en' ? 'About the authors' : 'За авторите')
+      : (lang === 'en' ? 'About the author'  : 'За автора');
 
     var html =
-      '<div class="author-card">' +
-        '<img src="' + prefix + expert.img + '" alt="' + authorName + '" ' +
-             'class="author-card-img" width="64" height="64" loading="lazy">' +
-        '<div class="author-card-info">' +
-          '<div class="author-card-label">' + byLabel + '</div>' +
-          '<div class="author-card-name">' + authorName + '</div>' +
-          (role ? '<div class="author-card-role">' + role + '</div>' : '') +
-          profileLink +
-        '</div>' +
+      '<div class="author-cards-wrap">' +
+        '<div class="author-cards-label">' + byLabel + '</div>' +
+        cards.join('') +
       '</div>';
 
     // Insert before share bar (which was inserted by initShareButtons)

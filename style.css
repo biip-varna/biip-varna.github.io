@@ -1068,16 +1068,28 @@ footer {
 .random-btn:hover { background: #004299; }
 
 /* ── Author expert card ──────────────────────────────────────── */
+.author-cards-wrap {
+  margin: 1.5em 0;
+}
+.author-cards-label {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #888;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
 .author-card {
   display: flex;
   align-items: center;
   gap: 1em;
   padding: 0.9em 1.1em;
-  margin: 1.5em 0;
+  margin-bottom: 0.6em;
   background: #f8fafd;
   border: 1px solid #dce4f0;
   border-radius: 10px;
 }
+.author-card:last-child { margin-bottom: 0; }
 .author-card-img {
   width: 64px;
   height: 64px;
