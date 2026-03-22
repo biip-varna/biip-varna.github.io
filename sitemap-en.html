@@ -154,11 +154,18 @@
       var en = articles.filter(function(a) { return a.lang === 'en'; });
       var bg = articles.filter(function(a) { return a.lang === 'bg'; });
 
+      var EN_MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      function fmtDate(d) {
+        if (!d) return '';
+        var p = d.split('-');
+        return parseInt(p[2], 10) + ' ' + EN_MON[parseInt(p[1], 10) - 1] + ' ' + p[0];
+      }
+
       function renderList(list) {
         if (!list.length) return '<li style="color:#888">No publications.</li>';
         return list.map(function(a) {
           var url = a.file.split('/').pop();
-          var date = a.date ? '<span class="sitemap-meta">' + a.date + '</span>' : '';
+          var date = a.date ? '<span class="sitemap-meta">' + fmtDate(a.date) + '</span>' : '';
           return '<li><a href="articles/' + url + '">' + a.title + '</a>' + date + '</li>';
         }).join('');
       }

@@ -1044,7 +1044,6 @@
     try { initReadingProgress(); }  catch(e) { console.warn('readingProgress:', e); }
     try { initBackToTop(); }        catch(e) { console.warn('backToTop:', e); }
     try { initPrintButtons(); }     catch(e) { console.warn('printButtons:', e); }
-    try { initPdfButton(); }        catch(e) { console.warn('pdfButton:', e); }
     try { initKeyboardShortcuts(); } catch(e) { console.warn('keyboardShortcuts:', e); }
   }
 
@@ -1052,6 +1051,7 @@
     // Register these immediately — no articles.json dependency
     try { initViewAllButton(); }  catch(e) {}
     try { initSurpriseButton(); } catch(e) {}
+    try { initPdfButton(); }      catch(e) {}
     // Load articles.json first, then run all features
     fetch(getPrefix() + 'articles.json')
       .then(function(r) { if (!r.ok) throw new Error(r.status); return r.json(); })
