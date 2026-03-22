@@ -213,6 +213,17 @@
 
 <script>
 (function(){
+  var TAG_LABEL = {
+    'bulgaria':'България','moldova':'Молдова','russia':'Русия',
+    'eu':'ЕС','balkans':'Балкани','china':'Китай',
+    'security':'Сигурност','nato':'НАТО','democracy':'Демокрация',
+    'governance':'Управление','corruption':'Корупция',
+    'africa':'Африка','southafrica':'Южна Африка',
+    'diplomacy':'Дипломация','disinformation':'Дезинформация',
+    'ai':'ИИ','digitaleconomy':'Дигитална икономика',
+    'economy':'Икономика','europeanparliament':'Европарламент',
+    'minorities':'Малцинства','romania':'Румъния',
+  };
   var index = [];
   var tagMap = {}; // url -> tags[]
   var currentLang = 'all';
@@ -249,7 +260,7 @@
     if (sortedTags.length) {
       var tagHtml = '<button type="button" class="tag-btn active" data-tag="">Всички теми</button>';
       sortedTags.forEach(function(t){
-        tagHtml += '<button type="button" class="tag-btn" data-tag="' + t + '">' + t + '</button>';
+        tagHtml += '<button type="button" class="tag-btn" data-tag="' + t + '">' + (TAG_LABEL[t] || t) + '</button>';
       });
       var tagWrap = document.getElementById('tag-filters');
       tagWrap.innerHTML = tagHtml;
