@@ -21,6 +21,13 @@
   --border-radius-lg: 12px;
 }
 
+/* Global button reset — prevents iOS Safari from applying native system
+   appearance (grey/rounded) that overrides custom background-color/border */
+button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
