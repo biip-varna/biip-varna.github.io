@@ -750,6 +750,54 @@
     if (h2) h2.insertAdjacentHTML('afterend', html);
   }
 
+  /* ── FEATURE: Home page "Surprise me" button ────────────────── */
+  function initSurpriseButton() {
+    var btn = document.getElementById('home-surprise-btn');
+    if (!btn || !ARTICLES) return;
+    var lang = getLang();
+    var pool = ARTICLES.filter(function(a) { return a.lang === lang; });
+    if (!pool.length) pool = ARTICLES;
+    btn.addEventListener('click', function() {
+      var pick  = pool[Math.floor(Math.random() * pool.length)];
+      var depth = window.location.pathname.split('/').length - 2;
+      var prefix = '';
+      for (var i = 0; i < depth; i++) prefix += '../';
+      window.location.href = prefix + pick.file;
+    });
+  }
+
+  /* ── FEATURE: Home page latest articles feed ─────────────────── */
+  function initHomeLatestFeed() {
+    var feed = document.getElementById('home-latest-feed');
+    if (!feed || !ARTICLES) return;
+    var lang  = getLang();
+    var count = parseInt(feed.getAttribute('data-count') || '4', 10);
+    var pool  = ARTICLES.filter(function(a) { return a.lang === lang; });
+    pool.sort(function(a, b) { return b.date > a.date ? 1 : b.date < a.date ? -1 : 0; });
+    var items = pool.slice(0, count);
+    if (!items.length) return;
+
+    var depth  = window.location.pathname.split('/').length - 2;
+    var prefix = '';
+    for (var i = 0; i < depth; i++) prefix += '../';
+    var byTxt = lang === 'en' ? 'by' : 'от';
+
+    feed.innerHTML = items.map(function(a) {
+      var imgSrc = a.img ? prefix + 'articles/' + a.img : '';
+      var imgHtml = imgSrc
+        ? '<img src="' + imgSrc + '" alt="' + a.title + '" class="article-thumb" loading="lazy" width="44" height="44">'
+        : '';
+      return '<a href="' + prefix + a.file + '" class="article-preview">' +
+        imgHtml +
+        '<div class="article-info">' +
+          '<h4>' + a.title + '</h4>' +
+          '<p class="article-meta">' + byTxt + ' ' + a.author + '</p>' +
+          '<p class="article-teaser">' + (a.desc || '') + '</p>' +
+        '</div>' +
+        '</a>';
+    }).join('');
+  }
+
   /* ── FEATURE: Random Article Button ─────────────────────────── */
   function initRandomArticleButton() {
     var latestFeed = document.getElementById('regions-latest-feed');
@@ -855,6 +903,8 @@
     try { initAuthorArticles(); } catch(e) { console.warn('authorArticles:', e); }
     try { initRegionsLatestFeed(); } catch(e) { console.warn('regionsLatestFeed:', e); }
     try { initRandomArticleButton(); } catch(e) { console.warn('randomArticle:', e); }
+    try { initSurpriseButton(); }     catch(e) { console.warn('surpriseButton:', e); }
+    try { initHomeLatestFeed(); }     catch(e) { console.warn('homeLatestFeed:', e); }
     try { initSectionFeed(); }      catch(e) { console.warn('sectionFeed:', e); }
     try { initReadingProgress(); }  catch(e) { console.warn('readingProgress:', e); }
     try { initBackToTop(); }        catch(e) { console.warn('backToTop:', e); }
