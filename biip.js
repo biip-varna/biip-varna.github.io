@@ -193,6 +193,13 @@
   }
 
   /* ── Helpers ─────────────────────────────────────────────────── */
+  function getPrefix() {
+    var depth = window.location.pathname.split('/').length - 2;
+    var prefix = '';
+    for (var i = 0; i < depth; i++) prefix += '../';
+    return prefix;
+  }
+
   function isNew(dateStr) {
     if (!dateStr) return false;
     return (Date.now() - new Date(dateStr).getTime()) < 30 * 24 * 60 * 60 * 1000;
@@ -340,10 +347,9 @@
         if (navigator.clipboard) {
           navigator.clipboard.writeText(text).then(done);
         } else {
-          var ta = document.createElement('textarea');
-          ta.value = text; ta.style.cssText = 'position:fixed;opacity:0';
-          document.body.appendChild(ta); ta.select();
-          document.execCommand('copy'); document.body.removeChild(ta); done();
+          // Clipboard API unavailable — prompt user to copy manually
+          self.textContent = lang === 'en' ? 'Select & copy above' : 'Маркирайте и копирайте';
+          setTimeout(function(){ self.textContent = copyLbl; }, 3000);
         }
       });
     });
@@ -778,10 +784,7 @@
         return;
       }
       var pick  = pool[Math.floor(Math.random() * pool.length)];
-      var depth = window.location.pathname.split('/').length - 2;
-      var prefix = '';
-      for (var i = 0; i < depth; i++) prefix += '../';
-      window.location.href = prefix + pick.file;
+      window.location.href = getPrefix() + pick.file;
     });
   }
 
@@ -796,9 +799,7 @@
     var items = pool.slice(0, count);
     if (!items.length) return;
 
-    var depth  = window.location.pathname.split('/').length - 2;
-    var prefix = '';
-    for (var i = 0; i < depth; i++) prefix += '../';
+    var prefix = getPrefix();
     var byTxt = lang === 'en' ? 'by' : 'от';
 
     feed.innerHTML = items.map(function(a) {
@@ -836,11 +837,8 @@
     latestFeed.parentNode.appendChild(wrap);
 
     document.getElementById('random-article-btn').addEventListener('click', function() {
-      var pick   = pool[Math.floor(Math.random() * pool.length)];
-      var depth  = window.location.pathname.split('/').length - 2;
-      var prefix = '';
-      for (var i = 0; i < depth; i++) prefix += '../';
-      window.location.href = prefix + pick.file;
+      var pick = pool[Math.floor(Math.random() * pool.length)];
+      window.location.href = getPrefix() + pick.file;
     });
   }
 
@@ -853,9 +851,7 @@
     var current = ARTICLES.find(function(a) { return a.file.split('/').pop() === file; });
     if (!current || !current.author) return;
 
-    var depth  = window.location.pathname.split('/').length - 2;
-    var prefix = '';
-    for (var i = 0; i < depth; i++) prefix += '../';
+    var prefix = getPrefix();
 
     var viewLabel = lang === 'en' ? 'View full profile →' : 'Виж пълния профил →';
 
@@ -931,15 +927,10 @@
 
   function init() {
     // Register these immediately — no articles.json dependency
-    try { initBackToTop(); }      catch(e) {}
     try { initViewAllButton(); }  catch(e) {}
     try { initSurpriseButton(); } catch(e) {}
     // Load articles.json first, then run all features
-    var depth = window.location.pathname.split('/').length - 2;
-    var prefix = '';
-    for (var i = 0; i < depth; i++) prefix += '../';
-
-    fetch(prefix + 'articles.json')
+    fetch(getPrefix() + 'articles.json')
       .then(function(r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function(data) {
         ARTICLES = data;
