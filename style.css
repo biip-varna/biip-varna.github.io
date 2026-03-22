@@ -707,62 +707,49 @@ a.region-card:hover {
   }
 }
 
-/* Print Kachel */
+/* Print / PDF action buttons */
 .print-kachel{
   display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:1rem;
-  margin:1em 0 1.5em 0;
-  padding:1.1em 1.1em;
-  background:#f8f8f8;
-  border-left:4px solid #bbb;
-  border-radius:12px;
-}
-
-.print-kachel__text{
-  min-width:0;
-}
-
-.print-kachel__meta{
-  margin-top:.25em;
-  color:#666;
-  font-size:.92em;
+  gap:0.5em;
+  flex-wrap:wrap;
+  margin:1.5em 0;
 }
 
 .print-kachel__btn{
   display:inline-flex;
   align-items:center;
-  justify-content:center;
-  white-space:nowrap;
-  padding:.7em 1.05em;
-  border-radius:10px;
-  font-weight:700;
-  border:1px solid rgba(0,0,0,.15);
+  gap:0.35em;
+  padding:0.5em 1.1em;
+  border:1.5px solid #d0d0d0;
+  border-radius:8px;
   background:#fff;
-  color:#111;
+  color:#333;
+  font-size:0.9em;
+  font-weight:600;
+  font-family:inherit;
   cursor:pointer;
-  transition:transform .08s ease, box-shadow .12s ease, background .12s ease;
+  transition:border-color .15s, color .15s, background .15s, box-shadow .15s;
 }
 
 .print-kachel__btn:hover{
-  background:#f2f2f2;
-  box-shadow:0 6px 18px rgba(0,0,0,.08);
-  transform:translateY(-1px);
+  border-color:var(--color-primary, #0057B7);
+  color:var(--color-primary, #0057B7);
+  background:#f0f4ff;
+  box-shadow:0 2px 8px rgba(0,87,183,.1);
 }
 
 .print-kachel__btn:active{
-  transform:translateY(0);
+  background:#e6eeff;
   box-shadow:none;
 }
 
 @media (max-width:640px){
   .print-kachel{
     flex-direction:column;
-    align-items:stretch;
+    align-items:flex-start;
   }
   .print-kachel__btn{
-    width:100%;
+    width:auto;
   }
 }
 
