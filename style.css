@@ -268,13 +268,12 @@ footer {
   pointer-events: none;
 }
 
-/* --- EXPERT CARD THUMBNAILS (LARGER, PORTRAIT) --- */
+/* --- EXPERT CARD THUMBNAILS --- */
 .expert-preview-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
-  justify-content: flex-start;
-  margin-top: 2em;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1.5em;
 }
 .expert-preview {
   display: flex;
@@ -285,16 +284,15 @@ footer {
   text-decoration: none;
   color: inherit;
   transition: box-shadow 0.22s;
-  width: 370px;
-  max-width: 100%;
-  min-height: 120px;
+  width: 100%;
+  min-height: 90px;
 }
 .expert-preview:hover {
   box-shadow: 0 4px 20px rgba(0,0,0,0.10);
 }
 .expert-thumb {
-  width: 300px;
-  height: 200px;
+  width: 88px;
+  height: 110px;
   object-fit: cover;
   border-right: 1px solid #e6e6e6;
   border-radius: 10px 0 0 10px;
@@ -327,8 +325,6 @@ footer {
 @media (max-width: 800px) {
   .region-grid { gap: 1em; }
   .region-card { min-width: 135px; min-height: 100px; font-size: 1em; padding: 15px 7px 11px 7px;}
-  .expert-preview-list { flex-direction: column; gap: 1.3em; }
-  .expert-preview { width: 100%; min-height: 90px; }
   .expert-thumb { width: 72px; height: 90px; }
 }
 
@@ -454,7 +450,10 @@ footer {
 }
 
 .cta-wrap {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6em;
   margin: 1.5em 0 2em;
 }
 .btn-primary {
@@ -474,9 +473,6 @@ footer {
   background-color: #0a60c8;
 }
 .btn-surprise {
-  display: block;
-  width: fit-content;
-  margin: 0.6em auto 0;
   background-color: transparent;
   color: #0057B7;
   padding: 0.7em 1.4em;
@@ -511,6 +507,7 @@ footer {
   margin-top: 0.5em;
   font-size: 0.95em;
   color: #555;
+  text-align: center;
 }
 @media (max-width: 400px) {
   .btn-primary  { width: 100%; }
