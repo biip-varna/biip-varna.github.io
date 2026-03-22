@@ -150,6 +150,16 @@
                             tags: ['CZ'] },
     'biip':               { bg: 'eksperti.html',                 en: 'experts-english.html',
                             img: null, role_bg: null, role_en: null, tags: [] },
+    'sonet-schutte':      { bg: null, en: null,
+                            img: 'experts/images/Schutte.png',
+                            role_bg: 'Асоцииран експерт',
+                            role_en: 'Associate Expert',
+                            tags: ['COMMS'] },
+    'pavel-stefanov':     { bg: null, en: null,
+                            img: 'experts/images/stefanov.jpg',
+                            role_bg: 'Асоцииран експерт',
+                            role_en: 'Associate Expert',
+                            tags: ['AIR'] },
   };
   // Canonical author names for matching
   var AUTHOR_ALIASES = {
@@ -167,6 +177,8 @@
     'manuel-muller':      ['мануел мюлер', 'manuel müller', 'manuel muller'],
     'vladimir-mitev':     ['владимир митев', 'vladimir mitev'],
     'biip':               ['bulgarian institute for international politics', 'biip', 'бимп'],
+    'sonet-schutte':      ['sonet schutte', 'сонет шут'],
+    'pavel-stefanov':     ['павел стефанов', 'pavel stefanov'],
   };
 
   function normalizeAuthorId(authorStr) {
