@@ -753,11 +753,20 @@
   /* ── FEATURE: Home page "Surprise me" button ────────────────── */
   function initSurpriseButton() {
     var btn = document.getElementById('home-surprise-btn');
-    if (!btn || !ARTICLES) return;
-    var lang = getLang();
-    var pool = ARTICLES.filter(function(a) { return a.lang === lang; });
-    if (!pool.length) pool = ARTICLES;
+    if (!btn) return;
     btn.addEventListener('click', function() {
+      var lang = getLang();
+      var articles = ARTICLES;
+      var pool = articles
+        ? articles.filter(function(a) { return a.lang === lang; })
+        : [];
+      if (!pool.length && articles) pool = articles;
+
+      if (!pool.length) {
+        // Fallback if articles.json never loaded
+        window.location.href = lang === 'en' ? 'regions-en.html' : 'regions.html';
+        return;
+      }
       var pick  = pool[Math.floor(Math.random() * pool.length)];
       var depth = window.location.pathname.split('/').length - 2;
       var prefix = '';
@@ -912,8 +921,9 @@
   }
 
   function init() {
-    // Back to top on all pages
-    try { initBackToTop(); } catch(e) {}
+    // Register these immediately — no articles.json dependency
+    try { initBackToTop(); }      catch(e) {}
+    try { initSurpriseButton(); } catch(e) {}
     // Load articles.json first, then run all features
     var depth = window.location.pathname.split('/').length - 2;
     var prefix = '';
