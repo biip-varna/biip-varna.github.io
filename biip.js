@@ -750,6 +750,16 @@
     if (h2) h2.insertAdjacentHTML('afterend', html);
   }
 
+  /* ── FEATURE: Home page "View all articles" button ──────────── */
+  function initViewAllButton() {
+    var btn = document.getElementById('home-view-btn');
+    if (!btn) return;
+    var lang = getLang();
+    btn.addEventListener('click', function() {
+      window.location.href = lang === 'en' ? 'regions-en.html' : 'regions.html';
+    });
+  }
+
   /* ── FEATURE: Home page "Surprise me" button ────────────────── */
   function initSurpriseButton() {
     var btn = document.getElementById('home-surprise-btn');
@@ -912,7 +922,6 @@
     try { initAuthorArticles(); } catch(e) { console.warn('authorArticles:', e); }
     try { initRegionsLatestFeed(); } catch(e) { console.warn('regionsLatestFeed:', e); }
     try { initRandomArticleButton(); } catch(e) { console.warn('randomArticle:', e); }
-    try { initSurpriseButton(); }     catch(e) { console.warn('surpriseButton:', e); }
     try { initHomeLatestFeed(); }     catch(e) { console.warn('homeLatestFeed:', e); }
     try { initSectionFeed(); }      catch(e) { console.warn('sectionFeed:', e); }
     try { initReadingProgress(); }  catch(e) { console.warn('readingProgress:', e); }
@@ -923,6 +932,7 @@
   function init() {
     // Register these immediately — no articles.json dependency
     try { initBackToTop(); }      catch(e) {}
+    try { initViewAllButton(); }  catch(e) {}
     try { initSurpriseButton(); } catch(e) {}
     // Load articles.json first, then run all features
     var depth = window.location.pathname.split('/').length - 2;
