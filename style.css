@@ -473,6 +473,23 @@ footer {
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
   background-color: #0a60c8;
 }
+.btn-surprise {
+  display: inline-block;
+  background-color: transparent;
+  color: #0057B7;
+  padding: 0.85em 1.4em;
+  border-radius: 8px;
+  font-weight: 700;
+  border: 2px solid #0057B7;
+  cursor: pointer;
+  font-size: 1em;
+  margin-left: 0.6em;
+  transition: background-color .15s ease, color .15s ease;
+}
+.btn-surprise:hover {
+  background-color: #0057B7;
+  color: #fff;
+}
 .cta-sub {
   margin-top: 0.5em;
   font-size: 0.95em;
@@ -480,6 +497,7 @@ footer {
 }
 @media (max-width: 400px) {
   .btn-primary { width: 100%; }
+  .btn-surprise { width: 100%; margin-left: 0; margin-top: 0.5em; }
 }
 
 /* PDF Download Kachel */
