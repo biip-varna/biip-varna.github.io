@@ -103,6 +103,42 @@
       padding: 2em;
       color: #888;
     }
+    #tag-filters {
+      display: flex;
+      gap: 0.4em;
+      flex-wrap: wrap;
+      margin-bottom: 0.8em;
+    }
+    .tag-btn {
+      background: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      padding: 0.2em 0.75em;
+      font-size: 0.82em;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .tag-btn.active, .tag-btn:hover {
+      background: #0057B7;
+      border-color: #0057B7;
+      color: #fff;
+    }
+    #author-filter-wrap {
+      margin-bottom: 1.2em;
+    }
+    #author-filter {
+      padding: 0.35em 0.7em;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      font-size: 0.88em;
+      cursor: pointer;
+      background: #f0f0f0;
+      transition: border-color 0.2s;
+    }
+    #author-filter:focus { outline: none; border-color: #0057B7; }
+    body.dark #tag-filters .tag-btn { background: #333; border-color: #555; color: #ddd; }
+    body.dark .tag-btn.active, body.dark .tag-btn:hover { background: #0057B7; border-color: #0057B7; color: #fff; }
+    body.dark #author-filter { background: #2a2a2a; border-color: #555; color: #eee; }
     body.dark #search-input {
       background: #2a2a2a;
       border-color: #555;
@@ -156,6 +192,14 @@
     <button type="button" class="filter-btn" data-lang="en">🇬🇧 English</button>
   </div>
 
+  <div id="tag-filters" style="display:none;"></div>
+
+  <div id="author-filter-wrap" style="display:none;">
+    <select id="author-filter" aria-label="Филтриране по автор">
+      <option value="">Всички автори</option>
+    </select>
+  </div>
+
   <div id="search-count"></div>
   <div id="search-results" aria-live="polite" aria-atomic="true"></div>
 </main>
@@ -171,22 +215,84 @@
 <script>
 (function(){
   var index = [];
+  var tagMap = {}; // url -> tags[]
   var currentLang = 'all';
+  var currentTag = '';
+  var currentAuthor = '';
   var currentQuery = '';
 
-  fetch('search-index.json')
-    .then(function(r){ return r.json(); })
-    .then(function(data){
-      index = data;
-      // Pre-load query from URL ?q=
-      var params = new URLSearchParams(window.location.search);
-      var q = params.get('q') || '';
-      if (q) {
-        document.getElementById('search-input').value = q;
-        doSearch(q);
-      }
-    })
-    .catch(function(){ /* index unavailable */ });
+  // Load both search index and articles.json (for tags)
+  Promise.all([
+    fetch('search-index.json').then(function(r){ return r.json(); }),
+    fetch('articles.json').then(function(r){ return r.json(); })
+  ]).then(function(results){
+    index = results[0];
+    var articles = results[1];
+
+    // Build tag lookup map keyed by filename
+    articles.forEach(function(a){
+      var fname = a.file.split('/').pop();
+      tagMap[fname] = a.tags || [];
+    });
+
+    // Enrich index items with tags
+    index.forEach(function(item){
+      var fname = item.url.split('/').pop();
+      item.tags = tagMap[fname] || [];
+    });
+
+    // Build tag pills from all available tags
+    var allTags = {};
+    index.forEach(function(item){
+      (item.tags || []).forEach(function(t){ allTags[t] = (allTags[t] || 0) + 1; });
+    });
+    var sortedTags = Object.keys(allTags).sort();
+    if (sortedTags.length) {
+      var tagHtml = '<button type="button" class="tag-btn active" data-tag="">Всички теми</button>';
+      sortedTags.forEach(function(t){
+        tagHtml += '<button type="button" class="tag-btn" data-tag="' + t + '">' + t + '</button>';
+      });
+      var tagWrap = document.getElementById('tag-filters');
+      tagWrap.innerHTML = tagHtml;
+      tagWrap.style.display = 'flex';
+
+      tagWrap.addEventListener('click', function(e){
+        var btn = e.target.closest('.tag-btn');
+        if (!btn) return;
+        tagWrap.querySelectorAll('.tag-btn').forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        currentTag = btn.getAttribute('data-tag');
+        doSearch(currentQuery);
+      });
+    }
+
+    // Build author dropdown
+    var authors = {};
+    index.forEach(function(item){ if (item.author) authors[item.author] = true; });
+    var sortedAuthors = Object.keys(authors).sort();
+    if (sortedAuthors.length) {
+      var sel = document.getElementById('author-filter');
+      sortedAuthors.forEach(function(a){
+        var opt = document.createElement('option');
+        opt.value = a; opt.textContent = a;
+        sel.appendChild(opt);
+      });
+      document.getElementById('author-filter-wrap').style.display = 'block';
+      sel.addEventListener('change', function(){
+        currentAuthor = this.value;
+        doSearch(currentQuery);
+      });
+    }
+
+    // Pre-load query from URL ?q=
+    var params = new URLSearchParams(window.location.search);
+    var q = params.get('q') || '';
+    if (q) {
+      document.getElementById('search-input').value = q;
+      currentQuery = q;
+      doSearch(q);
+    }
+  }).catch(function(){ /* index unavailable */ });
 
   document.getElementById('search-input').addEventListener('input', function(){
     currentQuery = this.value.trim();
@@ -216,15 +322,15 @@
 
     var filtered = index.filter(function(item){
       if (currentLang !== 'all' && item.lang !== currentLang) return false;
+      if (currentTag && (!item.tags || item.tags.indexOf(currentTag) === -1)) return false;
+      if (currentAuthor && item.author !== currentAuthor) return false;
       var haystack = [item.title, item.desc, item.author, item.body].join(' ').toLowerCase();
       return terms.every(function(t){ return haystack.indexOf(t) !== -1; });
     });
 
     // Score: title match > desc match > body match
     filtered.sort(function(a, b){
-      var aScore = score(a, terms);
-      var bScore = score(b, terms);
-      return bScore - aScore;
+      return score(b, terms) - score(a, terms);
     });
 
     countEl.textContent = filtered.length + ' резултата / results';
@@ -235,10 +341,7 @@
     }
 
     resultsEl.innerHTML = filtered.map(function(item){
-      var imgSrc = item.img.startsWith('http') ? item.img : item.img;
-      // For relative article images, prepend articles/
-      // Encode spaces in path for use in src attribute
-      var displayImg = imgSrc.replace(/ /g, '%20');
+      var displayImg = item.img.replace(/ /g, '%20');
       var highlighted_title = highlight(item.title, terms);
       var highlighted_desc  = highlight(item.desc, terms);
       var meta = [];

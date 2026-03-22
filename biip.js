@@ -737,6 +737,23 @@
     });
   }
 
+  /* ── FEATURE: PDF Save Button ───────────────────────────────── */
+  function initPdfButton() {
+    var kachels = document.querySelectorAll('.print-kachel');
+    if (!kachels.length) return;
+    var lang = getLang();
+    var label = lang === 'en' ? 'Save as PDF' : 'Запази като PDF';
+    kachels.forEach(function(kachel) {
+      if (kachel.querySelector('.pdf-btn')) return;
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'print-kachel__btn pdf-btn';
+      btn.textContent = label;
+      btn.addEventListener('click', function() { window.print(); });
+      kachel.appendChild(btn);
+    });
+  }
+
   /* ── FEATURE: Expert Tag Pills ──────────────────────────────── */
   function initExpertTags() {
     var container = document.getElementById('author-articles');
@@ -1027,6 +1044,7 @@
     try { initReadingProgress(); }  catch(e) { console.warn('readingProgress:', e); }
     try { initBackToTop(); }        catch(e) { console.warn('backToTop:', e); }
     try { initPrintButtons(); }     catch(e) { console.warn('printButtons:', e); }
+    try { initPdfButton(); }        catch(e) { console.warn('pdfButton:', e); }
     try { initKeyboardShortcuts(); } catch(e) { console.warn('keyboardShortcuts:', e); }
   }
 

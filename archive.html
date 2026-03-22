@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self' https://api.open-meteo.com; font-src 'self'; object-src 'none'; base-uri 'self';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Архив на публикациите | БИМП</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Архив на всички публикации на Българския институт за международна политика, групирани по месец и година.">
+  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="canonical" href="https://biip-varna.github.io/archive.html">
+  <link rel="alternate" hreflang="bg" href="https://biip-varna.github.io/archive.html">
+  <link rel="alternate" hreflang="en" href="https://biip-varna.github.io/archive-en.html">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="alternate" type="application/rss+xml" title="BIIP – Regions RSS Feed" href="https://biip-varna.github.io/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Архив на публикациите | БИМП">
+  <meta property="og:description" content="Архив на всички публикации на Българския институт за международна политика.">
+  <meta property="og:url" content="https://biip-varna.github.io/archive.html">
+  <meta property="og:image" content="https://biip-varna.github.io/logo.png">
+  <meta property="og:site_name" content="Български институт за международна политика">
+  <meta name="theme-color" content="#0057B7">
+  <style>
+    .archive-month {
+      margin: 2em 0 0.5em 0;
+    }
+    .archive-month h2 {
+      font-size: 1.1em;
+      color: var(--color-primary, #0057B7);
+      border-bottom: 2px solid var(--color-border, #e0e8f5);
+      padding-bottom: 0.3em;
+      margin-bottom: 0.6em;
+    }
+    .archive-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .archive-list li {
+      padding: 0.35em 0;
+      border-bottom: 1px solid #f0f0f0;
+      display: flex;
+      align-items: baseline;
+      gap: 0.7em;
+    }
+    .archive-list li:last-child { border-bottom: none; }
+    .archive-date {
+      color: #888;
+      font-size: 0.85em;
+      min-width: 5em;
+      flex-shrink: 0;
+    }
+    .archive-list a {
+      color: #1a3a6b;
+      text-decoration: none;
+      font-size: 0.97em;
+    }
+    .archive-list a:hover { text-decoration: underline; color: var(--color-primary, #0057B7); }
+    .archive-lang {
+      font-size: 0.78em;
+      background: #f0f4ff;
+      color: #555;
+      border-radius: 10px;
+      padding: 0.1em 0.5em;
+      flex-shrink: 0;
+    }
+    #archive-loading { color: #888; padding: 2em 0; }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;background:#fff;padding:4px 8px;font-weight:bold;">Към основното съдържание</a>
+<header>
+  <img src="logo.png" class="logo" alt="Лого на БИМП">
+  <h1>Архив на публикациите</h1>
+  <p class="motto">„Всеки един има дълг да върши възможното." – Васил Априлов</p>
+</header>
+<nav aria-label="Главна навигация">
+  <a href="index.html">Начало</a> <span aria-hidden="true"> | </span>
+  <a href="about.html">За нас</a> <span aria-hidden="true"> | </span>
+  <a href="regions.html">Региони</a> <span aria-hidden="true"> | </span>
+  <a href="eksperti.html">Експерти</a> <span aria-hidden="true"> | </span>
+  <a href="submit.html">Публикуване</a> <span aria-hidden="true"> | </span>
+  <a href="contact.html">Контакт</a> <span aria-hidden="true"> | </span>
+  <a href="archive-en.html">EN</a>
+  <a href="search.html" aria-label="Търсене" style="padding:8px 6px;">🔍</a>
+</nav>
+<main id="main-content">
+  <p style="color:#555;margin-bottom:1.5em;">Всички публикации на БИМП, наредени по дата. Показани са и българскоезичните, и англоезичните материали.</p>
+  <div id="archive-loading">Зареждане…</div>
+  <div id="archive-content"></div>
+</main>
+<footer>
+  <p>
+    Български институт за международна политика |
+    Bulgarisches Institut für Internationale Politik |
+    Institut Bulgare de Politique Internationale |
+    Bulgaars Instituut voor Internationale Politiek |
+    Istituto Bulgaro di Politica Internazionale |
+  </p>
+  <p style="margin-top:0.5em;">
+    <a href="impressum.html" style="color:#555; text-decoration:none;">Импресум</a> |
+    <a href="privacy.html" style="color:#555; text-decoration:none;">Поверителност</a> |
+    <a href="sitemap.html" style="color:#555; text-decoration:none;">Карта на сайта</a>
+  </p>
+</footer>
+<script>
+(function() {
+  var BG_MONTHS = ['Януари','Февруари','Март','Април','Май','Юни','Юли','Август','Септември','Октомври','Ноември','Декември'];
+
+  fetch('articles.json')
+    .then(function(r) { return r.json(); })
+    .then(function(articles) {
+      document.getElementById('archive-loading').style.display = 'none';
+
+      // Sort newest first
+      articles.sort(function(a, b) { return b.date > a.date ? 1 : b.date < a.date ? -1 : 0; });
+
+      // Group by YYYY-MM
+      var groups = {};
+      var order = [];
+      articles.forEach(function(a) {
+        if (!a.date) return;
+        var key = a.date.slice(0, 7); // "YYYY-MM"
+        if (!groups[key]) { groups[key] = []; order.push(key); }
+        groups[key].push(a);
+      });
+
+      if (!order.length) {
+        document.getElementById('archive-content').innerHTML = '<p>Няма публикации.</p>';
+        return;
+      }
+
+      var html = '';
+      order.forEach(function(key) {
+        var parts = key.split('-');
+        var monthName = BG_MONTHS[parseInt(parts[1], 10) - 1];
+        var year = parts[0];
+        html += '<div class="archive-month"><h2>' + monthName + ' ' + year + '</h2><ul class="archive-list">';
+        groups[key].forEach(function(a) {
+          var url = a.file.split('/').pop();
+          var day = a.date ? a.date.slice(8, 10) + '.' + a.date.slice(5, 7) : '';
+          var langLabel = a.lang === 'en' ? '<span class="archive-lang">EN</span>' : '<span class="archive-lang">БГ</span>';
+          html += '<li>' +
+            '<span class="archive-date">' + day + '</span>' +
+            '<a href="articles/' + url + '">' + a.title + '</a>' +
+            langLabel +
+            '</li>';
+        });
+        html += '</ul></div>';
+      });
+
+      document.getElementById('archive-content').innerHTML = html;
+    })
+    .catch(function() {
+      document.getElementById('archive-loading').textContent = 'Грешка при зареждане на публикациите.';
+    });
+})();
+</script>
+<script src="biip.js?v=2" defer></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch(function() {});
+}
+</script>
+</body>
+</html>
