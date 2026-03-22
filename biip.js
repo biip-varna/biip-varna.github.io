@@ -672,8 +672,8 @@
         var desc = lang === 'en' ? info.en : info.bg;
         var locLabel = lang === 'en' ? 'Varna, now' : 'Варна, в момента';
         var sourceLabel = lang === 'en'
-          ? 'Weather data: Open-Meteo (no tracking, no cookies)'
-          : 'Данни за времето: Open-Meteo (без проследяване, без бисквитки)';
+          ? 'Weather data: Open-Meteo'
+          : 'Данни за времето: Open-Meteo';
 
         placeholder.innerHTML =
           '<div class="weather-widget">' +
