@@ -5,33 +5,88 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self' https://api.open-meteo.com; font-src 'self'; object-src 'none'; base-uri 'self';">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Проект: Politică internațională simplu | БИМП</title>
-    <meta name="description" content="Politică internațională simplu – proiect BIIP de analiză politică pentru publicul moldovean.">
+  <meta name="description" content="Politică internațională simplu – проект на БИМП за политически анализ за молдовската аудитория, воден от д-р Димитър Керанов.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../style.css">
   <style>
+    .lang-nav { margin-top: 1em; display: flex; flex-wrap: wrap; gap: 0.4em; }
     .lang-nav a {
-      margin-right: 0.8em;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
       color: #0057B7;
+      border: 1.5px solid #0057B7;
+      border-radius: 6px;
+      padding: 0.3em 0.8em;
+      font-size: 0.93em;
+      transition: background .13s, color .13s;
     }
+    .lang-nav a:hover { background: #0057B7; color: #fff; }
     .lang-section {
       margin-top: 1.5em;
-      padding: 1.2em;
+      padding: 1.2em 1.3em;
       background: #fafafa;
       border: 1px solid #e3e3e3;
       border-radius: 10px;
     }
-    pre {
+    .fb-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      margin-top: 1.1em;
+      background: #1877f2;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.6em 1.2em;
+      border-radius: 7px;
+      font-weight: 700;
+      font-size: 0.97em;
+      transition: background .15s;
+    }
+    .fb-btn:hover { background: #145dbf; color: #fff; }
+    .project-author {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      margin: 1.4em 0 0;
+      padding: 0.85em 1em;
+      background: #f4f7fc;
+      border-radius: 10px;
+      border: 1px solid #dce4f0;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow .18s;
+    }
+    .project-author:hover { box-shadow: 0 3px 12px rgba(0,0,0,0.09); }
+    .project-author img {
+      width: 60px;
+      height: 75px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #cdd6e8;
+      flex-shrink: 0;
+    }
+    .author-name { font-weight: 700; font-size: 1em; }
+    .author-role { font-size: 0.87em; color: #5981b3; margin-top: 0.15em; }
+    .impressum-wrap {
+      margin-top: 1.2em;
+      font-size: 0.9em;
+    }
+    .impressum-wrap summary {
+      cursor: pointer;
+      color: #0057B7;
+      font-weight: 600;
+      list-style: none;
+    }
+    .impressum-body {
+      margin-top: 0.6em;
+      background: #f8f8f8;
+      border: 1px solid #e3e3e3;
+      border-radius: 6px;
+      padding: 0.9em 1em;
+      font-size: 0.88em;
+      line-height: 1.6;
+      color: #444;
       white-space: pre-wrap;
-      background:#f8f8f8;
-      border:1px solid #e3e3e3;
-      border-radius:6px;
-      padding:0.9em 1em;
-      font-size:0.9em;
-      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      line-height:1.5;
-      color:#333;
     }
   </style>
   <link rel="canonical" href="https://biip-varna.github.io/projects/politica-internationala-simplu.html">
@@ -39,14 +94,14 @@
   <link rel="icon" href="../logo.png" type="image/png">
   <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Проект: Politică internațională simplu">
-  <meta property="og:description" content="Politică internațională simplu – proiect BIIP de analiză politică pentru publicul moldovean.">
+  <meta property="og:title" content="Проект: Politică internațională simplu | БИМП">
+  <meta property="og:description" content="Politică internațională simplu – проект на БИМП за политически анализ за молдовската аудитория.">
   <meta property="og:url" content="https://biip-varna.github.io/projects/politica-internationala-simplu.html">
   <meta property="og:image" content="https://biip-varna.github.io/logo.png">
   <meta property="og:site_name" content="Български институт за международна политика">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Проект: Politică internațională simplu">
-  <meta name="twitter:description" content="Politică internațională simplu – proiect BIIP de analiză politică pentru publicul moldovean.">
+  <meta name="twitter:title" content="Проект: Politică internațională simplu | БИМП">
+  <meta name="twitter:description" content="Politică internațională simplu – проект на БИМП за политически анализ за молдовската аудитория.">
   <meta name="twitter:image" content="https://biip-varna.github.io/logo.png">
   <meta name="theme-color" content="#0057B7">
 </head>
@@ -58,25 +113,36 @@
     <img src="../logo.png" class="logo" alt="Лого на БИМП">
   </a>
   <h1>Проекти на БИМП</h1>
-  <p class="motto">„Всеки един има дълг да върши възможното.“ – Васил Априлов</p>
+  <p class="motto">„Всеки един има дълг да върши възможното." – Васил Априлов</p>
 </header>
 
 <nav aria-label="Главна навигация">
   <a href="../index.html">Начало</a> <span aria-hidden="true"> | </span>
   <a href="../about.html">За нас</a> <span aria-hidden="true"> | </span>
   <a href="../regions.html">Региони</a> <span aria-hidden="true"> | </span>
+<a href="../eksperti.html">Експерти</a> <span aria-hidden="true"> | </span>
   <a href="../submit.html">Публикуване</a> <span aria-hidden="true"> | </span>
   <a href="../contact.html">Контакт</a> <span aria-hidden="true"> | </span><a href="../search.html" aria-label="Search">🔍</a> <a href="../index-en.html">EN</a>
 </nav>
 
 <main id="main-content">
   <h2>Politică internațională simplu</h2>
-  <p style="color:#666; font-size:0.95em; margin-top:-0.4em;">
+  <p style="color:#666; font-size:0.95em; margin-top:-0.3em;">
     Проект на Българския институт за международна политика (БИМП)
   </p>
 
-  <!-- LANGUAGE NAVIGATION -->
-  <div class="lang-nav" style="margin-top: 1em;">
+  <!-- Author card -->
+  <a href="../experts/keranov.html" class="project-author">
+    <img src="../experts/images/Keranov.jpg" alt="Д-р Димитър Керанов">
+    <div>
+      <div class="author-name">Д-р Димитър Керанов, MRSSAf</div>
+      <div class="author-role">Член на УС; Експерт Африка и ЦИЕ</div>
+      <div style="font-size:0.87em; color:#555; margin-top:0.3em;">Автор и водещ на проекта</div>
+    </div>
+  </a>
+
+  <!-- Language navigation -->
+  <div class="lang-nav">
     <a href="#bg">🇧🇬 Български</a>
     <a href="#en">🇬🇧 English</a>
     <a href="#ro">🇷🇴 Română</a>
@@ -89,13 +155,13 @@
     <h3>🇧🇬 Описание на проекта</h3>
 
     <p>
-      <strong>„Politică internațională simplu“</strong> е лична инициатива и проект на
+      <strong>„Politică internațională simplu"</strong> е лична инициатива и проект на
       д-р Димитър Керанов – български политолог и член на Управителния съвет на Българския институт за международна политика (БИМП).
     </p>
 
     <p>
       Страницата предлага независими размисли за света и глобалния баланс на силите –
-      поднесени на ясен и достъпен език.
+      поднесени на ясен и достъпен румънски език.
     </p>
 
     <p>
@@ -105,12 +171,9 @@
 
     <p style="font-weight:bold; color:#444;">⚠️ Всички мнения, изразени в проекта, са лични.</p>
 
-    <p style="margin-top:1em;">
-      🔗 Facebook страница:  
-      <a href="https://www.facebook.com/profile.php?id=61582395316294" target="_blank" rel="noopener noreferrer">
-        Politică internațională simplu
-      </a>
-    </p>
+    <a class="fb-btn" href="https://www.facebook.com/profile.php?id=61582395316294" target="_blank" rel="noopener noreferrer">
+      <span style="font-size:1.15em; font-weight:900;">f</span> Към Facebook страницата
+    </a>
   </section>
 
   <!-- =============================== -->
@@ -120,13 +183,13 @@
     <h3>🇬🇧 Project Description</h3>
 
     <p>
-      <strong>“Politică internațională simplu”</strong> is a personal initiative and project by
+      <strong>"Politică internațională simplu"</strong> is a personal initiative and project by
       Dr. Dimitar Keranov – a Bulgarian political scientist and Member of the Managing Board of the Bulgarian Institute for International Politics (BIIP).
     </p>
 
     <p>
       The page offers independent reflections on world affairs, democracy, and the global balance of power –
-      explained in clear and accessible language.
+      explained in clear and accessible Romanian.
     </p>
 
     <p>
@@ -136,14 +199,10 @@
 
     <p style="font-weight:bold; color:#444;">⚠️ All opinions expressed within the project are personal.</p>
 
-    <p style="margin-top:1em;">
-      🔗 Facebook page:  
-      <a href="https://www.facebook.com/profile.php?id=61582395316294" target="_blank" rel="noopener noreferrer">
-        Politică internațională simplu
-      </a>
-    </p>
+    <a class="fb-btn" href="https://www.facebook.com/profile.php?id=61582395316294" target="_blank" rel="noopener noreferrer">
+      <span style="font-size:1.15em; font-weight:900;">f</span> Visit the Facebook page
+    </a>
   </section>
-
 
   <!-- =============================== -->
   <!-- 🇷🇴 ROMANIAN SECTION -->
@@ -152,7 +211,7 @@
     <h3>🇷🇴 Descrierea proiectului</h3>
 
     <p>
-      <strong>„Politică internațională simplu”</strong> este o inițiativă personală și un proiect al
+      <strong>„Politică internațională simplu"</strong> este o inițiativă personală și un proiect al
       dr. Dimitar Keranov, politolog bulgar și membru al Consiliului de administrație al Institutului Bulgar de Politică Internațională (BIIP).
     </p>
 
@@ -168,19 +227,16 @@
 
     <p style="font-weight:bold; color:#444;">⚠️ Toate opiniile exprimate aici sunt personale.</p>
 
-    <p style="margin-top:1em;">
-      🔗 Pagina de Facebook:  
-      <a href="https://www.facebook.com/profile.php?id=61582395316294" target="_blank" rel="noopener noreferrer">
-        Politică internațională simplu
-      </a>
-    </p>
+    <a class="fb-btn" href="https://www.facebook.com/profile.php?id=61582395316294" target="_blank" rel="noopener noreferrer">
+      <span style="font-size:1.15em; font-weight:900;">f</span> Vizitați pagina de Facebook
+    </a>
 
-    <!-- ROMANIAN IMPRESSUM -->
-    <h4 style="margin-top:1.5em;">Protecția datelor</h4>
-    <pre>Impressum (§ 5 TMG)
+    <!-- Romanian legal notice — collapsed by default -->
+    <details class="impressum-wrap">
+      <summary>📋 Impressum &amp; Protecția datelor</summary>
+      <div class="impressum-body">Impressum (§ 5 TMG)
 Responsabil: Dimitar Keranov
 E-mail: biip@mailfence.com
-
 Website: https://biip-varna.github.io
 
 Responsabil în sensul § 18 alin. 2 MStV: Dimitar Keranov, Berlin
@@ -191,11 +247,12 @@ Operator responsabil: Dr. Dimitar Keranov (vezi mai sus).
 Responsabilitate comună cu Meta pentru Page Insights. Informații de la Meta: facebook.com/privacy/policy și facebook.com/legal/terms/information_about_page_insights_data.
 Scopuri/Bază legală: funcționarea paginii, comunicare, analiză a acoperirii (Art. 6 alin. 1 lit. f GDPR).
 Destinatari: Meta; eventual furnizori de servicii IT/e-mail. Transferuri către țări terțe sunt posibile conform Meta (SCC).
-Drepturile dumneavoastră: acces, rectificare, ștergere, opoziție, plângere la o autoritate de supraveghere.</pre>
+Drepturile dumneavoastră: acces, rectificare, ștergere, opoziție, plângere la o autoritate de supraveghere.</div>
+    </details>
   </section>
 
   <p style="margin-top:2em;">
-    ← <a href="../index.html">Назад към началната страница</a>
+    <a href="../index.html" class="btn-secondary">← Назад към началната страница</a>
   </p>
 </main>
 
