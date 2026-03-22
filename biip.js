@@ -68,6 +68,12 @@
     'asia-en.html': 'asia.html',
     'proektsia-ep-juli25.html': 'ep-coalition-preview-summary.html',
     'ep-coalition-preview-summary.html': 'proektsia-ep-juli25.html',
+    'tags.html': 'tags-en.html',
+    'tags-en.html': 'tags.html',
+    'privacy.html': 'privacy-en.html',
+    'privacy-en.html': 'privacy.html',
+    '404.html': '404-en.html',
+    '404-en.html': '404.html',
   };
 
   /* ── Tag labels ──────────────────────────────────────────────── */
@@ -907,9 +913,107 @@
     }
   }
 
+  /* ── FEATURE: aria-current on active nav link ───────────────── */
+  function initActiveNav() {
+    var file = currentFile();
+    document.querySelectorAll('nav a').forEach(function(a) {
+      var href = (a.getAttribute('href') || '').split('/').pop();
+      if (href === file) {
+        a.setAttribute('aria-current', 'page');
+        a.style.color = 'var(--color-primary, #0057B7)';
+        a.style.textDecoration = 'underline';
+        a.style.textUnderlineOffset = '3px';
+      }
+    });
+  }
+
+  /* ── FEATURE: Keyboard shortcuts ────────────────────────────── */
+  function initKeyboardShortcuts() {
+    var lang = getLang();
+
+    // Build help modal content
+    var shortcuts = [
+      { key: '/', desc: lang === 'en' ? 'Focus search' : 'Търсене' },
+      { key: 'Escape', desc: lang === 'en' ? 'Close modal / clear search' : 'Затваряне на диалог' },
+      { key: '?', desc: lang === 'en' ? 'Show this help' : 'Покажи помощта' },
+    ];
+
+    var modalHtml =
+      '<div id="kb-modal" role="dialog" aria-modal="true" aria-label="' +
+      (lang === 'en' ? 'Keyboard shortcuts' : 'Клавишни комбинации') +
+      '" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;' +
+      'background:rgba(0,0,0,0.55);z-index:10001;align-items:center;justify-content:center;">' +
+        '<div style="background:#fff;max-width:420px;width:90%;border-radius:10px;padding:1.5em;' +
+        'box-shadow:0 8px 32px rgba(0,0,0,0.18);position:relative;">' +
+          '<button type="button" id="kb-close" style="position:absolute;top:10px;right:14px;' +
+          'background:none;border:none;font-size:1.4em;cursor:pointer;color:#555;" ' +
+          'aria-label="' + (lang === 'en' ? 'Close' : 'Затвори') + '">✕</button>' +
+          '<h3 style="margin:0 0 1em 0;">' +
+          (lang === 'en' ? '⌨️ Keyboard Shortcuts' : '⌨️ Клавишни комбинации') + '</h3>' +
+          '<table style="width:100%;border-collapse:collapse;">' +
+          shortcuts.map(function(s) {
+            return '<tr><td style="padding:0.4em 0.8em 0.4em 0;"><kbd style="background:#f0f0f0;' +
+              'border:1px solid #ccc;border-radius:4px;padding:0.1em 0.5em;font-size:0.9em;">' +
+              s.key + '</kbd></td>' +
+              '<td style="padding:0.4em 0;color:#444;">' + s.desc + '</td></tr>';
+          }).join('') +
+          '</table>' +
+        '</div>' +
+      '</div>';
+
+    document.body.insertAdjacentHTML('beforeend', modalHtml);
+
+    var modal = document.getElementById('kb-modal');
+    var closeBtn = document.getElementById('kb-close');
+
+    function openHelp() {
+      modal.style.display = 'flex';
+      closeBtn.focus();
+    }
+    function closeHelp() {
+      modal.style.display = 'none';
+    }
+
+    closeBtn.addEventListener('click', closeHelp);
+    modal.addEventListener('click', function(e) { if (e.target === modal) closeHelp(); });
+
+    document.addEventListener('keydown', function(e) {
+      // Don't trigger when typing in inputs
+      var tag = document.activeElement ? document.activeElement.tagName : '';
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+      if (document.activeElement && document.activeElement.isContentEditable) return;
+
+      if (e.key === '?') {
+        e.preventDefault();
+        if (modal.style.display === 'flex') { closeHelp(); } else { openHelp(); }
+        return;
+      }
+
+      if (e.key === 'Escape') {
+        closeHelp();
+        return;
+      }
+
+      if (e.key === '/') {
+        var searchInput = document.querySelector('input[type="search"], input[type="text"], #search-input');
+        if (searchInput) {
+          e.preventDefault();
+          searchInput.focus();
+          searchInput.select();
+        } else {
+          // Navigate to search page
+          var searchPage = lang === 'en' ? 'search-en.html' : 'search.html';
+          window.location.href = getPrefix() + searchPage;
+        }
+        return;
+      }
+    });
+  }
+
   function runAll() {
     try { initReadingTime(); }    catch(e) { console.warn('readingTime:', e); }
     try { initLangSwitcher(); }   catch(e) { console.warn('langSwitcher:', e); }
+    try { initActiveNav(); }      catch(e) { console.warn('activeNav:', e); }
     try { initCiteButton(); }     catch(e) { console.warn('citeButton:', e); }
     try { initRelatedArticles(); }catch(e) { console.warn('relatedArticles:', e); }
     try { initShareButtons(); }   catch(e) { console.warn('shareButtons:', e); }
@@ -923,6 +1027,7 @@
     try { initReadingProgress(); }  catch(e) { console.warn('readingProgress:', e); }
     try { initBackToTop(); }        catch(e) { console.warn('backToTop:', e); }
     try { initPrintButtons(); }     catch(e) { console.warn('printButtons:', e); }
+    try { initKeyboardShortcuts(); } catch(e) { console.warn('keyboardShortcuts:', e); }
   }
 
   function init() {

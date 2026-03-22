@@ -22,6 +22,8 @@
   <meta name="twitter:title" content="Asia & Oceania | BIIP">
   <meta name="twitter:description" content="Chinese foreign policy and Belt & Road, Indo-Pacific security, Central Asian politics.">
   <meta name="twitter:image" content="https://biip-varna.github.io/logo.png">
+    <link rel="manifest" href="manifest.json">
+  <link rel="alternate" type="application/rss+xml" title="BIIP – Regions RSS Feed" href="https://biip-varna.github.io/feed.xml">
   <meta name="theme-color" content="#0057B7">
   <link rel="alternate" hreflang="en" href="https://biip-varna.github.io/asia-en.html">
   <link rel="alternate" hreflang="bg" href="https://biip-varna.github.io/asia.html">
@@ -71,7 +73,16 @@
     Institut bulgare de politique internationale |
     Bulgaarse Instituut vir Internasionale Politiek
   </p>
+  <p style="margin-top:0.5em;">
+    <a href="impressum.html" style="color:#555; text-decoration:none;">Impressum</a> |
+    <a href="privacy-en.html" style="color:#555; text-decoration:none;">Privacy</a>
+  </p>
 </footer>
 <script src="biip.js?v=2" defer></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch(function() {});
+}
+</script>
 </body>
 </html>

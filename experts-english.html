@@ -181,6 +181,8 @@
   <meta name="twitter:title" content="Experts | BIIP">
   <meta name="twitter:description" content="BIIP Experts – profiles of the institute's analysts and researchers.">
   <meta name="twitter:image" content="https://biip-varna.github.io/logo.png">
+    <link rel="manifest" href="manifest.json">
+  <link rel="alternate" type="application/rss+xml" title="BIIP – Regions RSS Feed" href="https://biip-varna.github.io/feed.xml">
   <meta name="theme-color" content="#0057B7">
 </head>
 
@@ -264,6 +266,10 @@
     Instituti bullgar për politikë ndërkombëtare |
     Istituto Bulgaro di Politica Internazionale |
     Bulharský inštitút pre medzinárodnú politiku
+  </p>
+  <p style="margin-top:0.5em;">
+    <a href="impressum.html" style="color:#555; text-decoration:none;">Impressum</a> |
+    <a href="privacy-en.html" style="color:#555; text-decoration:none;">Privacy</a>
   </p>
 </footer>
 
@@ -451,5 +457,10 @@ document.getElementById("clear").addEventListener("click", ()=>{
 render();
 </script>
 <script src="biip.js?v=2" defer></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch(function() {});
+}
+</script>
 </body>
 </html>

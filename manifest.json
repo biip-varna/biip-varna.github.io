@@ -1,0 +1,53 @@
+{
+  "name": "Bulgarian Institute for International Politics",
+  "short_name": "BIIP",
+  "description": "Independent analytical publication from Varna. Articles, commentary and analysis on Bulgaria, Europe and beyond.",
+  "start_url": "/index-en.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0057B7",
+  "lang": "en",
+  "categories": ["news", "politics", "education"],
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "articles/article images/bruxbg.png",
+      "type": "image/png",
+      "label": "BIIP homepage with latest articles"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Latest Articles",
+      "short_name": "Articles",
+      "url": "/regions-en.html",
+      "description": "Browse the latest articles"
+    },
+    {
+      "name": "Search",
+      "short_name": "Search",
+      "url": "/search-en.html",
+      "description": "Search all articles"
+    },
+    {
+      "name": "Browse by Topic",
+      "short_name": "Topics",
+      "url": "/tags-en.html",
+      "description": "Browse articles by topic"
+    }
+  ]
+}

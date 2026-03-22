@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self' https://api.open-meteo.com; font-src 'self'; object-src 'none'; base-uri 'self';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Browse by Topic | BIIP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse all articles from the Bulgarian Institute for International Politics by topic. Filter by democracy, security, NATO, EU, Africa, and more.">
+  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="canonical" href="https://biip-varna.github.io/tags-en.html">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="alternate" hreflang="bg" href="https://biip-varna.github.io/tags.html">
+  <link rel="alternate" hreflang="en" href="https://biip-varna.github.io/tags-en.html">
+  <link rel="alternate" hreflang="x-default" href="https://biip-varna.github.io/tags-en.html">
+  <link rel="alternate" type="application/rss+xml" title="BIIP – Regions RSS Feed" href="https://biip-varna.github.io/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Browse by Topic | BIIP">
+  <meta property="og:description" content="Browse all BIIP articles by topic.">
+  <meta property="og:url" content="https://biip-varna.github.io/tags-en.html">
+  <meta property="og:image" content="https://biip-varna.github.io/articles/article%20images/bruxbg.png">
+  <meta name="theme-color" content="#0057B7">
+</head>
+<body>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;background:#fff;padding:4px 8px;font-weight:bold;">Skip to main content</a>
+<header>
+  <img src="logo.png" class="logo" alt="BIIP Logo">
+  <h1>Bulgarian Institute for International Politics</h1>
+  <p class="motto">"Each person has a duty to do what is possible." – Vasil Aprilov</p>
+</header>
+<nav aria-label="Main navigation">
+  <a href="index-en.html">Home</a> <span aria-hidden="true"> | </span>
+  <a href="about-en.html">About</a> <span aria-hidden="true"> | </span>
+  <a href="regions-en.html">Regions</a> <span aria-hidden="true"> | </span>
+  <a href="experts-english.html">Experts</a> <span aria-hidden="true"> | </span>
+  <a href="submit-en.html">Submissions</a> <span aria-hidden="true"> | </span>
+  <a href="contact-en.html">Contact</a> <span aria-hidden="true"> | </span>
+  <a href="search-en.html" aria-label="Search">🔍</a> <a href="tags.html">BG</a>
+</nav>
+<main id="main-content">
+  <h2>Browse by Topic</h2>
+  <p style="color:#555; margin-bottom:1.5em;">Select a topic to filter all articles. Articles in both English and Bulgarian are shown.</p>
+
+  <div id="tag-cloud" style="display:flex; flex-wrap:wrap; gap:0.6em; margin-bottom:2em;" aria-label="Topic filters">
+    <!-- Tag buttons inserted by JS -->
+  </div>
+
+  <div id="tag-results">
+    <!-- Article results inserted by JS -->
+  </div>
+</main>
+<footer>
+  <p>
+    Български институт за международна политика |
+    Bulgarisches Institut für Internationale Politik |
+    Institut bulgare de politique internationale |
+    Instituto Búlgaro de Política Internacional
+  </p>
+  <p style="margin-top:0.5em;">
+    <a href="impressum.html" style="color:#555; text-decoration:none;">Impressum</a> |
+    <a href="privacy-en.html" style="color:#555; text-decoration:none;">Privacy</a>
+  </p>
+</footer>
+<script>
+(function() {
+  var TAG_LABEL = {
+    'bulgaria': 'Bulgaria', 'moldova': 'Moldova', 'russia': 'Russia',
+    'eu': 'EU', 'balkans': 'Balkans', 'china': 'China',
+    'security': 'Security', 'nato': 'NATO', 'democracy': 'Democracy',
+    'governance': 'Governance', 'corruption': 'Corruption',
+    'africa': 'Africa', 'southafrica': 'South Africa',
+    'diplomacy': 'Diplomacy', 'disinformation': 'Disinformation',
+    'ai': 'AI', 'digitaleconomy': 'Digital Economy',
+    'economy': 'Economy', 'europeanparliament': 'European Parliament',
+    'minorities': 'Minorities', 'romania': 'Romania',
+  };
+
+  var activeTag = null;
+  var ARTICLES = null;
+
+  function renderTagCloud(articles) {
+    var counts = {};
+    articles.forEach(function(a) {
+      (a.tags || []).forEach(function(t) {
+        counts[t] = (counts[t] || 0) + 1;
+      });
+    });
+    var cloud = document.getElementById('tag-cloud');
+    var tags = Object.keys(counts).sort(function(a, b) {
+      return counts[b] - counts[a];
+    });
+    cloud.innerHTML = tags.map(function(tag) {
+      var label = TAG_LABEL[tag] || tag;
+      return '<button type="button" class="tag-filter-btn" data-tag="' + tag + '" ' +
+        'style="background:#e8f0fe;color:#0057B7;border:none;padding:0.35em 0.85em;' +
+        'border-radius:100px;font-size:0.9em;font-weight:600;cursor:pointer;transition:background 0.15s;">' +
+        label + ' <span style="color:#5981b3;font-size:0.85em;">(' + counts[tag] + ')</span>' +
+        '</button>';
+    }).join('');
+
+    cloud.querySelectorAll('.tag-filter-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var tag = btn.getAttribute('data-tag');
+        if (activeTag === tag) {
+          activeTag = null;
+          btn.style.background = '#e8f0fe';
+          btn.style.color = '#0057B7';
+          renderResults(ARTICLES);
+        } else {
+          activeTag = tag;
+          cloud.querySelectorAll('.tag-filter-btn').forEach(function(b) {
+            b.style.background = '#e8f0fe';
+            b.style.color = '#0057B7';
+          });
+          btn.style.background = '#0057B7';
+          btn.style.color = '#fff';
+          renderResults(ARTICLES.filter(function(a) {
+            return (a.tags || []).indexOf(tag) !== -1;
+          }));
+        }
+      });
+    });
+  }
+
+  function renderResults(articles) {
+    var sorted = articles.slice().sort(function(a, b) {
+      return (b.date || '').localeCompare(a.date || '');
+    });
+    var container = document.getElementById('tag-results');
+    if (!sorted.length) {
+      container.innerHTML = '<p style="color:#888;">No articles found for this topic.</p>';
+      return;
+    }
+    var heading = activeTag
+      ? '<h3 style="margin-bottom:0.8em; color:#0057B7;">' + (TAG_LABEL[activeTag] || activeTag) + ' — ' + sorted.length + ' article' + (sorted.length !== 1 ? 's' : '') + '</h3>'
+      : '<h3 style="margin-bottom:0.8em;">All articles — ' + sorted.length + '</h3>';
+
+    var cards = sorted.map(function(a) {
+      var href = a.file;
+      var imgSrc = ('articles/' + a.img).replace(/ /g, '%20');
+      var dateStr = a.date ? a.date.split('-').reverse().join('.') : '';
+      var langBadge = a.lang === 'en'
+        ? '<span class="sc-lang-badge sc-en">EN</span>'
+        : '<span class="sc-lang-badge sc-bg">БГ</span>';
+      var tagPills = (a.tags || []).map(function(t) {
+        return '<span style="background:#f0f4ff;color:#0057B7;font-size:0.75em;padding:0.15em 0.5em;border-radius:4px;margin-right:3px;">' + (TAG_LABEL[t] || t) + '</span>';
+      }).join('');
+      return '<a href="' + href + '" class="sc-card">' +
+        '<img src="' + imgSrc + '" alt="" class="sc-img" loading="lazy" width="120" height="80">' +
+        '<div class="sc-body">' +
+          '<div class="sc-meta">' + langBadge + ' ' + dateStr + (a.author ? ' · ' + a.author : '') + '</div>' +
+          '<h3 class="sc-title">' + a.title + '</h3>' +
+          '<p class="sc-teaser" style="margin-bottom:0.4em;">' + (a.desc || '') + '</p>' +
+          '<div>' + tagPills + '</div>' +
+        '</div>' +
+        '</a>';
+    }).join('');
+
+    container.innerHTML = heading + '<div class="article-preview-list" style="flex-direction:column;">' + cards + '</div>';
+  }
+
+  fetch('articles.json')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      ARTICLES = data;
+      renderTagCloud(data);
+      renderResults(data);
+    })
+    .catch(function() {
+      document.getElementById('tag-results').innerHTML =
+        '<p style="color:#888;">Could not load articles. Please try again later.</p>';
+    });
+})();
+</script>
+<script src="biip.js?v=2" defer></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch(function() {});
+}
+</script>
+</body>
+</html>

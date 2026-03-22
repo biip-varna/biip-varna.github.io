@@ -12,6 +12,8 @@
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="logo.png" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+  <link rel="alternate" type="application/rss+xml" title="BIIP – Regions RSS Feed" href="https://biip-varna.github.io/feed.xml">
   <meta name="theme-color" content="#0057B7">
   <style>
     #search-input {
@@ -160,6 +162,10 @@
 
 <footer>
   <p>Bulgarian Institute for International Politics | BIIP</p>
+  <p style="margin-top:0.5em;">
+    <a href="impressum.html" style="color:#555; text-decoration:none;">Impressum</a> |
+    <a href="privacy-en.html" style="color:#555; text-decoration:none;">Privacy</a>
+  </p>
 </footer>
 
 <script>
@@ -272,5 +278,10 @@
 })();
 </script>
 <script src="biip.js?v=2" defer></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch(function() {});
+}
+</script>
 </body>
 </html>

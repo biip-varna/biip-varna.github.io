@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Bulgarian Institute for International Politics – Regions</title>
+    <link>https://biip-varna.github.io/</link>
+    <description>Independent analytical publication from Varna. Articles, commentary and analysis on Bulgaria, Europe and beyond.</description>
+    <language>en</language>
+    <copyright>Bulgarian Institute for International Politics (BIIP)</copyright>
+    <managingEditor>biip@mailfence.com (Bulgarian Institute for International Politics)</managingEditor>
+    <webMaster>biip@mailfence.com (BIIP)</webMaster>
+    <lastBuildDate>Sun, 22 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://biip-varna.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://biip-varna.github.io/logo.png</url>
+      <title>Bulgarian Institute for International Politics</title>
+      <link>https://biip-varna.github.io/</link>
+    </image>
+
+    <item>
+      <title>The Double Embrace: Russian and Chinese Influence in Bulgaria</title>
+      <link>https://biip-varna.github.io/articles/double-embrace.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/double-embrace.html</guid>
+      <pubDate>Thu, 20 Mar 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Dr. Dimitar Keranov</dc:creator>
+      <description>Bulgaria remains one of the most institutionally vulnerable NATO and EU members to Russian and Chinese influence. A policy commentary by Dr. Dimitar Keranov.</description>
+      <category>Bulgaria</category>
+      <category>Russia</category>
+      <category>China</category>
+      <category>Security</category>
+      <category>Disinformation</category>
+    </item>
+
+    <item>
+      <title>Пекин и Москва в Западните Балкани</title>
+      <link>https://biip-varna.github.io/articles/chn.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/chn.html</guid>
+      <pubDate>Mon, 17 Mar 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Димитър Керанов</dc:creator>
+      <description>Руското политическо влияние и китайското икономическо присъствие се преплитат, създавайки рискове за демократичната устойчивост и европейската интеграция в региона.</description>
+      <category>Balkans</category>
+      <category>China</category>
+      <category>Russia</category>
+      <category>Disinformation</category>
+    </item>
+
+    <item>
+      <title>Bulgaria and Security at the Edge of Europe</title>
+      <link>https://biip-varna.github.io/articles/bgsecurity.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/bgsecurity.html</guid>
+      <pubDate>Sun, 09 Mar 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Dr. Dimitar Keranov; Konstantin Keranov</dc:creator>
+      <description>An analysis of Bulgaria's security posture, NATO commitments, and the challenges of modernising its defence sector.</description>
+      <category>Bulgaria</category>
+      <category>Security</category>
+      <category>NATO</category>
+    </item>
+
+    <item>
+      <title>Синтетичното съдържание като проблем на институционалното доверие</title>
+      <link>https://biip-varna.github.io/articles/syntheticbg.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/syntheticbg.html</guid>
+      <pubDate>Thu, 05 Mar 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Константин Керанов</dc:creator>
+      <description>Синтетичното съдържание не е само технологичен проблем – то поставя въпроса за доверието в институциите и устойчивостта на демократичната публична среда.</description>
+      <category>Disinformation</category>
+      <category>AI</category>
+      <category>Bulgaria</category>
+    </item>
+
+    <item>
+      <title>European Parliament Seat Projection – February 2026</title>
+      <link>https://biip-varna.github.io/articles/ep-feb26.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/ep-feb26.html</guid>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Manuel Müller</dc:creator>
+      <description>Analysis of the European Parliament seat projection for February 2026 and what it means for the von der Leyen coalition.</description>
+      <category>EU</category>
+      <category>European Parliament</category>
+    </item>
+
+    <item>
+      <title>Brussels to Sofia: EU Policy in Bulgaria</title>
+      <link>https://biip-varna.github.io/articles/bruxbg.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/bruxbg.html</guid>
+      <pubDate>Mon, 09 Feb 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Dr. Dimitar Keranov; Luca Rovinalti</dc:creator>
+      <description>How EU funding, rules, and conditionality shape governance, security, and resilience in Bulgaria.</description>
+      <category>Bulgaria</category>
+      <category>EU</category>
+      <category>Governance</category>
+    </item>
+
+    <item>
+      <title>Bulgaria and Romania Must Expand Cooperation in All Areas</title>
+      <link>https://biip-varna.github.io/articles/bul-ro-en.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/bul-ro-en.html</guid>
+      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Vladimir Mitev</dc:creator>
+      <description>Interview with Dr. Dimitar Keranov on Moldova's EU integration and Bulgarian-Romanian partnership.</description>
+      <category>Bulgaria</category>
+      <category>Romania</category>
+      <category>Moldova</category>
+      <category>EU</category>
+    </item>
+
+    <item>
+      <title>The Euro in Bulgaria Is a Good Idea</title>
+      <link>https://biip-varna.github.io/articles/the-euro-in-bulgaria-is-a-good-idea.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/the-euro-in-bulgaria-is-a-good-idea.html</guid>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Dr. Dimitar Keranov</dc:creator>
+      <description>Why Bulgaria's adoption of the euro is economically and politically beneficial despite public hesitancy.</description>
+      <category>Bulgaria</category>
+      <category>EU</category>
+      <category>Economy</category>
+    </item>
+
+    <item>
+      <title>Bulgaria's Democratic Challenge</title>
+      <link>https://biip-varna.github.io/articles/bulgarias-democratic-challenge.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/bulgarias-democratic-challenge.html</guid>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Dr. Dimitar Keranov</dc:creator>
+      <description>An analysis of Bulgaria's democratic backsliding, capture by oligarchic networks, and the prospects for reform.</description>
+      <category>Bulgaria</category>
+      <category>Democracy</category>
+      <category>Governance</category>
+    </item>
+
+    <item>
+      <title>Minority Politics in Moldova: Taraclia's Vote</title>
+      <link>https://biip-varna.github.io/articles/taraclia-vote-en.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/taraclia-vote-en.html</guid>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Dr. Dimitar Keranov</dc:creator>
+      <description>How Taraclia's Russian-language info space and Bulgaria's cultural links shape minority politics in Moldova.</description>
+      <category>Moldova</category>
+      <category>Minorities</category>
+      <category>EU</category>
+    </item>
+
+    <item>
+      <title>There Is No Corruption in Bulgaria</title>
+      <link>https://biip-varna.github.io/articles/no-corruption-bg.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/no-corruption-bg.html</guid>
+      <pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Dr. Dimitar Keranov</dc:creator>
+      <description>A sharp analysis of how Bulgaria's systemic corruption is denied and normalised by political elites.</description>
+      <category>Bulgaria</category>
+      <category>Governance</category>
+      <category>Corruption</category>
+    </item>
+
+    <item>
+      <title>Signal from Beijing: What Bulgaria Just Told the World</title>
+      <link>https://biip-varna.github.io/articles/beijing-bgr.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/beijing-bgr.html</guid>
+      <pubDate>Sat, 06 Sep 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Dr. Dimitar Keranov</dc:creator>
+      <description>What Bulgaria's diplomatic signal toward China reveals about its foreign policy orientation.</description>
+      <category>China</category>
+      <category>Bulgaria</category>
+      <category>Diplomacy</category>
+    </item>
+
+    <item>
+      <title>Could the von der Leyen coalition lose its majority?</title>
+      <link>https://biip-varna.github.io/articles/ep-coalition-preview-summary.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/ep-coalition-preview-summary.html</guid>
+      <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Manuel Müller</dc:creator>
+      <description>Summary of the July 2025 European Parliament seat projection and whether the centrist coalition can hold its majority.</description>
+      <category>EU</category>
+      <category>European Parliament</category>
+    </item>
+
+    <item>
+      <title>Moscow's Terror over Moldova: A Dark Chapter with Echoes Today</title>
+      <link>https://biip-varna.github.io/articles/moscow-md.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/moscow-md.html</guid>
+      <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Dr. Dimitar Keranov</dc:creator>
+      <description>A commentary on Soviet terror in Moldova, its victims, and the echoes of repression in current geopolitical tensions.</description>
+      <category>Moldova</category>
+      <category>Russia</category>
+      <category>Security</category>
+    </item>
+
+    <item>
+      <title>The Digital Economy and the Challenges for Policy</title>
+      <link>https://biip-varna.github.io/articles/digital-economy-english.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/digital-economy-english.html</guid>
+      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Konstantin Keranov</dc:creator>
+      <description>How new technologies are transforming the economy and what policy responses are needed.</description>
+      <category>Digital Economy</category>
+      <category>AI</category>
+    </item>
+
+    <item>
+      <title>Bulgaria and Moldova – Friendship and Shared Challenges</title>
+      <link>https://biip-varna.github.io/articles/bg-md-friendship-english.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/bg-md-friendship-english.html</guid>
+      <pubDate>Thu, 31 Jul 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Dr. Dimitar Keranov</dc:creator>
+      <description>A commentary on Bulgarian-Moldovan relations, the Bulgarian community in Moldova, and shared external challenges.</description>
+      <category>Bulgaria</category>
+      <category>Moldova</category>
+      <category>EU</category>
+    </item>
+
+    <item>
+      <title>Pretoria's Diplomatic Withdrawal</title>
+      <link>https://biip-varna.github.io/articles/pretoria-diplomatic-withdrawal.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/pretoria-diplomatic-withdrawal.html</guid>
+      <pubDate>Sat, 26 Jul 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Dr. Dimitar Keranov</dc:creator>
+      <description>Analysis of South Africa's diplomatic reversal and its significance for bilateral relations.</description>
+      <category>Africa</category>
+      <category>South Africa</category>
+      <category>Diplomacy</category>
+    </item>
+
+    <item>
+      <title>When Romania Bans You</title>
+      <link>https://biip-varna.github.io/articles/when-romania-bans-you.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/when-romania-bans-you.html</guid>
+      <pubDate>Wed, 09 Jul 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Dr. Dimitar Keranov</dc:creator>
+      <description>Analysis of Romania's ban and its implications for bilateral relations and freedom of speech.</description>
+      <category>Bulgaria</category>
+      <category>Romania</category>
+    </item>
+
+    <item>
+      <title>When Bulgarian Democracy Falters</title>
+      <link>https://biip-varna.github.io/articles/when-bulgarian-democracy-falters.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/when-bulgarian-democracy-falters.html</guid>
+      <pubDate>Sat, 12 Jul 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Dr. Dimitar Keranov</dc:creator>
+      <description>A look at the structural causes of democratic decline in Bulgaria and what reform would require.</description>
+      <category>Bulgaria</category>
+      <category>Democracy</category>
+      <category>Governance</category>
+    </item>
+
+    <item>
+      <title>Bulgaria Must Leave Soviet Armament Behind</title>
+      <link>https://biip-varna.github.io/articles/bulgaria-must-leave-soviet-armament-behind.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/bulgaria-must-leave-soviet-armament-behind.html</guid>
+      <pubDate>Mon, 14 Apr 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Dimitar Keranov</dc:creator>
+      <description>Why Bulgaria must accelerate replacing Soviet-era weapons with NATO-compatible equipment.</description>
+      <category>Bulgaria</category>
+      <category>Security</category>
+      <category>NATO</category>
+    </item>
+
+  </channel>
+</rss>

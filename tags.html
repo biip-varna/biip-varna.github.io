@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self' https://api.open-meteo.com; font-src 'self'; object-src 'none'; base-uri 'self';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Разглеждане по тема | БИМП</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Разглеждайте всички статии на Българския институт за международна политика по тема. Филтрирайте по демокрация, сигурност, НАТО, ЕС, Африка и други.">
+  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="canonical" href="https://biip-varna.github.io/tags.html">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="alternate" hreflang="bg" href="https://biip-varna.github.io/tags.html">
+  <link rel="alternate" hreflang="en" href="https://biip-varna.github.io/tags-en.html">
+  <link rel="alternate" hreflang="x-default" href="https://biip-varna.github.io/tags-en.html">
+  <link rel="alternate" type="application/rss+xml" title="BIIP – Regions RSS Feed" href="https://biip-varna.github.io/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Разглеждане по тема | БИМП">
+  <meta property="og:description" content="Разглеждайте всички статии на БИМП по тема.">
+  <meta property="og:url" content="https://biip-varna.github.io/tags.html">
+  <meta property="og:image" content="https://biip-varna.github.io/articles/article%20images/chn.png">
+  <meta name="theme-color" content="#0057B7">
+</head>
+<body>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;background:#fff;padding:4px 8px;font-weight:bold;">Към основното съдържание</a>
+<header>
+  <img src="logo.png" class="logo" alt="Лого на БИМП">
+  <h1>Български институт за международна политика</h1>
+  <p class="motto">„Всеки един има дълг да върши възможното." – Васил Априлов</p>
+</header>
+<nav aria-label="Главна навигация">
+<a href="index.html">Начало</a> <span aria-hidden="true"> | </span>
+<a href="about.html">За нас</a> <span aria-hidden="true"> | </span>
+<a href="regions.html">Региони</a> <span aria-hidden="true"> | </span>
+<a href="eksperti.html">Експерти</a> <span aria-hidden="true"> | </span>
+<a href="submit.html">Публикуване</a> <span aria-hidden="true"> | </span>
+<a href="contact.html">Контакт</a> <span aria-hidden="true"> | </span><a href="search.html" aria-label="Търсене">🔍</a> <a href="tags-en.html">EN</a>
+</nav>
+<main id="main-content">
+  <h2>Разглеждане по тема</h2>
+  <p style="color:#555; margin-bottom:1.5em;">Изберете тема, за да филтрирате всички статии. Показват се статии на български и английски.</p>
+
+  <div id="tag-cloud" style="display:flex; flex-wrap:wrap; gap:0.6em; margin-bottom:2em;" aria-label="Филтри по тема">
+    <!-- Tag buttons inserted by JS -->
+  </div>
+
+  <div id="tag-results">
+    <!-- Article results inserted by JS -->
+  </div>
+</main>
+<footer>
+  <p>
+    Български институт за международна политика |
+    Bulgarisches Institut für Internationale Politik |
+    Institut bulgare de politique internationale |
+    Instituto Búlgaro de Política Internacional
+  </p>
+  <p style="margin-top:0.5em;">
+    <a href="impressum.html" style="color:#555; text-decoration:none;">Импресум</a> |
+    <a href="privacy.html" style="color:#555; text-decoration:none;">Поверителност</a>
+  </p>
+</footer>
+<script>
+(function() {
+  var TAG_LABEL = {
+    'bulgaria': 'България', 'moldova': 'Молдова', 'russia': 'Русия',
+    'eu': 'ЕС', 'balkans': 'Балкани', 'china': 'Китай',
+    'security': 'Сигурност', 'nato': 'НАТО', 'democracy': 'Демокрация',
+    'governance': 'Управление', 'corruption': 'Корупция',
+    'africa': 'Африка', 'southafrica': 'Южна Африка',
+    'diplomacy': 'Дипломация', 'disinformation': 'Дезинформация',
+    'ai': 'ИИ', 'digitaleconomy': 'Дигитална икономика',
+    'economy': 'Икономика', 'europeanparliament': 'Европарламент',
+    'minorities': 'Малцинства', 'romania': 'Румъния',
+  };
+
+  var activeTag = null;
+  var ARTICLES = null;
+
+  function renderTagCloud(articles) {
+    var counts = {};
+    articles.forEach(function(a) {
+      (a.tags || []).forEach(function(t) {
+        counts[t] = (counts[t] || 0) + 1;
+      });
+    });
+    var cloud = document.getElementById('tag-cloud');
+    var tags = Object.keys(counts).sort(function(a, b) {
+      return counts[b] - counts[a];
+    });
+    cloud.innerHTML = tags.map(function(tag) {
+      var label = TAG_LABEL[tag] || tag;
+      return '<button type="button" class="tag-filter-btn" data-tag="' + tag + '" ' +
+        'style="background:#e8f0fe;color:#0057B7;border:none;padding:0.35em 0.85em;' +
+        'border-radius:100px;font-size:0.9em;font-weight:600;cursor:pointer;transition:background 0.15s;">' +
+        label + ' <span style="color:#5981b3;font-size:0.85em;">(' + counts[tag] + ')</span>' +
+        '</button>';
+    }).join('');
+
+    cloud.querySelectorAll('.tag-filter-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var tag = btn.getAttribute('data-tag');
+        if (activeTag === tag) {
+          activeTag = null;
+          btn.style.background = '#e8f0fe';
+          btn.style.color = '#0057B7';
+          renderResults(ARTICLES);
+        } else {
+          activeTag = tag;
+          cloud.querySelectorAll('.tag-filter-btn').forEach(function(b) {
+            b.style.background = '#e8f0fe';
+            b.style.color = '#0057B7';
+          });
+          btn.style.background = '#0057B7';
+          btn.style.color = '#fff';
+          renderResults(ARTICLES.filter(function(a) {
+            return (a.tags || []).indexOf(tag) !== -1;
+          }));
+        }
+      });
+    });
+  }
+
+  function renderResults(articles) {
+    var sorted = articles.slice().sort(function(a, b) {
+      return (b.date || '').localeCompare(a.date || '');
+    });
+    var container = document.getElementById('tag-results');
+    if (!sorted.length) {
+      container.innerHTML = '<p style="color:#888;">Няма намерени статии за тази тема.</p>';
+      return;
+    }
+    var heading = activeTag
+      ? '<h3 style="margin-bottom:0.8em; color:#0057B7;">' + (TAG_LABEL[activeTag] || activeTag) + ' — ' + sorted.length + ' статии</h3>'
+      : '<h3 style="margin-bottom:0.8em;">Всички статии — ' + sorted.length + '</h3>';
+
+    var cards = sorted.map(function(a) {
+      var href = a.file;
+      var imgSrc = ('articles/' + a.img).replace(/ /g, '%20');
+      var dateStr = a.date ? a.date.split('-').reverse().join('.') : '';
+      var langBadge = a.lang === 'en'
+        ? '<span class="sc-lang-badge sc-en">EN</span>'
+        : '<span class="sc-lang-badge sc-bg">БГ</span>';
+      var tagPills = (a.tags || []).map(function(t) {
+        return '<span style="background:#f0f4ff;color:#0057B7;font-size:0.75em;padding:0.15em 0.5em;border-radius:4px;margin-right:3px;">' + (TAG_LABEL[t] || t) + '</span>';
+      }).join('');
+      return '<a href="' + href + '" class="sc-card">' +
+        '<img src="' + imgSrc + '" alt="" class="sc-img" loading="lazy" width="120" height="80">' +
+        '<div class="sc-body">' +
+          '<div class="sc-meta">' + langBadge + ' ' + dateStr + (a.author ? ' · ' + a.author : '') + '</div>' +
+          '<h3 class="sc-title">' + a.title + '</h3>' +
+          '<p class="sc-teaser" style="margin-bottom:0.4em;">' + (a.desc || '') + '</p>' +
+          '<div>' + tagPills + '</div>' +
+        '</div>' +
+        '</a>';
+    }).join('');
+
+    container.innerHTML = heading + '<div class="article-preview-list" style="flex-direction:column;">' + cards + '</div>';
+  }
+
+  fetch('articles.json')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      ARTICLES = data;
+      renderTagCloud(data);
+      renderResults(data);
+    })
+    .catch(function() {
+      document.getElementById('tag-results').innerHTML =
+        '<p style="color:#888;">Статиите не можаха да се заредят. Моля, опитайте отново.</p>';
+    });
+})();
+</script>
+<script src="biip.js?v=2" defer></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch(function() {});
+}
+</script>
+</body>
+</html>

@@ -23,6 +23,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Bulgaria as a Former Soviet Republic">
   <meta name="twitter:description" content="An analysis of Bulgaria's position as a Soviet satellite, not a republic. Written by Dr. Dimitar Keranov.">
+    <link rel="manifest" href="manifest.json">
+  <link rel="alternate" type="application/rss+xml" title="BIIP – Regions RSS Feed" href="https://biip-varna.github.io/feed.xml">
   <meta name="theme-color" content="#0057B7">
   <link rel="alternate" hreflang="en" href="https://biip-varna.github.io/bulgaria-soviet-en.html">
   <link rel="alternate" hreflang="bg" href="https://biip-varna.github.io/index.html">
@@ -84,7 +86,16 @@ Bulgarisches Institut für Internationale Politik |
 Bulharský institut pro mezinárodní politiku |
 Bulharský inštitút pre medzinárodnú politiku
 </p>
+  <p style="margin-top:0.5em;">
+    <a href="impressum.html" style="color:#555; text-decoration:none;">Impressum</a> |
+    <a href="privacy-en.html" style="color:#555; text-decoration:none;">Privacy</a>
+  </p>
 </footer>
 <script src="biip.js?v=2" defer></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch(function() {});
+}
+</script>
 </body>
 </html>
