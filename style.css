@@ -1,10 +1,10 @@
 :root {
-  --color-primary: var(--color-primary);
-  --color-primary-hover: var(--color-primary-hover);
-  --color-primary-dark: var(--color-primary-dark);
-  --color-primary-focus: var(--color-primary-focus);
-  --color-accent: var(--color-accent);
-  --color-dark: var(--color-dark);
+  --color-primary: #0057B7;
+  --color-primary-hover: #0a60c8;
+  --color-primary-dark: #0048a0;
+  --color-primary-focus: #0066cc;
+  --color-accent: #5981b3;
+  --color-dark: #0a1628;
   --color-text: #111;
   --color-text-secondary: #333;
   --color-text-muted: #555;
