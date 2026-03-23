@@ -22,6 +22,7 @@
   <meta property="og:description" content="Разглеждайте всички статии на БИМП по тема.">
   <meta property="og:url" content="https://biip-varna.github.io/tags.html">
   <meta property="og:image" content="https://biip-varna.github.io/articles/article%20images/chn.png">
+  <meta property="og:site_name" content="Български институт за международна политика">
   <meta name="theme-color" content="#0057B7">
 </head>
 <body>
@@ -139,7 +140,7 @@
     }
     var artWord = sorted.length === 1 ? 'статия' : 'статии';
     var heading = activeTag
-      ? '<h3 style="margin-bottom:0.8em; color:#0057B7;">' + (TAG_LABEL[activeTag] || activeTag) + ' — ' + sorted.length + ' ' + artWord + '</h3>'
+      ? '<h3 style="margin-bottom:0.8em; color:#0057B7;">' + escHtml(TAG_LABEL[activeTag] || activeTag) + ' — ' + sorted.length + ' ' + artWord + '</h3>'
       : '<h3 style="margin-bottom:0.8em;">Всички статии — ' + sorted.length + '</h3>';
 
     var cards = sorted.map(function(a) {
@@ -150,7 +151,7 @@
         ? '<span class="sc-lang-badge sc-en">EN</span>'
         : '<span class="sc-lang-badge sc-bg">БГ</span>';
       var tagPills = (a.tags || []).map(function(t) {
-        return '<span style="background:#f0f4ff;color:#0057B7;font-size:0.75em;padding:0.15em 0.5em;border-radius:4px;margin-right:3px;">' + (TAG_LABEL[t] || t) + '</span>';
+        return '<span style="background:#f0f4ff;color:#0057B7;font-size:0.75em;padding:0.15em 0.5em;border-radius:4px;margin-right:3px;">' + escHtml(TAG_LABEL[t] || t) + '</span>';
       }).join('');
       return '<a href="' + href + '" class="sc-card">' +
         '<img src="' + imgSrc + '" alt="" class="sc-img" loading="lazy" width="120" height="80">' +

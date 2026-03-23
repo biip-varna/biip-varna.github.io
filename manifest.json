@@ -2,7 +2,7 @@
   "name": "Bulgarian Institute for International Politics",
   "short_name": "BIIP",
   "description": "Independent analytical publication from Varna. Articles, commentary and analysis on Bulgaria, Europe and beyond.",
-  "start_url": "/index-en.html",
+  "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
