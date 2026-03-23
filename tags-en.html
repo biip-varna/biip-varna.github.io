@@ -15,7 +15,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="alternate" hreflang="bg" href="https://biip-varna.github.io/tags.html">
   <link rel="alternate" hreflang="en" href="https://biip-varna.github.io/tags-en.html">
-  <link rel="alternate" hreflang="x-default" href="https://biip-varna.github.io/tags-en.html">
+  <link rel="alternate" hreflang="x-default" href="https://biip-varna.github.io/tags.html">
   <link rel="alternate" type="application/rss+xml" title="BIIP – Regions RSS Feed" href="https://biip-varna.github.io/feed.xml">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Browse by Topic | BIIP">
@@ -79,6 +79,9 @@
     'minorities': 'Minorities', 'romania': 'Romania',
   };
 
+  function escHtml(s) {
+    return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
   var activeTag = null;
   var ARTICLES = null;
 
@@ -94,8 +97,8 @@
       return counts[b] - counts[a];
     });
     cloud.innerHTML = tags.map(function(tag) {
-      var label = TAG_LABEL[tag] || tag;
-      return '<button type="button" class="tag-filter-btn" data-tag="' + tag + '" ' +
+      var label = escHtml(TAG_LABEL[tag] || tag);
+      return '<button type="button" class="tag-filter-btn" data-tag="' + escHtml(tag) + '" ' +
         'style="background:#e8f0fe;color:#0057B7;border:none;padding:0.35em 0.85em;' +
         'border-radius:100px;font-size:0.9em;font-weight:600;cursor:pointer;transition:background 0.15s;">' +
         label + ' <span style="color:#5981b3;font-size:0.85em;">(' + counts[tag] + ')</span>' +

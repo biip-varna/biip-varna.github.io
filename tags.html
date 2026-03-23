@@ -78,6 +78,9 @@
     'minorities': 'Малцинства', 'romania': 'Румъния',
   };
 
+  function escHtml(s) {
+    return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
   var activeTag = null;
   var ARTICLES = null;
 
@@ -93,8 +96,8 @@
       return counts[b] - counts[a];
     });
     cloud.innerHTML = tags.map(function(tag) {
-      var label = TAG_LABEL[tag] || tag;
-      return '<button type="button" class="tag-filter-btn" data-tag="' + tag + '" ' +
+      var label = escHtml(TAG_LABEL[tag] || tag);
+      return '<button type="button" class="tag-filter-btn" data-tag="' + escHtml(tag) + '" ' +
         'style="background:#e8f0fe;color:#0057B7;border:none;padding:0.35em 0.85em;' +
         'border-radius:100px;font-size:0.9em;font-weight:600;cursor:pointer;transition:background 0.15s;">' +
         label + ' <span style="color:#5981b3;font-size:0.85em;">(' + counts[tag] + ')</span>' +
@@ -134,8 +137,9 @@
       container.innerHTML = '<p style="color:#888;">Няма намерени статии за тази тема.</p>';
       return;
     }
+    var artWord = sorted.length === 1 ? 'статия' : 'статии';
     var heading = activeTag
-      ? '<h3 style="margin-bottom:0.8em; color:#0057B7;">' + (TAG_LABEL[activeTag] || activeTag) + ' — ' + sorted.length + ' статии</h3>'
+      ? '<h3 style="margin-bottom:0.8em; color:#0057B7;">' + (TAG_LABEL[activeTag] || activeTag) + ' — ' + sorted.length + ' ' + artWord + '</h3>'
       : '<h3 style="margin-bottom:0.8em;">Всички статии — ' + sorted.length + '</h3>';
 
     var cards = sorted.map(function(a) {

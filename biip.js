@@ -22,6 +22,16 @@
 
   var ARTICLES = null; // loaded once, shared by all features
 
+  /* ── HTML escaping helper (prevents XSS in innerHTML strings) ─── */
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
   /* ── Language map for switcher ───────────────────────────────── */
   var LANG_MAP = {
     'index.html': 'index-en.html',
@@ -392,7 +402,7 @@
     related.forEach(function(a) {
       html += '<a href="' + a.file.split('/').pop() + '" class="related-article">' +
         '<img src="' + imgSrc(a.img) + '" alt="" class="related-thumb" width="44" height="44" loading="lazy">' +
-        '<div class="related-info"><div class="related-title">' + a.title + '</div></div></a>';
+        '<div class="related-info"><div class="related-title">' + esc(a.title) + '</div></div></a>';
     });
     html += '</div></section>';
     article.insertAdjacentHTML('beforeend', html);
@@ -431,8 +441,8 @@
           '<img src="../articles/' + a.img.replace(/ /g, '%20') + '" alt="" class="article-thumb" ' +
             'width="44" height="44" loading="lazy">' +
           '<div class="article-info">' +
-            '<h4>' + a.title + '</h4>' +
-            '<p class="article-meta">' + (a.date || '') + '</p>' +
+            '<h4>' + esc(a.title) + '</h4>' +
+            '<p class="article-meta">' + esc(a.date) + '</p>' +
           '</div>' +
         '</a>';
     });
@@ -562,9 +572,9 @@
         return '<a href="' + href + '" class="sc-card">' +
           '<img src="' + imgSrc + '" alt="" class="sc-img" loading="lazy" width="120" height="80">' +
           '<div class="sc-body">' +
-            '<div class="sc-meta">' + langBadge + newBadge + dateStr + rt + (a.author ? ' · ' + a.author : '') + '</div>' +
-            '<h3 class="sc-title">' + a.title + '</h3>' +
-            '<p class="sc-teaser">' + (a.teaser || '') + '</p>' +
+            '<div class="sc-meta">' + langBadge + newBadge + dateStr + rt + (a.author ? ' · ' + esc(a.author) : '') + '</div>' +
+            '<h3 class="sc-title">' + esc(a.title) + '</h3>' +
+            '<p class="sc-teaser">' + esc(a.teaser) + '</p>' +
           '</div>' +
         '</a>';
       }).join('');
@@ -721,8 +731,8 @@
         '<a href="' + href + '" class="latest-item">' +
           '<img src="' + imgPath + '" alt="" class="latest-thumb" width="52" height="52" loading="lazy">' +
           '<div class="latest-info">' +
-            '<div class="latest-title">' + a.title + '</div>' +
-            '<div class="latest-meta">' + langLabel + newBadge + dateStr + (a.author ? ' · ' + a.author : '') + rtLabel + '</div>' +
+            '<div class="latest-title">' + esc(a.title) + '</div>' +
+            '<div class="latest-meta">' + langLabel + newBadge + dateStr + (a.author ? ' · ' + esc(a.author) : '') + rtLabel + '</div>' +
           '</div>' +
         '</a>';
     });
@@ -828,14 +838,14 @@
     feed.innerHTML = items.map(function(a) {
       var imgSrc = a.img ? prefix + 'articles/' + a.img : '';
       var imgHtml = imgSrc
-        ? '<img src="' + imgSrc + '" alt="' + a.title + '" class="article-thumb" loading="lazy" width="44" height="44">'
+        ? '<img src="' + imgSrc + '" alt="' + esc(a.title) + '" class="article-thumb" loading="lazy" width="44" height="44">'
         : '';
       return '<a href="' + prefix + a.file + '" class="article-preview">' +
         imgHtml +
         '<div class="article-info">' +
-          '<h4>' + a.title + '</h4>' +
-          '<p class="article-meta">' + byTxt + ' ' + a.author + '</p>' +
-          '<p class="article-teaser">' + (a.desc || '') + '</p>' +
+          '<h4>' + esc(a.title) + '</h4>' +
+          '<p class="article-meta">' + byTxt + ' ' + esc(a.author) + '</p>' +
+          '<p class="article-teaser">' + esc(a.desc) + '</p>' +
         '</div>' +
         '</a>';
     }).join('');

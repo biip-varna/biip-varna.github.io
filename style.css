@@ -86,12 +86,6 @@ nav a:hover {
   }
 }
 
-.toggle-button {
-  float: right;
-  margin: 10px;
-  cursor: pointer;
-}
-
 main {
   max-width: 900px;
   margin: auto;
@@ -348,12 +342,6 @@ a.region-card:hover {
   flex-direction: column;
   gap: 0.7em;
 }
-.impressum-link {
-  text-align: center;
-  margin-top: 1.5em;
-  font-size: 0.9em;
-}
-
 /* --- EXPERT CARD THUMBNAILS --- */
 .expert-preview-list {
   display: flex;
@@ -902,6 +890,7 @@ a.region-card:hover {
   header, nav, .no-print, .share-bar, .cite-trigger-btn,
   #back-to-top, #reading-progress, .print-kachel,
   .weather-widget, .related-articles, footer,
+  .author-cards-wrap, .random-article-wrap, .expert-tag-row,
   #cite-modal { display: none !important; }
 
   body {
