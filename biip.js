@@ -275,6 +275,7 @@
   function initCiteButton() {
     var article = document.querySelector('article');
     if (!article) return;
+    if (article.dataset.noCite) return;
     var lang    = getLang();
     var titleEl = document.querySelector('title');
     var titleTx = titleEl ? titleEl.textContent.replace(/\s*\|\s*(БИМП|BIIP).*/i, '').trim() : '';
@@ -555,7 +556,7 @@
           '<button type="button" class="sf-btn sf-active" data-lang="all">' +
             (lang === 'en' ? 'All' : 'Всички') + ' (' + filtered.length + ')' +
           '</button>' +
-          '<button type="button" class="sf-btn" data-lang="bg">БГ (' + bgCount + ')</button>' +
+          '<button type="button" class="sf-btn" data-lang="bg">BG (' + bgCount + ')</button>' +
           '<button type="button" class="sf-btn" data-lang="en">EN (' + enCount + ')</button>' +
         '</div>';
     }
