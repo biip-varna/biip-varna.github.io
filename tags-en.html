@@ -18,6 +18,7 @@
   <link rel="alternate" hreflang="x-default" href="https://biip-varna.github.io/tags.html">
   <link rel="alternate" type="application/rss+xml" title="BIIP – Regions RSS Feed" href="https://biip-varna.github.io/feed.xml">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
   <meta property="og:title" content="Browse by Topic | BIIP">
   <meta property="og:description" content="Browse all BIIP articles by topic.">
   <meta property="og:url" content="https://biip-varna.github.io/tags-en.html">
@@ -152,12 +153,12 @@
       var tagPills = (a.tags || []).map(function(t) {
         return '<span style="background:#f0f4ff;color:#0057B7;font-size:0.75em;padding:0.15em 0.5em;border-radius:4px;margin-right:3px;">' + (TAG_LABEL[t] || t) + '</span>';
       }).join('');
-      return '<a href="' + href + '" class="sc-card">' +
+      return '<a href="' + escHtml(href) + '" class="sc-card">' +
         '<img src="' + imgSrc + '" alt="" class="sc-img" loading="lazy" width="120" height="80">' +
         '<div class="sc-body">' +
-          '<div class="sc-meta">' + langBadge + ' ' + dateStr + (a.author ? ' · ' + a.author : '') + '</div>' +
-          '<h3 class="sc-title">' + a.title + '</h3>' +
-          '<p class="sc-teaser" style="margin-bottom:0.4em;">' + (a.desc || '') + '</p>' +
+          '<div class="sc-meta">' + langBadge + ' ' + dateStr + (a.author ? ' · ' + escHtml(a.author) : '') + '</div>' +
+          '<h3 class="sc-title">' + escHtml(a.title) + '</h3>' +
+          '<p class="sc-teaser" style="margin-bottom:0.4em;">' + escHtml(a.desc || '') + '</p>' +
           '<div>' + tagPills + '</div>' +
         '</div>' +
         '</a>';
