@@ -224,6 +224,9 @@
     'economy':'Икономика','europeanparliament':'Европарламент',
     'minorities':'Малцинства','romania':'Румъния',
   };
+  function escHtml(s) {
+    return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
   var index = [];
   var tagMap = {}; // url -> tags[]
   var currentLang = 'all';
@@ -355,8 +358,8 @@
       var highlighted_title = highlight(item.title, terms);
       var highlighted_desc  = highlight(item.desc, terms);
       var meta = [];
-      if (item.author) meta.push(item.author);
-      if (item.date)   meta.push(item.date);
+      if (item.author) meta.push(escHtml(item.author));
+      if (item.date)   meta.push(escHtml(item.date));
       return '<a href="' + item.url + '" class="result-card">' +
         '<img src="' + displayImg + '" alt="" loading="lazy" width="60" height="60">' +
         '<div class="result-info">' +
