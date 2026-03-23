@@ -8,7 +8,7 @@
     <copyright>Bulgarian Institute for International Politics (BIIP)</copyright>
     <managingEditor>biip@mailfence.com (Bulgarian Institute for International Politics)</managingEditor>
     <webMaster>biip@mailfence.com (BIIP)</webMaster>
-    <lastBuildDate>Sun, 22 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://biip-varna.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://biip-varna.github.io/logo.png</url>
@@ -107,7 +107,7 @@
       <title>The Euro in Bulgaria Is a Good Idea</title>
       <link>https://biip-varna.github.io/articles/the-euro-in-bulgaria-is-a-good-idea.html</link>
       <guid isPermaLink="true">https://biip-varna.github.io/articles/the-euro-in-bulgaria-is-a-good-idea.html</guid>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 16 Jul 2025 00:00:00 +0000</pubDate>
       <dc:creator>Dr. Dimitar Keranov</dc:creator>
       <description>Why Bulgaria's adoption of the euro is economically and politically beneficial despite public hesitancy.</description>
       <category>Bulgaria</category>
@@ -167,7 +167,7 @@
       <title>Could the von der Leyen coalition lose its majority?</title>
       <link>https://biip-varna.github.io/articles/ep-coalition-preview-summary.html</link>
       <guid isPermaLink="true">https://biip-varna.github.io/articles/ep-coalition-preview-summary.html</guid>
-      <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
       <dc:creator>Manuel Müller</dc:creator>
       <description>Summary of the July 2025 European Parliament seat projection and whether the centrist coalition can hold its majority.</description>
       <category>EU</category>
@@ -225,7 +225,7 @@
       <title>When Romania Bans You</title>
       <link>https://biip-varna.github.io/articles/when-romania-bans-you.html</link>
       <guid isPermaLink="true">https://biip-varna.github.io/articles/when-romania-bans-you.html</guid>
-      <pubDate>Wed, 09 Jul 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 26 Jul 2025 00:00:00 +0000</pubDate>
       <dc:creator>Dr. Dimitar Keranov</dc:creator>
       <description>Analysis of Romania's ban and its implications for bilateral relations and freedom of speech.</description>
       <category>Bulgaria</category>
@@ -254,6 +254,115 @@
       <category>Bulgaria</category>
       <category>Security</category>
       <category>NATO</category>
+    </item>
+
+    <item>
+      <title>България и Румъния трябва да разширяват сътрудничеството си</title>
+      <link>https://biip-varna.github.io/articles/bg-ro-vm.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/bg-ro-vm.html</guid>
+      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Владимир Митев</dc:creator>
+      <description>Интервю с д-р Димитър Керанов за европейската интеграция на Молдова и българо-румънското партньорство.</description>
+      <category>Bulgaria</category>
+      <category>Romania</category>
+      <category>Moldova</category>
+      <category>Eu</category>
+    </item>
+    <item>
+      <title>Терорът на Москва над Молдова</title>
+      <link>https://biip-varna.github.io/articles/moskva-moldova.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/moskva-moldova.html</guid>
+      <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Димитър Керанов</dc:creator>
+      <description>Анализ на съветския терор над Молдова, неговите жертви и отражението върху съвременното геополитическо напрежение.</description>
+      <category>Moldova</category>
+      <category>Russia</category>
+      <category>Security</category>
+    </item>
+    <item>
+      <title>Може ли „коалицията на фон дер Лайен“ да загуби мнозинството си?</title>
+      <link>https://biip-varna.github.io/articles/proektsia-ep-juli25.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/proektsia-ep-juli25.html</guid>
+      <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Мануел Мюлер</dc:creator>
+      <description>Резюме на юлската проекция за местата в Европейския парламент и въпроса дали центристката коалиция може да запази мнозинството си.</description>
+      <category>Eu</category>
+      <category>Europeanparliament</category>
+    </item>
+    <item>
+      <title>Атомните бомби на Южна Африка</title>
+      <link>https://biip-varna.github.io/articles/yuar-orazhiya.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/yuar-orazhiya.html</guid>
+      <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Димитър Керанов</dc:creator>
+      <description>История и анализ на южноафриканската ядрена програма и нейното значение за регионалната сигурност.</description>
+      <category>Africa</category>
+      <category>Southafrica</category>
+      <category>Security</category>
+    </item>
+    <item>
+      <title>Дигиталната икономика и предизвикателствата пред политиката</title>
+      <link>https://biip-varna.github.io/articles/digitalna-ikonomika.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/digitalna-ikonomika.html</guid>
+      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Константин Керанов</dc:creator>
+      <description>Как новите технологии трансформират икономиката и какви политически решения са необходими.</description>
+      <category>Digitaleconomy</category>
+      <category>Ai</category>
+    </item>
+    <item>
+      <title>България и Молдова – приятелство и общи предизвикателства</title>
+      <link>https://biip-varna.github.io/articles/bg-md.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/bg-md.html</guid>
+      <pubDate>Thu, 31 Jul 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Димитър Керанов</dc:creator>
+      <description>Коментар върху българо-молдовските отношения, българската общност в Молдова и общите външни предизвикателства.</description>
+      <category>Bulgaria</category>
+      <category>Moldova</category>
+      <category>Eu</category>
+    </item>
+    <item>
+      <title>Когато Румъния те забрани</title>
+      <link>https://biip-varna.github.io/articles/kogato-romania-te-zabrani.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/kogato-romania-te-zabrani.html</guid>
+      <pubDate>Sat, 26 Jul 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Димитър Керанов</dc:creator>
+      <description>Анализ на румънската забрана и нейното отражение върху двустранните отношения и свободата на словото.</description>
+      <category>Bulgaria</category>
+      <category>Romania</category>
+    </item>
+    <item>
+      <title>Дипломатическото отдръпване на Претория</title>
+      <link>https://biip-varna.github.io/articles/pretoria-bg.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/pretoria-bg.html</guid>
+      <pubDate>Sat, 26 Jul 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Димитър Керанов</dc:creator>
+      <description>Анализ на дипломатическия обрат на Южна Африка и неговото значение за двустранните отношения.</description>
+      <category>Africa</category>
+      <category>Southafrica</category>
+      <category>Diplomacy</category>
+    </item>
+    <item>
+      <title>Еврото в България е добра идея</title>
+      <link>https://biip-varna.github.io/articles/evroro-v-bg-dobra-ideya.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/evroro-v-bg-dobra-ideya.html</guid>
+      <pubDate>Wed, 16 Jul 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Димитър Керанов</dc:creator>
+      <description>Защо въвеждането на еврото в България е икономически и политически изгодно въпреки обществените резерви.</description>
+      <category>Bulgaria</category>
+      <category>Eu</category>
+      <category>Economy</category>
+    </item>
+    <item>
+      <title>Трябва окончателно да се разделим със съветското въоръжение</title>
+      <link>https://biip-varna.github.io/articles/tryabva-okonchatelno-da-se-razdelim-sas-savetskoto-vaorazhenie.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/tryabva-okonchatelno-da-se-razdelim-sas-savetskoto-vaorazhenie.html</guid>
+      <pubDate>Sun, 13 Jul 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Димитър Керанов</dc:creator>
+      <description>Защо България трябва да ускори замяната на съветското оръжие с натовско-съвместимо оборудване.</description>
+      <category>Bulgaria</category>
+      <category>Security</category>
+      <category>Nato</category>
     </item>
 
   </channel>
