@@ -1293,15 +1293,18 @@ a.region-card:hover {
 #cite-modal { z-index: 10000; }
 
 /* ── Focus styles (keyboard accessibility / WCAG 2.1 AA) ────── */
+/* White outline ensures visibility on any background (incl. primary blue buttons) */
 :focus-visible {
-  outline: 2px solid var(--color-primary-focus, #0066cc);
+  outline: 2px solid #fff;
   outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--color-primary-focus, #0066cc);
 }
 a:focus-visible,
 button:focus-visible,
 [tabindex]:focus-visible {
-  outline: 2px solid var(--color-primary-focus, #0066cc);
+  outline: 2px solid #fff;
   outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--color-primary-focus, #0066cc);
   border-radius: 2px;
 }
 

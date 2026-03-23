@@ -289,6 +289,10 @@
           {year:'numeric', month:'long', day:'numeric'})
       : '';
 
+    // Escape for safe HTML injection into cite-box innerHTML
+    var eTitleTx = esc(titleTx);
+    var eUrl     = esc(url);
+
     function fmtAPA(name) {
       // Strip honorific prefixes so "Dr. Dimitar Keranov" -> "Keranov, D." not "Keranov, D. D."
       var stripped = name.trim().replace(/^(Dr\.?|Prof\.?|Assoc\.?|д-р|Д-р|проф\.?|доц\.?)\s+/i, '');
@@ -299,14 +303,14 @@
       return last + ', ' + initials;
     }
 
-    var chicago = (author ? author.split(';')[0].trim() + '. ' : '') +
-      '"' + titleTx + '." ' +
+    var chicago = (author ? esc(author.split(';')[0].trim()) + '. ' : '') +
+      '&ldquo;' + eTitleTx + '.&rdquo; ' +
       'Bulgarian Institute for International Politics (BIIP), ' +
-      (dateStr ? dateStr + '. ' : '') + url + '.';
+      (dateStr ? esc(dateStr) + '. ' : '') + eUrl + '.';
 
-    var apa = (author ? fmtAPA(author.split(';')[0].trim()) + ' ' : '') +
-      '(' + year + '). ' + titleTx + '. ' +
-      'Bulgarian Institute for International Politics. ' + url;
+    var apa = (author ? esc(fmtAPA(author.split(';')[0].trim())) + ' ' : '') +
+      '(' + esc(String(year)) + '). ' + eTitleTx + '. ' +
+      'Bulgarian Institute for International Politics. ' + eUrl;
 
     var btnLabel = lang === 'en' ? '📋 Cite this article' : '📋 Цитирайте тази статия';
     var copyLbl  = lang === 'en' ? 'Copy' : 'Копирай';
