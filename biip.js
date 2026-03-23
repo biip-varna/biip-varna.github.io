@@ -907,11 +907,11 @@
         : '';
       cards.push(
         '<div class="author-card">' +
-          '<img src="' + prefix + expert.img + '" alt="' + authorName + '" ' +
+          '<img src="' + prefix + expert.img + '" alt="' + esc(authorName) + '" ' +
                'class="author-card-img" width="64" height="64" loading="lazy">' +
           '<div class="author-card-info">' +
-            '<div class="author-card-name">' + authorName + '</div>' +
-            (role ? '<div class="author-card-role">' + role + '</div>' : '') +
+            '<div class="author-card-name">' + esc(authorName) + '</div>' +
+            (role ? '<div class="author-card-role">' + esc(role) + '</div>' : '') +
             profileLink +
           '</div>' +
         '</div>'
