@@ -740,13 +740,6 @@ a.region-card:hover {
   }
 }
 
-/* Hide elements when printing */
-@media print{
-  .no-print{
-    display:none !important;
-  }
-}
-
 /* Skip to main content link (accessibility) */
 /* Back link on article pages */
 .back-link {

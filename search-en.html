@@ -259,7 +259,7 @@
     if (sortedTags.length) {
       var tagHtml = '<button type="button" class="tag-btn active" data-tag="">All topics</button>';
       sortedTags.forEach(function(t){
-        tagHtml += '<button type="button" class="tag-btn" data-tag="' + t + '">' + (TAG_LABEL[t] || t) + '</button>';
+        tagHtml += '<button type="button" class="tag-btn" data-tag="' + escHtml(t) + '">' + escHtml(TAG_LABEL[t] || t) + '</button>';
       });
       var tagWrap = document.getElementById('tag-filters');
       tagWrap.innerHTML = tagHtml;

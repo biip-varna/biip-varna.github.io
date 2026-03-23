@@ -388,6 +388,8 @@ function activeFiltersText(){
   return parts.join(" • ");
 }
 
+function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
 function matches(ex){
   const q = norm(state.q).trim();
   const hay = norm([ex.name, ex.role, ex.teaser, tagText(ex.tags)].join(" "));
@@ -410,21 +412,21 @@ function render(){
   const list = sortList(filtered);
 
   grid.innerHTML = list.map(ex => {
-    const tags = (ex.tags||[]).slice(0,3).map(t => `<span class="tag">${TAG_LABEL[t] || t}</span>`).join("");
+    const tags = (ex.tags||[]).slice(0,3).map(t => `<span class="tag">${esc(TAG_LABEL[t] || t)}</span>`).join("");
     const inner = `
-      <img class="avatar" src="${ex.img}" alt="${ex.name}" loading="lazy" width="80" height="80">
+      <img class="avatar" src="${esc(ex.img)}" alt="${esc(ex.name)}" loading="lazy" width="80" height="80">
       <div>
-        <h3>${ex.name}</h3>
-        <div class="role">${ex.role}</div>
-        <p class="teaser">${ex.teaser}</p>
+        <h3>${esc(ex.name)}</h3>
+        <div class="role">${esc(ex.role)}</div>
+        <p class="teaser">${esc(ex.teaser)}</p>
         <div class="tagline">${tags}</div>
       </div>
     `;
 
     if (ex.href){
-      return `<a class="card" href="${ex.href}" aria-label="Open expert page: ${ex.name}">${inner}</a>`;
+      return `<a class="card" href="${esc(ex.href)}" aria-label="Open expert page: ${esc(ex.name)}">${inner}</a>`;
     }
-    return `<div class="card is-static" aria-label="${ex.name}">${inner}</div>`;
+    return `<div class="card is-static" aria-label="${esc(ex.name)}">${inner}</div>`;
   }).join("");
 
   countEl.textContent = String(list.length);
