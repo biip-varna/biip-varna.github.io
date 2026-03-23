@@ -15,7 +15,6 @@
   --color-primary-tint: #e8f0fe;
   --color-border: #e0e8f5;
   --transition-base: 0.2s;
-  --transition-fast: 0.15s;
   --border-radius-sm: 6px;
   --border-radius-md: 10px;
   --border-radius-lg: 12px;
@@ -322,11 +321,11 @@ a.region-card:hover {
   margin-top: 0.5em;
   font-weight: 600;
 }
-.region-card-cee     { background: #e6f1ff; background: linear-gradient(140deg,#e6f1ff 60%, #e2f3e6 100%);}
-.region-card-west    { background: #f9e9ff; background: linear-gradient(140deg,#f9e9ff 62%, #fafafc 100%);}
-.region-card-africa  { background: #fff7e5; background: linear-gradient(140deg,#fff7e5 67%, #fafafc 100%);}
-.region-card-america { background: #e8f8ff; background: linear-gradient(140deg,#e8f8ff 60%, #f3f9f3 100%);}
-.region-card-asia    { background: #ffe6ef; background: linear-gradient(140deg,#ffe6ef 62%, #f9fafc 100%);}
+.region-card-cee     { background: linear-gradient(140deg,#e6f1ff 60%, #e2f3e6 100%);}
+.region-card-west    { background: linear-gradient(140deg,#f9e9ff 62%, #fafafc 100%);}
+.region-card-africa  { background: linear-gradient(140deg,#fff7e5 67%, #fafafc 100%);}
+.region-card-america { background: linear-gradient(140deg,#e8f8ff 60%, #f3f9f3 100%);}
+.region-card-asia    { background: linear-gradient(140deg,#ffe6ef 62%, #f9fafc 100%);}
 
 /* ── Regions latest feed ────────────────────────────────────── */
 .latest-section { margin: 0 0 2em 0; }
