@@ -8,13 +8,27 @@
     <copyright>Bulgarian Institute for International Politics (BIIP)</copyright>
     <managingEditor>biip@mailfence.com (Bulgarian Institute for International Politics)</managingEditor>
     <webMaster>biip@mailfence.com (BIIP)</webMaster>
-    <lastBuildDate>Mon, 23 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://biip-varna.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://biip-varna.github.io/logo.png</url>
       <title>Bulgarian Institute for International Politics</title>
       <link>https://biip-varna.github.io/</link>
     </image>
+
+    <item>
+      <title>US-German Relations in an Era of Strategic Recalibration</title>
+      <link>https://biip-varna.github.io/articles/us-german-relations.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/us-german-relations.html</guid>
+      <pubDate>Tue, 24 Mar 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Dr. Dimitar Keranov</dc:creator>
+      <description>An analysis of US-German relations amid strategic recalibration — from NATO and defence to economic interdependence and transatlantic technology cooperation.</description>
+      <category>USA</category>
+      <category>Germany</category>
+      <category>NATO</category>
+      <category>Transatlantic</category>
+      <category>Security</category>
+    </item>
 
     <item>
       <title>The Double Embrace: Russian and Chinese Influence in Bulgaria</title>

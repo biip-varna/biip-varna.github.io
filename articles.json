@@ -1,5 +1,16 @@
 [
   {
+    "file": "articles/us-german-relations.html",
+    "title": "US-German Relations in an Era of Strategic Recalibration",
+    "desc": "An analysis of US-German relations amid strategic recalibration — from NATO and defence to economic interdependence and transatlantic technology cooperation.",
+    "author": "Dr. Dimitar Keranov",
+    "date": "2026-03-24",
+    "lang": "en",
+    "img": "article images/biipall.png",
+    "tags": ["usa", "transatlantic", "nato", "security", "germany"],
+    "readTime": 4
+  },
+  {
     "file": "articles/beijing-bgr.html",
     "title": "Signal from Beijing: What Bulgaria Just Told the World",
     "desc": "What Bulgaria's diplomatic signal toward China reveals about its foreign policy orientation.",
