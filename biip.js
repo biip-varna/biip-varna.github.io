@@ -424,8 +424,7 @@
     if (!authorId) return;
 
     var authored = ARTICLES.filter(function(a) {
-      if (a.lang !== lang) return false;
-      // Match by authorId directly or via alias normalisation
+      // Match by authorId directly or via alias normalisation (all languages)
       if (a.authorId === authorId) return true;
       return a.author.split(';').some(function(name) {
         return normalizeAuthorId(name.trim()) === authorId;
@@ -529,10 +528,8 @@
     // Update count badge
     var countEl = document.getElementById('section-article-count');
     if (countEl) {
-      var total = ARTICLES.filter(function(a){
-        return (a.tags||[]).some(function(t){ return tags.indexOf(t) !== -1; });
-      }).length;
-      countEl.textContent = total + (lang === 'en' ? ' article' + (total !== 1 ? 's' : '') : ' статии');
+      var cnt = filtered.length;
+      countEl.textContent = cnt + (lang === 'en' ? ' article' + (cnt !== 1 ? 's' : '') : (cnt === 1 ? ' статия' : ' статии'));
     }
 
     if (!filtered.length) {
