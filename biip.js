@@ -180,7 +180,8 @@
   // Canonical author names for matching
   var AUTHOR_ALIASES = {
     'keranov':            ['д-р димитър керанов', 'dr. dimitar keranov',
-                           'dimitar keranov', 'димитър керанов', 'dr. dimitar keranov, mrssaf'],
+                           'dimitar keranov', 'димитър керанов', 'dr. dimitar keranov, mrssaf',
+                           'д-р димитър керанов, mrssaf'],
     'konstantin-keranov': ['константин керанов', 'konstantin keranov'],
     'uzunov':             ['д-р александър узунов', 'dr. alexander uzunov',
                            'александър узунов', 'alexander uzunov'],
@@ -188,9 +189,10 @@
                            'калоян смилков', 'kaloyan smilkov'],
     'petrov':             ['сергей петров', 'sergey petrov', 'aradjioni', 'aradzhioni'],
     'naama':              ['карим фахир наама', 'karim fahir naama', 'prof. karim fahir naama'],
-    'rovinalti':          ['лука ровиналти', 'luca rovinalti'],
+    'rovinalti':          ['лука ровиналти', 'luca rovinalti', 'luca rovinalti, mba', 'лука ровиналти, mba'],
     'vaculik':            ['давид вацулик', 'david vaculík', 'david vaculik'],
-    'manuel-muller':      ['мануел мюлер', 'manuel müller', 'manuel muller'],
+    'manuel-muller':      ['мануел мюлер', 'manuel müller', 'manuel muller',
+                           'dr. manuel müller', 'д-р мануел мюлер'],
     'vladimir-mitev':     ['владимир митев', 'vladimir mitev'],
     'biip':               ['bulgarian institute for international politics', 'biip', 'бимп'],
     'sonet-schutte':      ['sonet schutte', 'сонет шут'],
