@@ -131,7 +131,7 @@
                             tags: ['AFR', 'IR', 'SEC'] },
     'konstantin-keranov': { bg: null, en: null,
                             img: 'experts/images/KKeranov.png',
-                            role_bg: 'Експерт Дигитална икономика',
+                            role_bg: 'Експерт Дигитална икономика и нови технологии',
                             role_en: 'Expert on Digital Economy & Emerging Technologies',
                             tags: ['TECH'] },
     'uzunov':             { bg: 'experts/uzunov.html',           en: 'experts/auzunov-english.html',
@@ -195,7 +195,7 @@
                            'dr. manuel müller', 'д-р мануел мюлер'],
     'vladimir-mitev':     ['владимир митев', 'vladimir mitev'],
     'biip':               ['bulgarian institute for international politics', 'biip', 'бимп'],
-    'sonet-schutte':      ['sonet schutte', 'сонет шут'],
+    'sonet-schutte':      ['sonet schutte', 'сонет шуте'],
     'pavel-stefanov':     ['павел стефанов', 'pavel stefanov'],
   };
 
