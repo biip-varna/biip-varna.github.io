@@ -357,7 +357,7 @@
       if (item.author) meta.push(escHtml(item.author));
       if (item.date)   meta.push(escHtml(item.date));
       return '<a href="' + item.url + '" class="result-card">' +
-        '<img src="' + displayImg + '" alt="" loading="lazy" width="60" height="60">' +
+        '<img src="' + displayImg + '" alt="' + escHtml(item.title) + '" loading="lazy" width="60" height="60">' +
         '<div class="result-info">' +
           '<h3>' + highlighted_title + '</h3>' +
           (meta.length ? '<p class="result-meta">' + meta.join(' · ') + '</p>' : '') +
