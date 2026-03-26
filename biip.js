@@ -285,6 +285,8 @@
     var author  = authorM ? authorM.getAttribute('content') : '';
     var pubM    = document.querySelector('meta[property="article:published_time"]');
     var pubDate = pubM ? pubM.getAttribute('content') : '';
+    // Skip pages that are not actual articles (no author and no published date)
+    if (!author && !pubDate) return;
     var url     = window.location.href.replace(window.location.hash, '');
     var year    = pubDate ? pubDate.substring(0, 4) : new Date().getFullYear();
     var dateStr = pubDate
@@ -295,6 +297,11 @@
     // Escape for safe HTML injection into cite-box innerHTML
     var eTitleTx = esc(titleTx);
     var eUrl     = esc(url);
+
+    var institution = lang === 'en'
+      ? 'Bulgarian Institute for International Politics'
+      : 'Български институт за международна политика';
+    var institutionFull = institution + ' (' + (lang === 'en' ? 'BIIP' : 'БИМП') + ')';
 
     function fmtAPA(name) {
       // Strip honorific prefixes so "Dr. Dimitar Keranov" -> "Keranov, D." not "Keranov, D. D."
@@ -308,12 +315,12 @@
 
     var chicago = (author ? esc(author.split(';')[0].trim()) + '. ' : '') +
       '&ldquo;' + eTitleTx + '.&rdquo; ' +
-      'Bulgarian Institute for International Politics (BIIP), ' +
+      institutionFull + ', ' +
       (dateStr ? esc(dateStr) + '. ' : '') + eUrl + '.';
 
     var apa = (author ? esc(fmtAPA(author.split(';')[0].trim())) + ' ' : '') +
       '(' + esc(String(year)) + '). ' + eTitleTx + '. ' +
-      'Bulgarian Institute for International Politics. ' + eUrl;
+      institution + '. ' + eUrl;
 
     var btnLabel = lang === 'en' ? '📋 Cite this article' : '📋 Цитирайте тази статия';
     var copyLbl  = lang === 'en' ? 'Copy' : 'Копирай';
