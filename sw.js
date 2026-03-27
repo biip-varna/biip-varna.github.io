@@ -1,10 +1,11 @@
 /* ================================================================
    sw.js — BIIP Service Worker
-   Strategy: Cache-first for static assets, network-first for HTML.
+   Strategy: Cache-first for static assets, network-first for HTML
+   and data files (articles.json, search-index.json).
    Provides offline fallback for homepage and key pages.
    ================================================================ */
 
-var CACHE_VERSION = 'biip-v2';
+var CACHE_VERSION = 'biip-v3';
 var STATIC_CACHE  = CACHE_VERSION + '-static';
 var PAGES_CACHE   = CACHE_VERSION + '-pages';
 
@@ -74,14 +75,19 @@ self.addEventListener('fetch', function(event) {
   var isHTML = event.request.headers.get('Accept') &&
                event.request.headers.get('Accept').indexOf('text/html') !== -1;
 
-  if (isHTML) {
-    // Network-first for HTML pages (always try fresh content)
+  // Data files change with every publish — must always be fetched fresh
+  var isDataFile = url.pathname === '/articles.json' ||
+                   url.pathname === '/search-index.json';
+
+  if (isHTML || isDataFile) {
+    // Network-first: always try the network, fall back to cache when offline
     event.respondWith(
       fetch(event.request)
         .then(function(response) {
           if (response.ok) {
             var cloned = response.clone();
-            caches.open(PAGES_CACHE).then(function(cache) {
+            var cacheName = isHTML ? PAGES_CACHE : STATIC_CACHE;
+            caches.open(cacheName).then(function(cache) {
               cache.put(event.request, cloned);
             });
           }
@@ -91,14 +97,16 @@ self.addEventListener('fetch', function(event) {
           // Offline: serve cached version
           return caches.match(event.request).then(function(cached) {
             if (cached) return cached;
-            // Ultimate fallback: 404 page
-            var lang = url.pathname.indexOf('-en') !== -1 ? '404-en.html' : '404.html';
-            return caches.match('/' + lang);
+            // Ultimate fallback for HTML: 404 page
+            if (isHTML) {
+              var lang = url.pathname.indexOf('-en') !== -1 ? '404-en.html' : '404.html';
+              return caches.match('/' + lang);
+            }
           });
         })
     );
   } else {
-    // Cache-first for static assets (CSS, JS, images, JSON)
+    // Cache-first for truly static assets (CSS, JS, images)
     event.respondWith(
       caches.match(event.request).then(function(cached) {
         if (cached) return cached;
