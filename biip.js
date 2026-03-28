@@ -854,30 +854,59 @@
   function initHomeLatestFeed() {
     var feed = document.getElementById('home-latest-feed');
     if (!feed || !ARTICLES) return;
-    var lang  = getLang();
-    var count = parseInt(feed.getAttribute('data-count') || '4', 10);
-    var pool  = ARTICLES.filter(function(a) { return a.lang === lang; });
+    var lang   = getLang();
+    var count  = parseInt(feed.getAttribute('data-count') || '5', 10);
+    var pool   = ARTICLES.filter(function(a) { return a.lang === lang; });
     pool.sort(function(a, b) { return b.date > a.date ? 1 : b.date < a.date ? -1 : 0; });
-    var items = pool.slice(0, count);
+    var items  = pool.slice(0, count);
     if (!items.length) return;
 
     var prefix = getPrefix();
-    var byTxt = lang === 'en' ? 'by' : 'от';
+    var byTxt  = lang === 'en' ? 'by' : 'от';
+    var minTxt = lang === 'en' ? 'min read' : 'мин четене';
 
-    feed.innerHTML = items.map(function(a) {
-      var imgSrc = a.img ? prefix + 'articles/' + a.img : '';
-      var imgHtml = imgSrc
-        ? '<img src="' + imgSrc + '" alt="' + esc(a.title) + '" class="article-thumb" loading="lazy" width="44" height="44">'
-        : '';
-      return '<a href="' + prefix + a.file + '" class="article-preview">' +
-        imgHtml +
-        '<div class="article-info">' +
-          '<h4>' + esc(a.title) + '</h4>' +
-          '<p class="article-meta">' + byTxt + ' ' + esc(a.author) + '</p>' +
-          '<p class="article-teaser">' + esc(a.desc) + '</p>' +
-        '</div>' +
-        '</a>';
-    }).join('');
+    var hero = items[0];
+    var rest = items.slice(1);
+
+    /* ── Hero card (latest article) ── */
+    var heroImg = hero.img ? prefix + 'articles/' + hero.img : '';
+    var heroTag = (hero.tags && hero.tags[0]) ? hero.tags[0] : '';
+    var heroRT  = hero.readTime ? hero.readTime + '\u00a0' + minTxt : '';
+
+    var html = '<a href="' + prefix + hero.file + '" class="latest-hero">';
+    html += '<div class="latest-hero-img-wrap">';
+    if (heroImg) {
+      html += '<img src="' + heroImg + '" alt="' + esc(hero.title) +
+              '" class="latest-hero-img" loading="eager" width="860" height="220">';
+    }
+    html += '<div class="latest-hero-overlay">';
+    if (heroTag) { html += '<div class="latest-hero-tag">' + esc(heroTag) + '</div>'; }
+    html += '<h4 class="latest-hero-title">' + esc(hero.title) + '</h4>';
+    html += '<div class="latest-hero-meta">' + byTxt + ' ' + esc(hero.author);
+    if (heroRT) { html += ' \u00a0\u00b7\u00a0 ' + esc(heroRT); }
+    html += '</div></div></div></a>';
+
+    /* ── Secondary grid (remaining articles) ── */
+    if (rest.length) {
+      html += '<div class="latest-grid">';
+      rest.forEach(function(a) {
+        var imgSrc = a.img ? prefix + 'articles/' + a.img : '';
+        var rt = a.readTime ? a.readTime + '\u00a0' + minTxt : '';
+        html += '<a href="' + prefix + a.file + '" class="latest-card">';
+        if (imgSrc) {
+          html += '<img src="' + imgSrc + '" alt="' + esc(a.title) +
+                  '" class="latest-card-img" loading="lazy" width="80" height="60">';
+        }
+        html += '<div class="latest-card-body">';
+        html += '<div class="latest-card-title">' + esc(a.title) + '</div>';
+        html += '<div class="latest-card-meta">' + esc(a.author);
+        if (rt) { html += ' \u00b7 ' + esc(rt); }
+        html += '</div></div></a>';
+      });
+      html += '</div>';
+    }
+
+    feed.innerHTML = '<div class="latest-feed-wrap">' + html + '</div>';
   }
 
   /* ── FEATURE: Random Article Button ─────────────────────────── */
