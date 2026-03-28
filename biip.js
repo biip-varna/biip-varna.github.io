@@ -465,15 +465,23 @@
     }
 
     var heading = lang === 'en' ? 'Articles by this Expert' : 'Статии на този експерт';
-    var html = '<div class="author-articles-section"><h2>' + heading + '</h2><div class="article-preview-list">';
+    var minTxt  = lang === 'en' ? 'min read' : 'мин четене';
+
+    var html = '<div class="author-articles-section"><h2>' + heading + '</h2><div class="author-article-list">';
     authored.forEach(function(a) {
+      var imgSrc = a.img ? '../articles/' + a.img.replace(/ /g, '%20') : '';
+      var imgEl  = imgSrc
+        ? '<img class="author-article-img" src="' + imgSrc + '" alt="" loading="lazy" width="140" height="95">'
+        : '';
+      var rt   = a.readTime ? ' \u00b7 ' + a.readTime + '\u00a0' + minTxt : '';
+      var desc = a.desc ? '<p class="author-article-desc">' + esc(a.desc) + '</p>' : '';
       html +=
-        '<a href="../' + a.file + '" class="article-preview">' +
-          '<img src="../articles/' + a.img.replace(/ /g, '%20') + '" alt="" class="article-thumb" ' +
-            'width="44" height="44" loading="lazy">' +
-          '<div class="article-info">' +
-            '<h4>' + esc(a.title) + '</h4>' +
-            '<p class="article-meta">' + esc(a.date) + '</p>' +
+        '<a href="../' + a.file + '" class="author-article-card">' +
+          imgEl +
+          '<div class="author-article-body">' +
+            '<h3 class="author-article-title">' + esc(a.title) + '</h3>' +
+            '<div class="author-article-meta">' + esc(a.date) + rt + '</div>' +
+            desc +
           '</div>' +
         '</a>';
     });
@@ -870,7 +878,6 @@
 
     /* ── Hero card (latest article) ── */
     var heroImg = hero.img ? prefix + 'articles/' + hero.img : '';
-    var heroTag = (hero.tags && hero.tags[0]) ? hero.tags[0] : '';
     var heroRT  = hero.readTime ? hero.readTime + '\u00a0' + minTxt : '';
 
     var html = '<a href="' + prefix + hero.file + '" class="latest-hero">';
@@ -880,7 +887,6 @@
               '" class="latest-hero-img" loading="eager" width="860" height="220">';
     }
     html += '<div class="latest-hero-overlay">';
-    if (heroTag) { html += '<div class="latest-hero-tag">' + esc(heroTag) + '</div>'; }
     html += '<h4 class="latest-hero-title">' + esc(hero.title) + '</h4>';
     html += '<div class="latest-hero-meta">' + byTxt + ' ' + esc(hero.author);
     if (heroRT) { html += ' \u00a0\u00b7\u00a0 ' + esc(heroRT); }
