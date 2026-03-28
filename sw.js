@@ -1,7 +1,8 @@
 /* ================================================================
    sw.js — BIIP Service Worker
-   Strategy: Cache-first for static assets, network-first for HTML
-   and data files (articles.json, search-index.json).
+   Strategy:
+   - Network-first for HTML, data files, CSS, and JS (always fresh)
+   - Cache-first for images and other truly static assets
    Provides offline fallback for homepage and key pages.
    ================================================================ */
 
@@ -9,10 +10,9 @@ var CACHE_VERSION = 'biip-v4';
 var STATIC_CACHE  = CACHE_VERSION + '-static';
 var PAGES_CACHE   = CACHE_VERSION + '-pages';
 
-/* Static assets to pre-cache on install */
+/* Static assets to pre-cache on install (images/icons only — CSS and JS
+   are served network-first so they never need pre-caching here) */
 var PRECACHE_ASSETS = [
-  '/style.css?v=4',
-  '/biip.js?v=3',
   '/logo.png',
   '/favicon.ico',
   '/articles.json',
@@ -79,14 +79,18 @@ self.addEventListener('fetch', function(event) {
   var isDataFile = url.pathname === '/articles.json' ||
                    url.pathname === '/search-index.json';
 
-  if (isHTML || isDataFile) {
+  // CSS and JS change on every deploy — always fetch fresh, never serve stale
+  var isCssOrJs = url.pathname.indexOf('.css') !== -1 ||
+                  url.pathname.indexOf('.js') !== -1;
+
+  if (isHTML || isDataFile || isCssOrJs) {
     // Network-first: always try the network, fall back to cache when offline
     event.respondWith(
       fetch(event.request)
         .then(function(response) {
           if (response.ok) {
             var cloned = response.clone();
-            var cacheName = isHTML ? PAGES_CACHE : STATIC_CACHE;
+            var cacheName = (isHTML || isCssOrJs) ? PAGES_CACHE : STATIC_CACHE;
             caches.open(cacheName).then(function(cache) {
               cache.put(event.request, cloned);
             });
@@ -106,7 +110,7 @@ self.addEventListener('fetch', function(event) {
         })
     );
   } else {
-    // Cache-first for truly static assets (CSS, JS, images)
+    // Cache-first for truly static assets (images, fonts)
     event.respondWith(
       caches.match(event.request).then(function(cached) {
         if (cached) return cached;
