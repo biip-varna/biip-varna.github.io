@@ -40,6 +40,10 @@ header {
   padding: 30px 10px;
 }
 
+.logo-link {
+  display: inline-block;
+  line-height: 0;
+}
 .logo {
   height: 90px;
 }
