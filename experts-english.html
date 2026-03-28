@@ -126,35 +126,15 @@
     }
     .card.is-static{ cursor:default; }
 
-    .avatar-wrap{
-      position:relative;
+    .avatar{
       width:100%;
       aspect-ratio: 3 / 4;
-      overflow:hidden;
-      flex:none;
-      background:#0a1628;
-      display:block;
-    }
-    .avatar-bg{
-      position:absolute;
-      inset:0;
-      width:100%;
-      height:100%;
       object-fit:cover;
-      object-position:center top;
-      filter:blur(22px) brightness(0.45) saturate(0.65);
-      transform:scale(1.15);
-      display:block;
-    }
-    .avatar{
-      position:relative;
-      z-index:1;
-      width:100%;
-      height:100%;
-      object-fit:contain;
-      object-position:center top;
+      object-position:50% 0%;
       border-radius:0;
       border:none;
+      flex:none;
+      background:#e8f0fe;
       display:block;
     }
 
@@ -458,10 +438,7 @@ function render(){
   grid.innerHTML = list.map(ex => {
     const tags = (ex.tags||[]).slice(0,3).map(t => `<span class="tag">${esc(TAG_LABEL[t] || t)}</span>`).join("");
     const inner = `
-      <div class="avatar-wrap">
-        <img class="avatar-bg" src="${esc(ex.img)}" alt="" aria-hidden="true" loading="lazy">
-        <img class="avatar" src="${esc(ex.img)}" alt="${esc(ex.name)}" loading="lazy" width="300" height="400">
-      </div>
+      <img class="avatar" src="${esc(ex.img)}" alt="${esc(ex.name)}" loading="lazy" width="300" height="180">
       <div class="card-body">
         <h3>${esc(ex.name)}</h3>
         <div class="role">${esc(ex.role)}</div>

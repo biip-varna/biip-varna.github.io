@@ -883,7 +883,6 @@
     var html = '<a href="' + prefix + hero.file + '" class="latest-hero">';
     html += '<div class="latest-hero-img-wrap">';
     if (heroImg) {
-      html += '<img src="' + heroImg + '" alt="" class="latest-hero-img-bg" aria-hidden="true" loading="eager">';
       html += '<img src="' + heroImg + '" alt="' + esc(hero.title) +
               '" class="latest-hero-img" loading="eager" width="860" height="220">';
     }
@@ -901,11 +900,8 @@
         var rt = a.readTime ? a.readTime + '\u00a0' + minTxt : '';
         html += '<a href="' + prefix + a.file + '" class="latest-card">';
         if (imgSrc) {
-          html += '<div class="latest-card-img-wrap">';
-          html += '<img src="' + imgSrc + '" alt="" class="latest-card-img-bg" aria-hidden="true" loading="lazy">';
           html += '<img src="' + imgSrc + '" alt="' + esc(a.title) +
-                  '" class="latest-card-img" loading="lazy" width="100" height="72">';
-          html += '</div>';
+                  '" class="latest-card-img" loading="lazy" width="80" height="60">';
         }
         html += '<div class="latest-card-body">';
         html += '<div class="latest-card-title">' + esc(a.title) + '</div>';
