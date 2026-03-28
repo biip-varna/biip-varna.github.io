@@ -5,6 +5,9 @@ on:
     paths:
       - 'style.css'
       - 'biip.js'
+      - '*.html'
+      - 'articles/*.html'
+      - 'experts/*.html'
 
 jobs:
   bump:
@@ -18,8 +21,27 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Bump cache version in all HTML files
-        run: bash bump-cache.sh
+      - name: Decide bump vs normalize
+        id: mode
+        run: |
+          # List files changed in this push
+          CHANGED=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} 2>/dev/null || git diff --name-only HEAD~1 HEAD)
+          echo "Changed files: $CHANGED"
+          if echo "$CHANGED" | grep -qE '^(style\.css|biip\.js)$'; then
+            echo "mode=bump" >> "$GITHUB_OUTPUT"
+            echo "CSS or JS changed — will increment version."
+          else
+            echo "mode=normalize" >> "$GITHUB_OUTPUT"
+            echo "Only HTML files changed — will normalize to current version."
+          fi
+
+      - name: Run bump-cache.sh
+        run: |
+          if [ "${{ steps.mode.outputs.mode }}" = "bump" ]; then
+            bash bump-cache.sh
+          else
+            bash bump-cache.sh --normalize
+          fi
 
       - name: Commit and push if anything changed
         run: |
