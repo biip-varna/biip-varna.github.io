@@ -15,7 +15,7 @@
   <meta name="theme-color" content="#0057B7">
 </head>
 <body>
-<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;background:#fff;padding:4px 8px;font-weight:bold;">Skip to main content</a>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 <header>
   <img src="logo.png" class="logo" alt="BIIP Logo">
   <h1>Bulgarian Institute for International Politics</h1>
@@ -30,18 +30,18 @@
   <a href="contact-en.html">Contact</a> <span aria-hidden="true"> | </span>
   <a href="search-en.html" aria-label="Search">🔍</a> <a href="404.html">BG</a>
 </nav>
-<main id="main-content" style="text-align:center; padding: 3em 1em;">
-  <div style="font-size:5em; line-height:1; margin-bottom:0.3em;">🗺️</div>
-  <h2 style="font-size:2em; color:#0057B7; margin-bottom:0.3em;">404 — Page Not Found</h2>
-  <p style="font-size:1.1em; color:#555; max-width:520px; margin:0 auto 2em auto; line-height:1.6;">
+<main id="main-content" class="page-404-main">
+  <div class="page-404-emoji">🗺️</div>
+  <h2 class="page-404-heading">404 — Page Not Found</h2>
+  <p class="page-404-text">
     The page you're looking for doesn't exist or has been moved. You can return to the homepage or search for an article.
   </p>
-  <div style="display:flex; flex-wrap:wrap; gap:1em; justify-content:center; margin-bottom:2em;">
+  <div class="page-404-actions">
     <a href="index-en.html" class="btn-primary">← Home</a>
-    <a href="regions-en.html" class="btn-primary" style="background:#5981b3;">All Articles</a>
-    <a href="search-en.html" class="btn-primary" style="background:#5981b3;">🔍 Search</a>
+    <a href="regions-en.html" class="btn-secondary">All Articles</a>
+    <a href="search-en.html" class="btn-secondary">🔍 Search</a>
   </div>
-  <div id="home-latest-feed" data-count="4" style="max-width:700px; margin:0 auto; text-align:left;">
+  <div id="home-latest-feed" data-count="4" class="page-404-feed">
     <!-- Latest articles inserted by biip.js -->
   </div>
 </main>
@@ -53,9 +53,10 @@
     Instituto Búlgaro de Política Internacional
   </p>
   <p style="margin-top:0.5em;">
-    <a href="privacy-en.html" style="color:#555; text-decoration:none;">Privacy</a> |
-    <a href="archive-en.html" style="color:#555; text-decoration:none;">Archive</a> |
-    <a href="sitemap-en.html" style="color:#555; text-decoration:none;">Sitemap</a>
+    <a href="privacy-en.html" class="footer-link">Privacy</a> |
+    <a href="archive-en.html" class="footer-link">Archive</a> |
+    <a href="sitemap-en.html" class="footer-link">Sitemap</a> |
+    <a href="press-en.html" class="footer-link">Press Kit</a>
   </p>
 </footer>
 <script src="biip.js?v=3" defer></script>

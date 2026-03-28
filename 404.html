@@ -15,7 +15,7 @@
   <meta name="theme-color" content="#0057B7">
 </head>
 <body>
-<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;background:#fff;padding:4px 8px;font-weight:bold;">Към основното съдържание</a>
+<a href="#main-content" class="skip-link">Към основното съдържание</a>
 <header>
   <img src="logo.png" class="logo" alt="Лого на БИМП">
   <h1>Български институт за международна политика</h1>
@@ -29,18 +29,18 @@
 <a href="submit.html">Публикуване</a> <span aria-hidden="true"> | </span>
 <a href="contact.html">Контакт</a> <span aria-hidden="true"> | </span><a href="search.html" aria-label="Търсене">🔍</a> <a href="404-en.html">EN</a>
 </nav>
-<main id="main-content" style="text-align:center; padding: 3em 1em;">
-  <div style="font-size:5em; line-height:1; margin-bottom:0.3em;">🗺️</div>
-  <h2 style="font-size:2em; color:#0057B7; margin-bottom:0.3em;">404 — Страницата не е намерена</h2>
-  <p style="font-size:1.1em; color:#555; max-width:520px; margin:0 auto 2em auto; line-height:1.6;">
+<main id="main-content" class="page-404-main">
+  <div class="page-404-emoji">🗺️</div>
+  <h2 class="page-404-heading">404 — Страницата не е намерена</h2>
+  <p class="page-404-text">
     Страницата, която търсите, не съществува или е преместена. Може да се върнете на началната страница или да потърсите статия.
   </p>
-  <div style="display:flex; flex-wrap:wrap; gap:1em; justify-content:center; margin-bottom:2em;">
+  <div class="page-404-actions">
     <a href="index.html" class="btn-primary">← Начало</a>
-    <a href="regions.html" class="btn-primary" style="background:#5981b3;">Всички статии</a>
-    <a href="search.html" class="btn-primary" style="background:#5981b3;">🔍 Търсене</a>
+    <a href="regions.html" class="btn-secondary">Всички статии</a>
+    <a href="search.html" class="btn-secondary">🔍 Търсене</a>
   </div>
-  <div id="home-latest-feed" data-count="4" style="max-width:700px; margin:0 auto; text-align:left;">
+  <div id="home-latest-feed" data-count="4" class="page-404-feed">
     <!-- Latest articles inserted by biip.js -->
   </div>
 </main>
@@ -52,9 +52,10 @@
     Instituto Búlgaro de Política Internacional
   </p>
   <p style="margin-top:0.5em;">
-    <a href="privacy.html" style="color:#555; text-decoration:none;">Поверителност</a> |
-    <a href="archive.html" style="color:#555; text-decoration:none;">Архив</a> |
-    <a href="sitemap.html" style="color:#555; text-decoration:none;">Карта на сайта</a>
+    <a href="privacy.html" class="footer-link">Поверителност</a> |
+    <a href="archive.html" class="footer-link">Архив</a> |
+    <a href="sitemap.html" class="footer-link">Карта на сайта</a> |
+    <a href="press.html" class="footer-link">Пресцентър</a>
   </p>
 </footer>
 <script src="biip.js?v=3" defer></script>

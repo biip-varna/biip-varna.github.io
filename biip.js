@@ -84,6 +84,14 @@
     'privacy-en.html': 'privacy.html',
     '404.html': '404-en.html',
     '404-en.html': '404.html',
+    'america.html': 'america-en.html',
+    'america-en.html': 'america.html',
+    'archive.html': 'archive-en.html',
+    'archive-en.html': 'archive.html',
+    'sitemap.html': 'sitemap-en.html',
+    'sitemap-en.html': 'sitemap.html',
+    'press.html': 'press-en.html',
+    'press-en.html': 'press.html',
   };
 
   /* ── Tag labels ──────────────────────────────────────────────── */
@@ -176,6 +184,16 @@
                             role_bg: 'Асоцииран експерт',
                             role_en: 'Associate Expert',
                             tags: ['AIR'] },
+    'manuel-muller':      { bg: null, en: null,
+                            img: null,
+                            role_bg: 'Политолог',
+                            role_en: 'Political Scientist',
+                            tags: [] },
+    'vladimir-mitev':     { bg: null, en: null,
+                            img: null,
+                            role_bg: 'Журналист',
+                            role_en: 'Journalist',
+                            tags: [] },
   };
   // Canonical author names for matching
   var AUTHOR_ALIASES = {
@@ -447,7 +465,7 @@
     }
 
     var heading = lang === 'en' ? 'Articles by this Expert' : 'Статии на този експерт';
-    var html = '<h2 style="margin-top:2em;">' + heading + '</h2><div class="article-preview-list">';
+    var html = '<div class="author-articles-section"><h2>' + heading + '</h2><div class="article-preview-list">';
     authored.forEach(function(a) {
       html +=
         '<a href="../' + a.file + '" class="article-preview">' +
@@ -459,7 +477,7 @@
           '</div>' +
         '</a>';
     });
-    html += '</div>';
+    html += '</div></div>';
     container.innerHTML = html;
   }
 
@@ -585,7 +603,7 @@
           '<div class="sc-body">' +
             '<div class="sc-meta">' + langBadge + newBadge + dateStr + rt + (a.author ? ' · ' + esc(a.author) : '') + '</div>' +
             '<h3 class="sc-title">' + esc(a.title) + '</h3>' +
-            '<p class="sc-teaser">' + esc(a.teaser) + '</p>' +
+            '<p class="sc-teaser">' + esc(a.desc) + '</p>' +
           '</div>' +
         '</a>';
       }).join('');

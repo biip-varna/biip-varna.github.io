@@ -2,6 +2,7 @@
   --color-primary: #0057B7;
   --color-primary-hover: #0a60c8;
   --color-primary-dark: #0048a0;
+  --color-primary-darker: #004299;
   --color-primary-focus: #0066cc;
   --color-accent: #5981b3;
   --color-dark: #0a1628;
@@ -50,7 +51,7 @@ header {
 }
 
 nav {
-  background: #f5f5f5;
+  background: var(--color-bg-light);
   padding: 8px 4px;
   text-align: center;
   display: flex;
@@ -83,6 +84,7 @@ nav a:hover {
   nav span[aria-hidden] {
     display: none;
   }
+  .region-grid { grid-template-columns: 1fr; }
 }
 
 main {
@@ -92,10 +94,10 @@ main {
 }
 
 footer {
-  background: #f5f5f5;
+  background: var(--color-bg-light);
   padding: 15px;
   font-size: 12px;
-  color: #555;
+  color: var(--color-text-muted);
   text-align: center;
 }
 
@@ -110,6 +112,19 @@ footer {
   .motto {
     font-size: 1em;
   }
+  .article-preview {
+    flex-direction: column;
+    min-height: unset;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+  .article-thumb {
+    width: 100%;
+    height: 120px;
+    border-right: none;
+  }
+  .sc-img { width: 80px; height: 60px; }
+  .sc-title { font-size: 0.95em; }
 }
 
 /* --- ARTICLE PREVIEW / THUMBNAIL BLOCKS --- */
@@ -255,9 +270,6 @@ footer {
   width: 100%;
   box-sizing: border-box;
 }
-@media (max-width: 640px) {
-  .region-grid { grid-template-columns: 1fr; }
-}
 .region-card {
   display: flex;
   flex-direction: column;
@@ -300,7 +312,7 @@ a.region-card:hover {
 .region-card.region-soon .region-title { color: #888; }
 .region-desc {
   font-size: 0.9em;
-  color: #555;
+  color: var(--color-text-muted);
   line-height: 1.45;
   margin: 0;
 }
@@ -414,19 +426,6 @@ a.region-card:hover {
   }
   .related-article {
     width: 100%;
-  }
-}
-@media (max-width: 600px) {
-  .article-preview {
-    flex-direction: column;
-    min-height: unset;
-    max-width: 100%;
-    flex-basis: 100%;
-  }
-  .article-thumb {
-    width: 100%;
-    height: 120px;
-    border-right: none;
   }
 }
 
@@ -622,7 +621,7 @@ a.region-card:hover {
 .cta-sub {
   margin-top: 0.5em;
   font-size: 0.95em;
-  color: #555;
+  color: var(--color-text-muted);
   text-align: center;
 }
 @media (max-width: 400px) {
@@ -925,7 +924,7 @@ a.region-card:hover {
   article a[href]::after {
     content: " (" attr(href) ")";
     font-size: 8pt;
-    color: #555;
+    color: var(--color-text-muted);
     word-break: break-all;
   }
   /* But not for mailto or internal nav links */
@@ -1007,7 +1006,7 @@ a.region-card:hover {
 }
 .sc-teaser {
   font-size: 0.88em;
-  color: #555;
+  color: var(--color-text-muted);
   line-height: 1.45;
   margin: 0;
   display: -webkit-box;
@@ -1023,7 +1022,7 @@ a.region-card:hover {
   padding: 0.35em 0.9em;
   font-size: 0.85em;
   cursor: pointer;
-  color: #555;
+  color: var(--color-text-muted);
   font-weight: 600;
   transition: background 0.15s, color 0.15s;
 }
@@ -1073,11 +1072,6 @@ a.region-card:hover {
 .section-breadcrumb a { color: var(--color-primary, #0057B7); text-decoration: none; }
 .section-breadcrumb a:hover { text-decoration: underline; }
 
-@media (max-width: 600px) {
-  .sc-img { width: 80px; height: 60px; }
-  .sc-title { font-size: 0.95em; }
-}
-
 /* ── Citation button & modal ─────────────────────────────────── */
 .cite-trigger-btn {
   display: inline-block;
@@ -1092,7 +1086,7 @@ a.region-card:hover {
 }
 .cite-trigger-btn:hover { background: #dce8ff; }
 .cite-box {
-  background: #f5f5f5;
+  background: var(--color-bg-light);
   border: 1px solid #ddd;
   border-radius: 6px;
   padding: 0.75em 1em;
@@ -1171,7 +1165,7 @@ a.region-card:hover {
 }
 
 /* ── Email share button ──────────────────────────────────────── */
-.share-email { background: #555; }
+.share-email { background: var(--color-text-muted); }
 
 /* ── Random article button ───────────────────────────────────── */
 .random-article-wrap {
@@ -1185,7 +1179,7 @@ a.region-card:hover {
 .random-label {
   margin: 0 0 0.7em 0;
   font-size: 0.95em;
-  color: #555;
+  color: var(--color-text-muted);
 }
 .random-btn {
   display: inline-block;
@@ -1199,7 +1193,7 @@ a.region-card:hover {
   cursor: pointer;
   transition: background 0.15s;
 }
-.random-btn:hover { background: #004299; }
+.random-btn:hover { background: var(--color-primary-darker); }
 
 /* ── Author expert card ──────────────────────────────────────── */
 .author-cards-wrap {
@@ -1335,3 +1329,44 @@ button:focus-visible,
     transform: none !important;
   }
 }
+
+/* ── Skip link ─────────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 9999;
+  background: #fff;
+  padding: 4px 8px;
+  font-weight: bold;
+}
+.skip-link:focus {
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+}
+
+/* ── 404 page layout ───────────────────────────────────────── */
+.page-404-main    { text-align: center; padding: 3em 1em; }
+.page-404-emoji   { font-size: 5em; line-height: 1; margin-bottom: 0.3em; }
+.page-404-heading { font-size: 2em; color: var(--color-primary); margin-bottom: 0.3em; }
+.page-404-text    { font-size: 1.1em; color: var(--color-text-muted); max-width: 520px;
+                    margin: 0 auto 2em; line-height: 1.6; }
+.page-404-actions { display: flex; flex-wrap: wrap; gap: 1em;
+                    justify-content: center; margin-bottom: 2em; }
+.page-404-feed    { max-width: 700px; margin: 0 auto; text-align: left; }
+.footer-link      { color: var(--color-text-muted); text-decoration: none; }
+
+/* ── Press kit ─────────────────────────────────────────────── */
+.press-assets       { display: flex; flex-wrap: wrap; gap: 1em; margin: 1em 0; }
+.press-usage-note   { font-size: 0.9em; color: var(--color-text-muted); font-family: monospace; }
+.press-kit-cta      { background: var(--color-bg-light); border-radius: var(--border-radius-md);
+                      padding: 1.5em; margin: 2em 0; }
+.press-kit-cta h2   { margin-top: 0; }
+
+/* ── Author articles section ───────────────────────────────── */
+.author-articles-section h2 { margin-top: 2em; }
