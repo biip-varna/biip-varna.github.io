@@ -264,7 +264,7 @@ footer {
 }
 .region-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 1.2em;
   margin: 0 auto 2.5em auto;
   width: 100%;
