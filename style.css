@@ -1463,7 +1463,7 @@ button:focus-visible,
 }
 .latest-hero-img-wrap {
   position: relative;
-  height: 220px;
+  height: 260px;
   overflow: hidden;
   background: var(--color-dark, #0a1628);
 }
@@ -1471,7 +1471,7 @@ button:focus-visible,
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center 35%;
   transition: transform 0.35s ease;
   display: block;
 }
@@ -1532,9 +1532,10 @@ button:focus-visible,
   box-shadow: 0 6px 20px rgba(0,87,183,0.11);
 }
 .latest-card-img {
-  width: 80px;
-  height: 60px;
+  width: 100px;
+  height: 72px;
   object-fit: cover;
+  object-position: center 35%;
   border-radius: var(--border-radius-sm, 6px);
   flex-shrink: 0;
   background: #e8f0fe;
@@ -1557,10 +1558,10 @@ button:focus-visible,
 
 /* ── Responsive ────────────────────────────────────────────── */
 @media (max-width: 640px) {
-  .latest-hero-img-wrap { height: 165px; }
+  .latest-hero-img-wrap { height: 190px; }
   .latest-hero-title { font-size: 1.08em; }
   .latest-grid { grid-template-columns: 1fr; }
-  .latest-card-img { width: 68px; height: 52px; }
+  .latest-card-img { width: 80px; height: 60px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .latest-hero:hover .latest-hero-img { transform: none; }
