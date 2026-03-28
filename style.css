@@ -1401,9 +1401,10 @@ button:focus-visible,
   background: #fff;
 }
 .author-article-img {
-  width: 140px;
-  height: 95px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
+  object-position: center 25%;
   border-radius: var(--border-radius-sm, 6px);
   flex-shrink: 0;
   background: var(--color-primary-tint, #e8f0fe);
@@ -1438,7 +1439,7 @@ button:focus-visible,
   overflow: hidden;
 }
 @media (max-width: 640px) {
-  .author-article-img { width: 90px; height: 65px; }
+  .author-article-img { width: 72px; height: 72px; }
   .author-article-title { font-size: 0.95em; }
   .author-article-desc { display: none; }
 }
@@ -1458,66 +1459,42 @@ button:focus-visible,
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  position: relative;
-  background: #111;
+  background: #fff;
+  border: 1px solid #e6e8f0;
+  transition: box-shadow var(--transition-base, 0.2s) ease;
+}
+.latest-hero:hover {
+  box-shadow: 0 8px 28px rgba(0,87,183,0.12);
 }
 .latest-hero-img-wrap {
-  position: relative;
-  height: 300px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
-  background: var(--color-dark, #0a1628);
+  background: #e8f0fe;
 }
-.latest-hero-img-bg {
-  position: absolute;
-  inset: 0;
+.latest-hero-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
-  filter: blur(28px) brightness(0.38) saturate(0.7);
-  transform: scale(1.15);
-  display: block;
-}
-.latest-hero-img {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
+  object-position: center 25%;
   transition: transform 0.35s ease;
   display: block;
 }
 .latest-hero:hover .latest-hero-img { transform: scale(1.03); }
-.latest-hero-overlay {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  background: linear-gradient(transparent 0%, rgba(10,22,40,0.82) 60%);
-  padding: 2em 1.2em 1.1em;
-  color: #fff;
-}
-.latest-hero-tag {
-  display: inline-block;
-  font-size: 0.78em;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  background: var(--color-primary, #0057B7);
-  color: #fff;
-  border-radius: 999px;
-  padding: 0.18em 0.6em;
-  margin-bottom: 0.4em;
+.latest-hero-body {
+  padding: 0.85em 1.1em 1em;
+  border-top: 3px solid var(--color-primary, #0057B7);
 }
 .latest-hero-title {
   margin: 0 0 0.35em;
-  font-size: 1.28em;
+  font-size: 1.25em;
   font-weight: 700;
-  line-height: 1.25;
-  color: #fff;
+  line-height: 1.28;
+  color: var(--color-dark, #0a1628);
 }
 .latest-hero-meta {
-  font-size: 0.86em;
-  color: rgba(255,255,255,0.78);
+  font-size: 0.85em;
+  color: var(--color-text-light, #888);
 }
 
 /* ── Secondary grid (items 2–5) ────────────────────────────── */
@@ -1544,32 +1521,14 @@ button:focus-visible,
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0,87,183,0.11);
 }
-.latest-card-img-wrap {
-  position: relative;
-  width: 100px;
-  height: 72px;
-  flex-shrink: 0;
-  border-radius: var(--border-radius-sm, 6px);
-  overflow: hidden;
-  background: #0a1628;
-}
-.latest-card-img-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: blur(14px) brightness(0.4) saturate(0.6);
-  transform: scale(1.15);
-  display: block;
-}
 .latest-card-img {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: var(--border-radius-sm, 6px);
+  flex-shrink: 0;
+  background: #e8f0fe;
   display: block;
 }
 .latest-card-body { flex: 1; min-width: 0; }
@@ -1590,11 +1549,9 @@ button:focus-visible,
 
 /* ── Responsive ────────────────────────────────────────────── */
 @media (max-width: 640px) {
-  .latest-hero-img-wrap { height: 200px; }
-  .latest-hero-title { font-size: 1.08em; }
+  .latest-hero-title { font-size: 1.05em; }
   .latest-grid { grid-template-columns: 1fr; }
-  .latest-card-img-wrap { width: 80px; height: 60px; }
-  .latest-card-img { width: 80px; height: 60px; }
+  .latest-card-img { width: 60px; height: 60px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .latest-hero:hover .latest-hero-img { transform: none; }
