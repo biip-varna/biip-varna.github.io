@@ -44,11 +44,6 @@ header {
 .logo {
   height: 90px;
 }
-.logo-link {
-  display: inline-block;
-  line-height: 0;
-  border-radius: 8px;
-}
 
 .motto {
   font-style: italic;
@@ -125,19 +120,8 @@ footer {
   }
   .article-thumb {
     width: 100%;
-    height: 160px;
+    height: 120px;
     border-right: none;
-    border-radius: 8px 8px 0 0;
-    margin-right: 0;
-  }
-  .article-info {
-    padding: 0.6em 0.75em;
-  }
-  .article-teaser {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
   .sc-img { width: 80px; height: 60px; }
   .sc-title { font-size: 0.95em; }
@@ -169,8 +153,8 @@ footer {
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
 .article-thumb {
-  width: 80px;
-  height: 80px;
+  width: 44px;
+  height: 44px;
   object-fit: cover;
   border-right: 1px solid #eee;
   border-radius: 5px 0 0 5px;

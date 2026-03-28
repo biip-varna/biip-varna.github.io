@@ -867,7 +867,7 @@
     feed.innerHTML = items.map(function(a) {
       var imgSrc = a.img ? prefix + 'articles/' + a.img : '';
       var imgHtml = imgSrc
-        ? '<img src="' + imgSrc + '" alt="' + esc(a.title) + '" class="article-thumb" loading="lazy" width="80" height="80">'
+        ? '<img src="' + imgSrc + '" alt="' + esc(a.title) + '" class="article-thumb" loading="lazy" width="44" height="44">'
         : '';
       return '<a href="' + prefix + a.file + '" class="article-preview">' +
         imgHtml +
