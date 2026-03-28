@@ -84,14 +84,6 @@
     'privacy-en.html': 'privacy.html',
     '404.html': '404-en.html',
     '404-en.html': '404.html',
-    'america.html': 'america-en.html',
-    'america-en.html': 'america.html',
-    'archive.html': 'archive-en.html',
-    'archive-en.html': 'archive.html',
-    'sitemap.html': 'sitemap-en.html',
-    'sitemap-en.html': 'sitemap.html',
-    'press.html': 'press-en.html',
-    'press-en.html': 'press.html',
   };
 
   /* ── Tag labels ──────────────────────────────────────────────── */
@@ -184,16 +176,6 @@
                             role_bg: 'Асоцииран експерт',
                             role_en: 'Associate Expert',
                             tags: ['AIR'] },
-    'manuel-muller':      { bg: null, en: null,
-                            img: null,
-                            role_bg: 'Политолог',
-                            role_en: 'Political Scientist',
-                            tags: [] },
-    'vladimir-mitev':     { bg: null, en: null,
-                            img: null,
-                            role_bg: 'Журналист',
-                            role_en: 'Journalist',
-                            tags: [] },
   };
   // Canonical author names for matching
   var AUTHOR_ALIASES = {
@@ -465,27 +447,19 @@
     }
 
     var heading = lang === 'en' ? 'Articles by this Expert' : 'Статии на този експерт';
-    var minTxt  = lang === 'en' ? 'min read' : 'мин четене';
-
-    var html = '<div class="author-articles-section"><h2>' + heading + '</h2><div class="author-article-list">';
+    var html = '<h2 style="margin-top:2em;">' + heading + '</h2><div class="article-preview-list">';
     authored.forEach(function(a) {
-      var imgSrc = a.img ? '../articles/' + a.img.replace(/ /g, '%20') : '';
-      var imgEl  = imgSrc
-        ? '<img class="author-article-img" src="' + imgSrc + '" alt="" loading="lazy" width="140" height="95">'
-        : '';
-      var rt   = a.readTime ? ' \u00b7 ' + a.readTime + '\u00a0' + minTxt : '';
-      var desc = a.desc ? '<p class="author-article-desc">' + esc(a.desc) + '</p>' : '';
       html +=
-        '<a href="../' + a.file + '" class="author-article-card">' +
-          imgEl +
-          '<div class="author-article-body">' +
-            '<h3 class="author-article-title">' + esc(a.title) + '</h3>' +
-            '<div class="author-article-meta">' + esc(a.date) + rt + '</div>' +
-            desc +
+        '<a href="../' + a.file + '" class="article-preview">' +
+          '<img src="../articles/' + a.img.replace(/ /g, '%20') + '" alt="" class="article-thumb" ' +
+            'width="44" height="44" loading="lazy">' +
+          '<div class="article-info">' +
+            '<h4>' + esc(a.title) + '</h4>' +
+            '<p class="article-meta">' + esc(a.date) + '</p>' +
           '</div>' +
         '</a>';
     });
-    html += '</div></div>';
+    html += '</div>';
     container.innerHTML = html;
   }
 
@@ -611,7 +585,7 @@
           '<div class="sc-body">' +
             '<div class="sc-meta">' + langBadge + newBadge + dateStr + rt + (a.author ? ' · ' + esc(a.author) : '') + '</div>' +
             '<h3 class="sc-title">' + esc(a.title) + '</h3>' +
-            '<p class="sc-teaser">' + esc(a.desc) + '</p>' +
+            '<p class="sc-teaser">' + esc(a.teaser) + '</p>' +
           '</div>' +
         '</a>';
       }).join('');
@@ -862,57 +836,30 @@
   function initHomeLatestFeed() {
     var feed = document.getElementById('home-latest-feed');
     if (!feed || !ARTICLES) return;
-    var lang   = getLang();
-    var count  = parseInt(feed.getAttribute('data-count') || '5', 10);
-    var pool   = ARTICLES.filter(function(a) { return a.lang === lang; });
+    var lang  = getLang();
+    var count = parseInt(feed.getAttribute('data-count') || '4', 10);
+    var pool  = ARTICLES.filter(function(a) { return a.lang === lang; });
     pool.sort(function(a, b) { return b.date > a.date ? 1 : b.date < a.date ? -1 : 0; });
-    var items  = pool.slice(0, count);
+    var items = pool.slice(0, count);
     if (!items.length) return;
 
     var prefix = getPrefix();
-    var byTxt  = lang === 'en' ? 'by' : 'от';
-    var minTxt = lang === 'en' ? 'min read' : 'мин четене';
+    var byTxt = lang === 'en' ? 'by' : 'от';
 
-    var hero = items[0];
-    var rest = items.slice(1);
-
-    /* ── Hero card (latest article) ── */
-    var heroImg = hero.img ? prefix + 'articles/' + hero.img : '';
-    var heroRT  = hero.readTime ? hero.readTime + '\u00a0' + minTxt : '';
-
-    var html = '<a href="' + prefix + hero.file + '" class="latest-hero">';
-    html += '<div class="latest-hero-img-wrap">';
-    if (heroImg) {
-      html += '<img src="' + heroImg + '" alt="' + esc(hero.title) +
-              '" class="latest-hero-img" loading="eager" width="860" height="220">';
-    }
-    html += '<div class="latest-hero-overlay">';
-    html += '<h4 class="latest-hero-title">' + esc(hero.title) + '</h4>';
-    html += '<div class="latest-hero-meta">' + byTxt + ' ' + esc(hero.author);
-    if (heroRT) { html += ' \u00a0\u00b7\u00a0 ' + esc(heroRT); }
-    html += '</div></div></div></a>';
-
-    /* ── Secondary grid (remaining articles) ── */
-    if (rest.length) {
-      html += '<div class="latest-grid">';
-      rest.forEach(function(a) {
-        var imgSrc = a.img ? prefix + 'articles/' + a.img : '';
-        var rt = a.readTime ? a.readTime + '\u00a0' + minTxt : '';
-        html += '<a href="' + prefix + a.file + '" class="latest-card">';
-        if (imgSrc) {
-          html += '<img src="' + imgSrc + '" alt="' + esc(a.title) +
-                  '" class="latest-card-img" loading="lazy" width="80" height="60">';
-        }
-        html += '<div class="latest-card-body">';
-        html += '<div class="latest-card-title">' + esc(a.title) + '</div>';
-        html += '<div class="latest-card-meta">' + esc(a.author);
-        if (rt) { html += ' \u00b7 ' + esc(rt); }
-        html += '</div></div></a>';
-      });
-      html += '</div>';
-    }
-
-    feed.innerHTML = '<div class="latest-feed-wrap">' + html + '</div>';
+    feed.innerHTML = items.map(function(a) {
+      var imgSrc = a.img ? prefix + 'articles/' + a.img : '';
+      var imgHtml = imgSrc
+        ? '<img src="' + imgSrc + '" alt="' + esc(a.title) + '" class="article-thumb" loading="lazy" width="44" height="44">'
+        : '';
+      return '<a href="' + prefix + a.file + '" class="article-preview">' +
+        imgHtml +
+        '<div class="article-info">' +
+          '<h4>' + esc(a.title) + '</h4>' +
+          '<p class="article-meta">' + byTxt + ' ' + esc(a.author) + '</p>' +
+          '<p class="article-teaser">' + esc(a.desc) + '</p>' +
+        '</div>' +
+        '</a>';
+    }).join('');
   }
 
   /* ── FEATURE: Random Article Button ─────────────────────────── */

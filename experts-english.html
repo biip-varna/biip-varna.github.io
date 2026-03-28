@@ -7,7 +7,7 @@
   <title>Experts | BIIP</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="BIIP Experts – profiles of the institute's analysts and researchers.">
-  <link rel="stylesheet" href="style.css?v=216c9f3">
+  <link rel="stylesheet" href="style.css?v=4">
   <link rel="canonical" href="https://biip-varna.github.io/experts-english.html">
   <link rel="alternate" hreflang="en" href="https://biip-varna.github.io/experts-english.html">
   <link rel="alternate" hreflang="bg" href="https://biip-varna.github.io/eksperti.html">
@@ -98,96 +98,73 @@
     }
     .meta-row .btn:hover{ box-shadow:0 2px 8px rgba(0,0,0,.06); }
 
-    /* Cards – Portrait Gallery */
+    /* Cards */
     .grid{
       display:grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap:1.1em;
       margin-top:1.2em;
     }
-    @media (max-width: 720px){ .grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); gap:.75em; } }
+    @media (max-width: 980px){ .grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 620px){ .grid{ grid-template-columns: 1fr; } }
 
     .card{
       display:flex;
-      flex-direction:column;
-      background:#fff;
-      border:1px solid #e6e8f0;
+      gap:.95em;
+      align-items:flex-start;
+      padding:1em 1em .95em;
+      background:#fafafa;
+      border:1px solid #e6e6e6;
       border-radius:14px;
-      overflow:hidden;
       text-decoration:none;
       color:inherit;
-      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
-      position:relative;
+      transition: transform .14s ease, box-shadow .14s ease;
     }
     a.card:hover{
-      transform: translateY(-3px);
-      box-shadow:0 10px 32px rgba(0,87,183,.13);
-      border-color:#b8c7ff;
+      transform: translateY(-2px);
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
     }
     .card.is-static{ cursor:default; }
 
     .avatar{
-      width:100%;
-      aspect-ratio: 3 / 4;
-      max-height:320px;
+      width:72px;
+      height:92px;
       object-fit:cover;
-      object-position:50% 10%;
-      border-radius:0;
-      border:none;
-      flex:none;
-      background:#e8f0fe;
-      display:block;
-    }
-
-    .card-body{
-      padding:.75em .85em .85em;
-      display:flex;
-      flex-direction:column;
-      flex:1;
+      border-radius:12px;
+      border:1px solid #ddd;
+      flex: 0 0 72px;
+      background:#fff;
     }
     .card h3{
-      margin:0 0 .2em 0;
-      font-size:.95em;
+      margin:0 0 .18em 0;
+      font-size:1.02em;
       line-height:1.25;
     }
-    @media (max-width: 720px){ .card h3{ font-size:.82em; overflow-wrap:break-word; } }
-
     .role{
-      margin:0 0 .3em 0;
-      font-size:.8em;
-      color:#5981b3;
+      margin:0 0 .35em 0;
+      font-size:.92em;
+      color:#5f7aa6;
       font-weight:700;
-      line-height:1.3;
     }
     .teaser{
-      margin:.2em 0 0;
+      margin:0;
       color:#555;
-      font-size:.82em;
-      line-height:1.4;
-      display:-webkit-box;
-      -webkit-line-clamp:2;
-      -webkit-box-orient:vertical;
-      overflow:hidden;
+      font-size:.92em;
+      line-height:1.45;
     }
-    @media (max-width: 720px){ .teaser{ display:none; } }
-
     .tagline{
       display:flex;
-      gap:.35em;
+      gap:.4em;
       flex-wrap:wrap;
-      margin-top:auto;
-      padding-top:.55em;
+      margin-top:.55em;
     }
     .tag{
-      font-size:.73em;
-      padding:.15em .45em;
+      font-size:.82em;
+      padding:.18em .5em;
       border-radius:999px;
-      border:1px solid #e0e0f0;
-      background:#f2f5ff;
-      color:#5981b3;
-    }
-    @media (prefers-reduced-motion: reduce){
-      a.card:hover{ transform:none; }
+      border:1px solid #e0e0e0;
+      background:#fff;
+      color:#666;
     }
   </style>
   <link rel="canonical" href="https://biip-varna.github.io/experts-english.html">
@@ -211,7 +188,7 @@
 </head>
 
 <body>
-<a href="#main-content" class="skip-link">Skip to main content</a>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;background:#fff;padding:4px 8px;font-weight:bold;">Skip to main content</a>
 <header>
   <img src="logo.png" class="logo" alt="BIIP Logo">
   <h1>Experts</h1>
@@ -294,8 +271,7 @@
   <p style="margin-top:0.5em;">
     <a href="privacy-en.html" style="color:#555; text-decoration:none;">Privacy</a> |
     <a href="archive-en.html" style="color:#555; text-decoration:none;">Archive</a> |
-    <a href="sitemap-en.html" style="color:#555; text-decoration:none;">Sitemap</a> |
-    <a href="press-en.html" class="footer-link">Press Kit</a>
+    <a href="sitemap-en.html" style="color:#555; text-decoration:none;">Sitemap</a>
   </p>
 </footer>
 
@@ -439,8 +415,8 @@ function render(){
   grid.innerHTML = list.map(ex => {
     const tags = (ex.tags||[]).slice(0,3).map(t => `<span class="tag">${esc(TAG_LABEL[t] || t)}</span>`).join("");
     const inner = `
-      <img class="avatar" src="${esc(ex.img)}" alt="${esc(ex.name)}" loading="lazy" width="300" height="180">
-      <div class="card-body">
+      <img class="avatar" src="${esc(ex.img)}" alt="${esc(ex.name)}" loading="lazy" width="80" height="80">
+      <div>
         <h3>${esc(ex.name)}</h3>
         <div class="role">${esc(ex.role)}</div>
         <p class="teaser">${esc(ex.teaser)}</p>
@@ -484,7 +460,7 @@ document.getElementById("clear").addEventListener("click", ()=>{
 
 render();
 </script>
-<script src="biip.js?v=216c9f3" defer></script>
+<script src="biip.js?v=3" defer></script>
 <script>
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js').catch(function() {});

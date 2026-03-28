@@ -7,7 +7,7 @@
   <title>Български институт за международна политика</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Български институт за международна политика (БИМП) – независимо аналитично издание от Варна. Статии, коментари и анализи за България, Европа и света.">
-  <link rel="stylesheet" href="style.css?v=216c9f3">
+  <link rel="stylesheet" href="style.css?v=4">
     <link rel="canonical" href="https://biip-varna.github.io/index.html">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="logo.png" type="image/png">
@@ -31,7 +31,7 @@
   <meta name="theme-color" content="#0057B7">
 </head>
 <body>
-<a href="#main-content" class="skip-link">Skip to main content</a>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;background:#fff;padding:4px 8px;font-weight:bold;">Skip to main content</a>
 <header>
   <img src="logo.png" class="logo" alt="Лого на БИМП">
   <h1>Български институт за международна политика</h1>
@@ -146,7 +146,7 @@
 
   <section style="margin-top:2em;">
     <h3 style="margin-bottom:0.5em;">Последни статии</h3>
-    <div id="home-latest-feed" data-count="5"></div>
+    <div id="home-latest-feed" data-count="5" class="article-preview-list"></div>
     <p style="margin-top:1em;">
       <a href="regions.html" class="btn-secondary">Вижте всички статии по региони &rarr;</a>
     </p>
@@ -613,13 +613,12 @@ facts.sort((a,b)=> toNum(a.year) - toNum(b.year));
   <p style="margin-top:0.5em;">
     <a href="privacy.html" style="color:#555; text-decoration:none;">Поверителност</a> |
     <a href="archive.html" style="color:#555; text-decoration:none;">Архив</a> |
-    <a href="sitemap.html" style="color:#555; text-decoration:none;">Карта на сайта</a> |
-    <a href="press.html" class="footer-link">Пресцентър</a>
+    <a href="sitemap.html" style="color:#555; text-decoration:none;">Карта на сайта</a>
   </p>
 </footer>
 
 
-<script src="biip.js?v=216c9f3" defer></script>
+<script src="biip.js?v=3" defer></script>
 <script>
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js').catch(function() {});

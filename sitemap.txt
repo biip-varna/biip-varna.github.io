@@ -32,6 +32,7 @@ https://biip-varna.github.io/articles/when-bulgarian-democracy-falters.html
 https://biip-varna.github.io/articles/when-romania-bans-you.html
 https://biip-varna.github.io/articles/yuar-orazhiya.html
 https://biip-varna.github.io/asia.html
+https://biip-varna.github.io/bulgaria-soviet-en.html
 https://biip-varna.github.io/cee-en.html
 https://biip-varna.github.io/contact-en.html
 https://biip-varna.github.io/contact.html
@@ -64,7 +65,3 @@ https://biip-varna.github.io/articles/double-embrace.html
 https://biip-varna.github.io/asia-en.html
 https://biip-varna.github.io/search.html
 https://biip-varna.github.io/search-en.html
-
-https://biip-varna.github.io/press.html
-https://biip-varna.github.io/press-en.html
-https://biip-varna.github.io/articles/bulgaria-soviet-en.html
