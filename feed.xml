@@ -280,7 +280,7 @@
       <category>Bulgaria</category>
       <category>Romania</category>
       <category>Moldova</category>
-      <category>Eu</category>
+      <category>EU</category>
     </item>
     <item>
       <title>Терорът на Москва над Молдова</title>
@@ -300,7 +300,7 @@
       <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
       <dc:creator>д-р Мануел Мюлер</dc:creator>
       <description>Резюме на юлската проекция за местата в Европейския парламент и въпроса дали центристката коалиция може да запази мнозинството си.</description>
-      <category>Eu</category>
+      <category>EU</category>
       <category>Europeanparliament</category>
     </item>
     <item>
@@ -322,7 +322,7 @@
       <dc:creator>Константин Керанов</dc:creator>
       <description>Как новите технологии трансформират икономиката и какви политически решения са необходими.</description>
       <category>Digitaleconomy</category>
-      <category>Ai</category>
+      <category>AI</category>
     </item>
     <item>
       <title>България и Молдова – приятелство и общи предизвикателства</title>
@@ -333,7 +333,7 @@
       <description>Коментар върху българо-молдовските отношения, българската общност в Молдова и общите външни предизвикателства.</description>
       <category>Bulgaria</category>
       <category>Moldova</category>
-      <category>Eu</category>
+      <category>EU</category>
     </item>
     <item>
       <title>Когато Румъния те забрани</title>
@@ -364,7 +364,7 @@
       <dc:creator>Д-р Димитър Керанов, MRSSAf</dc:creator>
       <description>Защо въвеждането на еврото в България е икономически и политически изгодно въпреки обществените резерви.</description>
       <category>Bulgaria</category>
-      <category>Eu</category>
+      <category>EU</category>
       <category>Economy</category>
     </item>
     <item>
@@ -376,7 +376,19 @@
       <description>Защо България трябва да ускори замяната на съветското оръжие с натовско-съвместимо оборудване.</description>
       <category>Bulgaria</category>
       <category>Security</category>
-      <category>Nato</category>
+      <category>NATO</category>
+    </item>
+
+    <item>
+      <title>Bulgaria as a Former Soviet Republic</title>
+      <link>https://biip-varna.github.io/articles/bulgaria-soviet-en.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/bulgaria-soviet-en.html</guid>
+      <pubDate>Sat, 12 Jul 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Dr. Dimitar Keranov, MRSSAf</dc:creator>
+      <description>An analysis of Bulgaria's position as a Soviet satellite, not a republic. Written by Dr. Dimitar Keranov, MRSSAf.</description>
+      <category>Bulgaria</category>
+      <category>History</category>
+      <category>Russia</category>
     </item>
 
   </channel>
