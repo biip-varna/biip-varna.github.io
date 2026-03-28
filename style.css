@@ -379,6 +379,7 @@ a.region-card:hover {
   width: 88px;
   height: 110px;
   object-fit: cover;
+  object-position: 50% 15%;
   border-right: 1px solid #e6e6e6;
   border-radius: 10px 0 0 10px;
   flex-shrink: 0;
