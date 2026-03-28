@@ -6,7 +6,7 @@
    Provides offline fallback for homepage and key pages.
    ================================================================ */
 
-var CACHE_VERSION = 'biip-83d8726';
+var CACHE_VERSION = 'biip-711de5c';
 var STATIC_CACHE  = CACHE_VERSION + '-static';
 var PAGES_CACHE   = CACHE_VERSION + '-pages';
 
