@@ -1390,6 +1390,7 @@ button:focus-visible,
   position: relative;
   height: 220px;
   overflow: hidden;
+  background: var(--color-dark, #0a1628);
 }
 .latest-hero-img {
   width: 100%;
