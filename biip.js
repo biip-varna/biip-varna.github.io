@@ -471,7 +471,7 @@
     authored.forEach(function(a) {
       var imgSrc = a.img ? '../articles/' + a.img.replace(/ /g, '%20') : '';
       var imgEl  = imgSrc
-        ? '<img class="author-article-img" src="' + imgSrc + '" alt="" loading="lazy" width="100" height="100">'
+        ? '<img class="author-article-img" src="' + imgSrc + '" alt="" loading="lazy" width="140" height="95">'
         : '';
       var rt   = a.readTime ? ' \u00b7 ' + a.readTime + '\u00a0' + minTxt : '';
       var desc = a.desc ? '<p class="author-article-desc">' + esc(a.desc) + '</p>' : '';
@@ -881,17 +881,17 @@
     var heroRT  = hero.readTime ? hero.readTime + '\u00a0' + minTxt : '';
 
     var html = '<a href="' + prefix + hero.file + '" class="latest-hero">';
+    html += '<div class="latest-hero-img-wrap">';
     if (heroImg) {
-      html += '<div class="latest-hero-img-wrap">';
+      html += '<img src="' + heroImg + '" alt="" class="latest-hero-img-bg" aria-hidden="true" loading="eager">';
       html += '<img src="' + heroImg + '" alt="' + esc(hero.title) +
-              '" class="latest-hero-img" loading="eager" width="860" height="484">';
-      html += '</div>';
+              '" class="latest-hero-img" loading="eager" width="860" height="220">';
     }
-    html += '<div class="latest-hero-body">';
+    html += '<div class="latest-hero-overlay">';
     html += '<h4 class="latest-hero-title">' + esc(hero.title) + '</h4>';
     html += '<div class="latest-hero-meta">' + byTxt + ' ' + esc(hero.author);
     if (heroRT) { html += ' \u00a0\u00b7\u00a0 ' + esc(heroRT); }
-    html += '</div></div></a>';
+    html += '</div></div></div></a>';
 
     /* ── Secondary grid (remaining articles) ── */
     if (rest.length) {
@@ -901,7 +901,11 @@
         var rt = a.readTime ? a.readTime + '\u00a0' + minTxt : '';
         html += '<a href="' + prefix + a.file + '" class="latest-card">';
         if (imgSrc) {
-          html += '<img src="' + imgSrc + '" alt="" class="latest-card-img" loading="lazy" width="72" height="72">';
+          html += '<div class="latest-card-img-wrap">';
+          html += '<img src="' + imgSrc + '" alt="" class="latest-card-img-bg" aria-hidden="true" loading="lazy">';
+          html += '<img src="' + imgSrc + '" alt="' + esc(a.title) +
+                  '" class="latest-card-img" loading="lazy" width="100" height="72">';
+          html += '</div>';
         }
         html += '<div class="latest-card-body">';
         html += '<div class="latest-card-title">' + esc(a.title) + '</div>';
