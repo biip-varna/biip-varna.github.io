@@ -867,14 +867,14 @@
     feed.innerHTML = items.map(function(a) {
       var imgSrc = a.img ? prefix + 'articles/' + a.img : '';
       var imgHtml = imgSrc
-        ? '<img src="' + imgSrc + '" alt="' + esc(a.title) + '" class="home-feed-card-img" loading="lazy">'
+        ? '<img src="' + imgSrc + '" alt="' + esc(a.title) + '" class="article-thumb" loading="lazy" width="80" height="80">'
         : '';
-      return '<a href="' + prefix + a.file + '" class="home-feed-card">' +
+      return '<a href="' + prefix + a.file + '" class="article-preview">' +
         imgHtml +
-        '<div class="home-feed-card-body">' +
-          '<h4 class="home-feed-card-title">' + esc(a.title) + '</h4>' +
-          '<p class="home-feed-card-meta">' + byTxt + ' ' + esc(a.author) + '</p>' +
-          '<p class="home-feed-card-teaser">' + esc(a.desc) + '</p>' +
+        '<div class="article-info">' +
+          '<h4>' + esc(a.title) + '</h4>' +
+          '<p class="article-meta">' + byTxt + ' ' + esc(a.author) + '</p>' +
+          '<p class="article-teaser">' + esc(a.desc) + '</p>' +
         '</div>' +
         '</a>';
     }).join('');
