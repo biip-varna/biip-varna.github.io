@@ -844,19 +844,37 @@
     if (!items.length) return;
 
     var prefix = getPrefix();
-    var byTxt = lang === 'en' ? 'by' : 'от';
+    var byTxt   = lang === 'en' ? 'by' : 'от';
+    var minTxt  = lang === 'en' ? 'min read' : 'мин.';
 
     feed.innerHTML = items.map(function(a) {
       var imgSrc = a.img ? prefix + 'articles/' + a.img : '';
       var imgHtml = imgSrc
-        ? '<img src="' + imgSrc + '" alt="' + esc(a.title) + '" class="article-thumb" loading="lazy" width="44" height="44">'
+        ? '<img src="' + imgSrc + '" alt="' + esc(a.title) + '" class="article-thumb" loading="lazy" width="640" height="155">'
+        : '<div class="article-no-img" aria-hidden="true">&#128196;</div>';
+
+      var dateHtml = '';
+      if (a.date) {
+        try {
+          var d = new Date(a.date);
+          dateHtml = d.toLocaleDateString(lang === 'bg' ? 'bg-BG' : 'en-GB',
+            { year: 'numeric', month: 'short', day: 'numeric' });
+        } catch(e) { dateHtml = a.date; }
+      }
+      var rtHtml = a.readTime
+        ? '<span class="article-readtime">' + a.readTime + '\u202f' + minTxt + '</span>'
         : '';
+      var footerHtml = (dateHtml || rtHtml)
+        ? '<div class="article-card-footer"><span>' + dateHtml + '</span>' + rtHtml + '</div>'
+        : '';
+
       return '<a href="' + prefix + a.file + '" class="article-preview">' +
         imgHtml +
         '<div class="article-info">' +
           '<h4>' + esc(a.title) + '</h4>' +
           '<p class="article-meta">' + byTxt + ' ' + esc(a.author) + '</p>' +
           '<p class="article-teaser">' + esc(a.desc) + '</p>' +
+          footerHtml +
         '</div>' +
         '</a>';
     }).join('');
