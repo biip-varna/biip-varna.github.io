@@ -1066,6 +1066,50 @@
     });
   }
 
+  /* ── FEATURE: PWA install strip ─────────────────────────────── */
+  function initInstallBanner() {
+    if (localStorage.getItem('biip-install-dismissed')) return;
+
+    var deferredPrompt = null;
+
+    function dismissStrip() {
+      localStorage.setItem('biip-install-dismissed', '1');
+      var s = document.getElementById('install-strip');
+      if (s) s.remove();
+    }
+
+    window.addEventListener('beforeinstallprompt', function(e) {
+      e.preventDefault();
+      deferredPrompt = e;
+
+      var lang = getLang();
+      var msg = lang === 'en'
+        ? 'Install <strong>BIIP</strong> as an app \u2014 works offline too.'
+        : '\u0418\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u0439\u0442\u0435 <strong>\u0411\u0418\u041c\u041f</strong> \u043a\u0430\u0442\u043e \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u2014 \u0440\u0430\u0431\u043e\u0442\u0438 \u0438 \u043e\u0444\u043b\u0430\u0439\u043d.';
+      var btnLabel = lang === 'en' ? 'Install' : '\u0418\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u0439';
+
+      var strip = document.createElement('div');
+      strip.id = 'install-strip';
+      strip.setAttribute('role', 'banner');
+      strip.innerHTML =
+        '<span class="install-strip-msg">' + msg + '</span>' +
+        '<button class="install-strip-btn btn-primary" id="install-strip-yes">' + btnLabel + '</button>' +
+        '<button class="install-strip-close" id="install-strip-no" aria-label="Dismiss">&#x2715;</button>';
+      document.body.appendChild(strip);
+
+      document.getElementById('install-strip-yes').addEventListener('click', function() {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then(function() {
+          deferredPrompt = null;
+          dismissStrip();
+        });
+      });
+      document.getElementById('install-strip-no').addEventListener('click', dismissStrip);
+    });
+
+    window.addEventListener('appinstalled', dismissStrip);
+  }
+
   function runAll() {
     try { initReadingTime(); }    catch(e) { console.warn('readingTime:', e); }
     try { initLangSwitcher(); }   catch(e) { console.warn('langSwitcher:', e); }
@@ -1084,6 +1128,7 @@
     try { initBackToTop(); }        catch(e) { console.warn('backToTop:', e); }
     try { initPrintButtons(); }     catch(e) { console.warn('printButtons:', e); }
     try { initKeyboardShortcuts(); } catch(e) { console.warn('keyboardShortcuts:', e); }
+    try { initInstallBanner(); }     catch(e) { console.warn('installBanner:', e); }
   }
 
   function init() {

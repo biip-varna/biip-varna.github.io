@@ -922,6 +922,49 @@ a.region-card:hover {
   pointer-events: none;
 }
 
+/* ── PWA Install Strip ───────────────────────────────────────────── */
+#install-strip {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  padding: 0.75em 1.2em;
+  background: var(--color-dark, #0a1628);
+  color: #fff;
+  font-size: 0.9em;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.18);
+  animation: installSlideUp 0.3s ease;
+}
+@keyframes installSlideUp {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+.install-strip-msg { flex: 1; }
+.install-strip-msg strong { color: #fff; }
+.install-strip-btn {
+  font-size: 0.85em;
+  padding: 0.45em 1.1em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.install-strip-close {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 1.1em;
+  cursor: pointer;
+  padding: 0 0.3em;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.install-strip-close:hover { color: #fff; }
+@media (max-width: 480px) {
+  #install-strip { flex-wrap: wrap; gap: 0.5em; }
+  .install-strip-msg { width: 100%; }
+}
+
 /* ── Back to Top Button ──────────────────────────────────────────── */
 #back-to-top {
   position: fixed;
