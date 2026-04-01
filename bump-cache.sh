@@ -25,4 +25,12 @@ find . -name "*.html" -exec sed -i \
   "s/style\.css?v=[0-9]*/style.css?v=${NEXT}/g; \
    s/biip\.js?v=[0-9]*/biip.js?v=${NEXT}/g" {} +
 
-echo "Done. All HTML files now reference v=${NEXT}."
+# Keep sw.js in sync — update pre-cached asset versions and bump cache version
+SW_CACHE_CURRENT=$(grep -o "biip-v[0-9]*'" sw.js | grep -o '[0-9]*' | tail -1)
+SW_CACHE_NEXT=$((SW_CACHE_CURRENT + 1))
+sed -i \
+  "s/style\.css?v=[0-9]*/style.css?v=${NEXT}/g; \
+   s/biip\.js?v=[0-9]*/biip.js?v=${NEXT}/g; \
+   s/biip-v[0-9]*/biip-v${SW_CACHE_NEXT}/g" sw.js
+
+echo "Done. All HTML files and sw.js now reference v=${NEXT} (sw cache: biip-v${SW_CACHE_NEXT})."

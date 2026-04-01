@@ -5,14 +5,14 @@
    Provides offline fallback for homepage and key pages.
    ================================================================ */
 
-var CACHE_VERSION = 'biip-v3';
+var CACHE_VERSION = 'biip-v4';
 var STATIC_CACHE  = CACHE_VERSION + '-static';
 var PAGES_CACHE   = CACHE_VERSION + '-pages';
 
 /* Static assets to pre-cache on install */
 var PRECACHE_ASSETS = [
-  '/style.css?v=4',
-  '/biip.js?v=3',
+  '/style.css?v=5',
+  '/biip.js?v=5',
   '/logo.png',
   '/favicon.ico',
   '/articles.json',
