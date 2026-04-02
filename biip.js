@@ -181,7 +181,8 @@
   var AUTHOR_ALIASES = {
     'keranov':            ['д-р димитър керанов', 'dr. dimitar keranov',
                            'dimitar keranov', 'димитър керанов', 'dr. dimitar keranov, mrssaf',
-                           'д-р димитър керанов, mrssaf'],
+                           'д-р димитър керанов, mrssaf', 'dr. dimitar keranov, mrssaf, makadsa',
+                           'д-р димитър керанов, mrssaf, makadsa'],
     'konstantin-keranov': ['константин керанов', 'konstantin keranov'],
     'uzunov':             ['д-р александър узунов', 'dr. alexander uzunov',
                            'александър узунов', 'alexander uzunov'],
@@ -304,16 +305,30 @@
     var institutionFull = institution + ' (' + (lang === 'en' ? 'BIIP' : 'БИМП') + ')';
 
     function fmtAPA(name) {
-      // Strip honorific prefixes so "Dr. Dimitar Keranov" -> "Keranov, D." not "Keranov, D. D."
+      // Strip honorific prefix, then drop post-nominals (everything from first comma)
       var stripped = name.trim().replace(/^(Dr\.?|Prof\.?|Assoc\.?|д-р|Д-р|проф\.?|доц\.?)\s+/i, '');
-      var parts = stripped.split(' ');
-      if (parts.length < 2) return stripped;
+      var namePart = stripped.split(',')[0].trim();
+      var parts = namePart.split(/\s+/);
+      if (parts.length < 2) return namePart;
       var last = parts[parts.length - 1];
       var initials = parts.slice(0, -1).map(function(p){ return p[0] ? p[0] + '.' : ''; }).join(' ');
       return last + ', ' + initials;
     }
 
-    var chicago = (author ? esc(author.split(';')[0].trim()) + '. ' : '') +
+    function fmtChicago(name) {
+      // Strip honorific prefix; invert name (Last, First); retain post-nominals
+      var stripped = name.trim().replace(/^(Dr\.?|Prof\.?|Assoc\.?|д-р|Д-р|проф\.?|доц\.?)\s+/i, '');
+      var commaIdx = stripped.indexOf(',');
+      var namePart = commaIdx !== -1 ? stripped.slice(0, commaIdx).trim() : stripped;
+      var postNom  = commaIdx !== -1 ? stripped.slice(commaIdx) : '';
+      var parts = namePart.split(/\s+/);
+      if (parts.length < 2) return stripped;
+      var last = parts[parts.length - 1];
+      var rest = parts.slice(0, -1).join(' ');
+      return last + ', ' + rest + postNom;
+    }
+
+    var chicago = (author ? esc(fmtChicago(author.split(';')[0].trim())) + '. ' : '') +
       '&ldquo;' + eTitleTx + '.&rdquo; ' +
       institutionFull + ', ' +
       (dateStr ? esc(dateStr) + '. ' : '') + eUrl + '.';
