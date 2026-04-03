@@ -294,6 +294,9 @@
       ? new Date(pubDate).toLocaleDateString(lang === 'en' ? 'en-GB' : 'bg-BG',
           {year:'numeric', month:'long', day:'numeric'})
       : '';
+    // Some locales (bg-BG) append a trailing period (e.g. "17 март 2026 г.")
+    // Strip it so the citation template's own period doesn't create a double "г.."
+    if (dateStr) dateStr = dateStr.replace(/\.\s*$/, '');
 
     // Escape for safe HTML injection into cite-box innerHTML
     var eTitleTx = esc(titleTx);
