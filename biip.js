@@ -182,7 +182,7 @@
     'keranov':            ['д-р димитър керанов', 'dr. dimitar keranov',
                            'dimitar keranov', 'димитър керанов', 'dr. dimitar keranov, mrssaf',
                            'д-р димитър керанов, mrssaf', 'dr. dimitar keranov, mrssaf, makadsa',
-                           'д-р димитър керанов, mrssaf, makadsa'],
+                           'д-р димитър керанов, mrssaf, makadsa', 'д-р димитър керанов, mrssaf, lakadsa'],
     'konstantin-keranov': ['константин керанов', 'konstantin keranov'],
     'uzunov':             ['д-р александър узунов', 'dr. alexander uzunov',
                            'александър узунов', 'alexander uzunov'],
