@@ -331,12 +331,45 @@
       return last + ', ' + rest + postNom;
     }
 
-    var chicago = (author ? esc(fmtChicago(author.split(';')[0].trim())) + '. ' : '') +
+    // Subsequent Chicago authors: strip honorific, keep normal First Last order
+    function fmtChicagoNorm(name) {
+      return name.trim().replace(/^(Dr\.?|Prof\.?|Assoc\.?|д-р|Д-р|проф\.?|доц\.?)\s+/i, '');
+    }
+
+    var andWord = lang === 'en' ? 'and' : 'и';
+
+    // Chicago: first author inverted, subsequent normal; 4+ → et al.
+    var chicagoAuthorStr = '';
+    if (author) {
+      var cParts = author.split(';').map(function(a){ return a.trim(); });
+      if (cParts.length === 1) {
+        chicagoAuthorStr = fmtChicago(cParts[0]);
+      } else if (cParts.length <= 3) {
+        var cFirst = fmtChicago(cParts[0]);
+        var cRest  = cParts.slice(1).map(fmtChicagoNorm);
+        chicagoAuthorStr = cFirst + ', ' + andWord + ' ' + cRest.join(', ' + andWord + ' ');
+      } else {
+        chicagoAuthorStr = fmtChicago(cParts[0]) + ' et al.';
+      }
+    }
+
+    // APA 7: all authors as Last, F.; joined with ', '; '& ' before last
+    var apaAuthorStr = '';
+    if (author) {
+      var aParts = author.split(';').map(function(a){ return fmtAPA(a.trim()); });
+      if (aParts.length === 1) {
+        apaAuthorStr = aParts[0];
+      } else {
+        apaAuthorStr = aParts.slice(0, -1).join(', ') + ', & ' + aParts[aParts.length - 1];
+      }
+    }
+
+    var chicago = (chicagoAuthorStr ? esc(chicagoAuthorStr) + '. ' : '') +
       '&ldquo;' + eTitleTx + '.&rdquo; ' +
       institutionFull + ', ' +
       (dateStr ? esc(dateStr) + '. ' : '') + eUrl + '.';
 
-    var apa = (author ? esc(fmtAPA(author.split(';')[0].trim())) + ' ' : '') +
+    var apa = (apaAuthorStr ? esc(apaAuthorStr) + ' ' : '') +
       '(' + esc(String(year)) + '). ' + eTitleTx + '. ' +
       institution + '. ' + eUrl;
 
