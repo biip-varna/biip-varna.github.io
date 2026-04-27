@@ -84,6 +84,8 @@
     'privacy-en.html': 'privacy.html',
     '404.html': '404-en.html',
     '404-en.html': '404.html',
+    'sa-politics.html': 'sa-politics-en.html',
+    'sa-politics-en.html': 'sa-politics.html',
   };
 
   /* ── Tag labels ──────────────────────────────────────────────── */
@@ -465,8 +467,8 @@
     var heading = lang === 'en' ? 'Related Articles' : 'Свързани статии';
     var html = '<section class="related-articles"><h2>' + heading + '</h2><div class="related-list">';
     related.forEach(function(a) {
-      html += '<a href="' + a.file.split('/').pop() + '" class="related-article">' +
-        '<img src="' + imgSrc(a.img) + '" alt="" class="related-thumb" width="44" height="44" loading="lazy">' +
+      html += '<a href="' + getPrefix() + a.file + '" class="related-article">' +
+        '<img src="' + (getPrefix() + 'articles/' + a.img).replace(/ /g, '%20') + '" alt="" class="related-thumb" width="44" height="44" loading="lazy">' +
         '<div class="related-info"><div class="related-title">' + esc(a.title) + '</div></div></a>';
     });
     html += '</div></section>';
@@ -620,8 +622,7 @@
 
     function renderCards(articles) {
       return articles.map(function(a) {
-        var fname   = a.file.split('/').pop();
-        var href    = 'articles/' + fname;
+        var href    = a.file;
         var imgSrc  = ('articles/' + a.img).replace(/ /g, '%20');
         var dateStr = a.date ? a.date.split('-').reverse().join('.') : '';
         var rt      = a.readTime ? ' · ' + a.readTime + (lang === 'en' ? ' min' : ' мин') : '';
@@ -778,8 +779,7 @@
 
     var html = '';
     sorted.forEach(function(a) {
-      var fname = a.file.split('/').pop();
-      var href = 'articles/' + fname;
+      var href = a.file;
       var imgPath = 'articles/' + a.img.replace(/ /g, '%20');
       var langLabel = a.lang === 'en'
         ? '<span class="lang-badge lang-en">EN</span>'
