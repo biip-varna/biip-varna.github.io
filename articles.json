@@ -11,6 +11,17 @@
     "readTime": 5
   },
   {
+    "file": "projects/ten-countries-south/sa-politics.html",
+    "title": "Южна Африка: демокрация на кръстопът",
+    "desc": "Южна Африка е най-индустриализираната и една от най-политически сложните държави на африканския континент — конституционна демокрация под напрежение.",
+    "author": "Д-р Димитър Керанов, MRSSAf, LAkadSA",
+    "date": "2026-04-27",
+    "lang": "bg",
+    "img": "article images/biipall.png",
+    "tags": ["southafrica", "africa", "democracy", "politics"],
+    "readTime": 5
+  },
+  {
     "file": "articles/us-german-relations.html",
     "title": "US-German Relations in an Era of Strategic Recalibration",
     "desc": "An analysis of US-German relations amid strategic recalibration — from NATO and defence to economic interdependence and transatlantic technology cooperation.",
