@@ -1,5 +1,25 @@
 [
   {
+    "url": "projects/ten-countries-south/sa-politics-en.html",
+    "title": "South Africa: Democracy at a Crossroads",
+    "desc": "South Africa is the most industrialised and one of the most politically complex countries on the African continent — a constitutional democracy under stress.",
+    "author": "Dr. Dimitar Keranov, MRSSAf, MAkadSA",
+    "date": "2026-04-27",
+    "lang": "en",
+    "img": "articles/article images/biipall.png",
+    "body": "South Africa is the most industrialised and one of the most politically complex countries on the African continent. It is a constitutional democracy with an independent judiciary a free press and regular competitive elections yet it is also a country where decades of liberation movement dominance have left deep marks on how power is exercised and contested. The African National Congress ANC led the struggle against apartheid the system of institutionalised racial segregation that governed South Africa from 1948 until the early 1990s. When Nelson Mandela won the country's first fully democratic election in 1994 the ANC began what would become an uninterrupted thirty-year hold on national power. In May 2024 for the first time in nearly thirty years the ANC lost its parliamentary majority. The party received 40.18 percent of the vote while the Democratic Alliance came second with 21.81 percent followed by the newly formed uMkhonto we Sizwe party at 14.58 percent and the Economic Freedom Fighters at 9.52 percent. The MK party was founded in December 2023 by former president Jacob Zuma. Rather than forming a narrow coalition with populist parties the ANC formed a Government of National Unity with the DA. South Africa's Constitutional Court has repeatedly ruled against sitting presidents and powerful interests. South Africa is the dominant economy of the southern African region a member of BRICS a significant voice in African Union politics. Its BRICS membership and longstanding ties to Russia have placed it in an increasingly uncomfortable position since Russia's invasion of Ukraine in 2022."
+  },
+  {
+    "url": "projects/ten-countries-south/sa-politics.html",
+    "title": "Южна Африка: демокрация на кръстопът",
+    "desc": "Южна Африка е най-индустриализираната и една от най-политически сложните държави на африканския континент — конституционна демокрация под стрес.",
+    "author": "Д-р Димитър Керанов, MRSSAf, LAkadSA",
+    "date": "2026-04-27",
+    "lang": "bg",
+    "img": "articles/article images/biipall.png",
+    "body": "Южна Африка е най-индустриализираната и една от най-политически сложните държави на африканския континент. Тя е конституционна демокрация с независима съдебна власт свободна преса и редовни конкурентни избори. Африканският национален конгрес АНК води борбата срещу апартейда системата на институционализирана расова сегрегация от 1948 г. до началото на 90-те години. Когато Нелсън Мандела печели първите напълно демократични избори през 1994 г. АНК започва тридесетгодишно непрекъснато управление. През май 2024 г. за първи път от близо тридесет години АНК загуби парламентарното си мнозинство. Партията получи 40.18 процента от гласовете докато Демократическият алианс зае второ място с 21.81 процента следван от партията МК с 14.58 процента и Икономическите бойци с 9.52 процента. Партията МК е основана от бившия президент Джейкъб Зума. АНК създаде Правителство на националното единство с ДА. Конституционният съд нееднократно се е произнасял срещу действащи президенти. Южна Африка е водещата икономика в южноафриканския регион член на БРИКС и значим глас в политиката на Африканския съюз."
+  },
+  {
     "url": "articles/us-german-relations.html",
     "title": "US-German Relations in an Era of Strategic Recalibration",
     "desc": "An analysis of US-German relations amid strategic recalibration — from NATO and defence to economic interdependence and transatlantic technology cooperation.",

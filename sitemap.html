@@ -181,9 +181,8 @@
       function renderList(list) {
         if (!list.length) return '<li style="color:#888">Няма публикации.</li>';
         return list.map(function(a) {
-          var url = a.file.split('/').pop();
           var date = a.date ? '<span class="sitemap-meta">' + fmtDate(a.date) + '</span>' : '';
-          return '<li><a href="articles/' + url + '">' + a.title + '</a>' + date + '</li>';
+          return '<li><a href="' + a.file + '">' + a.title + '</a>' + date + '</li>';
         }).join('');
       }
 

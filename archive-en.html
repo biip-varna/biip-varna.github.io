@@ -134,12 +134,11 @@
         var year = parts[0];
         html += '<div class="archive-month"><h2>' + monthName + ' ' + year + '</h2><ul class="archive-list">';
         groups[key].forEach(function(a) {
-          var url = a.file.split('/').pop();
           var day = a.date ? a.date.slice(8, 10) + ' ' + EN_MONTHS[parseInt(a.date.slice(5,7),10)-1].slice(0,3) : '';
           var langLabel = a.lang === 'en' ? '<span class="archive-lang">EN</span>' : '<span class="archive-lang">BG</span>';
           html += '<li>' +
             '<span class="archive-date">' + day + '</span>' +
-            '<a href="articles/' + url + '">' + a.title + '</a>' +
+            '<a href="' + a.file + '">' + a.title + '</a>' +
             langLabel +
             '</li>';
         });
