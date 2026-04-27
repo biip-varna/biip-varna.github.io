@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self' https://api.open-meteo.com; font-src 'self'; object-src 'none'; base-uri 'self';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Десет държави на юг | БИМП</title>
+  <meta name="description" content="„Десет държави на юг" – проект на БИМП от Д-р Димитър Керанов с аналитични материали за политиката и езиците на десет южноафрикански страни.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../style.css?v=6">
+  <style>
+    .lang-nav { margin-top: 1em; display: flex; flex-wrap: wrap; gap: 0.4em; }
+    .lang-nav a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #0057B7;
+      border: 1.5px solid #0057B7;
+      border-radius: 6px;
+      padding: 0.3em 0.8em;
+      font-size: 0.93em;
+      transition: background .13s, color .13s;
+    }
+    .lang-nav a:hover { background: #0057B7; color: #fff; }
+    .lang-section {
+      margin-top: 1.5em;
+      padding: 1.2em 1.3em;
+      background: #fafafa;
+      border: 1px solid #e3e3e3;
+      border-radius: 10px;
+    }
+    .project-author {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      margin: 1.4em 0 0;
+      padding: 0.85em 1em;
+      background: #f4f7fc;
+      border-radius: 10px;
+      border: 1px solid #dce4f0;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow .18s;
+    }
+    .project-author:hover { box-shadow: 0 3px 12px rgba(0,0,0,0.09); }
+    .project-author img {
+      width: 60px;
+      height: 75px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #cdd6e8;
+      flex-shrink: 0;
+    }
+    .author-name { font-weight: 700; font-size: 1em; }
+    .author-role { font-size: 0.87em; color: #5981b3; margin-top: 0.15em; }
+    .country-grid {
+      margin-top: 1.5em;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 0.75em;
+    }
+    .country-entry {
+      padding: 0.75em 1em;
+      background: #fafafa;
+      border: 1px solid #e3e3e3;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5em;
+      flex-wrap: wrap;
+    }
+    .country-name { font-weight: 600; font-size: 0.97em; }
+    .country-links { font-size: 0.9em; display: flex; gap: 0.5em; align-items: center; }
+    .country-links a { color: #0057B7; text-decoration: none; font-weight: 600; }
+    .country-links a:hover { text-decoration: underline; }
+    .coming-soon { color: #aaa; font-size: 0.87em; font-style: italic; }
+  </style>
+  <link rel="canonical" href="https://biip-varna.github.io/projects/ten-countries-south.html">
+  <link rel="alternate" hreflang="bg" href="https://biip-varna.github.io/projects/ten-countries-south.html">
+  <link rel="alternate" hreflang="en" href="https://biip-varna.github.io/projects/ten-countries-south-en.html">
+  <link rel="alternate" hreflang="x-default" href="https://biip-varna.github.io/projects/ten-countries-south-en.html">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="bg_BG">
+  <meta property="og:title" content="Десет държави на юг | БИМП">
+  <meta property="og:description" content="„Десет държави на юг" – проект на БИМП с аналитични материали за политиката и езиците на десет южноафрикански страни.">
+  <meta property="og:url" content="https://biip-varna.github.io/projects/ten-countries-south.html">
+  <meta property="og:image" content="https://biip-varna.github.io/logo.png">
+  <meta property="og:site_name" content="Български институт за международна политика">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Десет държави на юг | БИМП">
+  <meta name="twitter:description" content="„Десет държави на юг" – проект на БИМП с аналитични материали за политиката и езиците на десет южноафрикански страни.">
+  <meta name="twitter:image" content="https://biip-varna.github.io/logo.png">
+  <meta name="theme-color" content="#0057B7">
+</head>
+
+<body>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;background:#fff;padding:4px 8px;font-weight:bold;">Към основното съдържание</a>
+<header>
+  <a href="../index.html" class="logo-link" aria-label="Home"><img src="../logo.png" class="logo" alt="Лого на БИМП"></a>
+  <h1>Проекти на БИМП</h1>
+  <p class="motto">„Всеки един има дълг да върши възможното." – Васил Априлов</p>
+</header>
+
+<nav aria-label="Главна навигация">
+  <a href="../index.html">Начало</a> <span aria-hidden="true"> | </span>
+  <a href="../about.html">За нас</a> <span aria-hidden="true"> | </span>
+  <a href="../regions.html">Региони</a> <span aria-hidden="true"> | </span>
+  <a href="../eksperti.html">Експерти</a> <span aria-hidden="true"> | </span>
+  <a href="../submit.html">Публикуване</a> <span aria-hidden="true"> | </span>
+  <a href="../contact.html">Контакт</a> <span aria-hidden="true"> | </span>
+  <a href="../search.html" aria-label="Търсене" style="padding:8px 6px;">🔍</a>
+  <a href="ten-countries-south-en.html">EN</a>
+</nav>
+
+<main id="main-content">
+  <h2>Десет държави на юг</h2>
+  <p style="color:#666; font-size:0.95em; margin-top:-0.3em;">
+    Проект на Българския институт за международна политика (БИМП)
+  </p>
+
+  <!-- Author card -->
+  <a href="../experts/keranov.html" class="project-author">
+    <img src="../experts/images/Keranov.jpg" alt="Д-р Димитър Керанов">
+    <div>
+      <div class="author-name">Д-р Димитър Керанов, MRSSAf, LAkadSA</div>
+      <div class="author-role">Член на УС; Експерт Африка и ЦИЕ</div>
+      <div style="font-size:0.87em; color:#555; margin-top:0.3em;">Автор и водещ на проекта</div>
+    </div>
+  </a>
+
+  <!-- Language navigation -->
+  <div class="lang-nav">
+    <a href="#bg">🇧🇬 Български</a>
+    <a href="ten-countries-south-en.html">🇬🇧 English</a>
+  </div>
+
+  <!-- Bulgarian section -->
+  <section id="bg" class="lang-section">
+    <h3>🇧🇬 За проекта</h3>
+
+    <p>
+      <strong>„Десет държави на юг"</strong> е проект на Д-р Димитър Керанов — политолог, член на Управителния съвет на Българския институт за международна политика и член на Кралското общество на Южна Африка (MRSSAf), както и на Южноафриканската академия на науките и изкуствата (SAAWK).
+    </p>
+
+    <p>
+      Проектът предлага кратки аналитични материали за политиката и езиците на десет страни в Южна Африка, публикувани на английски и български. Всяка страна се разглежда в два текста: политически обзор и езиков обзор.
+    </p>
+
+    <p>
+      Проектът се основава на експертизата на автора в африканските изследвания, включително монографията му от 2025 г. за Южна Африка, Зимбабве, Намибия, Ангола и Мозамбик (ЕНА, Варна, ISBN 978-619-7255-24-9), членството му в Кралското общество на Южна Африка и в Южноафриканската академия на науките и изкуствата, и познанията му по африкаанс и сесото.
+    </p>
+
+    <p>
+      Всички материали се публикуват в списание <em>Regions</em> (ISSN 3033-2516).
+    </p>
+
+    <p style="font-weight:bold; color:#444;">⚠️ Всички изразени мнения са лични.</p>
+  </section>
+
+  <!-- Country grid -->
+  <h3 style="margin-top:2em;">Материали по страни</h3>
+  <div class="country-grid">
+
+    <div class="country-entry">
+      <span class="country-name">🇿🇦 Южна Африка</span>
+      <span class="coming-soon">Очаквайте скоро</span>
+    </div>
+
+    <div class="country-entry">
+      <span class="country-name">🇳🇦 Намибия</span>
+      <span class="coming-soon">Очаквайте скоро</span>
+    </div>
+
+    <div class="country-entry">
+      <span class="country-name">🇿🇼 Зимбабве</span>
+      <span class="coming-soon">Очаквайте скоро</span>
+    </div>
+
+    <div class="country-entry">
+      <span class="country-name">🇧🇼 Ботсвана</span>
+      <span class="coming-soon">Очаквайте скоро</span>
+    </div>
+
+    <div class="country-entry">
+      <span class="country-name">🇲🇿 Мозамбик</span>
+      <span class="coming-soon">Очаквайте скоро</span>
+    </div>
+
+    <div class="country-entry">
+      <span class="country-name">🇦🇴 Ангола</span>
+      <span class="coming-soon">Очаквайте скоро</span>
+    </div>
+
+    <div class="country-entry">
+      <span class="country-name">🇿🇲 Замбия</span>
+      <span class="coming-soon">Очаквайте скоро</span>
+    </div>
+
+    <div class="country-entry">
+      <span class="country-name">🇲🇼 Малави</span>
+      <span class="coming-soon">Очаквайте скоро</span>
+    </div>
+
+    <div class="country-entry">
+      <span class="country-name">🇱🇸 Лесото</span>
+      <span class="coming-soon">Очаквайте скоро</span>
+    </div>
+
+    <div class="country-entry">
+      <span class="country-name">🇸🇿 Есватини</span>
+      <span class="coming-soon">Очаквайте скоро</span>
+    </div>
+
+  </div>
+
+  <p style="margin-top:2em;">
+    <a href="../index.html" class="btn-secondary">← Назад към началната страница</a>
+  </p>
+</main>
+
+<footer>
+  <p>
+    Български институт за международна политика |
+    Bulgarian Institute for International Politics |
+    Bugarski institut za međunarodnu politiku
+  </p>
+</footer>
+
+<script src="../biip.js?v=6" defer></script>
+</body>
+</html>
