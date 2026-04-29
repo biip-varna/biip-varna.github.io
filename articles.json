@@ -1,5 +1,16 @@
 [
   {
+    "file": "articles/bulgaria-crime-governance.html",
+    "title": "Crime and Governance: Bulgaria's Quiet Challenge",
+    "desc": "Bulgaria presents a paradox: low homicide rates coexist with persistent corruption, weak judicial credibility, and gaps in financial-crime enforcement — a governance analysis.",
+    "author": "Dr. Dimitar Keranov, MRSSAf, MAkadSA",
+    "date": "2026-04-29",
+    "lang": "en",
+    "img": "article images/biipall.png",
+    "tags": ["bulgaria", "corruption", "governance", "judiciary", "crime", "fatf", "eu"],
+    "readTime": 8
+  },
+  {
     "file": "projects/ten-countries-south/sa-politics-en.html",
     "title": "South Africa: Democracy at a Crossroads",
     "desc": "South Africa is the most industrialised and one of the most politically complex countries on the African continent — a constitutional democracy under stress.",
