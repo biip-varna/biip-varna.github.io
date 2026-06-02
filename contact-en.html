@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self' https://api.open-meteo.com; font-src 'self'; object-src 'none'; base-uri 'self';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://platform.linkedin.com; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self' https://api.open-meteo.com https://www.linkedin.com https://platform.linkedin.com; font-src 'self'; object-src 'none'; frame-src https://www.linkedin.com https://platform.linkedin.com; base-uri 'self';">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Contact | BIIP</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -97,6 +97,14 @@
     </a>
   </div>
 
+  <!-- Dr. Keranov on LinkedIn -->
+  <section style="margin-top:1.5em;">
+    <h2 style="margin-bottom:0.6em;">Dr. Keranov on LinkedIn</h2>
+    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="keranov" data-version="v1">
+      <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/keranov?trk=profile-badge">Dimitar K.</a>
+    </div>
+  </section>
+
   <!-- Media & Press -->
   <section style="margin-top:1.5em; background:#f8f8f8; padding:1em 1.2em; border-left:4px solid #0057B7;">
     <h2 style="margin-top:0;">Media & Press</h2>
@@ -160,6 +168,7 @@
 }
 </script>
 <script src="biip.js?v=7" defer></script>
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 <script>
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js').catch(function() {});
