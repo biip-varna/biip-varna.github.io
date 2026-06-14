@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self' https://api.open-meteo.com; font-src 'self'; object-src 'none'; base-uri 'self';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Проекти | БИМП</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Проекти на БИМП — интерактивни игри, публикации и аналитични инструменти на Българския институт за международна политика.">
+  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="canonical" href="https://biip-varna.github.io/projects.html">
+  <link rel="alternate" hreflang="bg" href="https://biip-varna.github.io/projects.html">
+  <link rel="alternate" hreflang="en" href="https://biip-varna.github.io/projects-en.html">
+  <link rel="alternate" hreflang="x-default" href="https://biip-varna.github.io/projects.html">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="alternate" type="application/rss+xml" title="BIIP – Regions RSS Feed" href="https://biip-varna.github.io/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="bg_BG">
+  <meta property="og:title" content="Проекти | БИМП">
+  <meta property="og:description" content="Проекти на БИМП — интерактивни игри, публикации и аналитични инструменти на Българския институт за международна политика.">
+  <meta property="og:url" content="https://biip-varna.github.io/projects.html">
+  <meta property="og:image" content="https://biip-varna.github.io/logo.png">
+  <meta property="og:site_name" content="Български институт за международна политика">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Проекти | БИМП">
+  <meta name="twitter:description" content="Проекти на БИМП — интерактивни игри, публикации и аналитични инструменти на Българския институт за международна политика.">
+  <meta name="twitter:image" content="https://biip-varna.github.io/logo.png">
+  <meta name="theme-color" content="#0057B7">
+  <style>
+    .projects-intro {
+      max-width: 760px;
+      color: #444;
+      margin-bottom: 0.5em;
+    }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 0.7em;
+      margin: 2.5em 0 1.2em;
+    }
+    .section-label h2 {
+      margin: 0;
+      font-size: 1.15em;
+      color: var(--color-primary, #0057B7);
+      white-space: nowrap;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      background: var(--color-border, #e0e8f5);
+    }
+
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.4rem;
+    }
+
+    .game-card {
+      background: #fff;
+      border: 1px solid #e3e3e3;
+      border-radius: 14px;
+      padding: 1.4rem 1.3rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow .2s ease, transform .2s ease, border-color .2s ease;
+    }
+    .game-card:hover {
+      box-shadow: 0 6px 24px rgba(0, 87, 183, 0.12);
+      transform: translateY(-3px);
+      border-color: #b8c7ff;
+    }
+
+    .game-card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .game-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: #0057B7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6em;
+      flex-shrink: 0;
+    }
+    .game-icon.teal  { background: #0e7c6a; }
+    .game-icon.green { background: #217a3c; }
+    .game-icon.gold  { background: #8a6400; }
+
+    .game-title {
+      margin: 0 0 0.15em;
+      font-size: 1.05em;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .game-subtitle {
+      margin: 0;
+      font-size: 0.85em;
+      color: #888;
+    }
+
+    .game-desc {
+      font-size: 0.9em;
+      color: #444;
+      line-height: 1.5;
+      margin: 0;
+      flex: 1;
+    }
+
+    .game-play {
+      display: inline-block;
+      margin-top: 0.4em;
+      padding: 0.45em 1.1em;
+      background: #0057B7;
+      color: #fff;
+      border-radius: 999px;
+      font-size: 0.85em;
+      font-weight: 600;
+      text-decoration: none;
+      align-self: flex-start;
+      transition: background .15s ease;
+    }
+    .game-card:hover .game-play {
+      background: #0a60c8;
+    }
+
+    .pub-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+    .pub-card {
+      background: #fff;
+      border: 1px solid #e3e3e3;
+      border-radius: 10px;
+      padding: 1.1rem 1.2rem;
+    }
+    .pub-card h3 {
+      margin: 0 0 0.3em;
+      font-size: 1em;
+    }
+    .pub-card p {
+      margin: 0 0 0.7em;
+      font-size: 0.88em;
+      color: #555;
+      line-height: 1.5;
+    }
+    .pub-card a.pub-link {
+      font-size: 0.85em;
+      color: #0057B7;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .pub-card a.pub-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;background:#fff;padding:4px 8px;font-weight:bold;">Към основното съдържание</a>
+<header>
+  <a href="index.html" class="logo-link" aria-label="Home"><img src="logo.png" class="logo" alt="Лого на БИМП"></a>
+  <h1>Български институт за международна политика</h1>
+  <p class="motto">„Всеки един има дълг да върши възможното." – Васил Априлов</p>
+</header>
+<nav aria-label="Главна навигация">
+  <a href="index.html">Начало</a> <span aria-hidden="true"> | </span>
+  <a href="about.html">За нас</a> <span aria-hidden="true"> | </span>
+  <a href="regions.html">Региони</a> <span aria-hidden="true"> | </span>
+  <a href="projects.html">Проекти</a> <span aria-hidden="true"> | </span>
+  <a href="eksperti.html">Експерти</a> <span aria-hidden="true"> | </span>
+  <a href="submit.html">Публикуване</a> <span aria-hidden="true"> | </span>
+  <a href="contact.html">Контакт</a> <span aria-hidden="true"> | </span>
+  <a href="search.html" aria-label="Търсене">🔍</a> <a href="projects-en.html">EN</a>
+</nav>
+<main id="main-content">
+
+  <h2>Проекти на БИМП</h2>
+  <p class="projects-intro">От интерактивни игри и викторини до аналитични публикации — това изгражда БИМП извън статиите.</p>
+
+  <!-- Интерактивни игри -->
+  <div class="section-label">
+    <h2>Интерактивни игри</h2>
+  </div>
+
+  <div class="games-grid">
+
+    <a href="https://biip-geo-quest.lovable.app/" target="_blank" rel="noopener" class="game-card">
+      <div class="game-card-header">
+        <div class="game-icon">🧠</div>
+        <div>
+          <p class="game-title">Политическа викторина на БИМП</p>
+          <p class="game-subtitle">Викторина — подбрана от експертите на БИМП</p>
+        </div>
+      </div>
+      <p class="game-desc">Въпроси с таймер за столици, лидери, типове режими и исторически повратни моменти от Балканите, ЦИЕ, Южна Африка и Кавказ.</p>
+      <span class="game-play">Играй →</span>
+    </a>
+
+    <a href="https://discover-sa.lovable.app/" target="_blank" rel="noopener" class="game-card">
+      <div class="game-card-header">
+        <div class="game-icon teal">🌍</div>
+        <div>
+          <p class="game-title">Открий Южна Африка</p>
+          <p class="game-subtitle">Интерактивно географско преживяване</p>
+        </div>
+      </div>
+      <p class="game-desc">Открийте хората, партиите и политиката на Южна Африка.</p>
+      <span class="game-play">Играй →</span>
+    </a>
+
+    <a href="https://defense-of-democracy.lovable.app/" target="_blank" rel="noopener" class="game-card">
+      <div class="game-card-header">
+        <div class="game-icon green">🏛️</div>
+        <div>
+          <p class="game-title">Защитник на демокрацията</p>
+          <p class="game-subtitle">Аркадна игра на БИМП с послание</p>
+        </div>
+      </div>
+      <p class="game-desc">Ти си Демокрацията. Корупцията напада — безмилостно. Реформите се появяват рядко. Хвани ги. Оцелей колкото можеш.</p>
+      <span class="game-play">Играй →</span>
+    </a>
+
+    <a href="https://kosovo-recognition.lovable.app/" target="_blank" rel="noopener" class="game-card">
+      <div class="game-card-header">
+        <div class="game-icon gold">🗺️</div>
+        <div>
+          <p class="game-title">Защо не признават Косово?</p>
+          <p class="game-subtitle">Геополитическа аналитична игра на БИМП</p>
+        </div>
+      </div>
+      <p class="game-desc">Аналитичната оценка на БИМП защо 25 държави не признават Косово — от вътрешната политика на Испания до тайванските опасения на Китай. Проверете геополитическите си познания.</p>
+      <span class="game-play">Играй →</span>
+    </a>
+
+  </div>
+
+  <!-- Публикации и проекти -->
+  <div class="section-label">
+    <h2>Публикации и аналитични проекти</h2>
+  </div>
+
+  <div class="pub-grid">
+
+    <div class="pub-card">
+      <h3>Politică internațională simplu</h3>
+      <p>Румънскоезичен месечен бюлетин и подкаст за международна политика, създаден в сътрудничество с партньори на БИМП.</p>
+      <a href="projects/politica-internationala-simplu.html" class="pub-link">Научете повече →</a>
+    </div>
+
+    <div class="pub-card">
+      <h3>Десет държави на юг</h3>
+      <p>Флагманският аналитичен проект на БИМП, изследващ десет държави в Южна Африка — тяхната политика, икономика и регионална динамика.</p>
+      <a href="projects/ten-countries-south.html" class="pub-link">Научете повече →</a>
+    </div>
+
+  </div>
+
+</main>
+<footer>
+  <p>
+    Български институт за международна политика |
+    Bulgarisches Institut für Internationale Politik |
+    Institut bulgare de politique internationale |
+    Instituto Búlgaro de Política Internacional |
+    Bolgár Nemzetközi Politikai Intézet |
+    Bugarski institut za međunarodnu politiku
+  </p>
+  <p style="margin-top:0.5em;">
+    <a href="privacy.html" style="color:#555; text-decoration:none;">Поверителност</a> |
+    <a href="archive.html" style="color:#555; text-decoration:none;">Архив</a> |
+    <a href="sitemap.html" style="color:#555; text-decoration:none;">Карта на сайта</a>
+  </p>
+</footer>
+<script src="biip.js?v=7" defer></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch(function() {});
+}
+</script>
+</body>
+</html>
