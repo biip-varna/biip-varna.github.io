@@ -33,6 +33,28 @@
     "readTime": 5
   },
   {
+    "file": "projects/ten-countries-south/sa-language-en.html",
+    "title": "South Africa: Twelve Languages, One Living Tapestry",
+    "desc": "Few countries in the world are as linguistically rich as South Africa. An explainer on its twelve official languages, their history, and what makes them remarkable.",
+    "author": "Dr. Dimitar Keranov, MRSSAf, MAkadSA",
+    "date": "2026-07-12",
+    "lang": "en",
+    "img": "article images/10.png",
+    "tags": ["southafrica", "africa", "language", "culture"],
+    "readTime": 6
+  },
+  {
+    "file": "projects/ten-countries-south/sa-language.html",
+    "title": "Южна Африка: Дванадесет езика, една жива тъкан",
+    "desc": "Малко държави в света могат да се похвалят с толкова голямо езиково богатство, колкото Южна Африка. Обяснение за дванадесетте официални езика, тяхната история и забележителни характеристики.",
+    "author": "Д-р Димитър Керанов, MRSSAf, LAkadSA",
+    "date": "2026-07-12",
+    "lang": "bg",
+    "img": "article images/10.png",
+    "tags": ["southafrica", "africa", "language", "culture"],
+    "readTime": 6
+  },
+  {
     "file": "articles/us-german-relations.html",
     "title": "US-German Relations in an Era of Strategic Recalibration",
     "desc": "An analysis of US-German relations amid strategic recalibration — from NATO and defence to economic interdependence and transatlantic technology cooperation.",
