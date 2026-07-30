@@ -801,6 +801,22 @@
     feed.innerHTML = html;
   }
 
+  /* ── FEATURE: Region card article counters ───────────────────── */
+  function initRegionCounters() {
+    var metas = document.querySelectorAll('.region-meta[data-tags]');
+    if (!metas.length || !ARTICLES) return;
+    var lang = getLang();
+    metas.forEach(function(el) {
+      var tags = el.getAttribute('data-tags').split(',').map(function(t){ return t.trim(); }).filter(Boolean);
+      var cnt = ARTICLES.filter(function(a){
+        return (a.tags || []).some(function(t){ return tags.indexOf(t) !== -1; });
+      }).length;
+      el.textContent = cnt + (lang === 'en'
+        ? ' article' + (cnt !== 1 ? 's' : '')
+        : (cnt === 1 ? ' статия' : ' статии'));
+    });
+  }
+
   function initPrintButtons() {
     document.addEventListener('click', function(e) {
       if (e.target && e.target.classList.contains('print-kachel__btn')) {
@@ -1172,6 +1188,7 @@
     try { initExpertTags(); }     catch(e) { console.warn('expertTags:', e); }
     try { initAuthorArticles(); } catch(e) { console.warn('authorArticles:', e); }
     try { initRegionsLatestFeed(); } catch(e) { console.warn('regionsLatestFeed:', e); }
+    try { initRegionCounters(); }    catch(e) { console.warn('regionCounters:', e); }
     try { initRandomArticleButton(); } catch(e) { console.warn('randomArticle:', e); }
     try { initHomeLatestFeed(); }     catch(e) { console.warn('homeLatestFeed:', e); }
     try { initSectionFeed(); }      catch(e) { console.warn('sectionFeed:', e); }
