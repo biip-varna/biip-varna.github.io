@@ -546,5 +546,21 @@
       "serbia"
     ],
     "readTime": 8
+  },
+  {
+    "file": "articles/the-witness-leaves.html",
+    "title": "The Witness Leaves",
+    "desc": "Republished with permission from Kosovo Dispatch: an examination of the Rašković case and why the man whose account needs independent testing is now beyond the investigation's reach.",
+    "author": "Drizan Shala",
+    "date": "2026-08-12",
+    "lang": "en",
+    "img": "article images/biipall.png",
+    "tags": [
+      "balkans",
+      "kosovo",
+      "serbia",
+      "security"
+    ],
+    "readTime": 5
   }
 ]
