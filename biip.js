@@ -178,6 +178,11 @@
                             role_bg: 'Асоцииран експерт',
                             role_en: 'Associate Expert',
                             tags: ['AIR'] },
+    'shala':              { bg: 'experts/shala.html',            en: 'experts/shala-english.html',
+                            img: 'experts/images/Shala.jpg',
+                            role_bg: 'Експерт по национална сигурност, разузнаване и геополитика',
+                            role_en: 'Expert on National Security, Intelligence and Geopolitics',
+                            tags: ['SEC', 'IR'] },
   };
   // Canonical author names for matching
   var AUTHOR_ALIASES = {
@@ -200,6 +205,8 @@
     'biip':               ['bulgarian institute for international politics', 'biip', 'бимп'],
     'sonet-schutte':      ['sonet schutte', 'сонет шуте'],
     'pavel-stefanov':     ['павел стефанов', 'pavel stefanov'],
+    'shala':              ['drizan shala', 'дризан шала', 'dr. drizan shala',
+                           'д-р дризан шала', 'prof. drizan shala', 'проф. дризан шала'],
   };
 
   function normalizeAuthorId(authorStr) {
