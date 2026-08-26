@@ -562,5 +562,22 @@
       "security"
     ],
     "readTime": 5
+  },
+  {
+    "file": "articles/inside-the-threat-bg.html",
+    "title": "Вътре в заплахата",
+    "desc": "Препубликувано с разрешение от Kosovo Dispatch: разследване на операция на сръбската БИА в мюсюлманската общност в Косово, разкрита от контраразузнаването на страната.",
+    "author": "Дризан Шала",
+    "date": "2026-08-16",
+    "lang": "bg",
+    "img": "article images/biipall.png",
+    "tags": [
+      "balkans",
+      "kosovo",
+      "serbia",
+      "security",
+      "disinformation"
+    ],
+    "readTime": 11
   }
 ]
