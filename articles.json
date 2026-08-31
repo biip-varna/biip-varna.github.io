@@ -579,5 +579,41 @@
       "disinformation"
     ],
     "readTime": 11
+  },
+  {
+    "file": "articles/vargas-interview-en.html",
+    "title": "\"My biggest concern is the normalization of hollow democracies\"",
+    "desc": "René Javier Vargas on social divides, democratic erosion, and the future of Mexico and Guatemala.",
+    "author": "René Javier Vargas",
+    "date": "2026-08-31",
+    "lang": "en",
+    "img": "article images/Vargas.jpg",
+    "tags": [
+      "america",
+      "latinamerica",
+      "mexico",
+      "guatemala",
+      "democracy",
+      "corruption"
+    ],
+    "readTime": 9
+  },
+  {
+    "file": "articles/vargas-interview-bg.html",
+    "title": "„Най-голямото ми безпокойство е нормализирането на кухите демокрации“",
+    "desc": "Рене Хавиер Варгас за социалните разделения, демократичната ерозия и бъдещето на Мексико и Гватемала.",
+    "author": "Рене Хавиер Варгас",
+    "date": "2026-08-31",
+    "lang": "bg",
+    "img": "article images/Vargas.jpg",
+    "tags": [
+      "america",
+      "latinamerica",
+      "mexico",
+      "guatemala",
+      "democracy",
+      "corruption"
+    ],
+    "readTime": 9
   }
 ]
