@@ -615,5 +615,39 @@
       "corruption"
     ],
     "readTime": 9
+  },
+  {
+    "file": "articles/turkiye-eu-relations-en.html",
+    "title": "What Comes After Membership?",
+    "desc": "Berrin Yeshil on the new reality of Türkiye–EU relations in 2026: the strategic partnership taking shape beyond the stalled accession process.",
+    "author": "Berrin Yeshil",
+    "date": "2026-09-04",
+    "lang": "en",
+    "img": "article images/TurkiyeEU.png",
+    "tags": [
+      "eu",
+      "turkiye",
+      "security",
+      "economy",
+      "diplomacy"
+    ],
+    "readTime": 9
+  },
+  {
+    "file": "articles/turkiye-eu-relations-bg.html",
+    "title": "Какво следва отвъд членството?",
+    "desc": "Беррин Йешил за новата реалност на отношенията между Турция и ЕС през 2026 г.: стратегическото партньорство отвъд застоялите преговори за членство.",
+    "author": "Беррин Йешил",
+    "date": "2026-09-04",
+    "lang": "bg",
+    "img": "article images/TurkiyeEU.png",
+    "tags": [
+      "eu",
+      "turkiye",
+      "security",
+      "economy",
+      "diplomacy"
+    ],
+    "readTime": 9
   }
 ]

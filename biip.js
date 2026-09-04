@@ -183,6 +183,11 @@
                             role_bg: 'Експерт по национална сигурност, разузнаване и геополитика',
                             role_en: 'Expert on National Security, Intelligence and Geopolitics',
                             tags: ['SEC', 'IR'] },
+    'yeshil':             { bg: 'experts/yeshil.html',           en: 'experts/yeshil-english.html',
+                            img: 'experts/images/Yeshil.jpg',
+                            role_bg: 'Експерт Турция, Балкани и Европейски въпроси',
+                            role_en: 'Expert on Türkiye, the Balkans, and European Affairs',
+                            tags: ['EU', 'SEC', 'IR'] },
   };
   // Canonical author names for matching
   var AUTHOR_ALIASES = {
@@ -207,6 +212,7 @@
     'pavel-stefanov':     ['павел стефанов', 'pavel stefanov'],
     'shala':              ['drizan shala', 'дризан шала', 'dr. drizan shala',
                            'д-р дризан шала', 'prof. drizan shala', 'проф. дризан шала'],
+    'yeshil':             ['berrin yeshil', 'беррин йешил', 'berrin yeşil'],
   };
 
   function normalizeAuthorId(authorStr) {
