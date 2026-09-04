@@ -77,7 +77,10 @@ self.addEventListener('fetch', function(event) {
 
   // Data files change with every publish — must always be fetched fresh
   var isDataFile = url.pathname === '/articles.json' ||
-                   url.pathname === '/search-index.json';
+                   url.pathname === '/search-index.json' ||
+                   url.pathname === '/feed.xml' ||
+                   url.pathname === '/sitemap.xml' ||
+                   url.pathname === '/sitemap.txt';
 
   if (isHTML || isDataFile) {
     // Network-first: always try the network, fall back to cache when offline
