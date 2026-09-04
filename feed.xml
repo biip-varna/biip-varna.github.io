@@ -8,13 +8,100 @@
     <copyright>Bulgarian Institute for International Politics (BIIP)</copyright>
     <managingEditor>biip@mailfence.com (Bulgarian Institute for International Politics)</managingEditor>
     <webMaster>biip@mailfence.com (BIIP)</webMaster>
-    <lastBuildDate>Tue, 24 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://biip-varna.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://biip-varna.github.io/logo.png</url>
       <title>Bulgarian Institute for International Politics</title>
       <link>https://biip-varna.github.io/</link>
     </image>
+
+    <item>
+      <title>The Estimate Is the Invitation</title>
+      <link>https://biip-varna.github.io/articles/estimate-is-the-invitation.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/estimate-is-the-invitation.html</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Albatros Rexhaj</dc:creator>
+      <description>Vučić announced the expected crowd size for Ratko Mladić's funeral four days in advance. Read as security, the estimate is unremarkable. Read as what it is, it is a mobilisation order.</description>
+      <category>Serbia</category>
+      <category>Balkans</category>
+      <category>EU</category>
+      <category>Security</category>
+      <category>Diplomacy</category>
+      <category>Democracy</category>
+    </item>
+
+    <item>
+      <title>What Comes After Membership?</title>
+      <link>https://biip-varna.github.io/articles/turkiye-eu-relations-en.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/turkiye-eu-relations-en.html</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Berrin Yeshil</dc:creator>
+      <description>Berrin Yeshil on the new reality of Türkiye–EU relations in 2026: the strategic partnership taking shape beyond the stalled accession process.</description>
+      <category>EU</category>
+      <category>Türkiye</category>
+      <category>Security</category>
+      <category>Economy</category>
+      <category>Diplomacy</category>
+    </item>
+
+    <item>
+      <title>"My biggest concern is the normalization of hollow democracies"</title>
+      <link>https://biip-varna.github.io/articles/vargas-interview-en.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/vargas-interview-en.html</guid>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>René Javier Vargas</dc:creator>
+      <description>René Javier Vargas on social divides, democratic erosion, and the future of Mexico and Guatemala.</description>
+      <category>America</category>
+      <category>Latin America</category>
+      <category>Mexico</category>
+      <category>Guatemala</category>
+      <category>Democracy</category>
+      <category>Corruption</category>
+    </item>
+
+    <item>
+      <title>The Witness Leaves</title>
+      <link>https://biip-varna.github.io/articles/the-witness-leaves.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/the-witness-leaves.html</guid>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Drizan Shala</dc:creator>
+      <description>Republished with permission from Kosovo Dispatch: an examination of the Rašković case and why the man whose account needs independent testing is now beyond the investigation's reach.</description>
+      <category>Balkans</category>
+      <category>Kosovo</category>
+      <category>Serbia</category>
+      <category>Security</category>
+    </item>
+
+    <item>
+      <title>Interview with Dr. Gurakuç Kuçi on Hybrid Threats in the Balkans</title>
+      <link>https://biip-varna.github.io/articles/kuci-interview-en.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/kuci-interview-en.html</guid>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Dr. Gurakuç Kuçi</dc:creator>
+      <description>BIIP talks to Dr. Gurakuç Kuçi on hybrid threats, Kosovo, and regional security. Dr. Kuçi is Professor at Universum College and External Associate at the Institute for Hybrid Warfare Studies "OCTOPUS".</description>
+      <category>Balkans</category>
+      <category>Security</category>
+      <category>Hybrid</category>
+      <category>Kosovo</category>
+      <category>Serbia</category>
+    </item>
+
+    <item>
+      <title>Crime and Governance: Bulgaria's Quiet Challenge</title>
+      <link>https://biip-varna.github.io/articles/bulgaria-crime-governance.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/bulgaria-crime-governance.html</guid>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Dr. Dimitar Keranov, MRSSAf, MAkadSA</dc:creator>
+      <description>Bulgaria presents a paradox: low homicide rates coexist with persistent corruption, weak judicial credibility, and gaps in financial-crime enforcement — a governance analysis.</description>
+      <category>Bulgaria</category>
+      <category>Corruption</category>
+      <category>Governance</category>
+      <category>Judiciary</category>
+      <category>Crime</category>
+      <category>FATF</category>
+      <category>EU</category>
+    </item>
 
     <item>
       <title>US-German Relations in an Era of Strategic Recalibration</title>
@@ -268,6 +355,63 @@
       <category>Bulgaria</category>
       <category>Security</category>
       <category>NATO</category>
+    </item>
+
+    <item>
+      <title>Какво следва отвъд членството?</title>
+      <link>https://biip-varna.github.io/articles/turkiye-eu-relations-bg.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/turkiye-eu-relations-bg.html</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Беррин Йешил</dc:creator>
+      <description>Беррин Йешил за новата реалност на отношенията между Турция и ЕС през 2026 г.: стратегическото партньорство отвъд застоялите преговори за членство.</description>
+      <category>EU</category>
+      <category>Türkiye</category>
+      <category>Security</category>
+      <category>Economy</category>
+      <category>Diplomacy</category>
+    </item>
+
+    <item>
+      <title>„Най-голямото ми безпокойство е нормализирането на кухите демокрации“</title>
+      <link>https://biip-varna.github.io/articles/vargas-interview-bg.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/vargas-interview-bg.html</guid>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Рене Хавиер Варгас</dc:creator>
+      <description>Рене Хавиер Варгас за социалните разделения, демократичната ерозия и бъдещето на Мексико и Гватемала.</description>
+      <category>America</category>
+      <category>Latin America</category>
+      <category>Mexico</category>
+      <category>Guatemala</category>
+      <category>Democracy</category>
+      <category>Corruption</category>
+    </item>
+
+    <item>
+      <title>Вътре в заплахата</title>
+      <link>https://biip-varna.github.io/articles/inside-the-threat-bg.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/inside-the-threat-bg.html</guid>
+      <pubDate>Sun, 16 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Дризан Шала</dc:creator>
+      <description>Препубликувано с разрешение от Kosovo Dispatch: разследване на операция на сръбската БИА в мюсюлманската общност в Косово, разкрита от контраразузнаването на страната.</description>
+      <category>Balkans</category>
+      <category>Kosovo</category>
+      <category>Serbia</category>
+      <category>Security</category>
+      <category>Disinformation</category>
+    </item>
+
+    <item>
+      <title>Интервю с д-р Гуракуч Кучи за хибридните заплахи на Балканите</title>
+      <link>https://biip-varna.github.io/articles/kuci-interview-bg.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/kuci-interview-bg.html</guid>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Д-р Гуракуч Кучи</dc:creator>
+      <description>БИМП разговаря с д-р Гуракуч Кучи за хибридните заплахи, Косово и регионалната сигурност. Д-р Кучи е преподавател в Universum College и външен сътрудник на Института за изследвания на хибридната война „OCTOPUS".</description>
+      <category>Balkans</category>
+      <category>Security</category>
+      <category>Hybrid</category>
+      <category>Kosovo</category>
+      <category>Serbia</category>
     </item>
 
     <item>
