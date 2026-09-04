@@ -649,5 +649,23 @@
       "diplomacy"
     ],
     "readTime": 9
+  },
+  {
+    "file": "articles/estimate-is-the-invitation.html",
+    "title": "The Estimate Is the Invitation",
+    "desc": "Vučić announced the expected crowd size for Ratko Mladić's funeral four days in advance. Read as security, the estimate is unremarkable. Read as what it is, it is a mobilisation order.",
+    "author": "Albatros Rexhaj",
+    "date": "2026-09-04",
+    "lang": "en",
+    "img": "article images/biipall.png",
+    "tags": [
+      "serbia",
+      "balkans",
+      "eu",
+      "security",
+      "diplomacy",
+      "democracy"
+    ],
+    "readTime": 5
   }
 ]
