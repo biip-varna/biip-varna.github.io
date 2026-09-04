@@ -470,7 +470,13 @@
       if (fname === file) return false;
       if (a.lang !== lang) return false;
       return a.tags && a.tags.some(function(t){ return current.tags.indexOf(t) !== -1; });
-    }).slice(0, 3);
+    }).map(function(a) {
+      var overlap = a.tags.filter(function(t){ return current.tags.indexOf(t) !== -1; }).length;
+      return { article: a, overlap: overlap };
+    }).sort(function(x, y) {
+      if (y.overlap !== x.overlap) return y.overlap - x.overlap;
+      return (y.article.date || '').localeCompare(x.article.date || '');
+    }).slice(0, 3).map(function(entry){ return entry.article; });
 
     var existing = article.querySelector('.related-articles');
     if (existing) existing.remove();
