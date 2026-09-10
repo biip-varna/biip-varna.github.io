@@ -667,5 +667,21 @@
       "democracy"
     ],
     "readTime": 5
+  },
+  {
+    "file": "articles/the-general-belgrade-reclaimed.html",
+    "title": "The General Belgrade Reclaimed",
+    "desc": "Republished with permission from Kosovo Dispatch: Serbia's justice minister called Ratko Mladić 'a general' on state television, collapsing the distinction between two armies that once shielded Belgrade from responsibility for Srebrenica.",
+    "author": "Drizan Shala",
+    "date": "2026-08-30",
+    "lang": "en",
+    "img": "article images/biipall.png",
+    "tags": [
+      "serbia",
+      "balkans",
+      "security",
+      "diplomacy"
+    ],
+    "readTime": 6
   }
 ]
