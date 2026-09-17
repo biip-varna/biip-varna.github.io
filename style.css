@@ -93,6 +93,15 @@ main {
   max-width: 900px;
   margin: auto;
   padding: 20px;
+  overflow-x: hidden;
+}
+
+/* Long unbroken strings (citation URLs, DOIs) in article body text must
+   wrap instead of forcing the whole page to scroll horizontally on mobile. */
+article p,
+article li {
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 footer {
