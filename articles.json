@@ -683,5 +683,21 @@
       "diplomacy"
     ],
     "readTime": 6
+  },
+  {
+    "file": "articles/who-sounds-bulgarian.html",
+    "title": "Who Sounds ‘Bulgarian’? The Politics of Sound on Sofia’s Streets",
+    "desc": "Evelina Soukou on Sofia's dueling June 2026 marches — the March for the Family and Sofia Pride — and the deeper contest over who gets to sound authentically Bulgarian.",
+    "author": "Evelina Soukou",
+    "date": "2026-09-17",
+    "lang": "en",
+    "img": "article images/biipall.png",
+    "tags": [
+      "bulgaria",
+      "democracy",
+      "culture",
+      "minorities"
+    ],
+    "readTime": 9
   }
 ]
