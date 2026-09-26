@@ -8,13 +8,28 @@
     <copyright>Bulgarian Institute for International Politics (BIIP)</copyright>
     <managingEditor>biip@mailfence.com (Bulgarian Institute for International Politics)</managingEditor>
     <webMaster>biip@mailfence.com (BIIP)</webMaster>
-    <lastBuildDate>Fri, 18 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://biip-varna.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://biip-varna.github.io/logo.png</url>
       <title>Bulgarian Institute for International Politics</title>
       <link>https://biip-varna.github.io/</link>
     </image>
+
+    <item>
+      <title>The Illyrians, Skanderbeg and Religion: Anatomy of an Identity War</title>
+      <link>https://biip-varna.github.io/articles/illyrians-skanderbeg-religion.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/illyrians-skanderbeg-religion.html</guid>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Dr. Gurakuç Kuçi</dc:creator>
+      <description>Dr. Gurakuç Kuçi on how Serbian nationalist narratives disconnect Albanians from antiquity, appropriate figures like Skanderbeg, and use religion to fragment Albanian identity along Muslim–Catholic–Orthodox lines.</description>
+      <category>Balkans</category>
+      <category>Kosovo</category>
+      <category>Serbia</category>
+      <category>Security</category>
+      <category>Hybrid</category>
+      <category>Disinformation</category>
+    </item>
 
     <item>
       <title>Who Sounds ‘Bulgarian’? The Politics of Sound on Sofia’s Streets</title>
@@ -56,21 +71,6 @@
       <category>Security</category>
       <category>Economy</category>
       <category>Diplomacy</category>
-    </item>
-
-    <item>
-      <title>The Illyrians, Skanderbeg and Religion: Anatomy of an Identity War</title>
-      <link>https://biip-varna.github.io/articles/illyrians-skanderbeg-religion.html</link>
-      <guid isPermaLink="true">https://biip-varna.github.io/articles/illyrians-skanderbeg-religion.html</guid>
-      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Dr. Gurakuç Kuçi</dc:creator>
-      <description>Dr. Gurakuç Kuçi on how Serbian nationalist narratives disconnect Albanians from antiquity, appropriate figures like Skanderbeg, and use religion to fragment Albanian identity along Muslim–Catholic–Orthodox lines.</description>
-      <category>Balkans</category>
-      <category>Kosovo</category>
-      <category>Serbia</category>
-      <category>Security</category>
-      <category>Hybrid</category>
-      <category>Disinformation</category>
     </item>
 
     <item>
