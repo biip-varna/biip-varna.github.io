@@ -8,13 +8,27 @@
     <copyright>Bulgarian Institute for International Politics (BIIP)</copyright>
     <managingEditor>biip@mailfence.com (Bulgarian Institute for International Politics)</managingEditor>
     <webMaster>biip@mailfence.com (BIIP)</webMaster>
-    <lastBuildDate>Sat, 26 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://biip-varna.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://biip-varna.github.io/logo.png</url>
       <title>Bulgarian Institute for International Politics</title>
       <link>https://biip-varna.github.io/</link>
     </image>
+
+    <item>
+      <title>UN Monologue: Why Kosovo Cannot Respond to Serbia’s Accusations</title>
+      <link>https://biip-varna.github.io/articles/un-monologue-kosovo-serbia.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/un-monologue-kosovo-serbia.html</guid>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Dr. Gurakuç Kuçi</dc:creator>
+      <description>Dr. Gurakuç Kuçi on the institutional gap that lets Serbia accuse Kosovo at the UN General Assembly while Kosovo has no equivalent right to respond — and why UN reform should address it.</description>
+      <category>Balkans</category>
+      <category>Kosovo</category>
+      <category>Serbia</category>
+      <category>Diplomacy</category>
+      <category>Security</category>
+    </item>
 
     <item>
       <title>The Impact of Anti-Immigration Vigilantism in South Africa, and Land Reclamation in Lesotho, on Lesotho-South Africa Integration Prospects.</title>
