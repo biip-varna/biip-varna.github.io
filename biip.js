@@ -128,7 +128,7 @@
   /* ── Author → expert profile map ────────────────────────────── */
   var AUTHOR_PAGE = {
     'keranov':            { bg: 'experts/keranov.html',          en: 'experts/keranov-en.html',
-                            img: 'experts/images/Keranov.jpg',
+                            img: 'experts/images/Keranov-2026.jpg',
                             role_bg: 'Експерт Африка и ЦИЕ',    role_en: 'Expert on Africa & CEE',
                             tags: ['AFR', 'IR', 'SEC'] },
     'konstantin-keranov': { bg: null, en: null,
