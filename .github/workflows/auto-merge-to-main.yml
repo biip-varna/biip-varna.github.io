@@ -4,10 +4,23 @@ on:
   push:
     branches:
       - 'claude/**'
+  # The cache-bump bot commits to the claude/* branch with GITHUB_TOKEN, which
+  # does not trigger a push event, so re-run the merge once it has finished.
+  workflow_run:
+    workflows: ["Bump asset cache version"]
+    types: [completed]
+
+concurrency:
+  group: auto-merge-to-main
+  cancel-in-progress: false
 
 jobs:
   merge-to-main:
     runs-on: ubuntu-latest
+    if: >-
+      github.event_name == 'push' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+       startsWith(github.event.workflow_run.head_branch, 'claude/'))
     permissions:
       contents: write
     steps:
@@ -18,9 +31,12 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Merge into main
+        env:
+          BRANCH: ${{ github.event.workflow_run.head_branch || github.ref_name }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin "$BRANCH" main
           git checkout main
-          git merge --ff-only ${{ github.ref_name }} || git merge ${{ github.ref_name }}
+          git merge --ff-only "origin/$BRANCH" || git merge "origin/$BRANCH"
           git push origin main
