@@ -8,13 +8,28 @@
     <copyright>Bulgarian Institute for International Politics (BIIP)</copyright>
     <managingEditor>biip@mailfence.com (Bulgarian Institute for International Politics)</managingEditor>
     <webMaster>biip@mailfence.com (BIIP)</webMaster>
-    <lastBuildDate>Mon, 28 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://biip-varna.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://biip-varna.github.io/logo.png</url>
       <title>Bulgarian Institute for International Politics</title>
       <link>https://biip-varna.github.io/</link>
     </image>
+
+    <item>
+      <title>Kept in Reserve</title>
+      <link>https://biip-varna.github.io/articles/kept-in-reserve.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/kept-in-reserve.html</guid>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Drizan Shala</dc:creator>
+      <description>Republished with permission from Kosovo Dispatch: Putin forgave Serbia, said whom he hopes will govern it, and called the Serbs' division an injustice that leads to conflict — an answer that, set against Europe's war-readiness timetable, describes an option being kept open.</description>
+      <category>Serbia</category>
+      <category>Balkans</category>
+      <category>Russia</category>
+      <category>NATO</category>
+      <category>Security</category>
+      <category>Diplomacy</category>
+    </item>
 
     <item>
       <title>UN Monologue: Why Kosovo Cannot Respond to Serbia’s Accusations</title>

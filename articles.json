@@ -751,5 +751,23 @@
       "security"
     ],
     "readTime": 5
+  },
+  {
+    "file": "articles/kept-in-reserve.html",
+    "title": "Kept in Reserve",
+    "desc": "Republished with permission from Kosovo Dispatch: Putin forgave Serbia, said whom he hopes will govern it, and called the Serbs' division an injustice that leads to conflict — an answer that, set against Europe's war-readiness timetable, describes an option being kept open.",
+    "author": "Drizan Shala",
+    "date": "2026-10-03",
+    "lang": "en",
+    "img": "article images/biipall.png",
+    "tags": [
+      "serbia",
+      "balkans",
+      "russia",
+      "nato",
+      "security",
+      "diplomacy"
+    ],
+    "readTime": 6
   }
 ]
