@@ -8,7 +8,7 @@
     <copyright>Bulgarian Institute for International Politics (BIIP)</copyright>
     <managingEditor>biip@mailfence.com (Bulgarian Institute for International Politics)</managingEditor>
     <webMaster>biip@mailfence.com (BIIP)</webMaster>
-    <lastBuildDate>Sat, 03 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://biip-varna.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://biip-varna.github.io/logo.png</url>
@@ -439,6 +439,21 @@
       <category>Bulgaria</category>
       <category>Security</category>
       <category>NATO</category>
+    </item>
+
+    <item>
+      <title>Отвъд Монтрьо: Турция, ЕС и новият геополитически баланс в Черно море</title>
+      <link>https://biip-varna.github.io/articles/otvad-montryo-turtsia-es-cherno-more.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/otvad-montryo-turtsia-es-cherno-more.html</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Беррин Йешил</dc:creator>
+      <description>Беррин Йешил за Конвенцията от Монтрьо, новия стратегически подход на ЕС и ролята на Турция в Черно море: сигурността на региона вече се определя не само от контрола над проливите, а и от инфраструктурата, коридорите и институционалните връзки.</description>
+      <category>Türkiye</category>
+      <category>EU</category>
+      <category>NATO</category>
+      <category>Security</category>
+      <category>Bulgaria</category>
+      <category>Diplomacy</category>
     </item>
 
     <item>
