@@ -8,13 +8,27 @@
     <copyright>Bulgarian Institute for International Politics (BIIP)</copyright>
     <managingEditor>biip@mailfence.com (Bulgarian Institute for International Politics)</managingEditor>
     <webMaster>biip@mailfence.com (BIIP)</webMaster>
-    <lastBuildDate>Fri, 09 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://biip-varna.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://biip-varna.github.io/logo.png</url>
       <title>Bulgarian Institute for International Politics</title>
       <link>https://biip-varna.github.io/</link>
     </image>
+
+    <item>
+      <title>Is the light still on on the 31st floor? Ursula von der Leyen’s proposal for a “new Congress of Europe”</title>
+      <link>https://biip-varna.github.io/articles/light-on-31st-floor-new-congress-of-europe.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/light-on-31st-floor-new-congress-of-europe.html</guid>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Manuel Müller</dc:creator>
+      <description>Republished with permission from Der (europäische) Föderalist: Manuel Müller on Ursula von der Leyen’s proposal for a “new Congress of Europe” in 2027 — why a top-down vision process is unlikely to work, and why the EU’s problem is a lack of political will, not a lack of visions.</description>
+      <category>EU</category>
+      <category>European Parliament</category>
+      <category>Governance</category>
+      <category>Democracy</category>
+      <category>Diplomacy</category>
+    </item>
 
     <item>
       <title>Kept in Reserve</title>
@@ -28,20 +42,6 @@
       <category>Russia</category>
       <category>NATO</category>
       <category>Security</category>
-      <category>Diplomacy</category>
-    </item>
-
-    <item>
-      <title>Is the light still on on the 31st floor? Ursula von der Leyen’s proposal for a “new Congress of Europe”</title>
-      <link>https://biip-varna.github.io/articles/light-on-31st-floor-new-congress-of-europe.html</link>
-      <guid isPermaLink="true">https://biip-varna.github.io/articles/light-on-31st-floor-new-congress-of-europe.html</guid>
-      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
-      <dc:creator>Manuel Müller</dc:creator>
-      <description>Republished from Der (europäische) Föderalist: Manuel Müller on Ursula von der Leyen’s proposal for a “new Congress of Europe” in 2027 — why a top-down vision process is unlikely to work, and why the EU’s problem is a lack of political will, not a lack of visions.</description>
-      <category>EU</category>
-      <category>European Parliament</category>
-      <category>Governance</category>
-      <category>Democracy</category>
       <category>Diplomacy</category>
     </item>
 
