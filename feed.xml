@@ -8,13 +8,28 @@
     <copyright>Bulgarian Institute for International Politics (BIIP)</copyright>
     <managingEditor>biip@mailfence.com (Bulgarian Institute for International Politics)</managingEditor>
     <webMaster>biip@mailfence.com (BIIP)</webMaster>
-    <lastBuildDate>Sun, 11 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://biip-varna.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://biip-varna.github.io/logo.png</url>
       <title>Bulgarian Institute for International Politics</title>
       <link>https://biip-varna.github.io/</link>
     </image>
+
+    <item>
+      <title>Diesel, drones and deterrence</title>
+      <link>https://biip-varna.github.io/articles/diesel-drones-and-deterrence.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/diesel-drones-and-deterrence.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Sergey Petrov – Aradzhioni</dc:creator>
+      <description>Republished with permission from the Political Science Institute (PSI): Sergey Petrov – Aradzhioni on the US–Russia diesel deal and “energy ceasefire”, drone strikes in Bulgarian waters, and NATO’s blunter deterrence.</description>
+      <category>Russia</category>
+      <category>USA</category>
+      <category>NATO</category>
+      <category>Security</category>
+      <category>Bulgaria</category>
+      <category>Diplomacy</category>
+    </item>
 
     <item>
       <title>Is the light still on on the 31st floor? Ursula von der Leyen’s proposal for a “new Congress of Europe”</title>
