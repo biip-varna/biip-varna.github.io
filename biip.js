@@ -183,6 +183,11 @@
                             role_bg: 'Експерт по национална сигурност, разузнаване и геополитика',
                             role_en: 'Expert on National Security, Intelligence and Geopolitics',
                             tags: ['SEC', 'IR'] },
+    'isac':               { bg: 'experts/isac.html',             en: 'experts/isac-english.html',
+                            img: 'experts/images/Isac.jpg',
+                            role_bg: 'Политически анализатор и експерт по медии',
+                            role_en: 'Political Analyst and Media Expert',
+                            tags: ['COMMS', 'IR'] },
     'yeshil':             { bg: 'experts/yeshil.html',           en: 'experts/yeshil-english.html',
                             img: 'experts/images/Yeshil.jpg',
                             role_bg: 'Експерт Турция, Балкани и Европейски въпроси',
@@ -212,6 +217,7 @@
     'pavel-stefanov':     ['павел стефанов', 'pavel stefanov'],
     'shala':              ['drizan shala', 'дризан шала', 'dr. drizan shala',
                            'д-р дризан шала', 'prof. drizan shala', 'проф. дризан шала'],
+    'isac':               ['mihai isac','михай исак'],
     'yeshil':             ['berrin yeshil', 'беррин йешил', 'berrin yeşil'],
   };
 
