@@ -98,7 +98,7 @@
     'diplomacy': 'Дипломация', 'disinformation': 'Дезинформация',
     'ai': 'ИИ', 'digitaleconomy': 'Дигитална икономика',
     'economy': 'Икономика', 'europeanparliament': 'Европарламент',
-    'minorities': 'Малцинства', 'romania': 'Румъния',
+    'minorities': 'Малцинства', 'romania': 'Румъния', 'ukraine': 'Украйна',
   };
   var TAG_LABEL_EN = {
     'bulgaria': 'Bulgaria', 'moldova': 'Moldova', 'russia': 'Russia',
@@ -109,7 +109,7 @@
     'diplomacy': 'Diplomacy', 'disinformation': 'Disinformation',
     'ai': 'AI', 'digitaleconomy': 'Digital Economy',
     'economy': 'Economy', 'europeanparliament': 'European Parliament',
-    'minorities': 'Minorities', 'romania': 'Romania',
+    'minorities': 'Minorities', 'romania': 'Romania', 'ukraine': 'Ukraine',
   };
 
   /* ── Expert tag codes → labels (mirrors TAG_LABEL in listing pages) ── */

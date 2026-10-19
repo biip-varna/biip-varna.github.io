@@ -8,13 +8,28 @@
     <copyright>Bulgarian Institute for International Politics (BIIP)</copyright>
     <managingEditor>biip@mailfence.com (Bulgarian Institute for International Politics)</managingEditor>
     <webMaster>biip@mailfence.com (BIIP)</webMaster>
-    <lastBuildDate>Wed, 14 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://biip-varna.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://biip-varna.github.io/logo.png</url>
       <title>Bulgarian Institute for International Politics</title>
       <link>https://biip-varna.github.io/</link>
     </image>
+
+    <item>
+      <title>Bulgaria and Ukraine: A Peaceful and Prosperous Economic Future for the Black Sea</title>
+      <link>https://biip-varna.github.io/articles/bulgaria-ukraine-black-sea-economic-future-en.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/bulgaria-ukraine-black-sea-economic-future-en.html</guid>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Andrii Akymenko, Dr. Dimitar Keranov</dc:creator>
+      <description>Andrii Akymenko (Centre for Economic Strategy) and Dr. Dimitar Keranov (BIIP) on the drone attacks off Bulgaria’s Black Sea coast, the growing Bulgaria–Ukraine trade and why safe shipping lanes matter for Varna and the region.</description>
+      <category>Bulgaria</category>
+      <category>Ukraine</category>
+      <category>Economy</category>
+      <category>Security</category>
+      <category>Russia</category>
+      <category>NATO</category>
+    </item>
 
     <item>
       <title>Diesel, drones and deterrence</title>
@@ -467,6 +482,21 @@
       <description>Why Bulgaria must accelerate replacing Soviet-era weapons with NATO-compatible equipment.</description>
       <category>Bulgaria</category>
       <category>Security</category>
+      <category>NATO</category>
+    </item>
+
+    <item>
+      <title>България и Украйна: Мирно и проспериращо икономическо бъдеще за Черно море</title>
+      <link>https://biip-varna.github.io/articles/bulgaria-ukraine-black-sea-economic-future-bg.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/bulgaria-ukraine-black-sea-economic-future-bg.html</guid>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Андрий Акименко, Д-р Димитър Керанов</dc:creator>
+      <description>Андрий Акименко (Център за икономическа стратегия) и д-р Димитър Керанов (БИМП) за атаките с дронове край българското черноморско крайбрежие, растящата търговия между България и Украйна и защо безопасните морски пътища са важни за Варна и региона.</description>
+      <category>Bulgaria</category>
+      <category>Ukraine</category>
+      <category>Economy</category>
+      <category>Security</category>
+      <category>Russia</category>
       <category>NATO</category>
     </item>
 
