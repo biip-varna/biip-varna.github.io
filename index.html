@@ -146,17 +146,20 @@
   </section>
 
   <section id="upcoming-workshop" data-ends="2026-11-23T15:45:00+01:00" style="margin-top:2.5em; padding:1.1em 1.3em; background:#f4f7fc; border:1px solid #dce4f0; border-left:4px solid #0057B7; border-radius:8px;">
-    <div style="font-size:0.78em; text-transform:uppercase; letter-spacing:0.08em; font-weight:700; color:#5981b3;">Предстоящ уъркшоп</div>
+    <div id="upcoming-workshop-label" data-past="Успешно проведено събитие" style="font-size:0.78em; text-transform:uppercase; letter-spacing:0.08em; font-weight:700; color:#5981b3;">Предстоящ уъркшоп</div>
     <h3 style="margin:0.2em 0 0.2em; font-size:1.2em;">От изследванията към практиката</h3>
     <p style="margin:0 0 0.2em; font-weight:700; color:#0057B7; font-size:0.9em;">УП × Посолство на Косово в София × БИМП</p>
     <p style="margin:0 0 0.8em; font-size:0.93em; color:#444;">Изграждане на кариера в политиките и международните отношения · Прищина · 23 ноември 2026 г. · 12:00–15:45 косовско време · на английски</p>
     <a href="projects/from-research-to-practice.html" style="display:inline-block; font-weight:600; color:#0057B7; text-decoration:none; margin-right:1.2em;">Програма и подробности →</a>
-    <a href="https://prishtina-career-workshop.lovable.app/" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#0057B7; color:#fff; font-weight:700; text-decoration:none; border-radius:6px; padding:0.4em 1em;">Регистрация ↗</a>
+    <a class="ev-reg" href="https://prishtina-career-workshop.lovable.app/" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#0057B7; color:#fff; font-weight:700; text-decoration:none; border-radius:6px; padding:0.4em 1em;">Регистрация ↗</a>
   </section>
   <script>
   (function(){
     var s=document.getElementById('upcoming-workshop');
-    if(s && Date.now() > new Date(s.getAttribute('data-ends')).getTime()) s.style.display='none';
+    if(s && Date.now() > new Date(s.getAttribute('data-ends')).getTime()){
+      var l=document.getElementById('upcoming-workshop-label'); if(l) l.textContent=l.getAttribute('data-past');
+      var r=s.querySelectorAll('.ev-reg'); for(var i=0;i<r.length;i++) r[i].style.display='none';
+    }
   })();
   </script>
 

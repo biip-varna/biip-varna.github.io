@@ -132,6 +132,7 @@
   <h2>From Research to Practice</h2>
   <p class="ev-sub">Building a career in policy and international affairs</p>
   <p class="ev-partners">UP × Kosovo Embassy Sofia × BIIP</p>
+  <p><span id="ev-status" class="ev-tag in" style="margin-left:0;" data-past="Successful event" data-done="This event took place on 23 November 2026.">Upcoming workshop</span></p>
   <p>A half-day career workshop for students and graduates on building a career in policy and international affairs: think tanks, communication, media and public affairs. Two speakers in Prishtina, two joining online, one afternoon.</p>
   <div class="ev-facts">
     <div class="ev-fact"><div class="k">Date</div><div class="v">23 November 2026</div></div>
@@ -141,7 +142,7 @@
     <div class="ev-fact"><div class="k">Audience</div><div class="v">Students and graduates</div></div>
     <div class="ev-fact"><div class="k">Language</div><div class="v">English</div></div>
   </div>
-  <p><a class="ev-btn" href="https://prishtina-career-workshop.lovable.app/" target="_blank" rel="noopener noreferrer">Register ↗</a><span class="ev-note">Registration is on the workshop website.</span></p>
+  <p><a class="ev-btn ev-reg" href="https://prishtina-career-workshop.lovable.app/" target="_blank" rel="noopener noreferrer">Register ↗</a><span class="ev-note ev-reg">Registration is on the workshop website.</span></p>
 
   <h3 style="margin-top:2em;">Programme</h3>
   <p style="color:#666; font-size:0.93em; margin-top:-0.4em;">12:00 – 15:45 Kosovo time (CET). In English.</p>
@@ -183,9 +184,19 @@
     <li>Bulgarian Institute for International Politics</li>
   </ul>
 
-  <p style="margin-top:1.5em;"><a class="ev-btn" href="https://prishtina-career-workshop.lovable.app/" target="_blank" rel="noopener noreferrer">Register ↗</a></p>
+  <p style="margin-top:1.5em;"><a class="ev-btn ev-reg" href="https://prishtina-career-workshop.lovable.app/" target="_blank" rel="noopener noreferrer">Register ↗</a></p>
   <p><a href="../projects-en.html">← All BIIP projects</a></p>
 </main>
+<script>
+(function(){
+  if (Date.now() <= new Date('2026-11-23T15:45:00+01:00').getTime()) return;
+  var b=document.getElementById('ev-status');
+  if (b){ b.textContent=b.getAttribute('data-past'); b.className='ev-tag key'; }
+  var r=document.querySelectorAll('.ev-reg'); for (var i=0;i<r.length;i++) r[i].style.display='none';
+  var n=document.querySelector('.ev-facts');
+  if (n && b){ var p=document.createElement('p'); p.style.cssText='color:#555;font-size:0.95em;'; p.textContent=b.getAttribute('data-done'); n.insertAdjacentElement('afterend',p); }
+})();
+</script>
 <footer>
   <p>
     Bulgarian Institute for International Politics |
