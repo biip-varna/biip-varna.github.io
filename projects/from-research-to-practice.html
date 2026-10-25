@@ -132,6 +132,7 @@
   <h2>От изследванията към практиката</h2>
   <p class="ev-sub">Изграждане на кариера в политиките и международните отношения</p>
   <p class="ev-partners">UP × Посолство на Косово в София × БИМП</p>
+  <p><span id="ev-status" class="ev-tag in" style="margin-left:0;" data-past="Успешно проведено събитие" data-done="Събитието се проведе на 23 ноември 2026 г.">Предстоящ уъркшоп</span></p>
   <p>Кариерен уъркшоп за студенти и випускници за изграждането на кариера в политиките и международните отношения: мозъчни тръстове, комуникации, медии и публични дейности. Двама лектори в Прищина, двама онлайн, един следобед.</p>
   <div class="ev-facts">
     <div class="ev-fact"><div class="k">Дата</div><div class="v">23 ноември 2026 г.</div></div>
@@ -141,7 +142,7 @@
     <div class="ev-fact"><div class="k">За кого</div><div class="v">Студенти и випускници</div></div>
     <div class="ev-fact"><div class="k">Език</div><div class="v">Английски</div></div>
   </div>
-  <p><a class="ev-btn" href="https://prishtina-career-workshop.lovable.app/" target="_blank" rel="noopener noreferrer">Регистрация ↗</a><span class="ev-note">Регистрацията е на уебсайта на уъркшопа.</span></p>
+  <p><a class="ev-btn ev-reg" href="https://prishtina-career-workshop.lovable.app/" target="_blank" rel="noopener noreferrer">Регистрация ↗</a><span class="ev-note ev-reg">Регистрацията е на уебсайта на уъркшопа.</span></p>
 
   <h3 style="margin-top:2em;">Програма</h3>
   <p style="color:#666; font-size:0.93em; margin-top:-0.4em;">12:00 – 15:45 косовско време (CET). На английски език.</p>
@@ -183,9 +184,19 @@
     <li>Български институт за международна политика</li>
   </ul>
 
-  <p style="margin-top:1.5em;"><a class="ev-btn" href="https://prishtina-career-workshop.lovable.app/" target="_blank" rel="noopener noreferrer">Регистрация ↗</a></p>
+  <p style="margin-top:1.5em;"><a class="ev-btn ev-reg" href="https://prishtina-career-workshop.lovable.app/" target="_blank" rel="noopener noreferrer">Регистрация ↗</a></p>
   <p><a href="../projects.html">← Всички проекти на БИМП</a></p>
 </main>
+<script>
+(function(){
+  if (Date.now() <= new Date('2026-11-23T15:45:00+01:00').getTime()) return;
+  var b=document.getElementById('ev-status');
+  if (b){ b.textContent=b.getAttribute('data-past'); b.className='ev-tag key'; }
+  var r=document.querySelectorAll('.ev-reg'); for (var i=0;i<r.length;i++) r[i].style.display='none';
+  var n=document.querySelector('.ev-facts');
+  if (n && b){ var p=document.createElement('p'); p.style.cssText='color:#555;font-size:0.95em;'; p.textContent=b.getAttribute('data-done'); n.insertAdjacentElement('afterend',p); }
+})();
+</script>
 <footer>
   <p>
     Български институт за международна политика |
