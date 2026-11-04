@@ -892,9 +892,9 @@
   },
   {
     "file": "articles/transnistria-plesca-tiraspol-depends-on-chisinau.html",
-    "title": "Dr. Pleșca: Tiraspol now depends on Chișinău’s goodwill and on European rules for its basic survival.",
-    "desc": "Laurențiu Pleșca (GMF) on Transnistria as a de facto state in decline: Russia’s weakening leverage, the end of gas transit, the “Moldovan” language, the Bulgarian community, the 1+1 talks, EU accession and the prospects for reintegration.",
-    "author": "Laurențiu Pleșca",
+    "title": "Transnistria: an interview with Dr. Laurențiu Pleșca",
+    "desc": "Interview with Dr. Laurențiu Pleșca (GMF) on Transnistria: what it is, how people live there, Russia’s weakening leverage, the end of gas transit, the Bulgarian community, the 1+1 talks, EU accession and the prospects for reintegration.",
+    "author": "Dr. Laurențiu Pleșca",
     "date": "2026-11-04",
     "lang": "en",
     "img": "article images/Plesca.jpg",
@@ -906,6 +906,6 @@
       "bulgaria",
       "hybrid"
     ],
-    "readTime": 8
+    "readTime": 10
   }
 ]
