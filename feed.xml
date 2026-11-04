@@ -8,13 +8,27 @@
     <copyright>Bulgarian Institute for International Politics (BIIP)</copyright>
     <managingEditor>biip@mailfence.com (Bulgarian Institute for International Politics)</managingEditor>
     <webMaster>biip@mailfence.com (BIIP)</webMaster>
-    <lastBuildDate>Mon, 19 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://biip-varna.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://biip-varna.github.io/logo.png</url>
       <title>Bulgarian Institute for International Politics</title>
       <link>https://biip-varna.github.io/</link>
     </image>
+
+    <item>
+      <title>How the BIA Became Involved in Gathering Electoral Support for the SNS in Kosovo and Serbia</title>
+      <link>https://biip-varna.github.io/articles/bia-electoral-support-sns-kosovo-serbia.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/bia-electoral-support-sns-kosovo-serbia.html</guid>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Dr. Gurakuç Kuçi</dc:creator>
+      <description>Dr. Gurakuç Kuçi on the reported involvement of Serbian intelligence in gathering electoral support for the SNS: Fehim Sali’s audio recording in Kosovo and the criminal complaint against BIA director Vladimir Orlić in Serbia, and what they mean for hybrid influence.</description>
+      <category>Balkans</category>
+      <category>Kosovo</category>
+      <category>Serbia</category>
+      <category>Security</category>
+      <category>Hybrid</category>
+    </item>
 
     <item>
       <title>Bulgaria and Ukraine: A Peaceful and Prosperous Economic Future for the Black Sea</title>
