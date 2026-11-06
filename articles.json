@@ -907,5 +907,24 @@
       "hybrid"
     ],
     "readTime": 10
+  },
+  {
+    "file": "articles/the-professor-is-right.html",
+    "title": "The Professor Is Right",
+    "desc": "Republished from the Tirana Examiner: Drizan Shala on David Colon’s warning about foreign interference in Albania, Alexander Dugin’s claim on the riots, and the Dunav Intel account’s move from photographing Albanian bases to pushing a narrative about Israeli intelligence.",
+    "author": "Drizan Shala",
+    "date": "2026-11-06",
+    "lang": "en",
+    "img": "article images/biipall.png",
+    "tags": [
+      "albania",
+      "balkans",
+      "russia",
+      "serbia",
+      "hybrid",
+      "disinformation",
+      "security"
+    ],
+    "readTime": 5
   }
 ]
