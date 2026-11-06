@@ -8,13 +8,29 @@
     <copyright>Bulgarian Institute for International Politics (BIIP)</copyright>
     <managingEditor>biip@mailfence.com (Bulgarian Institute for International Politics)</managingEditor>
     <webMaster>biip@mailfence.com (BIIP)</webMaster>
-    <lastBuildDate>Thu, 05 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://biip-varna.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://biip-varna.github.io/logo.png</url>
       <title>Bulgarian Institute for International Politics</title>
       <link>https://biip-varna.github.io/</link>
     </image>
+
+    <item>
+      <title>The Professor Is Right</title>
+      <link>https://biip-varna.github.io/articles/the-professor-is-right.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/the-professor-is-right.html</guid>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Drizan Shala</dc:creator>
+      <description>Republished from the Tirana Examiner: Drizan Shala on David Colon’s warning about foreign interference in Albania, Alexander Dugin’s claim on the riots, and the Dunav Intel account’s move from photographing Albanian bases to pushing a narrative about Israeli intelligence.</description>
+      <category>Albania</category>
+      <category>Balkans</category>
+      <category>Russia</category>
+      <category>Serbia</category>
+      <category>Hybrid</category>
+      <category>Disinformation</category>
+      <category>Security</category>
+    </item>
 
     <item>
       <title>Transnistria: an interview with Dr. Laurențiu Pleșca</title>
