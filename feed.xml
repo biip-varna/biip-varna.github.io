@@ -8,13 +8,27 @@
     <copyright>Bulgarian Institute for International Politics (BIIP)</copyright>
     <managingEditor>biip@mailfence.com (Bulgarian Institute for International Politics)</managingEditor>
     <webMaster>biip@mailfence.com (BIIP)</webMaster>
-    <lastBuildDate>Fri, 06 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://biip-varna.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://biip-varna.github.io/logo.png</url>
       <title>Bulgarian Institute for International Politics</title>
       <link>https://biip-varna.github.io/</link>
     </image>
+
+    <item>
+      <title>Between Denmark and Bulgaria: Identity, Democracy and the Common Good</title>
+      <link>https://biip-varna.github.io/articles/denmark-bulgaria-identity-democracy-common-good.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/denmark-bulgaria-identity-democracy-common-good.html</guid>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Marcus</dc:creator>
+      <description>A conversation with Marcus about Danish and Bulgarian identities, public trust, civil society, corruption and democratic challenges, exploring what the two countries can learn from one another and how their different historical experiences shape contemporary society.</description>
+      <category>Bulgaria</category>
+      <category>Denmark</category>
+      <category>Democracy</category>
+      <category>Corruption</category>
+      <category>Governance</category>
+    </item>
 
     <item>
       <title>The Professor Is Right</title>
