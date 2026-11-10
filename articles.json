@@ -960,5 +960,24 @@
       "diplomacy"
     ],
     "readTime": 9
+  },
+  {
+    "file": "articles/reinforcements.html",
+    "title": "Reinforcements",
+    "desc": "Republished with permission from Kosovo Dispatch: Brussels congratulated Serbia’s new majority and credited it with a mandate for reform; within five days the majority answered on Russia and on the army. Neither answer breaks with the past.",
+    "author": "Drizan Shala",
+    "date": "2026-11-10",
+    "lang": "en",
+    "img": "article images/biipall.png",
+    "tags": [
+      "serbia",
+      "balkans",
+      "kosovo",
+      "russia",
+      "nato",
+      "eu",
+      "security"
+    ],
+    "readTime": 5
   }
 ]
