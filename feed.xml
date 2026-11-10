@@ -8,13 +8,27 @@
     <copyright>Bulgarian Institute for International Politics (BIIP)</copyright>
     <managingEditor>biip@mailfence.com (Bulgarian Institute for International Politics)</managingEditor>
     <webMaster>biip@mailfence.com (BIIP)</webMaster>
-    <lastBuildDate>Mon, 09 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://biip-varna.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://biip-varna.github.io/logo.png</url>
       <title>Bulgarian Institute for International Politics</title>
       <link>https://biip-varna.github.io/</link>
     </image>
+
+    <item>
+      <title>Montenegro’s EU Accession on Croatia’s Terms?</title>
+      <link>https://biip-varna.github.io/articles/montenegro-eu-accession-croatia-terms.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/montenegro-eu-accession-croatia-terms.html</guid>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Evelina Soukou</dc:creator>
+      <description>For years, EU integration was presented in the Western Balkans as the strongest incentive to overcome post-war divisions. The prospect of a shared European future was supposed to gradually loosen the past’s grip on politics. Relations between Montenegro and Croatia reveal a less reassuring side of that promise.</description>
+      <category>Montenegro</category>
+      <category>Croatia</category>
+      <category>EU</category>
+      <category>Balkans</category>
+      <category>Diplomacy</category>
+    </item>
 
     <item>
       <title>Between Denmark and Bulgaria: Identity, Democracy and the Common Good</title>
