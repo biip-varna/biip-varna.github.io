@@ -8,7 +8,7 @@
     <copyright>Bulgarian Institute for International Politics (BIIP)</copyright>
     <managingEditor>biip@mailfence.com (Bulgarian Institute for International Politics)</managingEditor>
     <webMaster>biip@mailfence.com (BIIP)</webMaster>
-    <lastBuildDate>Tue, 10 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://biip-varna.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://biip-varna.github.io/logo.png</url>
@@ -587,6 +587,20 @@
       <category>Security</category>
       <category>Russia</category>
       <category>NATO</category>
+    </item>
+
+    <item>
+      <title>Между Европа и Азия: Стратегическата свързаност между България и Турция в новата геоикономическа среда</title>
+      <link>https://biip-varna.github.io/articles/bulgaria-turkey-strategic-connectivity-bg.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/bulgaria-turkey-strategic-connectivity-bg.html</guid>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Беррин Йешил</dc:creator>
+      <description>Може ли стратегическата свързаност между България и Турция да превърне географското им положение в устойчиво геоикономическо предимство за Югоизточна Европа и връзките между Европа и Азия?</description>
+      <category>Türkiye</category>
+      <category>Bulgaria</category>
+      <category>EU</category>
+      <category>Economy</category>
+      <category>Security</category>
     </item>
 
     <item>
