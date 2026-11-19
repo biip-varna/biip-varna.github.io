@@ -184,7 +184,7 @@
                             role_bg: 'Експерт по национална сигурност, разузнаване и геополитика',
                             role_en: 'Expert on National Security, Intelligence and Geopolitics',
                             tags: ['SEC', 'IR'] },
-    'soukou':             { bg: null, en: null,
+    'soukou':             { bg: 'experts/soukou.html',        en: 'experts/soukou-english.html',
                             img: 'experts/images/Soukou.jpg',
                             role_bg: 'Експерт по Западните Балкани и разширяването на ЕС',
                             role_en: 'Expert on Western Balkans and EU Enlargement',
