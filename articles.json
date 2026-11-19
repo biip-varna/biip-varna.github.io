@@ -1013,5 +1013,23 @@
       "security"
     ],
     "readTime": 32
+  },
+  {
+    "file": "articles/the-service-did-not-lose-the-election.html",
+    "title": "The Service Did Not Lose the Election",
+    "desc": "Republished with permission from Kosovo Dispatch: Russia’s foreign intelligence service defended Vučić against the students and now defends the students against Brussels. Of the three, only the service has stayed where it was.",
+    "author": "Drizan Shala",
+    "date": "2026-11-19",
+    "lang": "en",
+    "img": "article images/biipall.png",
+    "tags": [
+      "serbia",
+      "balkans",
+      "kosovo",
+      "russia",
+      "eu",
+      "security"
+    ],
+    "readTime": 4
   }
 ]
