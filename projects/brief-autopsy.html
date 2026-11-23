@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brief Autopsy - University of Prishtina</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Archivo+Narrow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F6F2;
+    --ink:#1B2A38;
+    --ink-soft:#5C6A76;
+    --rule:#D8D5CC;
+    --flag:#B22A3A;
+    --flag-wash:#F2D9DB;
+    --fix:#2E6B4F;
+    --fix-wash:#DCEAE2;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Newsreader",Georgia,serif;
+    font-size:17px;
+    line-height:1.62;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px 120px}
+
+  /* ---------- masthead ---------- */
+  header.top{
+    border-bottom:2px solid var(--ink);
+    padding:38px 0 20px;
+    margin-bottom:8px;
+  }
+  header.top h1{
+    font-family:"Archivo Narrow",Arial,sans-serif;
+    font-weight:700;
+    font-size:clamp(2.4rem,7vw,4.1rem);
+    line-height:.95;
+    letter-spacing:-.02em;
+    margin:0 0 12px;
+  }
+  header.top h1 em{
+    font-style:normal;
+    color:var(--flag);
+    text-decoration:line-through;
+    text-decoration-thickness:3px;
+  }
+  header.top p{
+    font-family:"Archivo Narrow",Arial,sans-serif;
+    color:var(--ink-soft);
+    max-width:56ch;
+    font-size:1rem;
+    margin:0;
+  }
+
+  /* ---------- control bar ---------- */
+  .controls{
+    position:sticky;top:0;z-index:40;
+    background:var(--paper);
+    border-bottom:1px solid var(--rule);
+    padding:12px 0;
+    display:flex;flex-wrap:wrap;gap:10px;align-items:center;
+    font-family:"Archivo Narrow",Arial,sans-serif;
+  }
+  button{
+    font-family:"Archivo Narrow",Arial,sans-serif;
+    font-size:.95rem;font-weight:600;
+    background:transparent;
+    color:var(--ink);
+    border:1.5px solid var(--ink);
+    padding:7px 14px;
+    cursor:pointer;
+    border-radius:2px;
+    transition:background .12s,color .12s;
+  }
+  button:hover{background:var(--ink);color:var(--paper)}
+  button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+  button:focus-visible{outline:3px solid var(--flag);outline-offset:2px}
+  .sep{width:1px;height:26px;background:var(--rule);margin:0 4px}
+  .tally{
+    margin-left:auto;
+    font-size:.95rem;
+    color:var(--ink-soft);
+    font-variant-numeric:tabular-nums;
+  }
+  .tally b{color:var(--flag);font-size:1.15rem}
+
+  /* ---------- document + margin ---------- */
+  .sheet{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 330px;
+    gap:44px;
+    align-items:start;
+    padding-top:34px;
+  }
+  .doc h2{
+    font-family:"Archivo Narrow",Arial,sans-serif;
+    font-size:1.15rem;font-weight:700;
+    margin:38px 0 10px;
+    padding-bottom:5px;
+    border-bottom:1px solid var(--rule);
+  }
+  .doc .doctitle{
+    font-family:"Archivo Narrow",Arial,sans-serif;
+    font-weight:700;
+    font-size:1.7rem;
+    line-height:1.12;
+    margin:0 0 6px;
+    border:none;
+  }
+  .doc .stamp{
+    font-family:"Archivo Narrow",Arial,sans-serif;
+    color:var(--ink-soft);
+    font-size:.92rem;
+    margin:0 0 26px;
+  }
+  .doc p{margin:0 0 14px;max-width:66ch}
+  .doc ol{max-width:66ch;padding-left:22px}
+  .doc li{margin-bottom:9px}
+
+  /* flagged spans */
+  .f{
+    background:var(--flag-wash);
+    border-bottom:1.5px solid var(--flag);
+    cursor:pointer;
+    padding:1px 0;
+    transition:background .12s;
+  }
+  .f:hover{background:#E8BFC4}
+  .f.seen{background:transparent;border-bottom:1.5px dotted var(--flag)}
+  .f.active{background:var(--flag);color:#fff;border-bottom-color:var(--flag)}
+  body.hidden-mode .f{background:transparent;border-bottom:none;cursor:default;color:inherit}
+
+  /* ---------- margin panel ---------- */
+  .margin{position:sticky;top:82px;font-family:"Archivo Narrow",Arial,sans-serif}
+  .card{
+    border:1.5px solid var(--ink);
+    background:#fff;
+    padding:16px 17px;
+  }
+  .card .tier{
+    display:inline-block;
+    font-size:.78rem;font-weight:700;
+    letter-spacing:.04em;
+    padding:2px 7px;
+    border:1px solid currentColor;
+    margin-bottom:9px;
+  }
+  .t1{color:var(--flag)}
+  .t2{color:#8A5A12}
+  .t3{color:#2B5580}
+  .t4{color:var(--ink-soft)}
+  .card h3{font-size:1.12rem;margin:0 0 8px;line-height:1.2}
+  .card p{font-size:.95rem;line-height:1.5;margin:0 0 10px;color:var(--ink)}
+  .card .fix{
+    background:var(--fix-wash);
+    border-left:3px solid var(--fix);
+    padding:9px 11px;
+    font-size:.92rem;
+    line-height:1.45;
+  }
+  .card .fix b{color:var(--fix);display:block;margin-bottom:3px;font-size:.8rem;letter-spacing:.04em}
+  .empty{color:var(--ink-soft);font-size:.95rem;line-height:1.5}
+  .empty strong{display:block;color:var(--ink);font-size:1.05rem;margin-bottom:6px}
+
+  /* ---------- footer scoreboard ---------- */
+  .found{
+    margin-top:52px;padding-top:22px;border-top:2px solid var(--ink);
+    font-family:"Archivo Narrow",Arial,sans-serif;
+  }
+  .found h2{font-size:1.3rem;margin:0 0 14px}
+  .found ol{padding-left:20px;margin:0;columns:2;column-gap:34px}
+  .found li{margin-bottom:6px;font-size:.95rem;break-inside:avoid}
+  .found li.got{color:var(--ink)}
+  .found li.miss{color:#BFBBB1}
+
+  /* ---------- mobile ---------- */
+  @media (max-width:860px){
+    .sheet{grid-template-columns:1fr;gap:0}
+    .margin{
+      position:fixed;left:0;right:0;bottom:0;top:auto;
+      z-index:50;
+      max-height:62vh;overflow-y:auto;
+      border-top:2px solid var(--ink);
+      background:#fff;
+      transform:translateY(101%);
+      transition:transform .22s ease;
+      padding:0;
+    }
+    .margin.open{transform:translateY(0)}
+    .card{border:none;padding:18px 20px 26px}
+    .margin .empty{display:none}
+    .closebar{
+      display:block;width:100%;text-align:left;
+      border:none;border-bottom:1px solid var(--rule);
+      padding:11px 20px;background:#fff;
+    }
+    .found ol{columns:1}
+    .doc p,.doc ol{max-width:none}
+  }
+  @media (min-width:861px){.closebar{display:none}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+  details.more{margin-top:12px;font-size:.9rem;color:var(--ink-soft)}
+  details.more summary{cursor:pointer;color:var(--ink);font-weight:600;margin-bottom:8px}
+  details.more p{margin:0 0 8px}
+</style>
+</head>
+<body class="hidden-mode">
+<div class="wrap">
+
+<header class="top">
+  <h1>Brief <em>Autopsy</em></h1>
+  <p>A policy brief that reads like every other policy brief, opened up on the table. Twenty deliberate faults. Tap any marked passage to see what is wrong with it and what would fix it.</p>
+</header>
+
+<div class="controls">
+  <button id="toggle" aria-pressed="false">Show the marks</button>
+  <button id="top5" aria-pressed="false">Top 5</button>
+  <span class="tally"><b id="n">0</b> of 20 opened</span>
+</div>
+
+<div class="sheet">
+  <article class="doc">
+    <p class="doctitle" id="d19">Strengthening Resilience: A Holistic Framework for Addressing Hybrid Challenges in the Western Balkans Region</p>
+    <p class="stamp">Centre for Strategic Regional Futures <span class="f" data-i="19">Policy Brief No. 47</span></p>
+
+    <h2>Executive Summary</h2>
+    <p>The Western Balkans region faces an <span class="f" data-i="15">unprecedented array of complex, multidimensional and interlocking challenges</span> in the contemporary geopolitical environment. Hybrid threats, disinformation, foreign malign influence and democratic backsliding have emerged as key challenges requiring urgent attention from all relevant stakeholders. This policy brief argues that <span class="f" data-i="2">a holistic, comprehensive and multi-stakeholder approach is needed</span> in order to build resilience and strengthen the capacity of regional actors to respond effectively to these challenges. <span class="f" data-i="1">The international community must do more.</span> Building on a whole-of-society framework, this brief offers <span class="f" data-i="18">a number of considerations for policymakers going forward</span>.</p>
+
+    <h2>1. Introduction and Background</h2>
+    <p>The Western Balkans has long been a region of strategic importance. Since the dissolution of Yugoslavia, the countries of the region have undergone a complex process of transition, marked by both progress and setbacks. The European Union has committed to the eventual accession of the Western Balkans countries, a commitment reaffirmed at successive summits. However, the accession process has been slow.</p>
+    <p>In recent years, external actors have increased their engagement in the region. <span class="f" data-i="9">Russia has pursued its interests through a variety of channels. China has expanded its economic footprint significantly. Turkey and the Gulf states have also been active.</span> These developments have raised concerns among Western policymakers.</p>
+    <p>At the same time, domestic developments in the countries of the region have given rise to concern. Democratic institutions remain fragile. Media freedom has deteriorated in some countries. Corruption remains a persistent problem. Public trust in institutions is low.</p>
+
+    <h2>2. The Nature of the Challenge</h2>
+    <p>Hybrid threats are, by their nature, difficult to define. They operate below the threshold of conventional conflict and combine military and non-military instruments. Disinformation is a central component. <span class="f" data-i="6">Recent studies have shown that disinformation is widespread across the region, and experts agree that the problem is worsening.</span></p>
+    <p><span class="f" data-i="5">Some analysts have suggested that up to 70% of citizens in certain Western Balkans countries are regularly exposed to disinformation narratives originating from external sources.</span> This is a striking figure and it underscores the scale of the problem.</p>
+    <p><span class="f" data-i="8">Kosovo, in particular, presents a unique case.</span> As a young state with a complex international status, <span class="f" data-i="14">it faces specific vulnerabilities. Serbia's continued non-recognition creates ongoing challenges.</span> The situation in the north remains sensitive. <span class="f" data-i="7">Interlocutors consulted for this brief expressed considerable concern about the trajectory.</span></p>
+    <p>Furthermore, the information environment is characterised by low levels of media literacy, a fragmented media landscape, and the growing role of social media platforms, which are largely unregulated. <span class="f" data-i="10">Young people are particularly vulnerable, as they consume most of their news online.</span></p>
+
+    <h2>3. Existing Responses</h2>
+    <p>A number of initiatives have been undertaken. The European Union has established several mechanisms. NATO has increased its engagement. Various civil society organisations are active in the field of fact-checking and media literacy. Donor funding for resilience-building has increased substantially in recent years.</p>
+    <p>However, <span class="f" data-i="13">these efforts remain fragmented. Coordination between actors is insufficient.</span> There is duplication of effort in some areas and gaps in others. <span class="f" data-i="12">Sustainability is a concern, as many initiatives are dependent on short-term project funding.</span></p>
+
+    <h2>4. Analysis</h2>
+    <p><span class="f" data-i="11">The fundamental problem is one of resilience. Societies that are resilient are better able to withstand hybrid pressure. Resilience is built through strong institutions, an informed citizenry, a free and plural media environment, and robust civil society.</span></p>
+    <p>It is clear that a comprehensive approach is required. Piecemeal interventions will not succeed. What is needed is <span class="f" data-i="16">a paradigm shift</span> in how the international community approaches the region, moving from a reactive posture to a proactive one, and from a narrow security focus to a whole-of-society perspective.</p>
+    <p>Ownership is also essential. Local actors must be in the driving seat. At the same time, international support remains indispensable. <span class="f" data-i="4">The balance between these two imperatives must be carefully managed.</span></p>
+
+    <h2>5. Recommendations</h2>
+    <ol>
+      <li><span class="f" data-i="3">Strengthen resilience across the region through a comprehensive, whole-of-society approach involving all relevant stakeholders.</span></li>
+      <li>Enhance coordination between international actors, national governments, civil society and the private sector.</li>
+      <li>Increase support for media literacy, particularly among young people.</li>
+      <li>Promote European integration as the fundamental anchor of stability and reform in the region.</li>
+      <li><span class="f" data-i="20">Build capacity of relevant institutions to identify and respond to hybrid threats.</span></li>
+      <li>Foster dialogue between all communities and improve regional cooperation.</li>
+      <li><span class="f" data-i="17">Address the root causes of vulnerability, including corruption, weak rule of law and economic underdevelopment.</span></li>
+    </ol>
+
+    <h2>6. Conclusion</h2>
+    <p>The Western Balkans <span class="f" data-i="0">stands at a crossroads</span>. The challenges are significant, but they are not insurmountable. With sufficient political will and a genuinely comprehensive approach, the region can build the resilience it needs. The stakes could not be higher. The time to act is now.</p>
+  </article>
+
+  <aside class="margin" id="margin">
+    <button class="closebar" id="close">Close</button>
+    <div class="card" id="card">
+      <div class="empty">
+        <strong>Read the brief. Find what's wrong. Point at the sentence.</strong>
+        Tap a marked sentence to see the problem.
+      </div>
+    </div>
+  </aside>
+</div>
+
+<section class="found">
+  <h2>The twenty faults</h2>
+  <ol id="scoreboard"></ol>
+</section>
+
+</div>
+
+<script>
+const F=[
+ {t:4,h:"Dead closing cliché",p:"A region at a crossroads, stakes that could not be higher, a time to act that is now. Three exhausted phrases in four sentences. They appear when the author has run out of things to say but still needs a paragraph.",fix:"End on the recommendation, not on atmosphere. A conclusion should tell the reader what happens if nobody acts, in specific terms."},
+ {t:1,h:"Nobody is being addressed",p:"The international community, policymakers, all relevant stakeholders, regional actors. Four phrases, none of which is a person, an institution or an office. A brief with no addressee cannot be acted on by anyone, because no one is responsible for it.",fix:"Name the desk. DG NEAR. The Kosovo Ministry of Education. The EU Special Representative. If you cannot name who acts, you do not yet have a recommendation."},
+ {t:1,h:"This is not an argument",p:"Nobody has ever published a brief arguing for a piecemeal, narrow, unilateral approach. When the opposing position is absurd, the position itself is empty. This sentence looks like a thesis and carries no claim.",fix:"State something a reasonable expert could dispute. The test: could a competent colleague read your thesis and say no, I think the opposite?"},
+ {t:1,h:"A verb with no object",p:"Strengthen resilience, how, by whom, with what money, by when, and how would anyone know whether it happened. Every one of the seven recommendations has this shape.",fix:"Actor plus instrument plus number plus date. Shift 30% of the Kosovo portfolio to five-year core funding from the 2027 cycle. That is a recommendation."},
+ {t:1,h:"Nothing here can be wrong",p:"There is no claim in the entire brief that evidence could contradict. This is the deepest fault and the hardest to see, because everything in it sounds reasonable. A document that cannot be wrong cannot be useful.",fix:"Before publishing, find the sentence in your draft that could be falsified. If there isn't one, you have written a description, not an analysis."},
+ {t:2,h:"The 70% that means nothing",p:"Some analysts have suggested, up to, in certain countries. Three hedges stacked into one sentence, so that it sounds quantitative while committing to nothing. No study, no method, no year, no footnote. This is the single most instructive sentence in the document.",fix:"Name the survey, the sample, the year and the question wording, or drop the number. A hedged statistic is worse than no statistic, because it borrows authority it has not earned."},
+ {t:2,h:"Studies and experts, unnamed",p:"Which studies. Which experts. Agreement is asserted rather than demonstrated, which lets the author import a consensus that may not exist.",fix:"Cite three sources or write in your own voice. If the consensus is real, naming it costs you one footnote."},
+ {t:2,h:"Concern is not a finding",p:"How many interlocutors. Selected how. Interviewed when, under what protocol. This borrows the form of qualitative research without any of its substance, and it is common in real briefs.",fix:"Give n, selection criteria and date, or say plainly that this reflects informal conversations."},
+ {t:2,h:"Uniqueness claimed, never shown",p:"Kosovo is called a unique case and then described in terms that apply to most of the region. No Kosovo-specific data appears anywhere in the brief, despite Kosovo being its central example.",fix:"One specific, sourced fact about Kosovo would do more work than the whole paragraph."},
+ {t:3,h:"Four actors flattened into one",p:"Russian information operations, Chinese infrastructure lending, Turkish soft power and Gulf investment are different phenomena with different mechanisms and different remedies. Grouping them prevents any useful response from being designed.",fix:"Pick one. A brief that addresses Chinese lending terms is more useful than a brief that gestures at four powers at once."},
+ {t:3,h:"An assumption doing real work",p:"Young people consume news online, therefore they are particularly vulnerable. The conclusion does not follow from the premise, and the research on this is genuinely contested. It is asserted because it sounds obvious.",fix:"Flag your assumptions as assumptions, or support them. The claims that feel too obvious to check are the ones that get briefs into trouble."},
+ {t:3,h:"Resilience defined as itself",p:"Resilient societies withstand pressure, and resilience is built through strong institutions, informed citizens, free media and civil society. Stripped down, this says that good societies are good. It is a description of a healthy democracy relabelled as a policy concept.",fix:"Define resilience so that it excludes something. If your definition covers every desirable feature of a state, it is not a definition."},
+ {t:3,h:"The real finding, buried",p:"Short project-funding cycles are the most concrete and most actionable problem in the whole document, and it appears in a subordinate clause in section 3, then never returns.",fix:"This should have been the thesis. When the sharpest thing in your draft is hiding in a clause, promote it to the executive summary."},
+ {t:3,h:"Passive voice hides everyone",p:"Initiatives have been undertaken. Coordination is insufficient. Insufficient by whom. Undertaken by whom. The passive is how a brief avoids naming anyone it might have to criticise.",fix:"Rewrite in the active voice and see who appears. If naming them feels risky, that is a sign you have found the actual finding."},
+ {t:3,h:"Kosovo has no agency",p:"Kosovo appears only as a site of vulnerability and a recipient of support. It never appears as an actor with capacity, choices or a policy of its own. Worth asking the room whether they recognise this framing from other documents written about their country.",fix:"Give the local actor a decision to make. Recommendations addressed only to donors tell you who the author thinks matters."},
+ {t:4,h:"Intensifiers carrying no weight",p:"Unprecedented, complex, multidimensional, interlocking, urgent. Delete all five and the sentence loses no meaning, which is the proof that they carried none.",fix:"Cut every adjective, then restore only the ones whose absence changes the claim. Usually that is one or two."},
+ {t:4,h:"Three words, one idea",p:"Holistic, comprehensive, multi-stakeholder, whole-of-society, paradigm shift, driving seat. Note that the first three are synonyms deployed as if they were three separate arguments.",fix:"One idea, one word. Jargon density and analytical density are inversely related."},
+ {t:1,h:"Solve the country in one bullet",p:"Corruption, rule of law and economic underdevelopment in a single line. This is not a recommendation, it is a description of the region's entire condition, and its presence signals that the author had a list to round out.",fix:"Cut it. Seven weak recommendations are worth less than two that someone could actually implement."},
+ {t:4,h:"A summary that summarises nothing",p:"It restates the topic and the vague conclusion, without a finding or a lead recommendation. Most readers read only this. Many read only its first two sentences.",fix:"Finding first, then the single most important recommendation, then the cost. A reader who stops here should still know what to do on Monday."},
+ {t:4,h:"No author, no date, no method",p:"Who wrote it, when, and based on what evidence. None of it is stated. The number 47 implies an established series, which is precisely how thin work borrows the credibility of an institution.",fix:"Author, date, methodology note, funder. Anything unwilling to say who paid for it and how it was researched should be read with suspicion."},
+ {t:3,h:"Capacity assumed absent",p:"Build capacity of relevant institutions presumes the institutions lack it, without ever assessing what capacity already exists. Much donor-funded work duplicates something already in place.",fix:"Audit first, build second. A recommendation to strengthen something should say what is currently there."}
+];
+
+const card=document.getElementById('card'),
+      margin=document.getElementById('margin'),
+      tally=document.getElementById('n'),
+      board=document.getElementById('scoreboard'),
+      toggle=document.getElementById('toggle');
+const NAMES=["Fatal","Evidence","Analysis","Craft"];
+const opened=new Set();
+
+
+// scoreboard
+F.forEach((f,i)=>{
+  const li=document.createElement('li');
+  li.className='miss';li.id='sb'+i;li.textContent=f.h;
+  board.appendChild(li);
+});
+board.parentElement.style.display='none';
+
+function short(p){
+  const m=p.match(/^[^.]*\./);
+  return m?m[0]:p;
+}
+function show(i){
+  const f=F[i];
+  card.innerHTML=
+    '<span class="tier t'+f.t+'">'+NAMES[f.t-1]+'</span>'+
+    '<h3>'+f.h+'</h3><p>'+short(f.p)+'</p>'+
+    '<div class="fix"><b>Fix</b>'+short(f.fix)+'</div>'+
+    '<details class="more"><summary>More</summary><p>'+f.p+'</p><p><b>Full fix:</b> '+f.fix+'</p></details>';
+  margin.classList.add('open');
+  if(!opened.has(i)){
+    opened.add(i);
+    tally.textContent=opened.size;
+    const li=document.getElementById('sb'+i);
+    li.className='got';
+  }
+}
+
+document.querySelectorAll('.f').forEach(el=>{
+  el.setAttribute('tabindex','0');
+  el.setAttribute('role','button');
+  const go=e=>{
+    if(document.body.classList.contains('hidden-mode'))return;
+    e.preventDefault();
+    document.querySelectorAll('.f.active').forEach(a=>a.classList.remove('active'));
+    el.classList.add('active','seen');
+    show(+el.dataset.i);
+  };
+  el.addEventListener('click',go);
+  el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')go(e)});
+});
+
+toggle.addEventListener('click',()=>{
+  const hidden=document.body.classList.toggle('hidden-mode');
+  toggle.setAttribute('aria-pressed',String(!hidden));
+  toggle.textContent=hidden?'Show the marks':'Hide the marks';
+});
+
+const TOP=[];
+F.map((f,i)=>({i,t:f.t})).sort((a,b)=>a.t-b.t).slice(0,5).forEach(x=>TOP.push(x.i));
+let topOn=false;
+document.getElementById('top5').addEventListener('click',()=>{
+  topOn=!topOn;
+  document.getElementById('top5').setAttribute('aria-pressed',String(topOn));
+  document.getElementById('top5').textContent=topOn?'All marks':'Top 5';
+  document.querySelectorAll('.f').forEach(el=>{
+    const on=!topOn||TOP.includes(+el.dataset.i);
+    el.style.display=on?'':'contents';
+    el.style.background=on?'':'transparent';
+    el.style.borderBottom=on?'':'none';
+    el.style.pointerEvents=on?'':'none';
+  });
+});
+
+document.getElementById('close').addEventListener('click',()=>margin.classList.remove('open'));
+</script>
+</body>
+</html>
