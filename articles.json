@@ -1031,5 +1031,21 @@
       "security"
     ],
     "readTime": 4
+  },
+  {
+    "file": "articles/bulgaria-energy-security-financial-test.html",
+    "title": "Bulgaria's Energy Security Needs a Financial Test",
+    "desc": "An electricity interconnector is usually discussed as a line on a map: a physical link that allows power to cross a border. For a factory deciding whether to invest, however, the more important question is what that connection means for the cost and reliability of electricity over time.",
+    "author": "Gustavo Pessoa",
+    "date": "2026-11-24",
+    "lang": "en",
+    "img": "article images/biipall.png",
+    "tags": [
+      "bulgaria",
+      "eu",
+      "economy",
+      "governance"
+    ],
+    "readTime": 4
   }
 ]

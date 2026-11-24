@@ -8,13 +8,26 @@
     <copyright>Bulgarian Institute for International Politics (BIIP)</copyright>
     <managingEditor>biip@mailfence.com (Bulgarian Institute for International Politics)</managingEditor>
     <webMaster>biip@mailfence.com (BIIP)</webMaster>
-    <lastBuildDate>Thu, 19 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://biip-varna.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://biip-varna.github.io/logo.png</url>
       <title>Bulgarian Institute for International Politics</title>
       <link>https://biip-varna.github.io/</link>
     </image>
+
+    <item>
+      <title>Bulgaria's Energy Security Needs a Financial Test</title>
+      <link>https://biip-varna.github.io/articles/bulgaria-energy-security-financial-test.html</link>
+      <guid isPermaLink="true">https://biip-varna.github.io/articles/bulgaria-energy-security-financial-test.html</guid>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Gustavo Pessoa</dc:creator>
+      <description>An electricity interconnector is usually discussed as a line on a map: a physical link that allows power to cross a border. For a factory deciding whether to invest, however, the more important question is what that connection means for the cost and reliability of electricity over time.</description>
+      <category>Bulgaria</category>
+      <category>EU</category>
+      <category>Economy</category>
+      <category>Governance</category>
+    </item>
 
     <item>
       <title>The Service Did Not Lose the Election</title>
